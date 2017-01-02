@@ -45,18 +45,18 @@ Leaderboard 에서는 다음 용어를 사용합니다.
 
 Leaderboard 플랫폼의 물리적 구성은 아래 그림 1과 같습니다.
 
-![[그림 1 Leaderboard 물리적 구조]](http://static.toastoven.net/toastcloud/static/common/img/cms_img/ranking/rank_1.jpg)
+![[그림 1 Leaderboard 물리적 구조]](http://static.toastoven.net/prod_leaderboardv2/overview_1.jpg)
 <center>[그림 1 Leaderboard 물리적 구조]</center>
 
-- Game Client/Server는 api-ranking.cloud.toast.com으로 데이터를 주고 받습니다.
+- Game Client/Server는 api-leaderboard.cloud.toast.com으로 데이터를 주고 받습니다.
 - Load Balancer는 여러 대로 구성한 Leaderboard 서버로 요청을 분배시킵니다.
-- 각 Leaderboard 서버는 nBase-ARC로 랭킹 데이터를 액세스 합니다.
+- 각 Leaderboard AP 서버는 Memory Server 와 Cassandra 로부터 데이터를 읽고 저장합니다.
 
 ### 논리적 구조
 
 Leaderboard 플랫폼의 논리적 구조는 아래 그림 2와 같습니다.
 
-![[그림 2 Leaderboard 논리적 구조]](http://static.toastoven.net/toastcloud/static/common/img/cms_img/ranking/rank_2.jpg)
+![[그림 2 Leaderboard 논리적 구조]](http://static.toastoven.net/prod_leaderboardv2/overview_2.jpg)
 <center>[그림 2 Leaderboard 논리적 구조]</center>
 
 - 한 개의 프로젝트 당 하나의 Leaderboard AppKey가 존재합니다.
@@ -65,29 +65,47 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림 2와 같습니다.
 
 ### 정렬방식
 
-정렬 방식은 팩터/주기 단위로 설정할 수 있습니다. 오름차순 정렬은 작은 점수부터 큰 점수로 정렬합니다.
+정렬 방식은 팩터/주기 단위로 설정할 수 있습니다. 
 
-![[그림 3 오름차순 정렬]](http://static.toastoven.net/toastcloud/static/common/img/cms_img/ranking/rank_3.jpg)
+오름차순 정렬은 작은 점수부터 큰 점수로 정렬합니다.
+
+![[그림 3 오름차순 정렬]](http://static.toastoven.net/prod_leaderboardv2/overview_3.jpg)
 <center>[그림 3 오름차순 정렬]</center>
 
 내림차순 정렬은 큰 점수부터 작은 점수로 정렬합니다.
 
-![[그림 4 내림차순 정렬]](http://static.toastoven.net/toastcloud/static/common/img/cms_img/ranking/rank_4.jpg)
+![[그림 4 내림차순 정렬]](http://static.toastoven.net/prod_leaderboardv2/overview_4.jpg)
 <center>[그림 4 내림차순 정렬]</center>
 
 ### 업데이트 방식
 
-업데이트 방식은 팩터 단위로 최고/최근/누적 점수로 설정할 수 있습니다. 최고 점수 업데이트는 이전 점수보다 높은 점수인 경우 업데이트합니다.
+업데이트 방식은 팩터 단위로 최고/최근/누적 점수로 설정할 수 있습니다. 
 
-![[그림 5 최고 점수 업데이트]](http://static.toastoven.net/toastcloud/static/common/img/cms_img/ranking/rank_5.jpg)
+최고 점수 업데이트는 이전 점수보다 높은 점수인 경우 업데이트합니다.
+
+![[그림 5 최고 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_5.jpg)
 <center>[그림 5 최고 점수 업데이트]</center>
 
 최근 점수 업데이트는 가장 마지막 점수를 업데이트합니다.
 
-![[그림 6 최근 점수 업데이트]](http://static.toastoven.net/toastcloud/static/common/img/cms_img/ranking/rank_6.jpg)
+![[그림 6 최근 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_6.jpg)
 <center>[그림 6 최근 점수 업데이트]</center>
 
 누적 점수 업데이트는 기존 점수의 누적 합입니다.
 
-![[그림 7 누적 점수 업데이트]](http://static.toastoven.net/toastcloud/static/common/img/cms_img/ranking/rank_7.jpg)
+![[그림 7 누적 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_7.jpg)
 <center>[그림 7 누적 점수 업데이트]</center>
+
+### 동점자 순위 결정 방식
+
+동점자 순위 결정 방식은 팩터 단위로 최초/최근 랭킹 획득자 우선순위로 설정할 수 있습니다.
+
+동점자가 여러명일 경우 가장 먼저 등록된 사용자가 더 높은 순위를 가집니다.
+
+![[그림 8 최초 랭킹 획득자 우선 순위]](http://static.toastoven.net/prod_leaderboardv2/overview_8.jpg)
+<center>[그림 8 최초 랭킹 획득자 우선 업데이트]</center>
+
+동점자가 여러명일 경우 가장 나중에 등록된 사용자가 더 높은 순위를 가집니다.
+
+![[그림 9 최근 랭킹 획득자 우선 순위]](http://static.toastoven.net/prod_leaderboardv2/overview_9.jpg)
+<center>[그림 9 최근 랭킹 획득자 우선 업데이트]</center>
