@@ -1,0 +1,1 @@
+## Game > LeaderBoard > Release Notes
