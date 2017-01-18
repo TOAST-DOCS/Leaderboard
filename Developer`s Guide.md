@@ -4,6 +4,7 @@ Leaderboard API 는 REST API 형태로 다음 3가지 종류를 제공합니다.
 
 #### Leaderboard 조회
 
+- Factor 에 등록된 사용자 수
 - 단일/다수 사용자 점수, 순위 조회
 - 일정 범위의 전체 점수, 순위 조회
 
@@ -20,14 +21,15 @@ Leaderboard API 는 REST API 형태로 다음 3가지 종류를 제공합니다.
 
 ## Leaderboard 조회
 
-### 단일 사용자 점수/순위 조회
 
-원하는 한 명의 사용자의 Leaderboard 정보를 조회할 수 있는 방법입니다.
+### Factor 에 등록된 사용자 수 조회
+
+원하는 한개의 Factor 에 등록된 사용자의 수 를 조회하는 방법입니다.
 
 [URL]
 
 ```
-GET https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/{factor}/users/{userId}/rank-info
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count
 ```
 
 [표 1] 단일 사용자 점수/순위 조회 URL 파라미터
@@ -36,7 +38,6 @@ GET https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/{
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey|
 |factor|	Int|	Leaderboard 팩터|
-|userid|	String|	사용자 ID|
 
 [표 2] 단일 사용자 점수/순위 조회 Query 파라미터
 
@@ -48,7 +49,7 @@ GET https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/{
 [Example Request]
 
 ```
-GET https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/{factor}/users/{userid}/rank-info?transactionid=12345&ispast=false
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count&transactionid=12345&ispast=false
 ```
 
 [Example Response]
@@ -58,20 +59,72 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-		"header": {
-			"transactionId": 12345,
-			"isSuccessful": true,
-			"resultCode": 200,
-			"resultMessage": "OK",
-			"serviceCode": 1
-		},
+	"header": {
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
+	},
+	"transactionId": 0,
+	"resultInfo": {
+		"resultCode": 0,
+		"totalCount": 7
+	}
+}
+```
 
-		"factor": 1,
-		"userId": "user1234",
+### 단일 사용자 점수/순위 조회
+
+원하는 한 명의 사용자의 Leaderboard 정보를 조회할 수 있는 방법입니다.
+
+[URL]
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+```
+
+[표 1] 단일 사용자 점수/순위 조회 URL 파라미터
+
+|이름|	자료형|	설명|
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey|
+|factor|	Int|	Leaderboard 팩터|
+
+[표 2] 단일 사용자 점수/순위 조회 Query 파라미터
+
+|이름|	자료형|	설명|
+|---|---|---|
+|userId|	String|	사용자 ID|
+|transactionid|	Int64|	트랜잭션 ID|
+|ispast|	Bool|	이전 Leaderboard 포함 여부 (입력하지 않을 시, 기본값은 False)|
+
+[Example Request]
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userId}&transactionid=12345&ispast=false
+```
+
+[Example Response]
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+	"header": {
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
+	},
+	"transactionId": 0,
+	"userInfo": {
+		"resultCode": 0,
+		"userId": "user1",
 		"score": 1000,
 		"rank": 2,
-		"rankChange": 0,
-		"lastUpdate": 1408599041
+		"preRank": 0,
+		"extra": "extra Data1",
+		"date": "2017-01-02T16:28:51+09:00"
+	}
 }
 ```
 
@@ -82,7 +135,7 @@ Content-Type: application/json
 [URL]
 
 ```
-POST https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/${appkey}/rank-infos/get
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/get-users
 ```
 
 [표 3] 다수 사용자 점수/순위 조회 Body 파라미터
@@ -91,27 +144,30 @@ POST https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/${appkey}/rank-in
 |---|---|---|
 |transactionId|	Int64|	트랜잭션 ID|
 |isPast|	Bool|	이전 Leaderboard 포함 여부 (입력하지 않을 시, 기본값은 False)|
-|userlist|	Vector|	조회를 원하는 유저 리스트|
+|userIDsWithFactor|	List|	조회를 원하는 유저 리스트와 팩터의 리스트 |
+|factor|	Int|	조희를 원하는 팩터 |
+|userIds|	List|	조회를 원하는 유저 리스트 |
 
 [Example Request]
 
 ```
-POST https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/${appkey}/rank-infos/get
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/get-users
 Content-Type: application/json
 {
-        "transactionId": 12345,
-        "isPast": false,
-        "users": [
-            {
-                "factor": 1,
-                   "userIDList" : ["user1000", "user1001", "user1002"]            
-            },
-            {
-                "factor": 2,
-                   "userIDList" : ["user2000", "user2001", "user2002"]            
-            }
-        ]
+	"isPast": false,
+	"transactionId": 12345,
+	"userIDsWithFactor": [
+		{
+			"factor": 1,
+			"userIds": ["user1", "user2", "user3" ]
+		},
+		{
+			"factor": 2,
+			"userIds": ["user4", "user5", "user6" ]
+		}
+	]
 }
+
 ```
 
 [Example Response]
@@ -120,48 +176,77 @@ Content-Type: application/json
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-		"header": {
-			"transactionId": 12345,
-			"isSuccessful": true,
-			"resultCode": 200,
-			"resultMessage": "OK",
-			"serviceCode": 1
+	"header": {
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
+	},
+	"transactionId": 12345,
+	"userInfosWithFactor": [
+	{
+		"resultCode": 0,
+		"factor": 1,
+		"userInfos": [
+		{
+			"resultCode": 0,
+			"userId": "user1",
+			"score": 1000,
+			"rank": 2,
+			"preRank": 0,
+			"extra": "extra Data1",
+			"date": "2017-01-02T16:42:31+09:00"
 		},
-		"rankInfos": [
-			{
-			"factor": 1,
-				"totalSize" : 2,
-   				"userRankInfoList" : [
-    					{
-     						"userId" : "user1000",
-     						"score" : 1200,
-    						"rank" : 1,
-     						"rankChange" : 0,
-     						"lastUpdate" : 1408599041
-   					},
-    					{
-     						"userId" : "user1001",
-     						"score" : 1100,
-    						"rank" : 2,
-     						"rankChange" : 0,
-     						"lastUpdate" : 1408599042
-   					}
-				]			
-			},
-			{
-			"factor": 2,
-				"totalSize" : 1,
-   				"userRankInfoList" : [
-    					{
-     						"userId" : "user2000",
-     						"score" : 2200,
-    						"rank" : 1,
-     						"rankChange" : 0,
-     						"lastUpdate" : 1408599041
-   					}					
-				]			
-			}
-		]
+		{
+			"resultCode": 0,
+			"userId": "user2",
+			"score": 1100,
+			"rank": 1,
+			"preRank": 0,
+			"extra": "extra Data2",
+			"date": "2017-01-02T16:42:31+09:00"
+		},
+		{
+			"resultCode": 462850,
+			"userId": "user3",
+			"score": 1100,
+			"rank": 0,
+			"preRank": 0,
+			"extra": "",
+			"date": "2017-01-02T16:42:31+09:00"
+		}]
+	},
+	{
+		"resultCode": 0,
+		"factor": 2,
+		"userInfos": [
+		{
+			"resultCode": 0,
+			"userId": "user4",
+			"score": 1200,
+			"rank": 3,
+			"preRank": 0,
+			"extra": "extra Data4",
+			"date": "2017-01-02T16:42:28+09:00"
+		},
+		{
+			"resultCode": 0,
+			"userId": "user5",
+			"score": 1300,
+			"rank": 2,
+			"preRank": 0,
+			"extra": "extra Data5",
+			"date": "2017-01-02T16:42:28+09:00"
+		},
+		{
+			"resultCode": 462850,
+			"userId": "user6",
+			"score": 1300,
+			"rank": 0,
+			"preRank": 0,
+			"extra": "",
+			"date": "2017-01-02T16:42:28+09:00"
+		}]
+	}]
 }
 ```
 
@@ -172,7 +257,7 @@ Content-Type: application/json
 [URL]
 
 ```
-GET https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/{factor}/rank-infos
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
 ```
 
 [표 4] 일정 범위의 전체 점수/순위 조회 URL 파라미터
@@ -194,7 +279,7 @@ GET https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/{
 [Example Request]
 
 ```
-GET https://api-ranking.cloud.toast.com/ranking/v3/api/ appkey/{appkey}/factors/{factor}/rank-infos?transactionid=12345&ispast=false&start=1&size=3
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionid=12345&ispast=false&start=1&size=3
 ```
 
 [Example Response]
@@ -204,42 +289,42 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 {
 	"header": {
-			"transactionId": 12345,
-			"isSuccessful": true,
-			"resultCode": 200,
-			"resultMessage": "OK",
-			"serviceCode": 1
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
 	},
-	"userRankInfoList": [
-			{
-
-				   "factor": 1,
-				   "userId": "user0000",
-				   "score": 1100,
-				   "rank": 1,
-				   "rankChange": 0,
-				   "lastUpdate": 1408599990
-			},
-			{
-
-				   "factor": 1,
-				   "userId": "user1234",
-				   "score": 1000,
-				   "rank": 2,
-				   "rankChange": 0,
-				   "lastUpdate": 1408599041
-			},
-			{
-
-				   "factor": 1,
-				   "userId": "user0001",
-				   "score": 900,
-				   "rank": 3,
-				   "rankChange": 0,
-				   "lastUpdate": 1408589468
-			}
-	],
-	"totalSize": 1000
+	"transactionId": 0,
+	"userInfosByRange": {
+		"resultCode": 0,
+		"factor": 1,
+		"userInfos": [
+		{
+			"resultCode": 0,
+			"userId": "user2",
+			"score": 1100,
+			"rank": 1,
+			"preRank": 0,
+			"extra": "extra Data2",
+			"date": "2017-01-02T16:42:28+09:00"
+		},
+		{
+			"resultCode": 0,
+			"userId": "user1",
+			"score": 1000,
+			"rank": 2,
+			"preRank": 0,
+			"extra": "extra Data1",
+			"date": "2017-01-02T16:42:28+09:00"
+		},
+		{
+			"resultCode": 0,
+			"userId": "test4",
+			"score": 200,
+			"rank": 3,
+			"preRank": 0,
+			"extra": "extraData",
+			"date": "2017-01-02T16:42:28+09:00"
+		}]
 }
 ```
 
@@ -252,7 +337,7 @@ Content-Type: application/json
 [URL]
 
 ```
-POST https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/{factor}/users/{userid}/score
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users/{userId}/score
 ```
 
 [표 6] 단일 사용자 점수 등록 URL 파라미터
@@ -261,7 +346,7 @@ POST https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey|
 |factor|	Int|	팩터|
-|userid|	String|	사용자 ID|
+|userId|	String|	사용자 ID|
 
 [표 7] 단일 사용자 점수 등록 Body 파라미터
 
@@ -273,12 +358,12 @@ POST https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/
 [Example Request]
 
 ```
-POST https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/{factor}/users/{userid}/score
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users/{userId}/score
 Content-Type: application/json
 
 {
-		"transactionId": 12345,
-		"score": 1005
+	"score": 10,
+	"transactionId": 1234
 }
 ```
 
@@ -289,24 +374,87 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-		"header": {
-			"transactionId": 12345,
-			"isSuccessful": true,
-			"resultCode": 200,
-			"resultMessage": "OK",
-			"serviceCode": 1
-		}
+	"header": {
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
+  	},
+  	"transactionId": 1234,
+  	"resultInfo": {
+		"resultCode": 0,
+		"userId": "test1"
+  	}
 }
 ```
 
-### 다수 사용자 Leaderboard 등록
+
+### 단일 사용자 점수/ExtraData 등록
+
+원하는 한 명의 사용자 점수와 Extra Data를 등록할 수 있는 방법입니다.
+
+[URL]
+
+```
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users/{userId}/score-extra
+```
+
+[표 6] 단일 사용자 점수 등록 URL 파라미터
+
+|이름|	자료형|	설명|
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey|
+|factor|	Int|	팩터|
+|userId|	String|	사용자 ID|
+
+[표 7] 단일 사용자 점수 등록 Body 파라미터
+
+|이름|	자료형|	설명|
+|---|---|---|
+|transactionId|	Int64|	트랜잭션 ID|
+|score|	Double|	사용자 점수|
+|extra|	String|	사용자 Extra Data (최대 16Byte)|
+
+[Example Request]
+
+```
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users/{userId}/score-extra
+Content-Type: application/json
+
+{
+	"extra": "extraData",
+	"score": 200,
+	"transactionId": 1234
+}
+```
+
+[Example Response]
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+	"header": {
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
+	},
+	"transactionId": 1234,
+	"resultInfo": {
+		"resultCode": 0,
+		"userId": "test4"
+	}
+}
+```
+
+### 다수 사용자 점수 등록
 
 원하는 사용자들 점수를 등록할 수 있는 방법입니다.
 
 [URL]
 
 ```
-POST https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/${appkey}/scores
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/scores
 ```
 
 [표 8] 다수 사용자 Leaderboard 등록 Body 파라미터
@@ -314,40 +462,46 @@ POST https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/${appkey}/scores
 |이름|	자료형|	설명|
 |---|---|---|
 |transactionId|	Int64|	트랜잭션 ID|
-|scores|	Vector|	사용자 점수 리스트|
+|userScoresWithFactor|	List|	사용자 점수 리스트와 팩터의 리스트|
+|factor | Int| 등록을 원하는 팩터|
+|userScores| List| 등록을 원하는 사용자 ID/점수의 리스트|
+|userId | String | 사용자 ID |
+|score | Double | 사용자 점수 |
 
 [Example Request]
 
 ```
-POST https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/${appkey}/scores
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/scores
 
 Content-Type: application/json
 {
-    "transactionId": 12345,
-    "scores": [
-    {
-        "factor": 1,
-        "userScoreList" : [
-        {
-            "userId": "user1000",
-            "score": 1200
-        },
-        {
-            "userId": "user1001",
-            "score": 1100
-        }
-        ]
-    },
-    {
-        "factor": 1,
-        "userScoreList" : [
-        {
-            "userId": "user1000",
-            "score": 1200
-        }
-        ]
-    }
-    ]
+	"transactionId": 12345,
+  	"userScoresWithFactor": [
+		{
+			"factor": 1,
+			"userScores": [
+			{
+				"score": 1000,
+				"userId": "user1"
+			},
+			{
+				"score": 1100,
+				"userId": "user2"
+			}]
+		},
+		{
+			"factor": 2,
+			"userScores": [
+				{
+				"score": 1200,
+				"userId": "user4"
+				},
+				{
+				"score": 1300,
+				"userId": "user5"
+				}]
+		}
+	]
 }
 ```
 
@@ -358,13 +512,147 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-		"header": {
-				"transactionId": 12345,
-				"isSuccessful": true,
-				"resultCode": 200,
-				"resultMessage": "OK",
-				"serviceCode": 1
-		}
+	"header": {
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
+	},
+	"transactionId": 12345,
+	"resultInfosWithFactor": [
+	{
+		"resultCode": 0,
+		"factor": 1,
+		"resultInfos": [
+			{
+				"resultCode": 0,
+				"userId": "user1"
+			},
+			{
+				"resultCode": 0,
+				"userId": "user2"
+			}
+		]
+	},
+	{
+		"resultCode": 0,
+		"factor": 2,
+		"resultInfos": [
+			{
+				"resultCode": 0,
+				"userId": "user4"
+			},
+			{
+				"resultCode": 0,
+				"userId": "user5"
+			}
+		]
+	}]
+}
+```
+
+### 다수 사용자 점수/ExtraData 등록
+
+원하는 사용자들 점수와 Extra Data를 등록할 수 있는 방법입니다.
+
+[URL]
+
+```
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/scores-extra
+```
+
+[표 8] 다수 사용자 Leaderboard 등록 Body 파라미터
+
+|이름|	자료형|	설명|
+|---|---|---|
+|transactionId|	Int64|	트랜잭션 ID|
+|userScoresWithFactor|	List|	사용자 점수 리스트와 팩터의 리스트|
+|factor | Int| 등록을 원하는 팩터|
+|userScores| List| 등록을 원하는 사용자 ID/점수의 리스트|
+|userId | String | 사용자 ID |
+|score | Double | 사용자 점수 |
+|extra | String | 사용자 Extra Data (최대 16Byte) |
+
+[Example Request]
+
+```
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/scores-extra
+
+Content-Type: application/json
+{
+	"transactionId": 12345,
+  	"userInfosWithFactor": [
+	{
+		"factor": 1,
+		"userInfos": [
+		{
+			"score": 1000,
+			"userId": "user1",
+			"extra": "extra Data1"
+		},
+		{
+			"score": 1100,
+			"userId": "user2",
+			"extra": "extra Data2"
+		}]
+	},
+	{
+		"factor": 2,
+		"userInfos": [
+		{
+			"score": 1200,
+			"userId": "user4",
+			"extra": "extra Data4"
+		},
+		{
+			"score": 1300,
+			"userId": "user5",
+			"extra": "extra Data5"
+		}]
+	}]
+}
+```
+
+[Example Response]
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+	"header": {
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
+	},
+	"transactionId": 12345,
+	"resultInfosWithFactor": [
+	{
+		"resultCode": 0,
+		"factor": 1,
+		"resultInfos": [
+			{
+				"resultCode": 0,
+				"userId": "user1"
+			},
+			{
+				"resultCode": 0,
+				"userId": "user2"
+			}
+		]
+	},
+	{
+		"resultCode": 0,
+		"factor": 2,
+		"resultInfos": [
+			{
+				"resultCode": 0,
+				"userId": "user4"
+			},
+			{
+				"resultCode": 0,
+				"userId": "user5"
+			}
+		]
+	}]
 }
 ```
 
@@ -372,12 +660,12 @@ Content-Type: application/json
 
 ### 단일 사용자 Leaderboard정보 삭제
 
-원하는 한 명의 사용자 Leaderboard정보를 삭제하는 방법입니다. 입력한 사용자 Leaderboard 정보가 삭제됩니다. 모든 팩터 삭제를 원하는 경우, factor 값에 -1을 입력해서 요청합니다.
+원하는 한 명의 사용자 Leaderboard정보를 삭제하는 방법입니다. 입력한 사용자 Leaderboard 정보가 삭제됩니다. 
 
 [URL]
 
 ```
-DELETE https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/{factor}/users/{userid}
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
 ```
 
 [표 9] 다수 사용자 Leaderboard 삭제 URL 파라미터
@@ -386,19 +674,19 @@ DELETE https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factor
 |---|---|---|
 |appkey|	String|	Leaderboard Service AppKey|
 |Factor|	Int|	팩터|
-|userid|	String|	사용자 ID|
 
 [표 10] 다수 사용자 Leaderboard 삭제 Query 파라미터
 
 |이름|	자료형|	설명|
 |---|---|---|
+|userid|	String|	사용자 ID|
 |transactionid|	Int64|	트랜잭션 ID|
 |ispast|	Bool|	이전 Leaderboard 포함 여부 (입력하지 않을 시, 기본값은 False)|
 
 [Example Request]
 
 ```
-DELETE https://api-ranking.cloud.toast.com/ranking/v3/api/appkey/{appkey}/factors/{factor}/users/{userid}?transactionid=12345&ispast=false
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userid}?transactionid=12345&ispast=false
 ```
 
 [Example Response]
@@ -418,22 +706,37 @@ Content-Type: application/json
 }
 ```
 
+## 시각
+
+사용자의 업데이트 시간은 RFC 3339 정의를 따릅니다.
+
+https://tools.ietf.org/html/rfc3339
+
 ## 에러 코드
 
-[표 11]의 에러 코드는 Response body의 header에 있는 resultCode와 resultMessage의 의미를 설명합니다.  
+[표 11]의 에러 코드는 Response body의 header/body에 있는 resultCode와 resultMessage의 의미를 설명합니다.  
+header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에러 코드가 보이는 경우는 아래 [참고] 링크를 참고 부탁드립니다.
 
 [표 11] 에러 코드  
 
-|Result Code|	설명|
-|---|---|
-|200|	OK : 요청 성공|
-|400|	Bad Request : 잘못된 요청일 경우|
-|401|	Unauthorized : 유효하지 않은 Leaderboard AppKey일 경우|
-|404|	Not Found : 요청한 리소스를 찾을 수 없을 경우|
-|501|	Not Implemented : 데이터가 존재하지 않을 경우|
+|Result Code| Result Code(Hex) | Result Message |설명|
+|---|---|---|---|
+|0|	0x00000000 |LEADERBOARD_SUCCESS | 요청 성공.|
+|1|	0x00000001 |LEADERBOARD_SUCCESS_BUT_NOT_UPDATE | 요청은 성공 했지만, 기존과 동일한 데이터가 들어와서 업데이트 하지 않음.|
+|459777|	0x00070401 |LEADERBOARD_ERROR_APPKEY_VERIFIER | 앱키 인증 실패. |
+|462849|	0x00071001 |LEADERBOARD_AP_ERROR_INITIALTIZE | 초기화 실패. |
+|462850|	0x00071002 |LEADERBOARD_AP_ERROR_NOT_EXIST_USER | 등록되지 않은 사용자. |
+|462851|	0x00071003 |LEADERBOARD_AP_ERROR_NOT_EXIST_FACTOR | 등록되지 않은 팩터.|
+|462852|	0x00071004 |LEADERBOARD_AP_ERROR_NOT_EXIST_APPKEY | 등록되지 않은 앱키. |
+|462853|	0x00071005 |LEADERBOARD_AP_ERROR_TOO_BIG_EXTRA | Extra Data 제한 길이 초과. |
+|462854|	0x00071006 |LEADERBOARD_AP_ERROR_WRONG_RANGE | 잘못된 범위. |
+|462855|	0x00071007 |LEADERBOARD_AP_ERROR_WRONG_PARAM | 잘못된 파라메터. |
+|463000|	0x00071098 |LEADERBOARD_AP_ERROR_SYSTEM | 시스템 에러.|
+|463001|	0x00071099 |LEADERBOARD_AP_ERROR_UNKOWN | 미확인 에러.|
+
 
 > [참고]  
-> HTTP 상태 코드가 400일 경우, API 형식에 맞지 않을 때 발생합니다.   
-> HTTP 상태 코드는 200이고 결과 코드가 400일 경우, 요청이 API 형식에는 맞으나 값이 잘못되었을 때 발생합니다.  
 > 그 외 일반적인 에러 코드에 대한 추가 정보는 다음 링크에서 확인하기 바랍니다.   
 > http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml  
+
+
