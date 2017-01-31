@@ -71,7 +71,7 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 
 #### 한계 유저 수
 
-- 해당 팩터에 등록될 수 있는 최대 유저 수를 뜻합니다. 최대 1억 명까지 입력할 수 있습니다. 
+- 해당 팩터에 등록될 수 있는 최대 유저 수를 뜻합니다. 최대 1억 명까지 입력할 수 있습니다.
 
 #### 기타정보
 
@@ -102,6 +102,11 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 <center>[그림 7 랭킹 데이터 검색]</center>
 
 2\) 검색 기준을 선택해 유저 정보를 검색합니다.
+![[그림 8 유저 정보 검색]](http://static.toastoven.net/prod_leaderboardv2/user_console_6.JPG)
+<center>[그림 8 유저 정보 검색]</center>
+
+각 항목별 설명
+
 #### 주기 설정
 - 지난 주기 : 이전 주기의 랭킹 정보를 기준으로 검색합니다.
 - 현재 주기 : 현재 주기의 랭킹 정보를 기준으로 검색합니다.
@@ -115,11 +120,11 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 #### 2. 유저 랭킹 삭제
 
 1\) 조회 후 삭제할 유저를 선택합니다.
-![[그림 8 삭제할 랭킹 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/user_console_6.JPG)
-<center>[그림 8 삭제할 랭킹 데이터 선택]</center>
+![[그림 9 삭제할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/user_console_7.JPG)
+<center>[그림 9 삭제할 유저 데이터 선택]</center>
 
 2\) Scores & Ranks 삭제 버튼을 누르면 삭제 여부를 묻는 팝업이 뜹니다. 삭제 후 취소가 불가능하니 신중히 삭제해야 합니다.
-![[그림 9 유저 랭킹 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/user_console_7.JPG)
-<center>[그림 9 유저 랭킹 삭제 팝업]</center>
+![[그림 10 유저 랭킹 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/user_console_8.JPG)
+<center>[그림 10 유저 랭킹 삭제 팝업]</center>
 
-※ 개발과 관련된 api 정보는 [Developer`s Guide](http://alpha-docs.cloud.toast.com/ko/Game/Leaderboard/Developer%60s%20Guide/) 를 참조해주세요.
+※ 개발과 관련된 api 정보는 [Developer's Guide](/ko/Game/Leaderboard/Developer%60s%20Guide/) 를 참조해주세요.
