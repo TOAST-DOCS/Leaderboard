@@ -1,8 +1,9 @@
 ## Game > LeaderBoard > Release Notes
+
 ### 2017.02.23
 
 * UI 변경
-	* UserConsole 에서 팩터 추가 시 주기가 'T' 인 경우 팩터 리셋 시간 노출되지 않도록 UI 변경
+	* UserConsole 에서 팩터 추가 시 주기가 'Total' 인 경우 팩터 리셋 시간 노출되지 않도록 UI 변경
 
 * 기능 추가
 	* UserConsole 에서 유저 ID별 랭킹 조회 시 과거 주기도 검색될 수 있도록 기능 추가
