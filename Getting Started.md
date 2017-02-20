@@ -27,8 +27,8 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 
 1\) 서비스 활성화 후 팩터 정보를 추가해야 합니다. [Game] > [Leaderboard] > [랭킹 설정] > [+추가] 버튼을 클릭해 팩터를 등록합니다.
 
-> [참고] 	
-> 팩터(Factor)는 [주기, 업데이트 기준, 정렬기준]의 묶은 단위입니다. 	
+> [참고]\
+> 팩터(Factor)는 [주기, 업데이트 기준, 정렬기준]의 묶은 단위입니다.\
 > 최고점수 랭킹을 일간, 주간, 월간으로 사용하고 싶다면 팩터를 3가지를 만들어야 합니다.
 
 ![[그림 3 팩터 등록을 위하여 [+추가] 클릭]](http://static.toastoven.net/prod_leaderboardv2/user_console_1.JPG)
@@ -127,4 +127,4 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 ![[그림 10 유저 랭킹 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/user_console_8.JPG)
 <center>[그림 10 유저 랭킹 삭제 팝업]</center>
 
-※ 개발과 관련된 api 정보는 [Developer's Guide](/ko/Game/Leaderboard/Developer%60s%20Guide/) 를 참조해주세요.
+※ 개발과 관련된 api 정보는 [Developer's Guide](/Game/Leaderboard/Developer%60s%20Guide/) 를 참조해주세요.
