@@ -710,7 +710,7 @@ Content-Type: application/json
 
 사용자의 업데이트 시간은 RFC 3339 정의를 따릅니다.
 
-https://tools.ietf.org/html/rfc3339
+> https://tools.ietf.org/html/rfc3339
 
 ## 에러 코드
 
