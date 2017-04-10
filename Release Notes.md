@@ -1,5 +1,14 @@
 ## Game > LeaderBoard > Release Notes
 
+
+### 2017.04.20
+
+#### 기능 개선/변경
+* [Console] UI 변경
+
+#### 버그 수정
+* [API] 서버로 요청이 오면, 비정상적인 요청인 경우에도, HTTP Status Code 를 200으로 리턴.
+
 ### 2017.02.23
 
 #### 기능 개선/변경
