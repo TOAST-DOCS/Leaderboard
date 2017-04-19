@@ -9,14 +9,14 @@
 
 Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 시 서비스가 활성화되고 관리화면으로 전환됩니다.
 
-![[그림 1 Leaderboard 서비스 활성화]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_1.JPG)
+![[그림 1 Leaderboard 서비스 활성화]](http://static.toastoven.net/prod_leaderboardv2/rank_8.jpg)
 <center>[그림 1 Leaderboard 서비스 활성화]</center>
 
 ### 2. API URL/AppKey
 
 서비스 활성화 후 접속 시 API URL 및 Appkey 값을 확인할 수 있습니다.
 
-![[그림 2 Leaderboard URL & AppKey 확인]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_2.JPG)
+![[그림 2 Leaderboard URL & AppKey 확인]](http://static.toastoven.net/prod_leaderboardv2/rank_11.jpg)
 <center>[그림 2 Leaderboard URL & AppKey 확인]</center>
 
 ## 각 탭 별 설명
@@ -27,27 +27,23 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 
 1\) 서비스 활성화 후 팩터 정보를 추가해야 합니다. [Game] > [Leaderboard] > [랭킹 설정] > [+추가] 버튼을 클릭해 팩터를 등록합니다.
 
-> [참고]\
-> 팩터(Factor)는 [주기, 업데이트 기준, 정렬기준]의 묶은 단위입니다.\
+> [참고] 	
+> 팩터(Factor)는 [주기, 업데이트 기준, 정렬기준]의 묶은 단위입니다. 	
 > 최고점수 랭킹을 일간, 주간, 월간으로 사용하고 싶다면 팩터를 3가지를 만들어야 합니다.
 
-![[그림 3 팩터 등록을 위하여 [+추가] 클릭]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_3.JPG)
+![[그림 3 팩터 등록을 위하여 [+추가] 클릭]](http://static.toastoven.net/prod_leaderboardv2/user_console_1.JPG)
 <center>[그림 3 팩터 등록을 위하여 [+추가] 클릭]</center>
 
 2\) [+추가] 버튼을 클릭하면 그림 3과 같은 <팩터 추가> 팝업이 열립니다.
 
-![[그림 4 팩터 추가]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_4.JPG)
+![[그림 4 팩터 추가]](http://static.toastoven.net/prod_leaderboardv2/user_console_2.JPG)
 <center>[그림 4 팩터 추가]</center>
 
 각 항목별 설명
 
-#### 팩터 이름
-
-- 랭킹을 구분할 이름이며 차후 팩터 검색에 사용될 수 있습니다.
-
 #### 팩터 주기
 
-- 랭킹의 초기화 기간을 의미하며 일간, 주간, 월간, 전체가 있습니다. 주기 또한 팩터 검색에 사용될 수 있으며 각 주기를 기준으로 유저들을 분류합니다.
+- 랭킹의 초기화 기간을 의미하며 일간, 주간, 월간, 전체가 있습니다. 각 주기를 기준으로 유저들을 분류합니다.
 
 #### 랭킹 업데이트 기준
 
@@ -81,37 +77,33 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 
 - 팩터의 extra 데이터로 필요 시 입력합니다.
 
+#### 설명
+
+- 해당 랭킹에 대한 설명으로 사용자의 식별 편의를 위해 제공합니다.
+
 > 팩터ID는 팩터 추가 시 자동으로 지정됩니다.
 
-#### 2. 팩터 검색
-
-1\) 검색 조건이 팩터 이름일 시 이름에 검색어가 포함된 팩터를 검색합니다.
-![[그림 5-1 검색 기준 팩터 이름]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_11.JPG)
-
-2\) 검색 조건이 팩터 주기일 시 선택 목록에 있는 주기로 검색합니다.
-![[그림 5-1 검색 기준 팩터 주기]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_12.JPG)
-
-#### 3. 팩터 삭제
+#### 2. 팩터 삭제
 
 1\) 삭제할 팩터들을 선택합니다.
-![[그림 6 랭킹 설정에서 삭제할 팩터 선택]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_5.JPG)
-<center>[그림 6 삭제할 팩터 선택]</center>
+![[그림 5 랭킹 설정에서 삭제할 팩터 선택]](http://static.toastoven.net/prod_leaderboardv2/user_console_3.JPG)
+<center>[그림 5 삭제할 팩터 선택]</center>
 
 2\) 삭제 버튼을 클릭시 삭제 팝업이 나타납니다. 팩터는 삭제 시 복구할 수 없으니 신중히 삭제해야 합니다.
-![[그림 7 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_6.JPG)
-<center>[그림 7 삭제 팝업]</center>
+![[그림 6 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/user_console_4.JPG)
+<center>[그림 6 삭제 팝업]</center>
 
 ### [랭킹 데이터]
 
 #### 1. 유저 랭킹 조회
 
-1\) 팩터 등록 후 유저 랭킹 조회 탭으로 가면 검색 기준 > 팩터 ID에 등록한 팩터들이 목록화 됩니다. 팩터 주기를 선택하면 각 주기에 맞는 팩터들이 선별됩니다.
-![[그림 8 랭킹 데이터 검색]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_7.JPG)
-<center>[그림 8 랭킹 데이터 검색]</center>
+1\) 팩터 등록 후 유저 랭킹 조회 탭으로 가면 검색 기준 > 팩터 ID에 등록한 팩터들이 목록화 됩니다.
+![[그림 7 랭킹 데이터 검색]](http://static.toastoven.net/prod_leaderboardv2/user_console_5.JPG)
+<center>[그림 7 랭킹 데이터 검색]</center>
 
 2\) 검색 기준을 선택해 유저 정보를 검색합니다.
-![[그림 9 유저 정보 검색]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_8.JPG)
-<center>[그림 9 유저 정보 검색]</center>
+![[그림 8 유저 정보 검색]](http://static.toastoven.net/prod_leaderboardv2/user_console_6.JPG)
+<center>[그림 8 유저 정보 검색]</center>
 
 각 항목별 설명
 
@@ -128,11 +120,11 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 #### 2. 유저 랭킹 삭제
 
 1\) 조회 후 삭제할 유저를 선택합니다.
-![[그림 10 삭제할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_9.JPG)
-<center>[그림 10 삭제할 유저 데이터 선택]</center>
+![[그림 9 삭제할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/user_console_7.JPG)
+<center>[그림 9 삭제할 유저 데이터 선택]</center>
 
 2\) Scores & Ranks 삭제 버튼을 누르면 삭제 여부를 묻는 팝업이 뜹니다. 삭제 후 취소가 불가능하니 신중히 삭제해야 합니다.
-![[그림 11 유저 랭킹 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_10.JPG)
-<center>[그림 11 유저 랭킹 삭제 팝업]</center>
+![[그림 10 유저 랭킹 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/user_console_8.JPG)
+<center>[그림 10 유저 랭킹 삭제 팝업]</center>
 
 ※ 개발과 관련된 api 정보는 [Developer's Guide](/Game/Leaderboard/Developer%60s%20Guide/) 를 참조해주세요.
