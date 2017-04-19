@@ -395,7 +395,7 @@ Content-Type: application/json
 [URL]
 
 ```
-POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users/{userId}/score-extra
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users/{userId}/score-with-extra
 ```
 
 [표 6] 단일 사용자 점수 등록 URL 파라미터
@@ -417,7 +417,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 [Example Request]
 
 ```
-POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users/{userId}/score-extra
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users/{userId}/score-with-extra
 Content-Type: application/json
 
 {
@@ -557,7 +557,7 @@ Content-Type: application/json
 [URL]
 
 ```
-POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/scores-extra
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/scores-with-extra
 ```
 
 [표 8] 다수 사용자 Leaderboard 등록 Body 파라미터
@@ -575,7 +575,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 [Example Request]
 
 ```
-POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/scores-extra
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/scores-with-extra
 
 Content-Type: application/json
 {
