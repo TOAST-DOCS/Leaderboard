@@ -1,4 +1,14 @@
-## Game > LeaderBoard > Release Notes
+## Game > Leaderboard > Release Notes
+
+
+### 2017.04.20
+
+#### 기능 개선/변경
+* [Console] 랭킹 설정 탭에 팩터 검색 기능 추가. 팩터 이름, 팩터 주기에 따라 검색 가능
+* [Console] 랭킹 데이터 탭에 검색 창 간결하게 변경. 검색 시 팩터 주기를 기준으로 등록된 팩터 분류.
+
+#### 버그 수정
+* [API] 서버로 요청이 오면, 비정상적인 요청인 경우에도, HTTP Status Code 를 200으로 리턴.
 
 
 ### 2017.04.20

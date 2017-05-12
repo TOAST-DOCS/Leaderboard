@@ -1,4 +1,4 @@
-## Game > LeaderBoard > Developer's Guide
+## Game > Leaderboard > Developer's Guide
 
 Leaderboard API 는 REST API 형태로 다음 3가지 종류를 제공합니다.
 

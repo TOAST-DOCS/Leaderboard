@@ -1,4 +1,4 @@
-## Game > LeaderBoard > Overview
+## Game > Leaderboard > Overview
 
 게임에서 친구들과의 순위 경쟁은 빠질 수 없는 게임의 재미요소 입니다.
 Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 할 수 있도록 지원 합니다.
