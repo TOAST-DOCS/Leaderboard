@@ -1,4 +1,4 @@
-## Game > LeaderBoard > Release Notes
+## Game > Leaderboard > Release Notes
 
 
 ### 2017.04.20

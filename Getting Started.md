@@ -1,4 +1,4 @@
-## Game > LeaderBoard > Getting Started
+## Game > Leaderboard > Getting Started
 
 - Leaderboard 사용을 위해선 상품 이용 후 랭킹을 등록해야 합니다.
 - 상품 이용 후에는 게임의 랭킹정보 등록, 삭제 및 플레이어의 랭킹 정보 조회, 삭제를 할 수 있습니다.
