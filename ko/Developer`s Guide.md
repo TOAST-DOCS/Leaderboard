@@ -741,6 +741,6 @@ header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에�
 
 ## 주의 사항
 - 모든 API 사용을 하기 위해서는 상품 활성화 후 팩터를 등록해야 합니다.  
-- CORS(Cross Origin Resource Sharing) 는 지원하지 않습니다.
+- Leaderboard API 는 Server에서 호출 하는 것을 권장하고, Client 에서의 호출은 권장하고 있지 않습니다.
 
 
