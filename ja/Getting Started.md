@@ -94,7 +94,7 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 #### 3. 팩터 삭제
 
 1\) 삭제할 팩터들을 선택합니다.
-![[그림 6 랭킹 설정에서 삭제할 팩터 선택]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_5.JPG)
+![[그림 6 랭킹 설정에서 삭제할 팩터 선택]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod2_5.JPG)
 <center>[그림 6 삭제할 팩터 선택]</center>
 
 2\) 삭제 버튼을 클릭시 삭제 팝업이 나타납니다. 팩터는 삭제 시 복구할 수 없으니 신중히 삭제해야 합니다.
