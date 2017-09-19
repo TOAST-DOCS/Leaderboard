@@ -1,58 +1,37 @@
 ## Game > Leaderboard > Developer's Guide
 
-Leaderboard API 는 REST API 형태로 다음 3가지 종류를 제공합니다.
+Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
 
-#### Leaderboard 조회
-
-- Factor 에 등록된 사용자 수
-- 단일/다수 사용자 점수, 순위 조회
-- 일정 범위의 전체 점수, 순위 조회
-
-#### Leaderboard 등록
-
-- 단일/다수 사용자 점수 등록
-
-#### Leaderboard 삭제
-
-- 단일/모든 사용자 Leaderboard 정보 삭제
+### HTTP API
+- 유져 점수 등록 (단일 / 다수)
+- 유져 점수 획득 (단일 / 다수 / 범위)
+- 팩터에 들어있는 사용자 수 조회
+- 유져 점수 삭제 (단일)
 
 > [주의]  
 > API 사용을 하기 위해서는 반드시 팩터를 등록해야 합니다.  
 
-## Leaderboard 조회
+### Server Address
+서버 API 를 호출 하기 위한 서버 주소는 다음과 같습니다. 해당 주소는 Leaderboard 콘솔 화면에서도 확인 가능합니다.
+![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/developer_1.jpg)
 
+### AppKey
+AppKey 는 게임 서버에서 요청을 보낼시 꼭 필요한 고유 키로, Leaderboard 콘솔 화면에서 확인 가능합니다.
+![그림 2 AppKye](http://static.toastoven.net/prod_leaderboardv2/developer_2.jpg)
 
-### Factor 에 등록된 사용자 수 조회
+### TransactionId
+API 를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 있는 방안으로 TransactionId 기능을 제공합니다.
+호출하는 서버에서 HTTP Body 에 TransactionId 를 설정하여 API 를 호출하면, Leaderboard 서버는 응답 결과에 해당 TransactionId 를 설정하여 결과를 전달합니다. TransactionId 는 정수형 타입으로 받습니다.
 
-원하는 한개의 Factor 에 등록된 사용자의 수 를 조회하는 방법입니다.
-
-[URL]
-
-```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count
-```
-
-[표 1] 단일 사용자 점수/순위 조회 URL 파라미터
-
-|이름|	자료형|	설명|
+## Comon
+### HTTP Header
+API 호출 시 HTTP Header 에 다음 항목을 설정해야 합니다.
+| Name | Required |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey|
-|factor|	Int|	Leaderboard 팩터|
+| Content-Type | mandatory | application/json; charset=UTF-8 |
 
-[표 2] 단일 사용자 점수/순위 조회 Query 파라미터
-
-|이름|	자료형|	설명|
-|---|---|---|
-|transactionid|	Int64|	트랜잭션 ID|
-|ispast|	Bool|	이전 Leaderboard 포함 여부 (입력하지 않을 시, 기본값은 False)|
-
-[Example Request]
-
-```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionid=12345&ispast=false
-```
-
-[Example Response]
+### API Response
+모든 API 요청에 대한 응답으로 HTTP 200 OK 를 전달합니다. API 요청 성공 유무는 Response Body 의 header 항목을 참고하여 판단할 수 있습니다.
 
 ```
 HTTP/1.1 200 OK
@@ -64,17 +43,55 @@ Content-Type: application/json
 		"resultMessage": "LEADERBOARD_OK",
 		"isSuccessful": true
 	},
-	"transactionId": 0,
-	"resultInfo": {
-		"resultCode": 0,
-		"totalCount": 7
-	}
+	"transactionId": 2873495728794,
+	...
 }
 ```
 
-### 단일 사용자 점수/순위 조회
+## Get API
 
-원하는 한 명의 사용자의 Leaderboard 정보를 조회할 수 있는 방법입니다.
+### Get User Count In Factor
+
+원하는 한개의 Factor 에 등록된 사용자의 수 를 조회합니다.
+
+**[Method, URI]**
+
+| Method | URI |
+| --- | --- |
+| GET | https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count |
+
+**[Request Header]**
+
+공통 사항 확인
+
+**[Path Variable]**
+| Name | Type |	Value |
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey|
+|factor|	Int|	Leaderboard 팩터|
+
+**[Response Body]**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "header": {
+    "resultCode": 0,
+	"resultMessage": "LEADERBOARD_OK",
+	"isSuccessful": true
+  },
+  "transactionId": 0,
+  "resultInfo": {
+	"resultCode": 0,
+	"totalCount": 7
+  }
+}
+```
+
+### Get single user score/ranking
+
+원하는 한 명의 사용자의 정보를 조회할 수 있습니다.
 
 [URL]
 
@@ -128,7 +145,7 @@ Content-Type: application/json
 }
 ```
 
-### 다수 사용자 점수/순위 조회
+### Get multiple user score/ranking
 
 여러 사용자 Leaderboard 정보를 조회할 수 있는 방법입니다.
 
