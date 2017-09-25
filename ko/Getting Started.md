@@ -1,45 +1,44 @@
 ## Game > Leaderboard > Getting Started
 
-- Leaderboard 사용을 위해선 상품 이용 후 랭킹을 등록해야 합니다.
-- 상품 이용 후에는 게임의 랭킹정보 등록, 삭제 및 플레이어의 랭킹 정보 조회, 삭제를 할 수 있습니다.
+Leaderboard 사용을 위해선 상품 이용 후 랭킹을 등록해야 합니다.
+상품 이용 후에는 게임의 랭킹정보 등록, 삭제 및 플레이어의 랭킹 정보 조회, 삭제를 할 수 있습니다.
 
-## 사용 설정
+<br>
 
-### 1. Leaderboard 서비스 활성화
+## Configuration
+
+### Leaderboard Service Enable
 
 Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 시 서비스가 활성화되고 관리화면으로 전환됩니다.
 
 ![[그림 1 Leaderboard 서비스 활성화]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_1.JPG)
-<center>[그림 1 Leaderboard 서비스 활성화]</center>
 
-### 2. API URL/AppKey
+
+### API URL/AppKey
 
 서비스 활성화 후 접속 시 API URL 및 Appkey 값을 확인할 수 있습니다.
 
 ![[그림 2 Leaderboard URL & AppKey 확인]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_2.JPG)
-<center>[그림 2 Leaderboard URL & AppKey 확인]</center>
 
-## 각 탭 별 설명
+<br>
 
-### [랭킹 설정]
+## Factor Configuration Tab
 
-#### 1. 팩터 추가
+### Add Factor
 
-1\) 서비스 활성화 후 팩터 정보를 추가해야 합니다. [Game] > [Leaderboard] > [랭킹 설정] > [+추가] 버튼을 클릭해 팩터를 등록합니다.
+서비스 활성화 후 팩터 정보를 추가해야 합니다. [Game] > [Leaderboard] > [랭킹 설정] > [+추가] 버튼을 클릭해 팩터를 등록합니다.
 
-> [참고]
-> 팩터(Factor)는 [주기, 업데이트 기준, 정렬기준]의 묶은 단위입니다.
+> **[참고]**<br>
+> 팩터(Factor)는 [주기, 업데이트 기준, 정렬기준]의 묶은 단위입니다.<br>
 > 최고점수 랭킹을 일간, 주간, 월간으로 사용하고 싶다면 팩터를 3가지를 만들어야 합니다.
 
 ![[그림 3 팩터 등록을 위하여 [+추가] 클릭]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod2_3.JPG)
-<center>[그림 3 팩터 등록을 위하여 [+추가] 클릭]</center>
 
-2\) [+추가] 버튼을 클릭하면 그림 3과 같은 <팩터 추가> 팝업이 열립니다.
+[+추가] 버튼을 클릭하면 그림 3과 같은 <팩터 추가> 팝업이 열립니다.
 
 ![[그림 4 팩터 추가]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod2_4.JPG)
-<center>[그림 4 팩터 추가]</center>
 
-각 항목별 설명
+**[각 항목별 설명]**
 
 #### 팩터 이름
 
@@ -83,37 +82,46 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 
 > 팩터ID는 팩터 추가 시 자동으로 지정됩니다.
 
-#### 2. 팩터 검색
+### Search Factor
 
-1\) 검색 조건이 팩터 이름일 시 이름에 검색어가 포함된 팩터를 검색합니다.
+검색 조건이 팩터 이름일 시 이름에 검색어가 포함된 팩터를 검색합니다.
+
 ![[그림 5-1 검색 기준 팩터 이름]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_11.JPG)
 
-2\) 검색 조건이 팩터 주기일 시 선택 목록에 있는 주기로 검색합니다.
+검색 조건이 팩터 주기일 시 선택 목록에 있는 주기로 검색합니다.
+
 ![[그림 5-1 검색 기준 팩터 주기]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_12.JPG)
 
-#### 3. 팩터 삭제
+### Delete Factor
 
-1\) 삭제할 팩터들을 선택합니다.
+삭제할 팩터들을 선택합니다.
+
 ![[그림 6 랭킹 설정에서 삭제할 팩터 선택]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod2_5.JPG)
-<center>[그림 6 삭제할 팩터 선택]</center>
 
-2\) 삭제 버튼을 클릭시 삭제 팝업이 나타납니다. 팩터는 삭제 시 복구할 수 없으니 신중히 삭제해야 합니다.
+삭제 버튼을 클릭시 삭제 팝업이 나타납니다. 팩터는 삭제 시 복구할 수 없으니 신중히 삭제해야 합니다.
+
 ![[그림 7 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_6.JPG)
-<center>[그림 7 삭제 팝업]</center>
 
-### [랭킹 데이터]
+<br>
 
-#### 1. 유저 랭킹 조회
+## Data Tab
 
-1\) 팩터 등록 후 유저 랭킹 조회 탭으로 가면 검색 기준 > 팩터 ID에 등록한 팩터들이 목록화 됩니다. 팩터 주기를 선택하면 각 주기에 맞는 팩터들이 선별됩니다.
+### Search User Info
+
+**[랭킹 데이터 검색]**
+
+팩터 등록 후 유저 랭킹 조회 탭으로 가면 검색 기준 > 팩터 ID에 등록한 팩터들이 목록화 됩니다. 팩터 주기를 선택하면 각 주기에 맞는 팩터들이 선별됩니다.
+
 ![[그림 8 랭킹 데이터 검색]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_7.JPG)
-<center>[그림 8 랭킹 데이터 검색]</center>
 
-2\) 검색 기준을 선택해 유저 정보를 검색합니다.
+**[유저 정보 검색]**
+
+검색 기준을 선택해 유저 정보를 검색합니다.
+
 ![[그림 9 유저 정보 검색]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod2_8.JPG)
-<center>[그림 9 유저 정보 검색]</center>
 
-각 항목별 설명
+
+**[각 항목별 설명]**
 
 #### 주기 설정
 - 지난 주기 : 이전 주기의 랭킹 정보를 기준으로 검색합니다.
@@ -125,14 +133,16 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 #### 사용자 ID
 - 해당 팩터 내에 검색하고자 하는 사용자 ID를 입력합니다. 사용자가 없는 경우 조회되지 않습니다.
 
-#### 2. 유저 랭킹 삭제
+### Delete User Info
 
-1\) 조회 후 삭제할 유저를 선택합니다.
+**[삭제할 유저 데이터 선택]**
+조회 후 삭제할 유저를 선택합니다.
+
 ![[그림 10 삭제할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod2_9.JPG)
-<center>[그림 10 삭제할 유저 데이터 선택]</center>
 
-2\) Scores & Ranks 삭제 버튼을 누르면 삭제 여부를 묻는 팝업이 뜹니다. 삭제 후 취소가 불가능하니 신중히 삭제해야 합니다.
+**[유저 랭킹 삭제 팝업]**
+Scores & Ranks 삭제 버튼을 누르면 삭제 여부를 묻는 팝업이 뜹니다. 삭제 후 취소가 불가능하니 신중히 삭제해야 합니다.
+
 ![[그림 11 유저 랭킹 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_10.JPG)
-<center>[그림 11 유저 랭킹 삭제 팝업]</center>
 
 ※ 개발과 관련된 api 정보는 [Developer's Guide](/Game/Leaderboard/ko/Developer%60s%20Guide/) 를 참조해주세요.

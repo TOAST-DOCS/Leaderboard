@@ -3,9 +3,13 @@
 게임에서 친구들과의 순위 경쟁은 이제 빠질 수 없는 요소 입니다.
 Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 할 수 있도록 지원 합니다.
 
+<br>
+
 ## Merits
 
 ![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/merits.png)
+
+<br>
 
 ## Main Function
 
@@ -27,6 +31,8 @@ Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 �
 - 팩터에 들어있는 사용자 수 조회
 - 유져 점수 삭제 (단일)
 
+<br>
+
 ## Term
 
 Leaderboard 에서는 다음 용어를 사용합니다.
@@ -39,6 +45,8 @@ Leaderboard 에서는 다음 용어를 사용합니다.
 |주간랭킹|	일주일마다 정해진 요일, 정해진 시간에 초기화하는 랭킹 주기.|
 |월간랭킹|	달마다 정해진 날, 정해진 시간에 초기화하는 랭킹 주기.|
 |전체랭킹|	초기화하지 않는 랭킹 주기.|
+
+<br>
 
 ## Service Structure
 
@@ -62,6 +70,8 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 - 한 개의 프로젝트 당 하나의 Leaderboard AppKey가 존재합니다.
 - Leaderboard AppKey내에 여러 개의 팩터(Factor)를 등록할 수 있습니다.
 - 한 개의 팩터(Factor)에 한 개의 주기를 설정할 수 있습니다.
+
+<br>
 
 ## Set Up
 

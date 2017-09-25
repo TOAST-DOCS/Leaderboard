@@ -2,13 +2,13 @@
 
 Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
 
-<br>
-
 ### HTTP API
 - 유져 점수 등록 (단일 / 다수)
 - 유져 점수 획득 (단일 / 다수 / 범위)
 - 팩터에 들어있는 사용자 수 조회
 - 유져 점수 삭제 (단일)
+
+<br>
 
 ## Notice
 
@@ -25,6 +25,8 @@ Leaderboard API 는 **Server에서 호출 하는 것을 권장**하고, Client �
 AppKey 는 게임 서버에서 요청을 보낼시 꼭 필요한 고유 키로, Leaderboard 콘솔 화면에서 확인 가능합니다.
 
 ![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/developer_2.png)
+
+<br>
 
 ## Common
 
@@ -63,8 +65,9 @@ API 를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 �
 
 > https://tools.ietf.org/html/rfc3339
 
-## Get API
+<br>
 
+## Get API
 
 ### Get user count in factor
 
@@ -439,6 +442,8 @@ Content-Type: application/json
 | userInfos[].preRank | int | 이전 주기의 순위 |
 | userInfos[].extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
 | userInfos[].date | String | User Score 가 업데이트 된 시간. (RFC 3339) |
+
+<br>
 
 ## Set API
 
@@ -827,6 +832,8 @@ Content-Type: application/json
 | resultInfos.resultCode | int | User 에 대한 에러코드 |
 | resultInfos.userId | String | 등록된 User ID |
 
+<br>
+
 ## Delete API
 
 ### Delete single user info
@@ -884,13 +891,12 @@ Content-Type: application/json
 }
 ```
 
+<br>
 
 ## Error Codes
 
 [표 11]의 에러 코드는 Response body의 header/body에 있는 resultCode와 resultMessage의 의미를 설명합니다.  
 header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에러 코드가 보이는 경우는 아래 [참고] 링크를 참고 부탁드립니다.
-
-[표 11] 에러 코드  
 
 |Result Code| Result Code(Hex) | Result Message |설명|
 |---|---|---|---|
@@ -906,7 +912,6 @@ header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에�
 |462855|	0x00071007 |LEADERBOARD_AP_ERROR_WRONG_PARAM | 잘못된 파라메터. |
 |463000|	0x00071098 |LEADERBOARD_AP_ERROR_SYSTEM | 시스템 에러.|
 |463001|	0x00071099 |LEADERBOARD_AP_ERROR_UNKOWN | 미확인 에러.|
-
 
 > [참고]  
 > 그 외 일반적인 에러 코드에 대한 추가 정보는 다음 링크에서 확인하기 바랍니다.   
