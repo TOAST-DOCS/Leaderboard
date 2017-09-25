@@ -4,6 +4,7 @@
 Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 할 수 있도록 지원 합니다.
 
 ## Merits
+
 ![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/merits.png)
 
 ## Main Function
@@ -11,6 +12,7 @@ Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 �
 다음과 같은 기능을 제공합니다.
 
 ### Web Console 
+
 - 사용량 정보 확인 
 - TPS 확인 
 - 팩터 등록
@@ -19,12 +21,14 @@ Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 �
 - 유져 점수 변경 및 삭제
 
 ### HTTP API
+
 - 유져 점수 등록 (단일 / 다수)
 - 유져 점수 획득 (단일 / 다수 / 범위)
 - 팩터에 들어있는 사용자 수 조회
 - 유져 점수 삭제 (단일)
 
 ## Term
+
 Leaderboard 에서는 다음 용어를 사용합니다.
 
 |용어|	설명|
@@ -60,6 +64,7 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 - 한 개의 팩터(Factor)에 한 개의 주기를 설정할 수 있습니다.
 
 ## Set Up
+
 설정은 팩터 단위로 할 수 있습니다. 설정에 따라서 여러 특성의 리더보드를 사용하실 수 있습니다.
 
 ###  Sorting
@@ -67,11 +72,13 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 점수 정렬 방식은 오름차순/내림차순 정렬로 설정할 수 있습니다. 
 
 **[오름차순 정렬]**
+
 오름차순 정렬은 작은 점수부터 큰 점수로 정렬합니다.
 
 ![[그림 3 오름차순 정렬]](http://static.toastoven.net/prod_leaderboardv2/overview_3.png)
 
 **[내림차순 정렬]**
+
 내림차순 정렬은 큰 점수부터 작은 점수로 정렬합니다.
 
 ![[그림 4 내림차순 정렬]](http://static.toastoven.net/prod_leaderboardv2/overview_4.png)
@@ -81,16 +88,19 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 점수 업데이트 방식은 최고/최근/누적 점수로 설정할 수 있습니다. 
 
 **[최고 점수 업데이트]**
+
 새로 들어온 점수가 이전 점수보다 높은 점수인 경우 업데이트 합니다.
 
 ![[그림 5 최고 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_5.png)
 
 **[최근 점수 업데이트]**
+
 기존 점수와 상관 없이 새로 들어온 점수를 업데이트 합니다. (항상 업데이트)
 
 ![[그림 6 최근 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_6.png)
 
 **[누적 점수 업데이트]**
+
 새로 들어온 점수와 기존 점수의 합해서 업데이트 합니다.
 
 ![[그림 7 누적 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_7.png)
@@ -100,22 +110,27 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 동점자 순위 결정 방식은 팩터 단위로 최초/최근 랭킹 획득자 우선순위로 설정할 수 있습니다.
 
 **[최초 랭킹 획득자 우선 순위]**
+
 동점자가 여러명일 경우 가장 먼저 등록된 사용자가 더 높은 순위를 가집니다.
 
 ![[그림 8 최초 랭킹 획득자 우선 순위]](http://static.toastoven.net/prod_leaderboardv2/overview_8.png)
 
 **[최근 랭킹 획득자 우선 순위]**
+
 동점자가 여러명일 경우 가장 나중에 등록된 사용자가 더 높은 순위를 가집니다.
 
 ![[그림 9 최근 랭킹 획득자 우선 순위]](http://static.toastoven.net/prod_leaderboardv2/overview_9.png)
 
 ### Reset time
+
 해당 팩터의 초기화 시간을 설정 할 수 있습니다.<br>
 전체 랭킹의 경우는 초기화되지 않습니다.
 
 ### Reset Date
+
 주간랭킹의 경우 초기화 요일을, 월간랭킹의 경우 초기화 날을 지정할 수 있습니다.<br>
 전체 랭킹의 경우는 초기화되지 않습니다.
 
 ### Limit User
+
 해당 팩터에 등록될 수 있는 최대 유저 수를 뜻합니다. 최대 1000만 명까지 입력할 수 있습니다.
