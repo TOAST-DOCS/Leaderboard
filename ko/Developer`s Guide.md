@@ -12,20 +12,14 @@ Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
 
 ## Notice
 
-<br>
-
 ### Caution
 모든 API 사용을 하기 위해서는 **상품 활성화 후 팩터를 등록**해야 합니다.  
 Leaderboard API 는 **Server에서 호출 하는 것을 권장**하고, Client 에서의 호출은 권장하고 있지 않습니다.
-
-<br>
 
 ### Server Address
 서버 API 를 호출 하기 위한 서버 주소는 다음과 같습니다. 해당 주소는 Leaderboard 콘솔 화면에서도 확인 가능합니다.
 
 ![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/developer_1.png)
-
-<br>
 
 ### AppKey
 AppKey 는 게임 서버에서 요청을 보낼시 꼭 필요한 고유 키로, Leaderboard 콘솔 화면에서 확인 가능합니다.
@@ -34,16 +28,12 @@ AppKey 는 게임 서버에서 요청을 보낼시 꼭 필요한 고유 키로, 
 
 ## Common
 
-<br>
-
 ### HTTP Header
 API 호출 시 HTTP Header 에 다음 항목을 설정해야 합니다.
 
 | Name | Required |	Value |
 |---|---|---|
 | Content-Type | mandatory | application/json; charset=UTF-8 |
-
-<br>
 
 ### API Response
 모든 API 요청에 대한 응답으로 HTTP 200 OK 를 전달합니다. API 요청 성공 유무는 Response Body 의 header 항목을 참고하여 판단할 수 있습니다.
@@ -63,13 +53,9 @@ Content-Type: application/json
 }
 ```
 
-<br>
-
 ### TransactionId
 API 를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 있는 방안으로 TransactionId 기능을 제공합니다.
 호출하는 서버에서 HTTP Body 에 TransactionId 를 설정하여 API 를 호출하면, Leaderboard 서버는 응답 결과에 해당 TransactionId 를 설정하여 결과를 전달합니다. TransactionId 는 정수형 타입으로 받습니다.
-
-<br>
 
 ### Time
 
@@ -79,7 +65,6 @@ API 를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 �
 
 ## Get API
 
-<br>
 
 ### Get user count in factor
 
@@ -91,13 +76,10 @@ API 를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 �
 GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionid={transactionid}&ispast={ispast} 
 ```
 
-<br>
-
 **[Request Header]**
 
 Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#common)
 
-<br>
 
 **[Path Variable]**
 
@@ -106,8 +88,6 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
 |factor|	int|	Leaderboard 팩터|
 
-<br>
-
 **[Request Parameter]**
 
 | Name | Type | Required |  Value |
@@ -115,14 +95,10 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | transactionid | long | optional | 트랜잭션 ID |
 | ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 | 
 
-<br>
-
 **[Request Sample]**
 ```
 GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionid=12345&ispast=false
 ```
-
-<br>
 
 **[Response]**
 ```
@@ -148,8 +124,6 @@ Content-Type: application/json
 | resultInfo | Object | 결과 정보 |
 | resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
 | resultInfo.totalCount | int | Factor 에 등록된 사용자 수 |
-
-<br>
 
 ### Get single user info
 

@@ -102,7 +102,7 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 **[최초 랭킹 획득자 우선 순위]**
 동점자가 여러명일 경우 가장 먼저 등록된 사용자가 더 높은 순위를 가집니다.
 
-(http://static.toastoven.net/prod_leaderboardv2/overview_8.png)
+![[그림 8 최초 랭킹 획득자 우선 순위]](http://static.toastoven.net/prod_leaderboardv2/overview_8.png)
 
 **[최근 랭킹 획득자 우선 순위]**
 동점자가 여러명일 경우 가장 나중에 등록된 사용자가 더 높은 순위를 가집니다.
