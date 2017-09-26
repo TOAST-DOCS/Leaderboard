@@ -3,26 +3,30 @@
 Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
 
 ### HTTP API
-- 유져 점수 등록 (단일 / 다수)
-- 유져 점수 획득 (단일 / 다수 / 범위)
-- 팩터에 들어있는 사용자 수 조회
-- 유져 점수 삭제 (단일)
+- User 점수 등록 (단일 / 다수)
+- User 점수 획득 (단일 / 다수 / 범위)
+- Factor에 들어있는 User 수 조회
+- User 점수 삭제 (단일)
 
 <br>
 
 ## Notice
 
 ### Caution
-모든 API 사용을 하기 위해서는 **상품 활성화 후 팩터를 등록**해야 합니다.  
-Leaderboard API 는 **Server에서 호출 하는 것을 권장**하고, Client 에서의 호출은 권장하고 있지 않습니다.
+모든 API 사용을 하기 위해서는 **상품 활성화 후 Factor를 등록**해야 합니다.  
+Leaderboard API 는 **Server에서 호출 하는 것을 권장**하고, **Client 에서의 호출은 권장하고 있지 않습니다.**
 
 ### Server Address
-서버 API 를 호출 하기 위한 서버 주소는 다음과 같습니다. 해당 주소는 Leaderboard 콘솔 화면에서도 확인 가능합니다.
+서버 API 를 호출 하기 위한 서버 주소는 다음과 같습니다. 해당 주소는 Leaderboard 콘솔 화면에서도 확인 가능합니다. <br>
+
+> https://api-leaderboard.cloud.toast.com
 
 ![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/developer_1.png)
 
 ### AppKey
 AppKey 는 게임 서버에서 요청을 보낼시 꼭 필요한 고유 키로, Leaderboard 콘솔 화면에서 확인 가능합니다.
+> **주의** <br>
+> AppKey 는 외부에 노출되어서는 안되며, 변경이 불가능합니다.
 
 ![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/developer_2.png)
 
@@ -61,7 +65,7 @@ API 를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 �
 
 ### Time
 
-사용자의 업데이트 시간은 RFC 3339 정의를 따릅니다.
+User의 업데이트 시간은 RFC 3339 정의를 따릅니다.
 
 > https://tools.ietf.org/html/rfc3339
 
@@ -71,7 +75,7 @@ API 를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 �
 
 ### Get user count in factor
 
-원하는 한개의 Factor 에 등록된 사용자의 수 를 조회합니다.
+원하는 한개의 Factor 에 등록된 User의 수 를 조회합니다.
 
 **[Method, URI]**
 
@@ -89,7 +93,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
-|factor|	int|	Leaderboard 팩터|
+|factor|	int|	Leaderboard Factor|
 
 **[Request Parameter]**
 
@@ -126,11 +130,11 @@ Content-Type: application/json
 | --- | --- | --- |
 | resultInfo | Object | 결과 정보 |
 | resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
-| resultInfo.totalCount | int | Factor 에 등록된 사용자 수 |
+| resultInfo.totalCount | int | Factor 에 등록된 User 수 |
 
 ### Get single user info
 
-원하는 한 명의 사용자의 정보를 조회할 수 있습니다.
+원하는 한 명의 User의 정보를 조회할 수 있습니다.
 
 **[Method, URI]**
 
@@ -147,13 +151,13 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
-|factor|	int|	Leaderboard 팩터|
+|factor|	int|	Leaderboard Factor|
 
 **[Request Parameter]**
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| userId | String |	mandatory | 사용자 ID |
+| userId | String |	mandatory | User ID |
 | transactionid | long | optional | 트랜잭션 ID |
 | ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조희 |
 
@@ -190,7 +194,7 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| userInfo | Object | 유져 정보 |
+| userInfo | Object | User 정보 |
 | userInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
 | userInfo.userId | String | User ID |
 | userInfo.score | Double | User Score |
@@ -201,7 +205,7 @@ Content-Type: application/json
 
 ### Get multiple user info
 
-원하는 다수의 사용자 정보를 조회할 수 있는 방법입니다.
+원하는 다수의 User 정보를 조회할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -225,8 +229,8 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | --- | --- | --- | --- |
 | transactionId |	long |	mandatory | 트랜잭션 ID |
 | isPast | bool | mandatory | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 |
-| userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 조회를 원하는 팩터와 User 리스트 묶음 |
-| userIDsWithFactor[].factor |	int | mandatory | 조희를 원하는 팩터 |
+| userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 조회를 원하는 Factor와 User 리스트 묶음 |
+| userIDsWithFactor[].factor |	int | mandatory | 조희를 원하는 Factor |
 | userIDsWithFactor[].userIds |	Array[String] | mandatory | 조회를 원하는 User 리스트 |
 
 **[Request Sample]**
@@ -335,9 +339,9 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| userInfosWithFactor | Array[Object] | 유져들의 정보 |
-| userInfosWithFactor[].resultCode | int | 팩터에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
-| userInfosWithFactor[].factor | int | 팩터 |
+| userInfosWithFactor | Array[Object] | User들의 정보 |
+| userInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| userInfosWithFactor[].factor | int | Factor ID |
 | userInfosWithFactor[].userInfos | Array[Object] | User Score |
 | userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
 | userInfos[].userId | String | User ID |
@@ -366,7 +370,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Value |
 | --- | --- | --- |
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
-|factor|	int|	팩터|
+|factor|	int|	Factor|
 
 **[Request Parameter]**
 
@@ -432,9 +436,9 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| userInfosByRange | Array[Object] | 유져들의 정보 |
-| userInfosByRange[].resultCode | int | 팩터에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
-| userInfosByRange[].factor | int | 팩터 |
+| userInfosByRange | Array[Object] | User들의 정보 |
+| userInfosByRange[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| userInfosByRange[].factor | int | Factor ID |
 | userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
@@ -449,7 +453,7 @@ Content-Type: application/json
 
 ### Set single user score
 
-원하는 한 명의 사용자 점수를 등록할 수 있는 방법입니다.
+원하는 한 명의 User 점수를 등록할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -466,15 +470,15 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Value |
 | --- | --- | --- |
 | appkey | String | Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
-| factor | int | 팩터 |
-| userId | String | 사용자 ID |
+| factor | int | Factor ID |
+| userId | String | User ID |
 
 **[Request Body]**
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId |	long |	mandatory | 트랜잭션 ID |
-|score|	double | mandatory | 사용자 점수 |
+|score|	double | mandatory | User 점수 |
 
 **[Request Sample]**
 
@@ -517,7 +521,7 @@ Content-Type: application/json
 
 ### Set single user score with extra data
 
-원하는 한 명의 사용자 점수와 Extra Data를 등록할 수 있는 방법입니다.
+원하는 한 명의 User 점수와 Extra Data를 등록할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -534,7 +538,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Value |
 | --- | --- | --- |
 | appkey |	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
-| factor | int | 팩터 |
+| factor | int | Factor ID |
 | userId | String | User ID |
 
 **[Request Body]**
@@ -542,7 +546,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId |	long |	mandatory | 트랜잭션 ID |
-| score | double | mandatory | 사용자 점수 |
+| score | double | mandatory | User 점수 |
 | extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
 
 **[Request Sample]**
@@ -586,7 +590,7 @@ Content-Type: application/json
 
 ### Set multiple user score
 
-원하는 사용자들 점수를 등록할 수 있는 방법입니다.
+원하는 User들 점수를 등록할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -609,9 +613,9 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId | long | mandatory | 트랜잭션 ID |
-| userScoresWithFactor | Array[Object] | mandatory | 사용자 점수 리스트와 팩터의 리스트 |
-| userScoresWithFactor[].factor | int | mandatory | 등록을 원하는 팩터 |
-| userScoresWithFactor[].userScores | Array[Object] | mandatory | 등록을 원하는 사용자 ID/점수의 리스트 |
+| userScoresWithFactor | Array[Object] | mandatory | User 점수 리스트와 Factor의 리스트 |
+| userScoresWithFactor[].factor | int | mandatory | 등록을 원하는 Factor |
+| userScoresWithFactor[].userScores | Array[Object] | mandatory | 등록을 원하는 User ID/점수의 리스트 |
 | userScores[].userId | String | mandatory | User ID |
 | userScores[].score | double | mandatory | User Score |
 
@@ -700,15 +704,15 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 결과 정보 |
-| resultInfosWithFactor[].resultCode | int | 팩터에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
-| resultInfosWithFactor[].factor | int | 팩터 |
+| resultInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 User 들의 결과 정보 |
 | resultInfos.resultCode | int | User 에 대한 에러코드 |
 | resultInfos.userId | String | 등록된 User ID |
 
 ### Set multiple user score with extra data
 
-원하는 사용자들 점수와 Extra Data를 등록할 수 있는 방법입니다.
+원하는 User들 점수와 Extra Data를 등록할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -731,9 +735,9 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId | long | mandatory | 트랜잭션 ID |
-| userInfosWithFactor | Array[Object] | mandatory | 사용자 점수 리스트와 팩터의 리스트 |
-| userInfosWithFactor[].factor | int | mandatory | 등록을 원하는 팩터 |
-| userInfosWithFactor[].userInfos | Array[Object] | mandatory | 등록을 원하는 사용자 ID/점수의 리스트 |
+| userInfosWithFactor | Array[Object] | mandatory | User 점수 리스트와 Factor의 리스트 |
+| userInfosWithFactor[].factor | int | mandatory | 등록을 원하는 Factor |
+| userInfosWithFactor[].userInfos | Array[Object] | mandatory | 등록을 원하는 User ID/점수의 리스트 |
 | userInfos[].userId | String | mandatory | User ID |
 | userInfos[].score | double | mandatory | User Score |
 | userInfos[].extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
@@ -826,8 +830,8 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 결과 정보 |
-| resultInfosWithFactor[].resultCode | int | 팩터에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
-| resultInfosWithFactor[].factor | int | 팩터 |
+| resultInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 User 들의 결과 정보 |
 | resultInfos.resultCode | int | User 에 대한 에러코드 |
 | resultInfos.userId | String | 등록된 User ID |
@@ -838,7 +842,7 @@ Content-Type: application/json
 
 ### Delete single user info
 
-원하는 한 명의 사용자 정보를 삭제하는 방법입니다. 해당 사용자는 영구적으로 삭제되며, 복구되지 않습니다.
+원하는 한 명의 User 정보를 삭제하는 방법입니다. 해당 User는 영구적으로 삭제되며, 복구되지 않습니다.
 
 **[Method, URI]**
 
@@ -855,13 +859,13 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Value |
 | --- | --- | --- |
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
-|factor|	int|	팩터|
+|factor|	int|	Factor|
 
 **[Request Parameter]**
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| userId | String |	mandatory | 사용자 ID |
+| userId | String |	mandatory | User ID |
 | transactionid | long | optional | 트랜잭션 ID |
 | ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 삭제 |
 
@@ -904,8 +908,8 @@ header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에�
 |1|	0x00000001 |LEADERBOARD_SUCCESS_BUT_NOT_UPDATE | 요청은 성공 했지만, 기존과 동일한 데이터가 들어와서 업데이트 하지 않음.|
 |459777|	0x00070401 |LEADERBOARD_ERROR_APPKEY_VERIFIER | 앱키 인증 실패. |
 |462849|	0x00071001 |LEADERBOARD_AP_ERROR_INITIALTIZE | 초기화 실패. |
-|462850|	0x00071002 |LEADERBOARD_AP_ERROR_NOT_EXIST_USER | 등록되지 않은 사용자. |
-|462851|	0x00071003 |LEADERBOARD_AP_ERROR_NOT_EXIST_FACTOR | 등록되지 않은 팩터.|
+|462850|	0x00071002 |LEADERBOARD_AP_ERROR_NOT_EXIST_USER | 등록되지 않은 User. |
+|462851|	0x00071003 |LEADERBOARD_AP_ERROR_NOT_EXIST_FACTOR | 등록되지 않은 Factor.|
 |462852|	0x00071004 |LEADERBOARD_AP_ERROR_NOT_EXIST_APPKEY | 등록되지 않은 앱키. |
 |462853|	0x00071005 |LEADERBOARD_AP_ERROR_TOO_BIG_EXTRA | Extra Data 제한 길이 초과. |
 |462854|	0x00071006 |LEADERBOARD_AP_ERROR_WRONG_RANGE | 잘못된 범위. |
