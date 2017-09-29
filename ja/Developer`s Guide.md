@@ -439,7 +439,7 @@ Content-Type: application/json
 | userInfosByRange | Array[Object] | ユーザー情報 |
 | userInfosByRange[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | 해당 User에 대한 코드. エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| userInfos[].resultCode | int | 該当ユーザーに対するコード。 エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
 | userInfos[].rank | int | 今回の周期のランキング |
