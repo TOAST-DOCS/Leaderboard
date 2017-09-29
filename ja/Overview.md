@@ -1,48 +1,48 @@
 ## Game > Leaderboard > Overview
 
-게임에서 친구들과의 순위 경쟁은 이제 빠질 수 없는 요소 입니다.
-Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 할 수 있도록 지원 합니다.
+ゲームにおいて友だちとのランキング競争は今や欠かせない要素となっています。
+「Leaderboard」プラットフォームは、簡単な連動だけでランキングサービスを実装できるようサポートします。
 
 <br>
 
 ## Merits
 
-![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/merits.png)
+![[図 0 Leaderboard Merits]]（http://static.toastoven.net/prod_leaderboardv2/merits-jp.png）
 
 <br>
 
 ## Main Function
 
-다음과 같은 기능을 제공합니다.
+以下のような機能を提供します。
 
 ### Web Console 
 
-- 사용량 정보 확인 
-- TPS 확인 
-- Factor 등록 / 조회 / 초기화
-- User 점수 조회 / 변경 / 삭제
+- 使用量の情報確認
+- TPS確認
+- Factor登録 / 照会 / リセット
+- ユーザースコア照会 / 変更 / 削除
 
 ### HTTP API
 
-- User 점수 등록 (단일 / 다수)
-- User 점수 획득 (단일 / 다수 / 범위)
-- Factor에 들어있는 User 수 조회
-- User 점수 삭제 (단일)
+- ユーザースコア登録（単一 / 複数）
+- ユーザースコア獲得（単一 / 複数 / 範囲）
+- Factorに入っているユーザー数照会
+- ユーザースコア削除（単一）
 
 <br>
 
 ## Term
 
-Leaderboard 에서는 다음 용어를 사용합니다.
+「Leaderboard」では、次の用語を使います。
 
-| 용어 | 설명 |
+| 用語 | 説明 |
 | --- | --- |
-| Leaderboard AppKey |	프로젝트당 하나의 Leaderboard AppKey를 발급함. |
-| Factor |	랭킹 목적을 구분하는 단위. Factor에는 주기, 업데이트 기준, 정렬기준 설정. |
-| 일간랭킹 | 하루마다 정해진 시간에 초기화하는 랭킹 주기. |
-| 주간랭킹 | 일주일마다 정해진 요일, 정해진 시간에 초기화하는 랭킹 주기. |
-| 월간랭킹 | 달마다 정해진 날, 정해진 시간에 초기화하는 랭킹 주기. |
-| 전체랭킹 | 초기화하지 않는 랭킹 주기. |
+| Leaderboard AppKey |	プロジェクト別に「Leaderboard AppKey」を発行 |
+| Factor |	ランキングの目的を区分する単位。Factorには、周期、アップデート基準、ソート基準を設定 |
+| 日間ランキング | 毎日決まった時間にリセットするランキング周期 |
+| 週間ランキング | 一週間ごとに決まった曜日・時間にリセットするランキング周期 |
+| 月間ランキング | 毎月決まった日付・時間にリセットするランキング周期 |
+| 全体ランキング | リセットしないランキング周期 |
 
 <br>
 
@@ -50,95 +50,96 @@ Leaderboard 에서는 다음 용어를 사용합니다.
 
 ### Physical Structure
 
-Leaderboard 플랫폼의 물리적 구성은 아래 그림과 같습니다.
+「Leaderboard」プラットフォームの物理的構造は、以下の図の通りです。
 
-![[그림 1 Leaderboard 물리적 구조]](http://static.toastoven.net/prod_leaderboardv2/overview_1.png)
+![[図1 「Leaderboard」の物理的構造]]（http://static.toastoven.net/prod_leaderboardv2/overview_1-jp.png）
 
-- Game Server / Web Console은 api-leaderboard.cloud.toast.com으로 데이터를 주고 받습니다.
-- Load Balancer는 여러 대로 구성한 Leaderboard AP 서버로 요청을 분배시킵니다.
-- Leaderboard AP 서버는 Memory Server 와 Cassandra 에 데이터를 저장합니다.
-- Leaderboard AP 서버는 Memory Server 에서 정렬된 데이터를 가져옵니다.
+- Game Server / Web Consoleは、api-leaderboard.cloud.toast.comでデータをやり取りします。
+- Load Balancerは、複数で構成したLeaderboard APサーバーにリクエストを分散します。
+- Leaderboard APサーバーは、Memory ServerとCassandraにデータを保存します。
+- Leaderboard APサーバーは、Memory Serverからソート済みのデータを取得します。
 
 ### Logical Structure
 
-Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
+「Leaderboard」プラットフォームの論理的構造は、以下の図の通りです。
 
-![[그림 2 Leaderboard 논리적 구조]](http://static.toastoven.net/prod_leaderboardv2/overview_2.png)
+![[図2 「Leaderboard」の論理的構造]]（http://static.toastoven.net/prod_leaderboardv2/overview_2-jp.png）
 
-- 한 개의 프로젝트 당 하나의 Leaderboard AppKey가 존재합니다.
-- Leaderboard AppKey내에 여러 개의 Factor를 등록할 수 있습니다.
-- 한 개의 Factor에 한 개의 주기를 설정할 수 있습니다.
+- プロジェクト別にLeaderboard AppKeyが存在します。
+- Leaderboard AppKey内に複数のFactorを登録できます。
+- 1つのFactorに1つの周期を設定できます。
 
 <br>
 
 ## Feature
 
-설정은 Factor 단위로 할 수 있습니다. 설정에 따라서 여러 특성의 리더보드를 사용하실 수 있습니다.
+設定はFactor単位で行うことができます。設定により、様々な特性のリーダーボードをご利用いただけます。
 
 ###  Sorting
 
-점수 정렬 방식은 오름차순/내림차순 정렬로 설정할 수 있습니다. 
+スコアソート方式は、昇順/降順ソートで設定できます。
 
-**[오름차순 정렬]**
+**[昇順ソート]**
 
-오름차순 정렬은 작은 점수부터 큰 점수로 정렬합니다.
+昇順ソートは、低いスコアから高いスコアへソートします。
 
-![[그림 3 오름차순 정렬]](http://static.toastoven.net/prod_leaderboardv2/overview_3.png)
+![[図3 昇順ソート]]（http://static.toastoven.net/prod_leaderboardv2/overview_3-jp.png）
 
-**[내림차순 정렬]**
+**[降順ソート]**
 
-내림차순 정렬은 큰 점수부터 작은 점수로 정렬합니다.
+降順ソートは、高いスコアから低いスコアへソートします。
 
-![[그림 4 내림차순 정렬]](http://static.toastoven.net/prod_leaderboardv2/overview_4.png)
+![[図4 降順ソート]]（http://static.toastoven.net/prod_leaderboardv2/overview_4-jp.png）
 
 ### Score update
 
-점수 업데이트 방식은 최고/최근/누적 점수로 설정할 수 있습니다. 
+スコアのアップデート方式は、最高/最新/累計スコアで設定できます。
 
-**[최고 점수 업데이트]**
+**[最高スコアのアップデート]**
 
-새로 들어온 점수가 이전 점수보다 높은 점수인 경우 업데이트 합니다.
+新しく入ったスコアが前のスコアより高い場合は、アップデートを行います。
 
-![[그림 5 최고 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_5.png)
+![[図5 最高スコアのアップデート]]（http://static.toastoven.net/prod_leaderboardv2/overview_5-jp.png）
 
-**[최근 점수 업데이트]**
+**[最新スコアのアップデート]**
 
-기존 점수와 상관 없이 새로 들어온 점수를 업데이트 합니다. (항상 업데이트)
+既存のスコアとは関係なく、新しいスコアをアップデートします（常にアップデート）。
 
-![[그림 6 최근 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_6.png)
+![[図6 最新スコアのアップデート]]（http://static.toastoven.net/prod_leaderboardv2/overview_6-jp.png）
 
-**[누적 점수 업데이트]**
+**[累計スコアのアップデート]*
 
-새로 들어온 점수와 기존 점수의 합해서 업데이트 합니다.
+新しいスコアと既存のスコアの合計をアップデートします。
 
-![[그림 7 누적 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_7.png)
+![[図7 累計スコアのアップデート]]（http://static.toastoven.net/prod_leaderboardv2/overview_7-jp.png）
 
 ### Tie score
 
-동점자 순위 결정 방식은 Factor 단위로 최초/최근 랭킹 획득자 우선순위로 설정할 수 있습니다.
+同点者のランキング決定方式は、Factor単位で最初/最新ランキング獲得者の優先順位で設定できます。
 
-**[최초 랭킹 획득자 우선 순위]**
+**[最初ランキング獲得者の優先順位]**
 
-동점자가 여러명일 경우 가장 먼저 등록된 User가 더 높은 순위를 가집니다.
+同点者が複数いる場合、先に登録されたユーザー方が高いランキングになります。
 
-![[그림 8 최초 랭킹 획득자 우선 순위]](http://static.toastoven.net/prod_leaderboardv2/overview_8.png)
+![[図8 最初ランキング獲得者の優先順位]]（http://static.toastoven.net/prod_leaderboardv2/overview_8-jp.png）
 
-**[최근 랭킹 획득자 우선 순위]**
+**[最新ランキング獲得者の優先順位]**
 
-동점자가 여러명일 경우 가장 나중에 등록된 User가 더 높은 순위를 가집니다.
+同点者が複数いる場合、遅れて登録されたユーザーの方が高いランキングになります。
 
-![[그림 9 최근 랭킹 획득자 우선 순위]](http://static.toastoven.net/prod_leaderboardv2/overview_9.png)
+![[図9 最新ランキング獲得者の優先順位]]（http://static.toastoven.net/prod_leaderboardv2/overview_9-jp.png）
 
 ### Reset time
 
-해당 Factor의 초기화 시간을 설정 할 수 있습니다.<br>
-전체 랭킹의 경우는 초기화되지 않습니다.
+該当Factorのリセット時間を設定できます。<br>
+全体ランキングはリセットされません。
 
 ### Reset Date
 
-주간랭킹의 경우 초기화 요일을, 월간랭킹의 경우 초기화 날을 지정할 수 있습니다.<br>
-전체 랭킹의 경우는 초기화되지 않습니다.
+週間ランキングはリセットの曜日を、月間ランキングはリセットの日付を指定できます。<br>
+全体ランキングはリセットされません。
 
 ### Limit User
 
-해당 Factor에 등록될 수 있는 최대 유저 수를 뜻합니다. 최대 1000만 명까지 입력할 수 있습니다.
+該当Factorに登録できる最大ユーザー数を意味します。最大1000万人まで入力できます。
+
