@@ -1,48 +1,48 @@
 ## Game > Leaderboard > Developer's Guide
 
-Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
+Leaderboard APIは、REST APIの形で以下のAPIを提供します。
 
 ### HTTP API
-- User 점수 등록 (단일 / 다수)
-- User 점수 획득 (단일 / 다수 / 범위)
-- Factor에 들어있는 User 수 조회
-- User 점수 삭제 (단일)
+- ユーザースコア登録（単一 / 複数）
+- ユーザースコア獲得（単一 / 複数 / 範囲）
+- Factorに入っているユーザー数照会
+- ユーザースコア削除（単一）
 
 <br>
 
 ## Notice
 
 ### Caution
-모든 API 사용을 하기 위해서는 **상품 활성화 후 Factor를 등록**해야 합니다.  
-Leaderboard API 는 **Server에서 호출 하는 것을 권장**하고, **Client 에서의 호출은 권장하고 있지 않습니다.**
+すべてのAPIを使用するためには、**商品をアクティブ化してから、Factorを登録**する必要があります。
+Leaderboard APIは、**Serverから呼び出すことをお勧め**しており、**Clientからの呼び出しはお勧めしていません。**
 
 ### Server Address
-서버 API 를 호출 하기 위한 서버 주소는 다음과 같습니다. 해당 주소는 Leaderboard 콘솔 화면에서도 확인 가능합니다. <br>
+サーバーAPIを呼び出すためのサーバーアドレスは、以下の通りです。このアドレスは「Leaderboard」のコンソル画面からも確認できます。<br>
 
 > https://api-leaderboard.cloud.toast.com
 
-![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/developer_1.png)
+![図 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/developer_1-jp.png)
 
 ### AppKey
-AppKey 는 게임 서버에서 요청을 보낼시 꼭 필요한 고유 키로, Leaderboard 콘솔 화면에서 확인 가능합니다.
-> **주의** <br>
-> AppKey 는 외부에 노출되어서는 안되며, 변경이 불가능합니다.
+AppKeyは、ゲームサーバーにリクエストを送る際に必ず必要な固有なキーで、 「Leaderboard」のコンソル画面からも確認できます。
+> **注意事項** <br>
+> AppKeyは、外部に露出されることがあってはなりません。なお、変更はできないので、ご注意ください。
 
-![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/developer_2.png)
+![図 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/developer_2-jp.png)
 
 <br>
 
 ## Common
 
 ### HTTP Header
-API 호출 시 HTTP Header 에 다음 항목을 설정해야 합니다.
+API呼び出し時にHTTP Headerに以下の項目を設定する必要があります。
 
-| Name | Required |	Value |
+| Name | Required | Value |
 |---|---|---|
 | Content-Type | mandatory | application/json; charset=UTF-8 |
 
 ### API Response
-모든 API 요청에 대한 응답으로 HTTP 200 OK 를 전달합니다. API 요청 성공 유무는 Response Body 의 header 항목을 참고하여 판단할 수 있습니다.
+すべてのAPIリクエストに対するレスポンスとして、HTTP 200 OKを送ります。APIリクエストの成功有無は、Response Bodyのheader項目を参照し判断できます。
 
 ```
 HTTP/1.1 200 OK
@@ -60,12 +60,12 @@ Content-Type: application/json
 ```
 
 ### TransactionId
-API 를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 있는 방안으로 TransactionId 기능을 제공합니다.
-호출하는 서버에서 HTTP Body 에 TransactionId 를 설정하여 API 를 호출하면, Leaderboard 서버는 응답 결과에 해당 TransactionId 를 설정하여 결과를 전달합니다. TransactionId 는 정수형 타입으로 받습니다.
+APIを呼び出すサーバーで内部的にAPIリクエストを管理できる方策として、TransactionId機能を提供します。
+呼び出すサーバーのHTTP BodyにTransactionIdを設定しAPIを呼び出すと、「Leaderboard」サーバーは、レスポンスの結果に該当のTransactionIdを設定し、結果を送ります。TransactionIdは、定数型タイプです。
 
 ### Time
 
-User의 업데이트 시간은 RFC 3339 정의를 따릅니다.
+ユーザーのアップデート時間は、RFC 3339の定義に従います。
 
 > https://tools.ietf.org/html/rfc3339
 
@@ -75,7 +75,7 @@ User의 업데이트 시간은 RFC 3339 정의를 따릅니다.
 
 ### Get user count in factor
 
-원하는 한개의 Factor 에 등록된 User의 수 를 조회합니다.
+希望する1つのFactorに登録されているユーザー数を照会します。
 
 **[Method, URI]**
 
@@ -85,22 +85,22 @@ GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
 
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
 |factor|	int|	Leaderboard Factor|
 
 **[Request Parameter]**
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 | 
+| transactionid | long | optional | トランザクションID |
+| ispast | bool | optional | true or false（デフォルトはfalse） <br> trueの場合は、前回の周期のデータを照会 | 
 
 **[Request Sample]**
 ```
@@ -128,13 +128,13 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
-| resultInfo.totalCount | int | Factor 에 등록된 User 수 |
+| resultInfo | Object | 結果情報 |
+| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| resultInfo.totalCount | int | Factorに登録されているユーザー数 |
 
 ### Get single user info
 
-원하는 한 명의 User의 정보를 조회할 수 있습니다.
+希望する一人のユーザー情報を照会できます。
 
 **[Method, URI]**
 
@@ -144,13 +144,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
 |factor|	int|	Leaderboard Factor|
 
 **[Request Parameter]**
@@ -158,8 +158,8 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
 | userId | String |	mandatory | User ID |
-| transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조희 |
+| transactionid | long | optional | トランザクションID |
+| ispast | bool | optional | true or false（デフォルトはfalse) <br> trueの場合は、前回の周期のデータを照会 |
 
 **[Request Sample]**
 
@@ -194,18 +194,18 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| userInfo | Object | User 정보 |
-| userInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| userInfo | Object | ユーザー情報 |
+| userInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | userInfo.userId | String | User ID |
 | userInfo.score | Double | User Score |
-| userInfo.rank | int | 이번 주기의 순위 |
-| userInfo.preRank | int | 이전 주기의 순위 |
-| userInfo.extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
-| userInfo.date | String | User Score 가 업데이트 된 시간. (RFC 3339) |
+| userInfo.rank | int | 今回の周期のランキング |
+| userInfo.preRank | int | 前回の周期のランキング |
+| userInfo.extra | String | ユーザーとともに保存されるExtra Data（最大16Byte） |
+| userInfo.date | String | ユーザースコアがアップデートされた時間（RFC 3339） |
 
 ### Get multiple user info
 
-원하는 다수의 User 정보를 조회할 수 있는 방법입니다.
+希望する複数のユーザー情報を照会できる方法です。
 
 **[Method, URI]**
 
@@ -215,23 +215,23 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/g
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
 
 **[Request Body]**
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionId |	long |	mandatory | 트랜잭션 ID |
-| isPast | bool | mandatory | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 |
-| userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 조회를 원하는 Factor와 User 리스트 묶음 |
-| userIDsWithFactor[].factor |	int | mandatory | 조희를 원하는 Factor |
-| userIDsWithFactor[].userIds |	Array[String] | mandatory | 조회를 원하는 User 리스트 |
+| transactionId |	long |	mandatory | トランザクションID |
+| isPast | bool | mandatory | true or false（デフォルトはfalse) <br> trueの場合は、前回の周期のデータを照会 |
+| userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 照会を希望するFactorとユーザーリストのまとめ |
+| userIDsWithFactor[].factor |	int | mandatory | 照会を希望するFactor |
+| userIDsWithFactor[].userIds |	Array[String] | mandatory | 照会を希望するユーザーリスト |
 
 **[Request Sample]**
 
@@ -339,21 +339,21 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| userInfosWithFactor | Array[Object] | User들의 정보 |
-| userInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| userInfosWithFactor | Array[Object] | ユーザー情報 |
+| userInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | userInfosWithFactor[].factor | int | Factor ID |
 | userInfosWithFactor[].userInfos | Array[Object] | User Score |
-| userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
-| userInfos[].rank | int | 이번 주기의 순위 |
-| userInfos[].preRank | int | 이전 주기의 순위 |
-| userInfos[].extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
-| userInfos[].date | String | User Score 가 업데이트 된 시간. (RFC 3339) |
+| userInfos[].rank | int | 今回の周期のランキング |
+| userInfos[].preRank | int | 前回の周期のランキング |
+| userInfos[].extra | String | ユーザーとともに保存されるExtra Data（最大16Byte) |
+| userInfos[].date | String | ユーザースコアがアップデートされた時間（RFC 3339) |
 
 ### Get multiple user info by range
 
-원하는 범위(등수)의 순위 정보를 조회할 수 있는 방법입니다.
+希望する範囲（順位）のランキング情報を照会できる方法です。
 
 **[Method, URI]**
 
@@ -363,23 +363,23 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
 |factor|	int|	Factor|
 
 **[Request Parameter]**
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 |
-| start | int | mandatory | 시작 순위|
-| size | int | mandatory | 가져올 Leaderboard 정보의 개수|
+| transactionid | long | optional | トランザクションID |
+| ispast | bool | optional | true or false（デフォルトはfalse) <br> trueの場合は、前回の周期のデータを照会 |
+| start | int | mandatory | 開始ランキング |
+| size | int | mandatory | 取得するLeaderboardの情報数 |
 
 **[Request Sample]**
 
@@ -436,16 +436,16 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| userInfosByRange | Array[Object] | User들의 정보 |
-| userInfosByRange[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| userInfosByRange | Array[Object] | ユーザー情報 |
+| userInfosByRange[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| userInfos[].resultCode | int | 해당 User에 대한 코드. エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
-| userInfos[].rank | int | 이번 주기의 순위 |
-| userInfos[].preRank | int | 이전 주기의 순위 |
-| userInfos[].extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
-| userInfos[].date | String | User Score 가 업데이트 된 시간. (RFC 3339) |
+| userInfos[].rank | int | 今回の周期のランキング |
+| userInfos[].preRank | int | 前回の周期のランキング |
+| userInfos[].extra | String | ユーザーとともに保存されるExtra Data（最大16Byte) |
+| userInfos[].date | String | ユーザースコアがアップデートされた時間（RFC 3339) |
 
 <br>
 
@@ -453,7 +453,7 @@ Content-Type: application/json
 
 ### Set single user score
 
-원하는 한 명의 User 점수를 등록할 수 있는 방법입니다.
+希望する一人のユーザーのスコアを登録できる方法です。
 
 **[Method, URI]**
 
@@ -463,13 +463,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-| appkey | String | Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
+| appkey | String | Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
 | factor | int | Factor ID |
 | userId | String | User ID |
 
@@ -477,8 +477,8 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionId |	long |	mandatory | 트랜잭션 ID |
-|score|	double | mandatory | User 점수 |
+| transactionId |	long | mandatory | トランザクションID |
+|score|	double | mandatory | ユーザースコア |
 
 **[Request Sample]**
 
@@ -514,14 +514,14 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
-| resultInfo.userId | String | 등록된 User ID |
+| resultInfo | Object | 結果情報 |
+| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| resultInfo.userId | String | 登録されたユーザーID  |
 
 
 ### Set single user score with extra data
 
-원하는 한 명의 User 점수와 Extra Data를 등록할 수 있는 방법입니다.
+希望する一人のユーザーのスコアとExtra Dataを登録できる方法です。
 
 **[Method, URI]**
 
@@ -531,13 +531,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-| appkey |	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
+| appkey |	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
 | factor | int | Factor ID |
 | userId | String | User ID |
 
@@ -545,9 +545,9 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionId |	long |	mandatory | 트랜잭션 ID |
-| score | double | mandatory | User 점수 |
-| extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
+| transactionId |	long |	mandatory | トランザクションID |
+| score | double | mandatory | ユーザースコア |
+| extra | String | ユーザーとともに保存されるExtra Data（最大16Byte) |
 
 **[Request Sample]**
 
@@ -584,13 +584,13 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
-| resultInfo.userId | String | 등록된 User ID |
+| resultInfo | Object | 結果情報 |
+| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| resultInfo.userId | String | 登録されたユーザーID  |
 
 ### Set multiple user score
 
-원하는 User들 점수를 등록할 수 있는 방법입니다.
+希望するユーザースコアを登録できる方法です。
 
 **[Method, URI]**
 
@@ -600,22 +600,22 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
 
 **[Request Body]**
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionId | long | mandatory | 트랜잭션 ID |
-| userScoresWithFactor | Array[Object] | mandatory | User 점수 리스트와 Factor의 리스트 |
-| userScoresWithFactor[].factor | int | mandatory | 등록을 원하는 Factor |
-| userScoresWithFactor[].userScores | Array[Object] | mandatory | 등록을 원하는 User ID/점수의 리스트 |
+| transactionId | long | mandatory | トランザクションID |
+| userScoresWithFactor | Array[Object] | mandatory | ユーザースコア・Factorのリスト |
+| userScoresWithFactor[].factor | int | mandatory | 登録を希望するFactor |
+| userScoresWithFactor[].userScores | Array[Object] | mandatory | 登録を希望するユーザーID/スコアのリスト |
 | userScores[].userId | String | mandatory | User ID |
 | userScores[].score | double | mandatory | User Score |
 
@@ -703,16 +703,16 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| resultInfosWithFactor | Array[Object] | 결과 정보 |
-| resultInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| resultInfosWithFactor | Array[Object] | 結果情報 |
+| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | resultInfosWithFactor[].factor | int | Factor ID |
-| resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 User 들의 결과 정보 |
-| resultInfos.resultCode | int | User 에 대한 에러코드 |
-| resultInfos.userId | String | 등록된 User ID |
+| resultInfosWithFactor[].resultInfos | Array[Object] | 登録されたユーザーの結果情報 |
+| resultInfos.resultCode | int | User に対するエラーコード|
+| resultInfos.userId | String | 登録されたユーザーID  |
 
 ### Set multiple user score with extra data
 
-원하는 User들 점수와 Extra Data를 등록할 수 있는 방법입니다.
+希望するユーザースコアとExtra Dataを登録できる方法です。
 
 **[Method, URI]**
 
@@ -722,25 +722,25 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
 
 **[Request Body]**
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionId | long | mandatory | 트랜잭션 ID |
-| userInfosWithFactor | Array[Object] | mandatory | User 점수 리스트와 Factor의 리스트 |
-| userInfosWithFactor[].factor | int | mandatory | 등록을 원하는 Factor |
-| userInfosWithFactor[].userInfos | Array[Object] | mandatory | 등록을 원하는 User ID/점수의 리스트 |
+| transactionId | long | mandatory | トランザクションID |
+| userInfosWithFactor | Array[Object] | mandatory | ユーザースコア・Factorのリスト |
+| userInfosWithFactor[].factor | int | mandatory | 登録を希望するFactor |
+| userInfosWithFactor[].userInfos | Array[Object] | mandatory | 登録を希望するユーザーID/スコアのリスト |
 | userInfos[].userId | String | mandatory | User ID |
 | userInfos[].score | double | mandatory | User Score |
-| userInfos[].extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
+| userInfos[].extra | String | ユーザーとともに保存されるExtra Data（最大16Byte) |
 
 **[Request Sample]**
 
@@ -829,12 +829,12 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| resultInfosWithFactor | Array[Object] | 결과 정보 |
-| resultInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
+| resultInfosWithFactor | Array[Object] | 結果情報 |
+| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | resultInfosWithFactor[].factor | int | Factor ID |
-| resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 User 들의 결과 정보 |
-| resultInfos.resultCode | int | User 에 대한 에러코드 |
-| resultInfos.userId | String | 등록된 User ID |
+| resultInfosWithFactor[].resultInfos | Array[Object] | 登録されたユーザーの結果情報 |
+| resultInfos.resultCode | int | User に対するエラーコード|
+| resultInfos.userId | String | 登録されたユーザーID |
 
 <br>
 
@@ -842,7 +842,7 @@ Content-Type: application/json
 
 ### Delete single user info
 
-원하는 한 명의 User 정보를 삭제하는 방법입니다. 해당 User는 영구적으로 삭제되며, 복구되지 않습니다.
+希望する一人のユーザー情報を削除する方法です。該当ユーザーは永久的に削除され、復旧できません。
 
 **[Method, URI]**
 
@@ -852,22 +852,22 @@ DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
 |factor|	int|	Factor|
 
 **[Request Parameter]**
 
-| Name | Type | Required |  Value |
+| Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| userId | String |	mandatory | User ID |
-| transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 삭제 |
+| userId | String | mandatory | User ID |
+| transactionid | long | optional | トランザクションID |
+| ispast | bool | optional | true or false（デフォルトはfalse） <br> trueの場合は、前回の周期のデータを削除 |
 
 **[Request Sample]**
 
@@ -899,28 +899,25 @@ Content-Type: application/json
 
 ## Error Codes
 
-[표 11]의 에러 코드는 Response body의 header/body에 있는 resultCode와 resultMessage의 의미를 설명합니다.  
-header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에러 코드가 보이는 경우는 아래 [참고] 링크를 참고 부탁드립니다.
+以下の表のエラーコードは、Response bodyのheader/bodyにあるresultCodeとresultMessageの意味を説明したものです。
+HeaderのresultCodeで以下のエラーコードではなく、HTTPのエラーコードが表示される場合は、以下の[参照]リンクをご参照ください。
 
-|Result Code| Result Code(Hex) | Result Message |설명|
+|Result Code| Result Code(Hex) | Result Message |説明|
 |---|---|---|---|
-|0|	0x00000000 |LEADERBOARD_SUCCESS | 요청 성공.|
-|1|	0x00000001 |LEADERBOARD_SUCCESS_BUT_NOT_UPDATE | 요청은 성공 했지만, 기존과 동일한 데이터가 들어와서 업데이트 하지 않음.|
-|459777|	0x00070401 |LEADERBOARD_ERROR_APPKEY_VERIFIER | 앱키 인증 실패. |
-|462849|	0x00071001 |LEADERBOARD_AP_ERROR_INITIALTIZE | 초기화 실패. |
-|462850|	0x00071002 |LEADERBOARD_AP_ERROR_NOT_EXIST_USER | 등록되지 않은 User. |
-|462851|	0x00071003 |LEADERBOARD_AP_ERROR_NOT_EXIST_FACTOR | 등록되지 않은 Factor.|
-|462852|	0x00071004 |LEADERBOARD_AP_ERROR_NOT_EXIST_APPKEY | 등록되지 않은 앱키. |
-|462853|	0x00071005 |LEADERBOARD_AP_ERROR_TOO_BIG_EXTRA | Extra Data 제한 길이 초과. |
-|462854|	0x00071006 |LEADERBOARD_AP_ERROR_WRONG_RANGE | 잘못된 범위. |
-|462855|	0x00071007 |LEADERBOARD_AP_ERROR_WRONG_PARAM | 잘못된 파라메터. |
-|463000|	0x00071098 |LEADERBOARD_AP_ERROR_SYSTEM | 시스템 에러.|
-|463001|	0x00071099 |LEADERBOARD_AP_ERROR_UNKOWN | 미확인 에러.|
+|0|	0x00000000 |LEADERBOARD_SUCCESS | リクエスト成功 |
+|1|	0x00000001 |LEADERBOARD_SUCCESS_BUT_NOT_UPDATE | リクエストは成功したものの、既存と同じデータが入ったため、アップデートはしていない |
+|459777|	0x00070401 |LEADERBOARD_ERROR_APPKEY_VERIFIER | アプリキー認証失敗 |
+|462849|	0x00071001 |LEADERBOARD_AP_ERROR_INITIALTIZE | リセット失敗 |
+|462850|	0x00071002 |LEADERBOARD_AP_ERROR_NOT_EXIST_USER | 未登録ユーザー |
+|462851|	0x00071003 |LEADERBOARD_AP_ERROR_NOT_EXIST_FACTOR | 未登録Factor |
+|462852|	0x00071004 |LEADERBOARD_AP_ERROR_NOT_EXIST_APPKEY | 未登録アプリキー |
+|462853|	0x00071005 |LEADERBOARD_AP_ERROR_TOO_BIG_EXTRA | Extra Data 制限長さ超過 |
+|462854|	0x00071006 |LEADERBOARD_AP_ERROR_WRONG_RANGE | 正しくない範囲 |
+|462855|	0x00071007 |LEADERBOARD_AP_ERROR_WRONG_PARAM | 正しくないパラメーター |
+|463000|	0x00071098 |LEADERBOARD_AP_ERROR_SYSTEM | システムエラー |
+|463001|	0x00071099 |LEADERBOARD_AP_ERROR_UNKOWN | 不明なエラー |
 
-> [참고]  
-> 그 외 일반적인 에러 코드에 대한 추가 정보는 다음 링크에서 확인하기 바랍니다.   
+> [参照]  
+> その他、一般的なエラーコードに対する追加情報は、以下のリンクよりご確認ください。 <br>
 > http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml  
-
-
-
 

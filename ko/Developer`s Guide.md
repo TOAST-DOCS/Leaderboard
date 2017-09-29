@@ -13,7 +13,7 @@ Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
 ## Notice
 
 ### Caution
-모든 API 사용을 하기 위해서는 **상품 활성화 후 Factor를 등록**해야 합니다.  
+모든 API를 사용하기 위해서는 **상품 활성화 후 Factor를 등록**해야만 합니다.  
 Leaderboard API 는 **Server에서 호출 하는 것을 권장**하고, **Client 에서의 호출은 권장하고 있지 않습니다.**
 
 ### Server Address
@@ -899,7 +899,7 @@ Content-Type: application/json
 
 ## Error Codes
 
-[표 11]의 에러 코드는 Response body의 header/body에 있는 resultCode와 resultMessage의 의미를 설명합니다.  
+아래 표의 에러 코드는 Response body의 header/body에 있는 resultCode와 resultMessage의 의미를 설명합니다.  
 header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에러 코드가 보이는 경우는 아래 [참고] 링크를 참고 부탁드립니다.
 
 |Result Code| Result Code(Hex) | Result Message |설명|
