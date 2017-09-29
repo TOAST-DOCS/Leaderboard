@@ -7,7 +7,7 @@
 
 ## Merits
 
-![[図 0 Leaderboard Merits]]（http://static.toastoven.net/prod_leaderboardv2/merits-jp.png）
+![[図0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/merits-jp.png)
 
 <br>
 
@@ -52,7 +52,7 @@
 
 「Leaderboard」プラットフォームの物理的構造は、以下の図の通りです。
 
-![[図1 「Leaderboard」の物理的構造]]（http://static.toastoven.net/prod_leaderboardv2/overview_1-jp.png）
+![[図1 「Leaderboard」の物理的構造]](http://static.toastoven.net/prod_leaderboardv2/overview_1-jp.png)
 
 - Game Server / Web Consoleは、api-leaderboard.cloud.toast.comでデータをやり取りします。
 - Load Balancerは、複数で構成したLeaderboard APサーバーにリクエストを分散します。
@@ -63,7 +63,7 @@
 
 「Leaderboard」プラットフォームの論理的構造は、以下の図の通りです。
 
-![[図2 「Leaderboard」の論理的構造]]（http://static.toastoven.net/prod_leaderboardv2/overview_2-jp.png）
+![[図2 「Leaderboard」の論理的構造]](http://static.toastoven.net/prod_leaderboardv2/overview_2-jp.png)
 
 - プロジェクト別にLeaderboard AppKeyが存在します。
 - Leaderboard AppKey内に複数のFactorを登録できます。
@@ -83,13 +83,13 @@
 
 昇順ソートは、低いスコアから高いスコアへソートします。
 
-![[図3 昇順ソート]]（http://static.toastoven.net/prod_leaderboardv2/overview_3-jp.png）
+![[図3 昇順ソート]](http://static.toastoven.net/prod_leaderboardv2/overview_3-jp.png)
 
 **[降順ソート]**
 
 降順ソートは、高いスコアから低いスコアへソートします。
 
-![[図4 降順ソート]]（http://static.toastoven.net/prod_leaderboardv2/overview_4-jp.png）
+![[図4 降順ソート]](http://static.toastoven.net/prod_leaderboardv2/overview_4-jp.png)
 
 ### Score update
 
@@ -99,19 +99,19 @@
 
 新しく入ったスコアが前のスコアより高い場合は、アップデートを行います。
 
-![[図5 最高スコアのアップデート]]（http://static.toastoven.net/prod_leaderboardv2/overview_5-jp.png）
+![[図5 最高スコアのアップデート]](http://static.toastoven.net/prod_leaderboardv2/overview_5-jp.png)
 
 **[最新スコアのアップデート]**
 
 既存のスコアとは関係なく、新しいスコアをアップデートします（常にアップデート）。
 
-![[図6 最新スコアのアップデート]]（http://static.toastoven.net/prod_leaderboardv2/overview_6-jp.png）
+![[図6 最新スコアのアップデート]](ㅗttp://static.toastoven.net/prod_leaderboardv2/overview_6-jp.png)
 
 **[累計スコアのアップデート]*
 
 新しいスコアと既存のスコアの合計をアップデートします。
 
-![[図7 累計スコアのアップデート]]（http://static.toastoven.net/prod_leaderboardv2/overview_7-jp.png）
+![[図7 累計スコアのアップデート]](http://static.toastoven.net/prod_leaderboardv2/overview_7-jp.png)
 
 ### Tie score
 
@@ -121,13 +121,13 @@
 
 同点者が複数いる場合、先に登録されたユーザー方が高いランキングになります。
 
-![[図8 最初ランキング獲得者の優先順位]]（http://static.toastoven.net/prod_leaderboardv2/overview_8-jp.png）
+![[図8 最初ランキング獲得者の優先順位]](http://static.toastoven.net/prod_leaderboardv2/overview_8-jp.png)
 
 **[最新ランキング獲得者の優先順位]**
 
 同点者が複数いる場合、遅れて登録されたユーザーの方が高いランキングになります。
 
-![[図9 最新ランキング獲得者の優先順位]]（http://static.toastoven.net/prod_leaderboardv2/overview_9-jp.png）
+![[図9 最新ランキング獲得者の優先順位]](http://static.toastoven.net/prod_leaderboardv2/overview_9-jp.png)
 
 ### Reset time
 
