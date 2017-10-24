@@ -17,14 +17,14 @@ Leaderboard APIは、REST APIの形で以下のAPIを提供します。
 Leaderboard APIは、**Serverから呼び出すことをお勧め**しており、**Clientからの呼び出しはお勧めしていません。**
 
 ### Server Address
-サーバーAPIを呼び出すためのサーバーアドレスは、以下の通りです。このアドレスは「Leaderboard」のコンソル画面からも確認できます。<br>
+サーバーAPIを呼び出すためのサーバーアドレスは、以下の通りです。このアドレスは「Leaderboard」のコンソール画面からも確認できます。<br>
 
 > https://api-leaderboard.cloud.toast.com
 
 ![図 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/developer_1-jp.png)
 
 ### AppKey
-AppKeyは、ゲームサーバーにリクエストを送る際に必ず必要な固有なキーで、 「Leaderboard」のコンソル画面からも確認できます。
+AppKeyは、ゲームサーバーにリクエストを送る際に必要な固有なキーで、 「Leaderboard」のコンソール画面からも確認できます。
 > **注意事項** <br>
 > AppKeyは、外部に露出されることがあってはなりません。なお、変更はできないので、ご注意ください。
 
@@ -42,7 +42,7 @@ API呼び出し時にHTTP Headerに以下の項目を設定する必要があり
 | Content-Type | mandatory | application/json; charset=UTF-8 |
 
 ### API Response
-すべてのAPIリクエストに対するレスポンスとして、HTTP 200 OKを送ります。APIリクエストの成功有無は、Response Bodyのheader項目を参照し判断できます。
+すべてのAPIリクエストに対するレスポンスとして、HTTP 200 OKを送ります。APIリクエストの成否は、Response Bodyのheader項目を参照し判断できます。
 
 ```
 HTTP/1.1 200 OK
@@ -60,7 +60,7 @@ Content-Type: application/json
 ```
 
 ### TransactionId
-APIを呼び出すサーバーで内部的にAPIリクエストを管理できる方策として、TransactionId機能を提供します。
+APIを呼び出すサーバーで内部的にAPIリクエストを管理できる方法として、TransactionId機能を提供します。
 呼び出すサーバーのHTTP BodyにTransactionIdを設定しAPIを呼び出すと、「Leaderboard」サーバーは、レスポンスの結果に該当のTransactionIdを設定し、結果を送ります。TransactionIdは、定数型タイプです。
 
 ### Time
@@ -439,7 +439,7 @@ Content-Type: application/json
 | userInfosByRange | Array[Object] | ユーザー情報 |
 | userInfosByRange[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | 該当ユーザーに対するコード。 エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
 | userInfos[].rank | int | 今回の周期のランキング |
@@ -911,7 +911,7 @@ HeaderのresultCodeで以下のエラーコードではなく、HTTPのエラー
 |462850|	0x00071002 |LEADERBOARD_AP_ERROR_NOT_EXIST_USER | 未登録ユーザー |
 |462851|	0x00071003 |LEADERBOARD_AP_ERROR_NOT_EXIST_FACTOR | 未登録Factor |
 |462852|	0x00071004 |LEADERBOARD_AP_ERROR_NOT_EXIST_APPKEY | 未登録アプリキー |
-|462853|	0x00071005 |LEADERBOARD_AP_ERROR_TOO_BIG_EXTRA | Extra Data 制限長さ超過 |
+|462853|	0x00071005 |LEADERBOARD_AP_ERROR_TOO_BIG_EXTRA | Extra Data 長さ制限超過 |
 |462854|	0x00071006 |LEADERBOARD_AP_ERROR_WRONG_RANGE | 正しくない範囲 |
 |462855|	0x00071007 |LEADERBOARD_AP_ERROR_WRONG_PARAM | 正しくないパラメーター |
 |462856|    0x00071008 |LEADERBOARD_AP_ERROR_WRONG_PATH | URI入力時誤字、パラメータ不足 |
