@@ -151,7 +151,7 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Gui
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
-|factor|	int|	Leaderboard Factor|
+|factor|	int|	Leaderboard Factor ID|
 
 **[Request Parameter]**
 
@@ -370,7 +370,7 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Gui
 | Name | Type | Value |
 | --- | --- | --- |
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
-|factor|	int|	Factor|
+|factor|	int|	Factor ID|
 
 **[Request Parameter]**
 
@@ -547,7 +547,7 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Gui
 | --- | --- | --- | --- |
 | transactionId |	long |	mandatory | トランザクションID |
 | score | double | mandatory | ユーザースコア |
-| extra | String | ユーザーとともに保存されるExtra Data（最大16Byte) |
+| extra | String | optional | ユーザーとともに保存されるExtra Data（最大16Byte) |
 
 **[Request Sample]**
 
@@ -740,7 +740,7 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Gui
 | userInfosWithFactor[].userInfos | Array[Object] | mandatory | 登録を希望するユーザーID/スコアのリスト |
 | userInfos[].userId | String | mandatory | User ID |
 | userInfos[].score | double | mandatory | User Score |
-| userInfos[].extra | String | ユーザーとともに保存されるExtra Data（最大16Byte) |
+| userInfos[].extra | String | optional | ユーザーとともに保存されるExtra Data（最大16Byte) |
 
 **[Request Sample]**
 
@@ -859,7 +859,7 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Gui
 | Name | Type | Value |
 | --- | --- | --- |
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
-|factor|	int|	Factor|
+|factor|	int|	Factor ID|
 
 **[Request Parameter]**
 
