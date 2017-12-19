@@ -93,7 +93,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
-|factor|	int|	Leaderboard Factor|
+|factor|	int|	Leaderboard Factor ID|
 
 **[Request Parameter]**
 
@@ -151,7 +151,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
-|factor|	int|	Leaderboard Factor|
+|factor|	int|	Leaderboard Factor ID|
 
 **[Request Parameter]**
 
@@ -228,9 +228,9 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId |	long |	mandatory | 트랜잭션 ID |
-| isPast | bool | mandatory | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 |
+| isPast | bool | mandatory | true 일 경우 이전 주기, false 일 경우 현재 주기의 데이터 조회 |
 | userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 조회를 원하는 Factor와 User 리스트 묶음 |
-| userIDsWithFactor[].factor |	int | mandatory | 조희를 원하는 Factor |
+| userIDsWithFactor[].factor |	int | mandatory | 조희를 원하는 Factor ID|
 | userIDsWithFactor[].userIds |	Array[String] | mandatory | 조회를 원하는 User 리스트 |
 
 **[Request Sample]**
@@ -370,7 +370,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Value |
 | --- | --- | --- |
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
-|factor|	int|	Factor|
+|factor|	int|	Factor ID|
 
 **[Request Parameter]**
 
@@ -477,7 +477,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionId |	long |	mandatory | 트랜잭션 ID |
+| transactionId |	long | mandatory | 트랜잭션 ID |
 |score|	double | mandatory | User 점수 |
 
 **[Request Sample]**
@@ -547,7 +547,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | --- | --- | --- | --- |
 | transactionId |	long |	mandatory | 트랜잭션 ID |
 | score | double | mandatory | User 점수 |
-| extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
+| extra | String | optional | User 와 함께 저장되는 Extra Data (최대 16Byte) |
 
 **[Request Sample]**
 
@@ -614,7 +614,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | --- | --- | --- | --- |
 | transactionId | long | mandatory | 트랜잭션 ID |
 | userScoresWithFactor | Array[Object] | mandatory | User 점수 리스트와 Factor의 리스트 |
-| userScoresWithFactor[].factor | int | mandatory | 등록을 원하는 Factor |
+| userScoresWithFactor[].factor | int | mandatory | 등록을 원하는 Factor ID |
 | userScoresWithFactor[].userScores | Array[Object] | mandatory | 등록을 원하는 User ID/점수의 리스트 |
 | userScores[].userId | String | mandatory | User ID |
 | userScores[].score | double | mandatory | User Score |
@@ -736,11 +736,11 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | --- | --- | --- | --- |
 | transactionId | long | mandatory | 트랜잭션 ID |
 | userInfosWithFactor | Array[Object] | mandatory | User 점수 리스트와 Factor의 리스트 |
-| userInfosWithFactor[].factor | int | mandatory | 등록을 원하는 Factor |
+| userInfosWithFactor[].factor | int | mandatory | 등록을 원하는 Factor ID |
 | userInfosWithFactor[].userInfos | Array[Object] | mandatory | 등록을 원하는 User ID/점수의 리스트 |
 | userInfos[].userId | String | mandatory | User ID |
 | userInfos[].score | double | mandatory | User Score |
-| userInfos[].extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
+| userInfos[].extra | String | optional | User 와 함께 저장되는 Extra Data (최대 16Byte) |
 
 **[Request Sample]**
 
@@ -859,7 +859,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guid
 | Name | Type | Value |
 | --- | --- | --- |
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#appkey)|
-|factor|	int|	Factor|
+|factor|	int|	Factor ID|
 
 **[Request Parameter]**
 
@@ -921,7 +921,4 @@ header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에�
 > [참고]  
 > 그 외 일반적인 에러 코드에 대한 추가 정보는 다음 링크에서 확인하기 바랍니다.   
 > http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml  
-
-
-
 

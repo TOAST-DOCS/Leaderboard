@@ -18,7 +18,7 @@ Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 �
 ### Web Console 
 
 - 사용량 정보 확인 
-- TPS 확인 
+- TPS(초당 처리량) 확인
 - Factor 등록 / 조회 / 초기화
 - User 점수 조회 / 변경 / 삭제
 
