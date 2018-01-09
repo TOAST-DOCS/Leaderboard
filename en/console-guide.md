@@ -1,0 +1,1 @@
+## Game > Leaderboard > Console Guide
