@@ -1,7 +1,7 @@
-## Game > Leaderboard > Console Guide
+## Game > Leaderboard > コンソール使用ガイド
 
-Leaderboard 사용을 위해선 상품 이용 후 랭킹을 등록해야 합니다.
-상품 이용 후에는 게임의 지표 확인, 랭킹정보 등록, 초기화, 삭제 및 플레이어의 랭킹 정보 조회, 수정, 삭제를 할 수 있습니다.
+Leaderboardを使用するためには、サービス利用後、ランキングを登録する必要があります。
+サービス利用後は、ゲーム指標の確認、ランキング情報の登録、初期化、削除およびプレイヤーのランキング情報の照会、修正、削除を行うことができます。
 
 <br>
 
@@ -9,16 +9,16 @@ Leaderboard 사용을 위해선 상품 이용 후 랭킹을 등록해야 합니�
 
 ### Leaderboard Service Enable
 
-Console에서 [서비스 선택] > [Leaderboard]를 클릭하면 서비스가 활성화 되고 좌측 탭에 [Game] > [Leaderboard] 메뉴가 나타납니다.
+Console上部の**(+)サービス選択**ボタンをクリックした後、サービスリストから**Leaderboard**サービスをクリックし、サービスを活性化できます。サービスが活性化すると、左側のタブに[Game] > [Leaderboard]メニューが表示されます。
 
-![[그림 1 Leaderboard 서비스 활성화]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_1.PNG)
+![[図1 Leaderboard サービス活性化]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_1.PNG)
 
 
 ### API URL/AppKey
 
-서비스 활성화 후 접속 시 API URL 및 Appkey 값을 확인할 수 있습니다.
+サービス活性化後、**URL&Appkey**をクリックし、API URLおよびAppkeyの値を確認できます。
 
-![[그림 2 Leaderboard URL & AppKey 확인]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_2.PNG)
+![[図2 Leaderboard URL & AppKey 確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_2.PNG)
 
 <br>
 
@@ -26,34 +26,38 @@ Console에서 [서비스 선택] > [Leaderboard]를 클릭하면 서비스가 �
 
 ### Target Date Indicator
 
-특정 일자의 총 유저 수, Factor 수, 주기 및 Factor별 점유율 현황을 확인 할 수 있습니다. 오늘 날짜로 부터 6개월 전 까지의 데이터만 제공됩니다.
+特定日付の合計ユーザー数、Factor数、全体データの周期別占有率とFactor別占有率の現状を確認できます。今日の日付から6ヶ月前のデータのみ提供されます。
 
-달력에서 날짜 선택 시 그 날의 지표가 바로 조회됩니다.
+基本は、今日の日付が選択されリアルタイムデータが表示されますが、過去のデータを確認したい場合は、カレンダーで日付を選択すると、選択した日付の指標を直ちに照会できます。
 
-![[그림 3 특정 일자의 지표 확인]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_3.PNG)
+![[図3 特定の日付の指標確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_3.PNG)
 
-**[각 항목별 설명]**
+**[各項目別の説明]**
 #### Data Total
 
-- 그 날짜의 총 유저 수.
+- 選択した日付の合計データ件数
+
+- Factorが三つで、各Factorにデータが100件、200件、300件保存されている場合、Data Total値は600と表示されます。
 
 #### Factor Count
 
-- 그 날짜의 Factor 수. 그래프에는 주기 별로 Factor가 얼마나 있는지 표시됩니다.
+- 選択した日付に登録されているFactor数
 
-#### Data 점유율 차트
+- グラフには周期別に何件のFactorが登録されているかが表示されます。
 
-- 주기 : 주기를 기준으로 유저 수를 표시합니다.
-- 팩터 : Factor를 기준으로 유저 수를 표시합니다.
+#### データ占有率チャート
+
+- 周期：全体のデータがどの周期に多く分布するかを表示します。
+- ファクター：全体のデータがどのFactorに多く分布するかを表示します。
 
 
 ### Range Date Indicator
 
-일정 기간 동안의 데이터 변동 량을 확인 할 수 있습니다. 조회 가능 범위는 최대 6개월 입니다.
+一定期間のデータの変動量を確認できます。照会可能範囲は、最大6ヶ月です。
 
-최대 10개 까지 특정 Factor를 선택 할 수 있으며, 미 선택 시 선택 된 주기를 기준으로 상위 10개 Factor의 데이터를 조회합니다.  
+最大10件まで特定のFactorを選択可能で、選択していない場合は、選択済みの周期を基準に上位10件のFactorのデータを照会します。
 
-![[그림 4 일정 기간의 지표 확인]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_4.PNG)
+![[図4 一定期間の指標の確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_4.PNG)
 
 <br>
 
@@ -61,141 +65,155 @@ Console에서 [서비스 선택] > [Leaderboard]를 클릭하면 서비스가 �
 
 ### Search User Info
 
-**[랭킹 데이터 검색]**
+**[ランキングデータの取得]**
 
-Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보입니다. Factor 주기 선택 시 해당 주기의 Factor들이 선별됩니다.
+Factor登録後ランキングデータタブに行けば登録したFactorが見えます。 Factorサイクル選択時に、そのサイクルのFactorが選別されます。
 
-![[그림 5 랭킹 데이터 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5.PNG)
+![[図5 ランキングデータの検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5.PNG)
 
-**[유저 정보 검색]**
+**[ユーザ情報検索]**
 
-검색 기준을 선택해 유저 정보를 검색합니다.
+検索条件に合うランキングデータを照会できます。今後、検索されたユーザーをファイルでダウンロードできる機能を追加する予定です。
 
-![[그림 6 유저 정보 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6.PNG)
+![[図6 ユーザ情報検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6.PNG)
 
-**[각 항목별 설명]**
+**[各項目別の説明]**
 
-#### 주기 선택
-- 지난 주기 : 이전 주기의 랭킹 정보를 기준으로 검색합니다.
-- 현재 주기 : 현재 주기의 랭킹 정보를 기준으로 검색합니다.
+#### 周期選択
+- 過去の周期：前の周期のランキング情報を基準に検索します。
+- 現在の周期：現在の周期のランキング情報を基準に検索します。
 
-#### 검색 조건
-- 순위별 조회 : 조회할 유저의 랭킹 범위를 정합니다. 조회 시 500명 까지 범위가 제한됩니다.
-- 사용자 ID 조회 : 해당 Factor 내에 검색하고자 하는 User ID를 입력합니다. User가 없는 경우 조회되지 않습니다.
+#### 検索条件
+- 順位別照会：最小値と最大値を入力し、照会するランキングの範囲を決めます。最大500件のデータのみ照会できます。
+- ユーザーIDの照会：該当のFactor内に検索したいUser IDを入力します。存在しないUser IDを入力する場合は照会されません。
 
 ### Modify User Info
 
-**[수정할 유저 데이터 선택]**
-조회 후 수정할 유저를 선택합니다.
+**[修正するユーザーデータの選択]**
+照会したユーザーの登録済みのランキング情報を修正できます。
 
-![[그림 7 수정할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_7.PNG)
+![[図7 修正するユーザーデータの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_7.PNG)
 
-**[유저 랭킹 수정 팝업]**
-수정 버튼을 누르면 수정 할 데이터를 입력하는 팝업이 뜹니다. 점수, 기타 정보를 수정 할 수 있으며 변경 점수 및 사유는 필수 입력 입니다.
+**[ユーザーランキング修正ポップアップ]**
+修正を希望するデータを選択し**修正**ボタンをクリックすると、ユーザーのスコア、その他の情報を修正できるポップアップが表示されます。**事由**には、ランキング変更事由を入力し、運営者が修正した履歴は、ランキングデータ画面の**変更履歴**ボタンをクリックすることで確認できます。<br/>
+複数のデータを同じ値に修正した場合、修正画面でデータを選択し**選択ユーザー一括入力**ボタンをクリックすると、選択したデータを簡単に一括登録できます。
 
-![[그림 8 유저 랭킹 수정 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_8.PNG)
+![[図8 ユーザーランキング修正ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_8.PNG)
 
 ### Delete User Info
 
-**[삭제할 유저 데이터 선택]**
-조회 후 삭제할 유저를 선택합니다.
+**[削除するユーザーデータの選択]**
+照会画面でデータを選択し**削除**ボタンをクリックすることで、データを削除できます。マルチ選択が可能で、同時に複数のデータを削除することもできます。
 
-![[그림 9 삭제할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_9.PNG)
+![[図9 削除するユーザーデータの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_9.PNG)
 
-**[유저 랭킹 삭제 팝업]**
-삭제 버튼을 누르면 삭제 여부를 묻는 팝업이 뜹니다. 사유는 필수 입력이며 삭제 후 복구가 불가능하니 신중히 삭제해야 합니다.
+**[ユーザーランキング削除ポップアップ]**
+削除ボタンを押すと削除事由を入力するポップアップが表示されます。運営者が削除した履歴も修正履歴と同じく、ランキングデータ画面の**変更履歴**ボタンをクリックし確認できます。<br/>削除後は、復旧できないため、慎重に削除する必要があります。
 
-![[그림 10 유저 랭킹 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_10.PNG)
+![[図10 ユーザーランキング削除のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_10.PNG)
 
 <br>
 
 ## Factor Configuration Tab
 
-> **[유의 사항]**<br>
-> Factor의 등록, 초기화, 삭제는 프로젝트의 ADMIN으로 등록된 사용자만 수행 할 수 있습니다. 
+> **[重要]**<br>
+> Factorの登録、初期化、削除は、プロジェクトのADMINとして登録されている使用者のみ行うことができます。 
 
 ### Add Factor
 
-서비스 활성화 후 Factor 정보를 추가해야 합니다. [Game] > [Leaderboard] > [랭킹 설정] > [+추가] 버튼을 클릭해 Factor를 등록합니다.
+[Game] > [Leaderboard] > [ランキング設定] > [+追加]ボタンをクリックし、Factorを登録します。
 
-> **[참고]**<br>
-> Factor는 [주기, 업데이트 기준, 정렬기준]의 묶은 단위입니다.<br>
-> 최고점수 랭킹을 일간, 주간, 월간으로 사용하고 싶다면 Factor를 3가지를 만들어야 합니다.
+> **[参考]**<br>
+> Factorは[サイクル、アップデートの基準は、並べ替え基準]の束ねた単位です。<br>
+> ハイスコ​​アランキングを毎日、毎週、毎月の使用したい場合はFactorを3つのことをする必要があります。
 
-![[그림 11 Factor 등록을 위하여 [+추가] 클릭]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_11.PNG)
+![[図11 Factor登録のための[+追加]クリック]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_11.PNG)
 
-[+추가] 버튼을 클릭하면 그림 3과 같은 <Factor 추가> 팝업이 열립니다.
+[+追加]ボタンをクリックすると、図3のようなポップアップが表示されます。
 
-![[그림 12 Factor 추가 팝업](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12.PNG)
+![[図12 Factor追加のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12.PNG)
 
-**[각 항목별 설명]**
+**[各項目別の説明]**
 
-#### Factor 이름
+#### ファクター名
 
-- 랭킹을 구분할 이름이며 차후 Factor 검색에 사용될 수 있습니다.
+- ランキングを区分する名前であり、後でファクター検索に使われます。
 
-#### 한계 유저 수
+#### 限界ユーザー数
 
-- 해당 Factor에 등록될 수 있는 최대 유저 수를 뜻합니다. 최대 1000만 명까지 입력할 수 있습니다.
+- ファクターに登録可能な最大のユーザー数を意味します。
+- 最大1000万人まで入力できます。
 
-#### 기타정보
+#### その他の情報
 
-- Factor의 extra 데이터로 필요 시 입력합니다.
+- ファクターの追加データで、必要な場合に入力します。
 
-#### Factor 주기
+#### ファクターの周期
 
-- 랭킹의 초기화 기간을 의미하며 일간, 주간, 월간, 전체가 있습니다. 주기 또한 Factor 검색에 사용될 수 있으며 각 주기를 기준으로 유저들을 분류합니다.
+- ランキングの初期化期間を意味し、日間、週間、月間、全体があります。
 
-#### Factor 리셋 시간
+#### ファクターリセット時間
 
-- Factor 별 초기화 시간을 의미합니다. 주기가 전체인 경우 초기화 되지 않아 큰 의미는 없습니다.
+- ファクターの初期化時間を設定します。
+- 周期が全体である場合、初期化しないため設定はできず、日間、週間、月間のみ設定できます。
 
-#### Factor 리셋 일자
+#### ファクターリセット日付
 
-- 주간, 월간의 경우 초기화 될 요일, 일자를 선택해야합니다.
+- 週間の場合は初期化する曜日を設定し、月間の場合は初期化する日付(1~28の中で選択可能)を設定します。
+- 日間、全体周期の場合は、初期化日付設定はできません。
 
-#### 정렬 기준
+#### ソート基準
 
-- Desc : 점수를 내림차순으로 정렬합니다.
-- Asc : 점수를 오름차순으로 정렬합니다.
+- Desc：スコアを降順にソートします。
+- Asc：スコアを昇順にソートします。
 
-#### 랭킹 업데이트 기준
+#### ランキングのアップデート基準
 
-- Best Score : 최고 점수 등록. User의 베스트 점수를 기록합니다.
-- Latest Score : 최신 점수 등록. User의 가장 최근 점수를 기록합니다.
-- Accumulation Score : 누적 점수 등록. User의 점수를 누적 합산해 등록합니다.
+- ランキングのデータを記録する基準を選択します。
+- Best Score：ユーザーの最高スコアを記録します。
+- Latest Score：ユーザーの最近のスコアを記録します。
+- Accumulation Score：ユーザーの累計スコアを合算し記録します。
 
-#### 동점자 처리
+(例) データのソート基準が昇順で、以前登録されたデータが100、最近登録されたデータが10の場合のランキングデータ記録方法
+- Best Score：最高記録の100
+- Latest Score：最近の記録の10
+- Accumulation Score：累計記録の110(100+10)
 
-- Priority First Ranking Get : 최초 랭킹 획득 우선. 동점인 경우 먼저 등록된 유저가 높은 등수로 기록됩니다.
-- Priority Latest Ranking Get : 최근 랭킹 획득 우선. 동점인 경우 나중에 등록된 유저가 높은 등수로 기록됩니다.
+#### 同点者処理
 
-> FactorID는 Factor 추가 시 자동으로 지정됩니다.
+- 同点者の順位処理方法を選択します。
+- Priority First Ranking Get：先に登録されたユーザーが高いランキングとして記録されます。
+- Priority Latest Ranking Get：後で登録されたユーザーが高いランキングとして記録されます。
+
+
+> [参照]<br>
+> FactorIDは、ファクター追加時に自動的に生成されるIDです。
 
 ### Search Factor
 
-검색 조건이 Factor 이름일 시 이름에 검색어가 포함된 Factor를 검색합니다.
+検索条件がファクター名である時、ファクター名に検索語が含まれたファクターを検索します。
 
-![[그림 13 검색 기준 Factor 이름]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_13.PNG)
+![[図13 検索基準Factor名]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_13.PNG)
 
-검색 조건이 Factor 주기일 시 선택 목록에 있는 주기로 검색합니다.
+検索条件がFactorの周期である時、選択した周期(日間、週間、月間、全体)のファクターを検索します。
 
-![[그림 14 검색 기준 Factor 주기]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_14.PNG)
+![[図14 検索基準Factor 周期]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_14.PNG)
 
 ### Init Factor
 
-초기화 할 Factor들을 선택합니다.
+ファクターに保存されたデータを初期化したり、ファクターを削除できます。<br>
+対象となるファクターを選択し、**初期化**ボタンをクリックします。
 
-![[그림 15 랭킹 설정에서 초기화 할 Factor 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15.PNG)
+![[図15 ランキング設定での初期化するFactorの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15.PNG)
 
-초기화 버튼을 클릭 시 초기화 팝업이 나타납니다. 초기화 후엔 Factor의 유저 데이터가 전부 사라지고 복구가 불가능 하니 신중하게 수행합니다.
+初期化ポップアップにてデータを初期化するファクター情報を確認し、**初期化**ボタンをクリックすると、すべてのデータが削除され、ファクターデータが初期化されます。
 
-![[그림 16 Factor 초기화 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_16.PNG)
+![[図16 Factor 初期化ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_16.PNG)
 
 ### Delete Factor
 
-초기화 팝업에서 하단 항목 체크 시 Factor까지 삭제됩니다. 데이터 복구가 불가능하니 신중하게 수행합니다. 
+下部の「Factor登録情報も削除することを希望する場合はチェックを入れてください」という項目にチェックを入れた後、**初期化**ボタンをクリックすると、登録済みのファクター情報も削除されます。 
 
-![[그림 17 Factor 삭제]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_17.PNG)
+![[図17 Factor 削除]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_17.PNG)
 
-※ 개발과 관련된 api 정보는 [Developer's Guide](/Game/Leaderboard/ko/Developer%60s%20Guide/) 를 참조해주세요.
+※開発に関するapi情報は、[Developer's Guide](/Game/Leaderboard/ja/Developer%60s%20Guide/)をご参照ください。
