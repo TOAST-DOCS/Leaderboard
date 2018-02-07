@@ -198,4 +198,4 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 
 ![[그림 17 Factor 삭제]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_17.PNG)
 
-※ 개발과 관련된 api 정보는 [Developer's Guide](/Game/Leaderboard/ko/Developer%60s%20Guide/) 를 참조해주세요.
+※ 개발과 관련된 api 정보는 [Developer's Guide](/Game/Leaderboard/ko/api-guide/) 를 참조해주세요.

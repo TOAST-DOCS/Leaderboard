@@ -216,4 +216,4 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 
 ![[図17 Factor 削除]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_17.PNG)
 
-※開発に関するapi情報は、[Developer's Guide](/Game/Leaderboard/ja/Developer%60s%20Guide/)をご参照ください。
+※開発に関するapi情報は、[Developer's Guide](/Game/Leaderboard/ja/api-guide/)をご参照ください。
