@@ -1,6 +1,6 @@
 ## Game > Leaderboard > Release Notes
 
-### 2018.01.22
+### 2018.02.22
 
 #### 기능 개선/변경
 * [Console] 콘솔 UI 개편
