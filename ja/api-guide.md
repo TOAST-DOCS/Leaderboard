@@ -129,7 +129,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 結果情報 |
-| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
+| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/error-code) |
 | resultInfo.totalCount | int | Factorに登録されているユーザー数 |
 
 ### Get single user info
@@ -195,7 +195,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfo | Object | ユーザー情報 |
-| userInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
+| userInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/error-code) |
 | userInfo.userId | String | User ID |
 | userInfo.score | Double | User Score |
 | userInfo.rank | int | 今回の周期のランキング |
@@ -340,10 +340,10 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosWithFactor | Array[Object] | ユーザー情報 |
-| userInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
+| userInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/error-code) |
 | userInfosWithFactor[].factor | int | Factor ID |
 | userInfosWithFactor[].userInfos | Array[Object] | User Score |
-| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
+| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/error-code) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
 | userInfos[].rank | int | 今回の周期のランキング |
@@ -437,9 +437,9 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosByRange | Array[Object] | ユーザー情報 |
-| userInfosByRange[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
+| userInfosByRange[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/error-code) |
 | userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
+| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/error-code) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
 | userInfos[].rank | int | 今回の周期のランキング |
@@ -515,7 +515,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 結果情報 |
-| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
+| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/error-code) |
 | resultInfo.userId | String | 登録されたユーザーID  |
 
 
@@ -585,7 +585,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 結果情報 |
-| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
+| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/error-code) |
 | resultInfo.userId | String | 登録されたユーザーID  |
 
 ### Set multiple user score
@@ -704,7 +704,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 結果情報 |
-| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
+| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/error-code) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 登録されたユーザーの結果情報 |
 | resultInfos.resultCode | int | User に対するエラーコード|
@@ -830,7 +830,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 結果情報 |
-| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
+| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/error-code) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 登録されたユーザーの結果情報 |
 | resultInfos.resultCode | int | User に対するエラーコード|
