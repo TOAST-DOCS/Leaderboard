@@ -129,7 +129,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/zh/api-guide/error-code) |
+| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
 | resultInfo.totalCount | int | Factor 에 등록된 User 수 |
 
 ### Get single user info
@@ -195,7 +195,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfo | Object | User 정보 |
-| userInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/zh/api-guide/error-code) |
+| userInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
 | userInfo.userId | String | User ID |
 | userInfo.score | Double | User Score |
 | userInfo.rank | int | 이번 주기의 순위 |
@@ -340,10 +340,10 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosWithFactor | Array[Object] | User들의 정보 |
-| userInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/zh/api-guide/error-code) |
+| userInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
 | userInfosWithFactor[].factor | int | Factor ID |
 | userInfosWithFactor[].userInfos | Array[Object] | User Score |
-| userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/zh/api-guide/error-code) |
+| userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
 | userInfos[].rank | int | 이번 주기의 순위 |
@@ -437,9 +437,9 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosByRange | Array[Object] | User들의 정보 |
-| userInfosByRange[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/zh/api-guide/error-code) |
+| userInfosByRange[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
 | userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/zh/api-guide/error-code) |
+| userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
 | userInfos[].rank | int | 이번 주기의 순위 |
@@ -515,7 +515,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/zh/api-guide/error-code) |
+| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
 | resultInfo.userId | String | 등록된 User ID |
 
 
@@ -585,7 +585,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/zh/api-guide/error-code) |
+| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
 | resultInfo.userId | String | 등록된 User ID |
 
 ### Set multiple user score
@@ -704,7 +704,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 결과 정보 |
-| resultInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/zh/api-guide/error-code) |
+| resultInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 User 들의 결과 정보 |
 | resultInfos.resultCode | int | User 에 대한 에러코드 |
@@ -830,7 +830,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 결과 정보 |
-| resultInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/zh/api-guide/error-code) |
+| resultInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 User 들의 결과 정보 |
 | resultInfos.resultCode | int | User 에 대한 에러코드 |
