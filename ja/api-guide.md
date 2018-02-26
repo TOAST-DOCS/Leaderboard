@@ -85,14 +85,14 @@ GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
 |factor|	int|	Leaderboard Factor|
 
 **[Request Parameter]**
@@ -129,7 +129,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 結果情報 |
-| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
 | resultInfo.totalCount | int | Factorに登録されているユーザー数 |
 
 ### Get single user info
@@ -144,13 +144,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
 |factor|	int|	Leaderboard Factor ID|
 
 **[Request Parameter]**
@@ -195,7 +195,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfo | Object | ユーザー情報 |
-| userInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| userInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
 | userInfo.userId | String | User ID |
 | userInfo.score | Double | User Score |
 | userInfo.rank | int | 今回の周期のランキング |
@@ -215,13 +215,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/g
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
 
 **[Request Body]**
 
@@ -340,10 +340,10 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosWithFactor | Array[Object] | ユーザー情報 |
-| userInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| userInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
 | userInfosWithFactor[].factor | int | Factor ID |
 | userInfosWithFactor[].userInfos | Array[Object] | User Score |
-| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
 | userInfos[].rank | int | 今回の周期のランキング |
@@ -363,13 +363,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
@@ -437,9 +437,9 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosByRange | Array[Object] | ユーザー情報 |
-| userInfosByRange[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| userInfosByRange[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
 | userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User Score |
 | userInfos[].rank | int | 今回の周期のランキング |
@@ -463,13 +463,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-| appkey | String | Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
+| appkey | String | Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
 | factor | int | Factor ID |
 | userId | String | User ID |
 
@@ -515,7 +515,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 結果情報 |
-| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
 | resultInfo.userId | String | 登録されたユーザーID  |
 
 
@@ -531,13 +531,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-| appkey |	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
+| appkey |	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
 | factor | int | Factor ID |
 | userId | String | User ID |
 
@@ -585,7 +585,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 結果情報 |
-| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
 | resultInfo.userId | String | 登録されたユーザーID  |
 
 ### Set multiple user score
@@ -600,13 +600,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
 
 **[Request Body]**
 
@@ -704,7 +704,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 結果情報 |
-| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 登録されたユーザーの結果情報 |
 | resultInfos.resultCode | int | User に対するエラーコード|
@@ -722,13 +722,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
 
 **[Request Body]**
 
@@ -830,7 +830,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 結果情報 |
-| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
+| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/api-guide/#error-codes) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 登録されたユーザーの結果情報 |
 | resultInfos.resultCode | int | User に対するエラーコード|
@@ -852,13 +852,13 @@ DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#common)
+Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
