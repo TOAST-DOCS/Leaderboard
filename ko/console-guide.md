@@ -124,7 +124,7 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 
 ![[그림 11 Factor 등록을 위하여 [+추가] 클릭]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_11-1.PNG)
 
-[+추가] 버튼을 클릭하면 아래와 같은 <Factor 추가> 팝업이 열립니다.
+[+추가] 버튼을 클릭하면 아래와 같은 팝업이 열립니다.
 
 ![[그림 12 Factor 추가 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-1.PNG)
 
