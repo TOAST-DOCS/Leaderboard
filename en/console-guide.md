@@ -11,14 +11,14 @@ Leaderboard 사용을 위해선 상품 이용 후 랭킹을 등록해야 합니�
 
 Console에서 [서비스 선택] > [Leaderboard]를 클릭하면 서비스가 활성화 되고 좌측 탭에 [Game] > [Leaderboard] 메뉴가 나타납니다.
 
-![[그림 1 Leaderboard 서비스 활성화]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_1.PNG)
+![[그림 1 Leaderboard 서비스 활성화]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_1-1.PNG)
 
 
 ### API URL/AppKey
 
 서비스 활성화 후 접속 시 API URL 및 Appkey 값을 확인할 수 있습니다.
 
-![[그림 2 Leaderboard URL & AppKey 확인]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_2.PNG)
+![[그림 2 Leaderboard URL & AppKey 확인]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_2-1.PNG)
 
 <br>
 
@@ -30,7 +30,7 @@ Console에서 [서비스 선택] > [Leaderboard]를 클릭하면 서비스가 �
 
 달력에서 날짜 선택 시 그 날의 지표가 바로 조회됩니다.
 
-![[그림 3 특정 일자의 지표 확인]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_3.PNG)
+![[그림 3 특정 일자의 지표 확인]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_3-1.PNG)
 
 **[각 항목별 설명]**
 #### Data Total
@@ -65,13 +65,13 @@ Console에서 [서비스 선택] > [Leaderboard]를 클릭하면 서비스가 �
 
 Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보입니다. Factor 주기 선택 시 해당 주기의 Factor들이 선별됩니다.
 
-![[그림 5 랭킹 데이터 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5.PNG)
+![[그림 5 랭킹 데이터 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5-1.PNG)
 
 **[유저 정보 검색]**
 
 검색 기준을 선택해 유저 정보를 검색합니다.
 
-![[그림 6 유저 정보 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6.PNG)
+![[그림 6 유저 정보 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6-1.PNG)
 
 **[각 항목별 설명]**
 
@@ -122,11 +122,11 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 > Factor는 [주기, 업데이트 기준, 정렬기준]의 묶은 단위입니다.<br>
 > 최고점수 랭킹을 일간, 주간, 월간으로 사용하고 싶다면 Factor를 3가지를 만들어야 합니다.
 
-![[그림 11 Factor 등록을 위하여 [+추가] 클릭]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_11.PNG)
+![[그림 11 Factor 등록을 위하여 [+추가] 클릭]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_11-1.PNG)
 
 [+추가] 버튼을 클릭하면 그림 3과 같은 <Factor 추가> 팝업이 열립니다.
 
-![[그림 12 Factor 추가 팝업](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12.PNG)
+![[그림 12 Factor 추가 팝업](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-1.PNG)
 
 **[각 항목별 설명]**
 
@@ -186,7 +186,7 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 
 초기화 할 Factor들을 선택합니다.
 
-![[그림 15 랭킹 설정에서 초기화 할 Factor 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15.PNG)
+![[그림 15 랭킹 설정에서 초기화 할 Factor 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15-1.PNG)
 
 초기화 버튼을 클릭 시 초기화 팝업이 나타납니다. 초기화 후엔 Factor의 유저 데이터가 전부 사라지고 복구가 불가능 하니 신중하게 수행합니다.
 

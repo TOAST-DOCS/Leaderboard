@@ -11,14 +11,14 @@ Leaderboardを使用するためには、サービス利用後、ランキング
 
 Console上部の**(+)サービス選択**ボタンをクリックした後、サービスリストから**Leaderboard**サービスをクリックし、サービスを活性化できます。サービスが活性化すると、左側のタブに[Game] > [Leaderboard]メニューが表示されます。
 
-![[図1 Leaderboard サービス活性化]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_1.PNG)
+![[図1 Leaderboard サービス活性化]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_1-1.PNG)
 
 
 ### API URL/AppKey
 
 サービス活性化後、**URL&Appkey**をクリックし、API URLおよびAppkeyの値を確認できます。
 
-![[図2 Leaderboard URL & AppKey 確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_2.PNG)
+![[図2 Leaderboard URL & AppKey 確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_2-1.PNG)
 
 <br>
 
@@ -30,7 +30,7 @@ Console上部の**(+)サービス選択**ボタンをクリックした後、サ
 
 基本は、今日の日付が選択されリアルタイムデータが表示されますが、過去のデータを確認したい場合は、カレンダーで日付を選択すると、選択した日付の指標を直ちに照会できます。
 
-![[図3 特定の日付の指標確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_3.PNG)
+![[図3 特定の日付の指標確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_3-1.PNG)
 
 **[各項目別の説明]**
 #### Data Total
@@ -69,13 +69,13 @@ Console上部の**(+)サービス選択**ボタンをクリックした後、サ
 
 Factor登録後ランキングデータタブに行けば登録したFactorが見えます。 Factorサイクル選択時に、そのサイクルのFactorが選別されます。
 
-![[図5 ランキングデータの検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5.PNG)
+![[図5 ランキングデータの検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5-1.PNG)
 
 **[ユーザ情報検索]**
 
 検索条件に合うランキングデータを照会できます。今後、検索されたユーザーをファイルでダウンロードできる機能を追加する予定です。
 
-![[図6 ユーザ情報検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6.PNG)
+![[図6 ユーザ情報検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6-1.PNG)
 
 **[各項目別の説明]**
 
@@ -114,7 +114,7 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 
 <br>
 
-## Factor Configuration Tab
+## Setting Tab
 
 > **[重要]**<br>
 > Factorの登録、初期化、削除は、プロジェクトのADMINとして登録されている使用者のみ行うことができます。 
@@ -127,11 +127,11 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 > Factorは[サイクル、アップデートの基準は、並べ替え基準]の束ねた単位です。<br>
 > ハイスコ​​アランキングを毎日、毎週、毎月の使用したい場合はFactorを3つのことをする必要があります。
 
-![[図11 Factor登録のための[+追加]クリック]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_11.PNG)
+![[図11 Factor登録のための[+追加]クリック]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_11-1.PNG)
 
 [+追加]ボタンをクリックすると、図3のようなポップアップが表示されます。
 
-![[図12 Factor追加のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12.PNG)
+![[図12 Factor追加のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-1.PNG)
 
 **[各項目別の説明]**
 
@@ -156,6 +156,11 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 
 - ファクターの初期化時間を設定します。
 - 周期が全体である場合、初期化しないため設定はできず、日間、週間、月間のみ設定できます。
+
+#### ファクターリセット間隔
+
+- Factorサイクルの初期化間隔を意味します。
+- 3に設定すると日 -  3日、週間 -  3週、月間 -  3ヶ月に1回の初期化されます。
 
 #### ファクターリセット日付
 
@@ -204,7 +209,7 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 ファクターに保存されたデータを初期化したり、ファクターを削除できます。<br>
 対象となるファクターを選択し、**初期化**ボタンをクリックします。
 
-![[図15 ランキング設定での初期化するFactorの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15.PNG)
+![[図15 ランキング設定での初期化するFactorの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15-1.PNG)
 
 初期化ポップアップにてデータを初期化するファクター情報を確認し、**初期化**ボタンをクリックすると、すべてのデータが削除され、ファクターデータが初期化されます。
 

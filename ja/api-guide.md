@@ -21,14 +21,14 @@ Leaderboard APIは、**Serverから呼び出すことをお勧め**しており�
 
 > https://api-leaderboard.cloud.toast.com
 
-![図 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/developer_1-jp.png)
+![図 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_1-1.PNG)
 
 ### AppKey
 AppKeyは、ゲームサーバーにリクエストを送る際に必要な固有なキーで、 「Leaderboard」のコンソール画面からも確認できます。
 > **注意事項** <br>
 > AppKeyは、外部に露出されることがあってはなりません。なお、変更はできないので、ご注意ください。
 
-![図 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/developer_2-jp.png)
+![図 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_2-1.PNG)
 
 <br>
 
