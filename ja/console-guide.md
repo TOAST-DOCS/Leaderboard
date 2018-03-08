@@ -129,7 +129,7 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 
 ![[図11 Factor登録のための[+追加]クリック]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_11-1.PNG)
 
-[+追加]ボタンをクリックすると、図3のようなポップアップが表示されます。
+[+追加]ボタンをクリックすると、以下のようなポップアップが表示されます。
 
 ![[図12 Factor追加のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-1.PNG)
 
