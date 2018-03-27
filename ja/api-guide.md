@@ -14,7 +14,7 @@ Leaderboard APIは、REST APIの形で以下のAPIを提供します。
 
 ### Caution
 すべてのAPIを使用するためには、**商品をアクティブ化してから、Factorを登録**する必要があります。
-Leaderboard APIは、**Serverから呼び出すことをお勧め**しており、**Clientからの呼び出しはお勧めしていません。**
+Leaderboard APIは、**Clientで呼び出し時乱用などの危険があり、Serverでのみ呼び出すことをお勧めします。**
 
 ### Server Address
 サーバーAPIを呼び出すためのサーバーアドレスは、以下の通りです。このアドレスは「Leaderboard」のコンソール画面からも確認できます。<br>
