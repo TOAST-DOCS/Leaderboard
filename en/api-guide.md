@@ -295,11 +295,11 @@ Content-Type: application/json
 		{
 			"resultCode": 462850,
 			"userId": "user3",
-			"score": 1100,
+			"score": 0,
 			"rank": 0,
 			"preRank": 0,
 			"extra": "",
-			"date": "2017-01-02T16:42:31+09:00"
+			"date": "1970-01-01T09:00:00+09:00"
 		}]
 	},
 	{
@@ -327,11 +327,11 @@ Content-Type: application/json
 		{
 			"resultCode": 462850,
 			"userId": "user6",
-			"score": 1300,
+			"score": 0,
 			"rank": 0,
 			"preRank": 0,
 			"extra": "",
-			"date": "2017-01-02T16:42:28+09:00"
+			"date": "1970-01-01T09:00:00+09:00"
 		}]
 	}]
 }
