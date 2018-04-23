@@ -14,7 +14,7 @@ Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
 
 ### Caution
 모든 API를 사용하기 위해서는 **상품 활성화 후 Factor를 등록**해야만 합니다.
-Leaderboard API 는 **Server에서 호출 하는 것을 권장**하고, **Client 에서의 호출은 권장하고 있지 않습니다.**
+Leaderboard API 는 **Client 에서 호출 시 어뷰징 등의 위험이 있어 Server에서 만 호출 하는 것을 권장 합니다.**
 
 ### Server Address
 서버 API 를 호출 하기 위한 서버 주소는 다음과 같습니다. 해당 주소는 Leaderboard 콘솔 화면에서도 확인 가능합니다. <br>
@@ -295,11 +295,11 @@ Content-Type: application/json
 		{
 			"resultCode": 462850,
 			"userId": "user3",
-			"score": 1100,
+			"score": 0,
 			"rank": 0,
 			"preRank": 0,
 			"extra": "",
-			"date": "2017-01-02T16:42:31+09:00"
+			"date": "1970-01-01T09:00:00+09:00"
 		}]
 	},
 	{
@@ -327,11 +327,11 @@ Content-Type: application/json
 		{
 			"resultCode": 462850,
 			"userId": "user6",
-			"score": 1300,
+			"score": 0,
 			"rank": 0,
 			"preRank": 0,
 			"extra": "",
-			"date": "2017-01-02T16:42:28+09:00"
+			"date": "1970-01-01T09:00:00+09:00"
 		}]
 	}]
 }
