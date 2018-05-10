@@ -65,13 +65,13 @@ Console에서 [서비스 선택] > [Leaderboard]를 클릭하면 서비스가 �
 
 Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보입니다. Factor 주기 선택 시 해당 주기의 Factor들이 선별됩니다.
 
-![[그림 5 랭킹 데이터 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5-1.PNG)
+![[그림 5 랭킹 데이터 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5-2.PNG)
 
 **[유저 정보 검색]**
 
 검색 기준을 선택해 유저 정보를 검색합니다.
 
-![[그림 6 유저 정보 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6-1.PNG)
+![[그림 6 유저 정보 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6-2.PNG)
 
 **[각 항목별 설명]**
 
@@ -88,7 +88,7 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 **[수정할 유저 데이터 선택]**
 조회 후 수정할 유저를 선택합니다.
 
-![[그림 7 수정할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_7.PNG)
+![[그림 7 수정할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_7-1.PNG)
 
 **[유저 랭킹 수정 팝업]**
 수정 버튼을 누르면 수정 할 데이터를 입력하는 팝업이 뜹니다. 점수, 기타 정보를 수정 할 수 있으며 변경 점수 및 사유는 필수 입력 입니다.
@@ -100,16 +100,28 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 **[삭제할 유저 데이터 선택]**
 조회 후 삭제할 유저를 선택합니다.
 
-![[그림 9 삭제할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_9.PNG)
+![[그림 9 삭제할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_9-1.PNG)
 
 **[유저 랭킹 삭제 팝업]**
 삭제 버튼을 누르면 삭제 여부를 묻는 팝업이 뜹니다. 사유는 필수 입력이며 삭제 후 복구가 불가능하니 신중히 삭제해야 합니다.
 
 ![[그림 10 유저 랭킹 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_10.PNG)
 
+### Download User Data
+
+**[데이터 저장 버튼 클릭]**
+현재 조회한 유저 정보들을 저장하려면 데이터 저장 버튼을 누릅니다.
+
+![[그림 18 데이터 저장 버튼 클릭]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_18.PNG)
+
+**[데이터 저장 팝업]**
+데이터는 1회 최대 10만 건까지 저장 가능하며, 허용량 초과 시 조회 시작 순위 포함 10만 명 까지만 다운로드 됩니다.
+
+![[그림 19 데이터 저장 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_19.PNG)
+
 <br>
 
-## Factor Configuration Tab
+## Setting Tab
 
 > **[유의 사항]**<br>
 > Factor의 등록, 초기화, 삭제는 프로젝트의 ADMIN으로 등록된 사용자만 수행 할 수 있습니다. 
@@ -126,9 +138,12 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 
 [+추가] 버튼을 클릭하면 아래와 같은 팝업이 열립니다.
 
-![[그림 12 Factor 추가 팝업](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-1.PNG)
+![[그림 12 Factor 추가 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-2.PNG)
 
 **[각 항목별 설명]**
+#### Factor ID
+
+- Factor의 고유한 숫자 ID로 팝업 오픈 시 자동으로 지정되나 사용자 임의로 변경 할 수 있습니다. 다른 Factor ID와 중복 불가입니다.
 
 #### Factor 이름
 
@@ -148,7 +163,11 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 
 #### Factor 리셋 시간
 
-- Factor 별 초기화 시간을 의미합니다. 주기가 전체인 경우 초기화 되지 않아 큰 의미는 없습니다.
+- Factor 별 초기화 시간을 의미합니다. 주기가 전체인 경우 활성화 되지 않습니다.
+
+#### Factor 리셋 간격
+
+- Factor 주기의 초기화 간격을 의미합니다. 3으로 설정 시 일간 - 3일, 주간 - 3주, 월간 - 3개월에 1번 초기화 됩니다.
 
 #### Factor 리셋 일자
 

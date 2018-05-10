@@ -69,13 +69,13 @@ Console上部の**(+)サービス選択**ボタンをクリックした後、サ
 
 Factor登録後ランキングデータタブに行けば登録したFactorが見えます。 Factorサイクル選択時に、そのサイクルのFactorが選別されます。
 
-![[図5 ランキングデータの検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5-1.PNG)
+![[図5 ランキングデータの検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5-2.PNG)
 
 **[ユーザ情報検索]**
 
 検索条件に合うランキングデータを照会できます。今後、検索されたユーザーをファイルでダウンロードできる機能を追加する予定です。
 
-![[図6 ユーザ情報検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6-1.PNG)
+![[図6 ユーザ情報検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6-2.PNG)
 
 **[各項目別の説明]**
 
@@ -92,7 +92,7 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 **[修正するユーザーデータの選択]**
 照会したユーザーの登録済みのランキング情報を修正できます。
 
-![[図7 修正するユーザーデータの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_7.PNG)
+![[図7 修正するユーザーデータの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_7-1.PNG)
 
 **[ユーザーランキング修正ポップアップ]**
 修正を希望するデータを選択し**修正**ボタンをクリックすると、ユーザーのスコア、その他の情報を修正できるポップアップが表示されます。**事由**には、ランキング変更事由を入力し、運営者が修正した履歴は、ランキングデータ画面の**変更履歴**ボタンをクリックすることで確認できます。<br/>
@@ -105,12 +105,24 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 **[削除するユーザーデータの選択]**
 照会画面でデータを選択し**削除**ボタンをクリックすることで、データを削除できます。マルチ選択が可能で、同時に複数のデータを削除することもできます。
 
-![[図9 削除するユーザーデータの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_9.PNG)
+![[図9 削除するユーザーデータの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_9-1.PNG)
 
 **[ユーザーランキング削除ポップアップ]**
 削除ボタンを押すと削除事由を入力するポップアップが表示されます。運営者が削除した履歴も修正履歴と同じく、ランキングデータ画面の**変更履歴**ボタンをクリックし確認できます。<br/>削除後は、復旧できないため、慎重に削除する必要があります。
 
 ![[図10 ユーザーランキング削除のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_10.PNG)
+
+### Download User Data
+
+**[データ保存ボタンをクリック]**
+現在照会したユーザ情報を保存するには、データ保存]ボタンを押します。
+
+![[図18 データ保存ボタンをクリック]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_18.PNG)
+
+**[データの保存ポップアップ]**
+データは、1回、最大10万件まで保存可能であり、許容量を超えたとき再生開始順位を含む10万人までダウンロードされます。
+
+![[図19 データの保存ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_19.PNG)
 
 <br>
 
@@ -131,9 +143,12 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 
 [+追加]ボタンをクリックすると、以下のようなポップアップが表示されます。
 
-![[図12 Factor追加のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-1.PNG)
+![[図12 Factor追加のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-2.PNG)
 
 **[各項目別の説明]**
+#### Factor ID
+
+- Factorの一意の数値IDでポップアップオープン時に自動的に割り当てされますが、ユーザー任意に変更することができます。他Factor IDと重複不可です。
 
 #### ファクター名
 
