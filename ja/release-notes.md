@@ -1,6 +1,8 @@
 ## Game > Leaderboard > Release Notes
 
 ### 2018.05.29
+
+#### 기능 개선/변경
 * [Console] 유저 데이터 조회 시 500명 제한 해제
 * [Console] 조회한 유저 데이터 다운로드 기능 추가. 1회 최대 10만 명 까지 가능
 * [Console] 팩터 등록 시 팩터 ID를 지정 할 수 있도록 개선
