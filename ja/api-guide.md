@@ -80,7 +80,7 @@ APIを呼び出すサーバーで内部的にAPIリクエストを管理でき�
 **[Method, URI]**
 
 ```
-GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionid={transactionid}&ispast={ispast} 
+GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count 
 ```
 
 **[Request Header]**
@@ -139,7 +139,7 @@ Content-Type: application/json
 **[Method, URI]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userId}&transactionid={transactionid}&ispast={ispast} 
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users 
 ```
 
 **[Request Header]**
@@ -358,7 +358,7 @@ Content-Type: application/json
 **[Method, URI]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionid={transactionid}&ispast={ispast}&start={start}&size={size} 
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users 
 ```
 
 **[Request Header]**
@@ -847,7 +847,7 @@ Content-Type: application/json
 **[Method, URI]**
 
 ```
-DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionid={transactionid}&ispast={ispast}
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
 ```
 
 **[Request Header]**
@@ -872,7 +872,7 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 **[Request Sample]**
 
 ```
-DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userid}?transactionid=12345&ispast=false
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userid}&transactionid=12345&ispast=false
 ```
 
 **[Response]**

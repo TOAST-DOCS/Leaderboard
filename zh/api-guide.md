@@ -80,7 +80,7 @@ User의 업데이트 시간은 RFC 3339 정의를 따릅니다.
 **[Method, URI]**
 
 ```
-GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionid={transactionid}&ispast={ispast}
+GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count
 ```
 
 **[Request Header]**
@@ -139,7 +139,7 @@ Content-Type: application/json
 **[Method, URI]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userId}&transactionid={transactionid}&ispast={ispast}
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
 ```
 
 **[Request Header]**
@@ -358,7 +358,7 @@ Content-Type: application/json
 **[Method, URI]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionid={transactionid}&ispast={ispast}&start={start}&size={size}
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
 ```
 
 **[Request Header]**
@@ -847,7 +847,7 @@ Content-Type: application/json
 **[Method, URI]**
 
 ```
-DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionid={transactionid}&ispast={ispast}
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
 ```
 
 **[Request Header]**
