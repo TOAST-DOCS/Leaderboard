@@ -138,7 +138,7 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 
 [+추가] 버튼을 클릭하면 아래와 같은 팝업이 열립니다.
 
-![[그림 12 Factor 추가 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-2.PNG)
+![[그림 12 Factor 추가 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-3.PNG)
 
 **[각 항목별 설명]**
 #### Factor ID
@@ -147,7 +147,7 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 
 #### Factor 이름
 
-- 랭킹을 구분할 이름이며 차후 Factor 검색에 사용될 수 있습니다.
+- 랭킹을 구분할 이름이며 차후 Factor 검색에 사용될 수 있습니다. Factor 이름은 등록 후 수정이 가능합니다.
 
 #### 한계 유저 수
 
@@ -155,15 +155,19 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 
 #### 기타정보
 
-- Factor의 extra 데이터로 필요 시 입력합니다.
+- Factor의 extra 데이터로 필요 시 입력합니다. 기타 정보는 등록 후 수정이 가능합니다.
 
 #### Factor 주기
 
 - 랭킹의 초기화 기간을 의미하며 일간, 주간, 월간, 전체가 있습니다. 주기 또한 Factor 검색에 사용될 수 있으며 각 주기를 기준으로 유저들을 분류합니다.
 
+#### 기준 시간 선택
+
+- Factor의 기준이 되는 UTC 시간을 의미합니다. Factor 내 유저 조회 시 최근 업데이트 시간은 이 값을 기준으로 표시됩니다. 
+
 #### Factor 리셋 시간
 
-- Factor 별 초기화 시간을 의미합니다. 주기가 전체인 경우 활성화 되지 않습니다.
+- Factor 별 초기화 시간을 의미합니다. 기준 UTC 시간을 토대로 계산됩니다. 주기가 전체인 경우 활성화 되지 않습니다.
 
 #### Factor 리셋 간격
 
