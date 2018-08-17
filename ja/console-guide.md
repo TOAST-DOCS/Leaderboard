@@ -232,7 +232,7 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 ファクターに保存されたデータを初期化したり、ファクターを削除できます。<br>
 対象となるファクターを選択し、**初期化**ボタンをクリックします。
 
-![[図15 ランキング設定での初期化するFactorの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15-1.PNG)
+![[図15 ランキング設定での初期化するFactorの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15-3.PNG)
 
 初期化ポップアップにてデータを初期化するファクター情報を確認し、**初期化**ボタンをクリックすると、すべてのデータが削除され、ファクターデータが初期化されます。
 
@@ -243,5 +243,15 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 下部の「Factor登録情報も削除することを希望する場合はチェックを入れてください」という項目にチェックを入れた後、**初期化**ボタンをクリックすると、登録済みのファクター情報も削除されます。 
 
 ![[図17 Factor 削除]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_17.PNG)
+
+### Modify Factor
+
+Factorリストで、変更するFactorの名前を選択します。
+
+![[図 20 修正Factor選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_20-1.PNG)
+
+選択時の修正ポップアップが開きます。Factor名、その他の情報のみを変更できます。
+
+![[図 21 Factor修正ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_21-1.PNG)
 
 ※開発に関するapi情報は、[API Guide](/Game/Leaderboard/ja/api-guide/)をご参照ください。

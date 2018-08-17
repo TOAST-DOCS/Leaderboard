@@ -209,7 +209,7 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 
 초기화 할 Factor들을 선택합니다.
 
-![[그림 15 랭킹 설정에서 초기화 할 Factor 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15-1.PNG)
+![[그림 15 랭킹 설정에서 초기화 할 Factor 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15-3.PNG)
 
 초기화 버튼을 클릭 시 초기화 팝업이 나타납니다. 초기화 후엔 Factor의 유저 데이터가 전부 사라지고 복구가 불가능 하니 신중하게 수행합니다.
 
@@ -220,5 +220,15 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 초기화 팝업에서 하단 항목 체크 시 Factor까지 삭제됩니다. 데이터 복구가 불가능하니 신중하게 수행합니다. 
 
 ![[그림 17 Factor 삭제]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_17.PNG)
+
+### Modify Factor
+
+Factor 목록에서 수정할 Factor의 이름을 선택합니다.
+
+![[그림 20 수정 Factor 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_20-1.PNG)
+
+선택 시 수정 팝업이 열립니다. Factor 이름, 기타 정보 만 수정 가능합니다.
+
+![[그림 21 Factor 수정 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_21-1.PNG)
 
 ※ 개발과 관련된 api 정보는 [API Guide](/Game/Leaderboard/en/api-guide/) 를 참조해주세요.
