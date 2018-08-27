@@ -143,7 +143,7 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 
 [+追加]ボタンをクリックすると、以下のようなポップアップが表示されます。
 
-![[図12 Factor追加のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-2.PNG)
+![[図12 Factor追加のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-3.PNG)
 
 **[各項目別の説明]**
 #### Factor ID
@@ -153,6 +153,7 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 #### ファクター名
 
 - ランキングを区分する名前であり、後でファクター検索に使われます。
+- ファクター名は登録後に変更が可能です。
 
 #### 限界ユーザー数
 
@@ -162,14 +163,21 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 #### その他の情報
 
 - ファクターの追加データで、必要な場合に入力します。
+- その他の情報は、登録後に変更が可能です。
 
 #### ファクターの周期
 
 - ランキングの初期化期間を意味し、日間、週間、月間、全体があります。
 
+#### 基準時間を選択
+
+- Factorの基準となるUTC時刻を意味します。
+- Factor私のユーザ照会時、最近の更新時間は、この値を基準にしています。
+
 #### ファクターリセット時間
 
 - ファクターの初期化時間を設定します。
+- 基準UTC時刻を基に計算されます。
 - 周期が全体である場合、初期化しないため設定はできず、日間、週間、月間のみ設定できます。
 
 #### ファクターリセット間隔
@@ -224,7 +232,7 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 ファクターに保存されたデータを初期化したり、ファクターを削除できます。<br>
 対象となるファクターを選択し、**初期化**ボタンをクリックします。
 
-![[図15 ランキング設定での初期化するFactorの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15-1.PNG)
+![[図15 ランキング設定での初期化するFactorの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15-3.PNG)
 
 初期化ポップアップにてデータを初期化するファクター情報を確認し、**初期化**ボタンをクリックすると、すべてのデータが削除され、ファクターデータが初期化されます。
 
@@ -235,5 +243,15 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 下部の「Factor登録情報も削除することを希望する場合はチェックを入れてください」という項目にチェックを入れた後、**初期化**ボタンをクリックすると、登録済みのファクター情報も削除されます。 
 
 ![[図17 Factor 削除]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_17.PNG)
+
+### Modify Factor
+
+Factorリストで、変更するFactorの名前を選択します。
+
+![[図 20 修正Factor選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_20-1.PNG)
+
+選択時の修正ポップアップが開きます。Factor名、その他の情報のみを変更できます。
+
+![[図 21 Factor修正ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_21-1.PNG)
 
 ※開発に関するapi情報は、[API Guide](/Game/Leaderboard/ja/api-guide/)をご参照ください。

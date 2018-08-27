@@ -1,5 +1,13 @@
 ## Game > Leaderboard > Release Notes
 
+### 2018.08.28
+
+#### 기능 개선/변경
+* [Console] 팩터 등록 시 UTC 설정 기능 추가
+* [Console] 유저 데이터 조회 시 팩터의 UTC 시간을 기준으로 최근 업데이트 시간 표시
+* [Console] 팩터 등록 후 이름, extra 정보 수정 기능 추가
+* [Document] 개선된 UTC 설정, 팩터 수정 관련 설명 추가
+
 ### 2018.07.24
 
 #### 기능 개선/변경
