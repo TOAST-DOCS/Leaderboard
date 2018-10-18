@@ -11,14 +11,14 @@ Leaderboardを使用するためには、サービス利用後、ランキング
 
 Console上部の**(+)サービス選択**ボタンをクリックした後、サービスリストから**Leaderboard**サービスをクリックし、サービスを活性化できます。サービスが活性化すると、左側のタブに[Game] > [Leaderboard]メニューが表示されます。
 
-![[図1 Leaderboard サービス活性化]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_1-1.PNG)
+![[図1 Leaderboard サービス活性化]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_1.PNG)
 
 
 ### API URL/AppKey
 
 サービス活性化後、**URL&Appkey**をクリックし、API URLおよびAppkeyの値を確認できます。
 
-![[図2 Leaderboard URL & AppKey 確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_2-1.PNG)
+![[図2 Leaderboard URL & AppKey 確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_2.PNG)
 
 <br>
 
@@ -30,7 +30,7 @@ Console上部の**(+)サービス選択**ボタンをクリックした後、サ
 
 基本は、今日の日付が選択されリアルタイムデータが表示されますが、過去のデータを確認したい場合は、カレンダーで日付を選択すると、選択した日付の指標を直ちに照会できます。
 
-![[図3 特定の日付の指標確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_3-1.PNG)
+![[図3 特定の日付の指標確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_3.PNG)
 
 **[各項目別の説明]**
 #### Data Total
@@ -57,7 +57,7 @@ Console上部の**(+)サービス選択**ボタンをクリックした後、サ
 
 最大10件まで特定のFactorを選択可能で、選択していない場合は、選択済みの周期を基準に上位10件のFactorのデータを照会します。
 
-![[図4 一定期間の指標の確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_4.PNG)
+![[図4 一定期間の指標の確認]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_4.PNG)
 
 <br>
 
@@ -69,13 +69,13 @@ Console上部の**(+)サービス選択**ボタンをクリックした後、サ
 
 Factor登録後ランキングデータタブに行けば登録したFactorが見えます。 Factorサイクル選択時に、そのサイクルのFactorが選別されます。
 
-![[図5 ランキングデータの検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5-2.PNG)
+![[図5 ランキングデータの検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_5.PNG)
 
 **[ユーザ情報検索]**
 
 検索条件に合うランキングデータを照会できます。今後、検索されたユーザーをファイルでダウンロードできる機能を追加する予定です。
 
-![[図6 ユーザ情報検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6-2.PNG)
+![[図6 ユーザ情報検索]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_6.PNG)
 
 **[各項目別の説明]**
 
@@ -92,37 +92,37 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 **[修正するユーザーデータの選択]**
 照会したユーザーの登録済みのランキング情報を修正できます。
 
-![[図7 修正するユーザーデータの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_7-1.PNG)
+![[図7 修正するユーザーデータの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_7.PNG)
 
 **[ユーザーランキング修正ポップアップ]**
 修正を希望するデータを選択し**修正**ボタンをクリックすると、ユーザーのスコア、その他の情報を修正できるポップアップが表示されます。**事由**には、ランキング変更事由を入力し、運営者が修正した履歴は、ランキングデータ画面の**変更履歴**ボタンをクリックすることで確認できます。<br/>
 複数のデータを同じ値に修正した場合、修正画面でデータを選択し**選択ユーザー一括入力**ボタンをクリックすると、選択したデータを簡単に一括登録できます。
 
-![[図8 ユーザーランキング修正ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_8.PNG)
+![[図8 ユーザーランキング修正ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_8.PNG)
 
 ### Delete User Info
 
 **[削除するユーザーデータの選択]**
 照会画面でデータを選択し**削除**ボタンをクリックすることで、データを削除できます。マルチ選択が可能で、同時に複数のデータを削除することもできます。
 
-![[図9 削除するユーザーデータの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_9-1.PNG)
+![[図9 削除するユーザーデータの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_9.PNG)
 
 **[ユーザーランキング削除ポップアップ]**
 削除ボタンを押すと削除事由を入力するポップアップが表示されます。運営者が削除した履歴も修正履歴と同じく、ランキングデータ画面の**変更履歴**ボタンをクリックし確認できます。<br/>削除後は、復旧できないため、慎重に削除する必要があります。
 
-![[図10 ユーザーランキング削除のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_10.PNG)
+![[図10 ユーザーランキング削除のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_10.PNG)
 
 ### Download User Data
 
 **[データ保存ボタンをクリック]**
 現在照会したユーザ情報を保存するには、データ保存]ボタンを押します。
 
-![[図18 データ保存ボタンをクリック]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_18.PNG)
+![[図18 データ保存ボタンをクリック]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_11.PNG)
 
 **[データの保存ポップアップ]**
 データは、1回、最大10万件まで保存可能であり、許容量を超えたとき再生開始順位を含む10万人までダウンロードされます。
 
-![[図19 データの保存ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_19.PNG)
+![[図19 データの保存ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_12.PNG)
 
 <br>
 
@@ -139,11 +139,11 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 > Factorは[サイクル、アップデートの基準は、並べ替え基準]の束ねた単位です。<br>
 > ハイスコ​​アランキングを毎日、毎週、毎月の使用したい場合はFactorを3つのことをする必要があります。
 
-![[図11 Factor登録のための[+追加]クリック]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_11-1.PNG)
+![[図11 Factor登録のための[+追加]クリック]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_13.PNG)
 
 [+追加]ボタンをクリックすると、以下のようなポップアップが表示されます。
 
-![[図12 Factor追加のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-3.PNG)
+![[図12 Factor追加のポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_14.PNG)
 
 **[各項目別の説明]**
 #### Factor ID
@@ -221,37 +221,37 @@ Factor登録後ランキングデータタブに行けば登録したFactorが�
 
 検索条件がファクター名である時、ファクター名に検索語が含まれたファクターを検索します。
 
-![[図13 検索基準Factor名]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_13.PNG)
+![[図13 検索基準Factor名]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_15.PNG)
 
 検索条件がFactorの周期である時、選択した周期(日間、週間、月間、全体)のファクターを検索します。
 
-![[図14 検索基準Factor 周期]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_14.PNG)
+![[図14 検索基準Factor 周期]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_16.PNG)
 
 ### Init Factor
 
 ファクターに保存されたデータを初期化したり、ファクターを削除できます。<br>
 対象となるファクターを選択し、**初期化**ボタンをクリックします。
 
-![[図15 ランキング設定での初期化するFactorの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15-3.PNG)
+![[図15 ランキング設定での初期化するFactorの選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_17.PNG)
 
 初期化ポップアップにてデータを初期化するファクター情報を確認し、**初期化**ボタンをクリックすると、すべてのデータが削除され、ファクターデータが初期化されます。
 
-![[図16 Factor 初期化ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_16.PNG)
+![[図16 Factor 初期化ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_18.PNG)
 
 ### Delete Factor
 
 下部の「Factor登録情報も削除することを希望する場合はチェックを入れてください」という項目にチェックを入れた後、**初期化**ボタンをクリックすると、登録済みのファクター情報も削除されます。 
 
-![[図17 Factor 削除]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_17.PNG)
+![[図17 Factor 削除]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_19.PNG)
 
 ### Modify Factor
 
 Factorリストで、変更するFactorの名前を選択します。
 
-![[図 20 修正Factor選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_20-1.PNG)
+![[図 20 修正Factor選択]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_20.PNG)
 
 選択時の修正ポップアップが開きます。Factor名、その他の情報のみを変更できます。
 
-![[図 21 Factor修正ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_21-1.PNG)
+![[図 21 Factor修正ポップアップ]](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/console_guide_21.PNG)
 
 ※開発に関するapi情報は、[API Guide](/Game/Leaderboard/ja/api-guide/)をご参照ください。

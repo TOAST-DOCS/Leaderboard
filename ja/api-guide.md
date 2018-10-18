@@ -21,14 +21,14 @@ Leaderboard APIは、**Clientで呼び出し時乱用などの危険があり、
 
 > https://api-leaderboard.cloud.toast.com
 
-![図 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_1-1.PNG)
+![図 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_1.PNG)
 
 ### AppKey
 AppKeyは、ゲームサーバーにリクエストを送る際に必要な固有なキーで、 「Leaderboard」のコンソール画面からも確認できます。
 > **注意事項** <br>
 > AppKeyは、外部に露出されることがあってはなりません。なお、変更はできないので、ご注意ください。
 
-![図 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_2-1.PNG)
+![図 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_2.PNG)
 
 <br>
 
@@ -227,8 +227,9 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionId |	long |	mandatory | トランザクションID |
-| isPast | bool | mandatory | true or false（デフォルトはfalse) <br> trueの場合は、前回の周期のデータを照会 |
+| transactionId | long | optional | トランザクションID |
+| isPast | bool | optional | true or false（デフォルトはfalse) <br> trueの場合は、前回の周期のデータを照会 |
+| isSort | bool | optional | true or false（デフォルトはfalse) <br> trueの場合は、ランキング順に結果をソートします|
 | userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 照会を希望するFactorとユーザーリストのまとめ |
 | userIDsWithFactor[].factor |	int | mandatory | 照会を希望するFactor |
 | userIDsWithFactor[].userIds |	Array[String] | mandatory | 照会を希望するユーザーリスト |
@@ -241,6 +242,7 @@ Content-Type: application/json
 
 {
 	"isPast": false,
+	"isSort": false,
 	"transactionId": 12345,
 	"userIDsWithFactor": [
 		{
