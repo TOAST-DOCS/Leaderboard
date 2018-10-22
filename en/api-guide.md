@@ -229,6 +229,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
 | --- | --- | --- | --- |
 | transactionId |	long |	mandatory | 트랜잭션 ID |
 | isPast | bool | mandatory | true 일 경우 이전 주기, false 일 경우 현재 주기의 데이터 조회 |
+| isSort | bool | optional | true 일 경우 등수 기준 정렬, false 일 경우 입력한 userId 순으로 데이터 조회 |
 | userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 조회를 원하는 Factor와 User 리스트 묶음 |
 | userIDsWithFactor[].factor |	int | mandatory | 조희를 원하는 Factor ID|
 | userIDsWithFactor[].userIds |	Array[String] | mandatory | 조회를 원하는 User 리스트 |
@@ -241,6 +242,7 @@ Content-Type: application/json
 
 {
 	"isPast": false,
+	"isSort": false,
 	"transactionId": 12345,
 	"userIDsWithFactor": [
 		{

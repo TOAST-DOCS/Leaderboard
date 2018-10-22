@@ -1,5 +1,12 @@
 ## Game > Leaderboard > 릴리스 노트
 
+### 2018.10.23
+
+#### 기능 개선/변경
+* [Console] 팩터 등록 시 UTC 시간대 확대
+* [API] Get multiple user info api에 정렬 기능 추가
+* [Document] 개선된 Get multiple user info api에 대한 설명 추가
+
 ### 2018.08.28
 
 #### 기능 개선/변경
@@ -63,7 +70,7 @@
 
 #### 버그 수정
 * [Console] 지난 주기 유저가 삭제되지 않는 문제 수정
-* [Server]  초기화 시점에 데이터가 들어왔을 때 정합성 문제 수정
+* [Server] 초기화 시점에 데이터가 들어왔을 때 정합성 문제 수정
 * [API] Score 에 너무 큰 수 /작은 수가 입력 되었을 경우 Infinity 로 출력되는 이슈 수정
 * [API] UserID 에 "" 가 들어오지 못하도록 수정
 

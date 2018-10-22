@@ -1,5 +1,12 @@
 ## Game > Leaderboard > Release Notes
 
+### 2018.10.23
+
+#### 기능 개선/변경
+* [Console] 팩터 등록 시 UTC 시간대 확대
+* [API] Get multiple user info api에 정렬 기능 추가
+* [Document] 개선된 Get multiple user info api에 대한 설명 추가
+
 ### 2018.08.28
 
 #### 기능 개선/변경
