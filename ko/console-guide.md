@@ -3,34 +3,14 @@
 Leaderboard 사용을 위해선 상품 이용 후 랭킹을 등록해야 합니다.
 상품 이용 후에는 게임의 지표 확인, 랭킹정보 등록, 초기화, 삭제 및 플레이어의 랭킹 정보 조회, 수정, 삭제를 할 수 있습니다.
 
-<br>
-
-## Configuration
-
-### Leaderboard Service Enable
-
-Console에서 [서비스 선택] > [Leaderboard]를 클릭하면 서비스가 활성화 되고 좌측 탭에 [Game] > [Leaderboard] 메뉴가 나타납니다.
-
-![[그림 1 Leaderboard 서비스 활성화]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_1-1.PNG)
-
-
-### API URL/AppKey
-
-서비스 활성화 후 접속 시 API URL 및 Appkey 값을 확인할 수 있습니다.
-
-![[그림 2 Leaderboard URL & AppKey 확인]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_2-1.PNG)
-
-<br>
-
 ## Indicator Tab
+![leaderboard_01_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_01_201812.png)
 
-### Target Date Indicator
+### 1. Target Date Indicator
 
 특정 일자의 총 유저 수, Factor 수, 주기 및 Factor별 점유율 현황을 확인 할 수 있습니다. 오늘 날짜로 부터 6개월 전 까지의 데이터만 제공됩니다.
 
 달력에서 날짜 선택 시 그 날의 지표가 바로 조회됩니다.
-
-![[그림 3 특정 일자의 지표 확인]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_3-1.PNG)
 
 **[각 항목별 설명]**
 #### Data Total
@@ -47,31 +27,22 @@ Console에서 [서비스 선택] > [Leaderboard]를 클릭하면 서비스가 �
 - 팩터 : Factor를 기준으로 유저 수를 표시합니다.
 
 
-### Range Date Indicator
+### 2. Range Date Indicator
 
 일정 기간 동안의 데이터 변동 량을 확인 할 수 있습니다. 조회 가능 범위는 최대 6개월 입니다.
 
 최대 10개 까지 특정 Factor를 선택 할 수 있으며, 미 선택 시 선택 된 주기를 기준으로 상위 10개 Factor의 데이터를 조회합니다.  
 
-![[그림 4 일정 기간의 지표 확인]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_4.PNG)
-
-<br>
-
 ## Data Tab
 
 ### Search User Info
 
+![leaderboard_02_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_02_201812.png)
+
 **[랭킹 데이터 검색]**
 
 Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보입니다. Factor 주기 선택 시 해당 주기의 Factor들이 선별됩니다.
-
-![[그림 5 랭킹 데이터 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_5-2.PNG)
-
-**[유저 정보 검색]**
-
 검색 기준을 선택해 유저 정보를 검색합니다.
-
-![[그림 6 유저 정보 검색]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_6-2.PNG)
 
 **[각 항목별 설명]**
 
@@ -83,62 +54,56 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 - 순위별 조회 : 조회할 유저의 랭킹 범위를 정합니다. 조회 시 500명 까지 범위가 제한됩니다.
 - 사용자 ID 조회 : 해당 Factor 내에 검색하고자 하는 User ID를 입력합니다. User가 없는 경우 조회되지 않습니다.
 
-### Modify User Info
 
-**[수정할 유저 데이터 선택]**
+### User Info
+
+![leaderboard_03_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_03_201812.png)
+
+#### 1. Modify User Info
+
 조회 후 수정할 유저를 선택합니다.
-
-![[그림 7 수정할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_7-1.PNG)
 
 **[유저 랭킹 수정 팝업]**
 수정 버튼을 누르면 수정 할 데이터를 입력하는 팝업이 뜹니다. 점수, 기타 정보를 수정 할 수 있으며 변경 점수 및 사유는 필수 입력 입니다.
 
-![[그림 8 유저 랭킹 수정 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_8.PNG)
+![leaderboard_04_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_04_201812.png)
 
-### Delete User Info
+#### 2. Delete User Info
 
-**[삭제할 유저 데이터 선택]**
 조회 후 삭제할 유저를 선택합니다.
-
-![[그림 9 삭제할 유저 데이터 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_9-1.PNG)
 
 **[유저 랭킹 삭제 팝업]**
 삭제 버튼을 누르면 삭제 여부를 묻는 팝업이 뜹니다. 사유는 필수 입력이며 삭제 후 복구가 불가능하니 신중히 삭제해야 합니다.
 
-![[그림 10 유저 랭킹 삭제 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_10.PNG)
+![leaderboard_05_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_05_201812.png)
 
-### Download User Data
+#### 3. Download User Data
 
-**[데이터 저장 버튼 클릭]**
 현재 조회한 유저 정보들을 저장하려면 데이터 저장 버튼을 누릅니다.
-
-![[그림 18 데이터 저장 버튼 클릭]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_18.PNG)
 
 **[데이터 저장 팝업]**
 데이터는 1회 최대 10만 건까지 저장 가능하며, 허용량 초과 시 조회 시작 순위 포함 10만 명 까지만 다운로드 됩니다.
 
-![[그림 19 데이터 저장 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_19.PNG)
-
-<br>
+![leaderboard_06_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_06_201812.png)
 
 ## Setting Tab
+
+![leaderboard_07_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_07_201812.png)
 
 > **[유의 사항]**<br>
 > Factor의 등록, 초기화, 삭제는 프로젝트의 ADMIN으로 등록된 사용자만 수행 할 수 있습니다. 
 
 ### Add Factor
 
-서비스 활성화 후 Factor 정보를 추가해야 합니다. [Game] > [Leaderboard] > [랭킹 설정] > [+추가] 버튼을 클릭해 Factor를 등록합니다.
+서비스 활성화 후 Factor 정보를 추가해야 합니다. **[Game] > [Leaderboard] > [랭킹 설정] > [+추가]** 버튼을 클릭해 Factor를 등록합니다.
 
 > **[참고]**<br>
 > Factor는 [주기, 업데이트 기준, 정렬기준]의 묶은 단위입니다.<br>
 > 최고점수 랭킹을 일간, 주간, 월간으로 사용하고 싶다면 Factor를 3가지를 만들어야 합니다.
 
-![[그림 11 Factor 등록을 위하여 [+추가] 클릭]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_11-1.PNG)
+**[+추가]** 버튼을 클릭하면 아래와 같은 팝업이 열립니다.
 
-[+추가] 버튼을 클릭하면 아래와 같은 팝업이 열립니다.
-
-![[그림 12 Factor 추가 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_12-3.PNG)
+![leaderboard_08_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_08_201812.png)
 
 **[각 항목별 설명]**
 #### Factor ID
@@ -197,38 +162,29 @@ Factor 등록 후 랭킹 데이터 탭으로 가면 등록한 Factor들이 보�
 
 ### Search Factor
 
-검색 조건이 Factor 이름일 시 이름에 검색어가 포함된 Factor를 검색합니다.
+![leaderboard_09_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_09_201812.png)
 
-![[그림 13 검색 기준 Factor 이름]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_13.PNG)
+검색 조건이 Factor 이름일 시 이름에 검색어가 포함된 Factor를 검색합니다.
 
 검색 조건이 Factor 주기일 시 선택 목록에 있는 주기로 검색합니다.
 
-![[그림 14 검색 기준 Factor 주기]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_14.PNG)
+### Initialize Factor
 
-### Init Factor
+![leaderboard_10_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_10_201812.png)
 
 초기화 할 Factor들을 선택합니다.
 
-![[그림 15 랭킹 설정에서 초기화 할 Factor 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_15-3.PNG)
-
-초기화 버튼을 클릭 시 초기화 팝업이 나타납니다. 초기화 후엔 Factor의 유저 데이터가 전부 사라지고 복구가 불가능 하니 신중하게 수행합니다.
-
-![[그림 16 Factor 초기화 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_16.PNG)
-
-### Delete Factor
+**초기화** 버튼을 클릭 시 초기화 팝업이 나타납니다. 초기화 후엔 Factor의 유저 데이터가 전부 사라지고 복구가 불가능 하니 신중하게 수행합니다.
 
 초기화 팝업에서 하단 항목 체크 시 Factor까지 삭제됩니다. 데이터 복구가 불가능하니 신중하게 수행합니다. 
 
-![[그림 17 Factor 삭제]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_17.PNG)
 
 ### Modify Factor
 
 Factor 목록에서 수정할 Factor의 이름을 선택합니다.
 
-![[그림 20 수정 Factor 선택]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_20-1.PNG)
-
 선택 시 수정 팝업이 열립니다. Factor 이름, 기타 정보 만 수정 가능합니다.
 
-![[그림 21 Factor 수정 팝업]](http://static.toastoven.net/prod_leaderboardv2/renewal/console_guide_21-1.PNG)
+![leaderboard_11_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_11_201812.png)
 
 ※ 개발과 관련된 api 정보는 [API Guide](/Game/Leaderboard/ko/api-guide/) 를 참조해주세요.
