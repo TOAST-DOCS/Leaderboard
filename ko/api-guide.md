@@ -1,48 +1,48 @@
 ## Game > Leaderboard > API 가이드
 
-Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
+Leaderboard API는 REST API 형태로, 다음과 같은 API를 제공합니다.
 
 ### HTTP API
-- User 점수 등록 (단일 / 다수)
-- User 점수 획득 (단일 / 다수 / 범위)
-- Factor에 들어있는 User 수 조회
-- User 점수 삭제 (단일)
+- 유저 점수 등록(단일/다수)
+- 유저 점수 획득(단일/다수/범위)
+- 팩터에 있는 유저 수 검색
+- 유저 점수 삭제(단일)
 
 <br>
 
-## Notice
-
-### Caution
-모든 API를 사용하기 위해서는 **상품 활성화 후 Factor를 등록**해야만 합니다.
-Leaderboard API 는 **Client 에서 호출 시 어뷰징 등의 위험이 있어 Server에서 만 호출 하는 것을 권장 합니다.**
+## 사전 준비
+서버 API를 사용하기 위해서는 다음의 정보들을 알고 있어야 합니다.  
 
 ### Server Address
-서버 API 를 호출 하기 위한 서버 주소는 다음과 같습니다. 해당 주소는 Leaderboard 콘솔 화면에서도 확인 가능합니다. <br>
+서버 API 호출 서버 주소는 다음과 같습니다. 해당 주소는 Leaderboard 콘솔에서도 확인할 수 있습니다.<br>
 
 > https://api-leaderboard.cloud.toast.com
 
-![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_1-1.PNG)
+![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_201901_1-1.PNG)
 
 ### AppKey
-AppKey 는 게임 서버에서 요청을 보낼시 꼭 필요한 고유 키로, Leaderboard 콘솔 화면에서 확인 가능합니다.
-> **주의** <br>
-> AppKey 는 외부에 노출되어서는 안되며, 변경이 불가능합니다.
+앱키는 게임 서버에서 요청을 보낼 때 꼭 필요한 고유 키로, 콘솔에서 확인할 수 있습니다.
+> [주의] 앱키는 외부에 노출하면 안 되며, 변경할 수 없습니다.
 
-![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_2-1.PNG)
+![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_201901_2-1.PNG)
+
+### 주의 사항
+모든 API를 사용하려면 **서비스 활성화 후 팩터를 등록**해야 합니다.  
+Leaderboard API는 **클라이언트에서 호출 시 어뷰징 등의 위험이 있어 서버에서만 호출하는 것을 권장합니다.**
 
 <br>
 
-## Common
+## 공통
 
 ### HTTP Header
-API 호출 시 HTTP Header 에 다음 항목을 설정해야 합니다.
+API를 호출할 때 HTTP Header에 다음 항목을 설정해야 합니다.
 
 | Name | Required |	Value |
 |---|---|---|
 | Content-Type | mandatory | application/json; charset=UTF-8 |
 
 ### API Response
-모든 API 요청에 대한 응답으로 HTTP 200 OK 를 전달합니다. API 요청 성공 유무는 Response Body 의 header 항목을 참고하여 판단할 수 있습니다.
+모든 API 요청 응답으로 HTTP 200 OK를 전달합니다. API 요청 성공 유무는 Response Body의 header 항목을 참고하여 판단할 수 있습니다.
 
 ```
 HTTP/1.1 200 OK
@@ -60,12 +60,12 @@ Content-Type: application/json
 ```
 
 ### TransactionId
-API 를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 있는 방안으로 TransactionId 기능을 제공합니다.
-호출하는 서버에서 HTTP Body 에 TransactionId 를 설정하여 API 를 호출하면, Leaderboard 서버는 응답 결과에 해당 TransactionId 를 설정하여 결과를 전달합니다. TransactionId 는 정수형 타입으로 받습니다.
+API를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 있는 방안으로 TransactionId 기능을 제공합니다.
+호출하는 서버에서 HTTP Body에 TransactionId를 설정하여 API를 호출하면, Leaderboard 서버는 응답 결과에 해당 TransactionId를 설정하여 결과를 전달합니다. TransactionId는 정수형 타입으로 받습니다.
 
 ### Time
 
-User의 업데이트 시간은 RFC 3339 정의를 따릅니다.
+유저의 업데이트 시간은 RFC 3339 정의를 따릅니다.
 
 > https://tools.ietf.org/html/rfc3339
 
@@ -75,7 +75,7 @@ User의 업데이트 시간은 RFC 3339 정의를 따릅니다.
 
 ### Get user count in factor
 
-원하는 한개의 Factor 에 등록된 User의 수 를 조회합니다.
+원하는 한 개의 팩터에 등록된 유저의 수를 검색합니다.
 
 **[Method, URI]**
 
@@ -85,8 +85,7 @@ GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
-
+Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 
 **[Path Variable]**
 
@@ -100,9 +99,10 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
 | transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 |
+| ispast | bool | optional | true 또는 false(기본값은 false) <br> true이면 이전 주기의 데이터 검색 |
 
 **[Request Sample]**
+
 ```
 GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionid=12345&ispast=false
 ```
@@ -129,12 +129,12 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
-| resultInfo.totalCount | int | Factor 에 등록된 User 수 |
+| resultInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| resultInfo.totalCount | int | 팩터에 등록된 유저 수 |
 
 ### Get single user info
 
-원하는 한 명의 User의 정보를 조회할 수 있습니다.
+원하는 한 명의 유저의 정보를 검색할 수 있습니다.
 
 **[Method, URI]**
 
@@ -157,9 +157,9 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| userId | String |	mandatory | User ID |
+| userId | String |	mandatory | 유저 ID |
 | transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조희 |
+| ispast | bool | optional | true 또는 false(기본값은 false) <br> true이면 이전 주기의 데이터 조회 |
 
 **[Request Sample]**
 
@@ -194,18 +194,18 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| userInfo | Object | User 정보 |
-| userInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
-| userInfo.userId | String | User ID |
-| userInfo.score | Double | User Score |
+| userInfo | Object | 유저 정보 |
+| userInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfo.userId | String | 유저 ID |
+| userInfo.score | Double | 유저 점수 |
 | userInfo.rank | int | 이번 주기의 순위 |
 | userInfo.preRank | int | 이전 주기의 순위 |
-| userInfo.extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
-| userInfo.date | String | User Score 가 업데이트 된 시간. (RFC 3339) |
+| userInfo.extra | String | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
+| userInfo.date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
 
 ### Get multiple user info
 
-원하는 다수의 User 정보를 조회할 수 있는 방법입니다.
+원하는 다수의 유저 정보를 검색할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -228,11 +228,11 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId | long | optional | 트랜잭션 ID |
-| isPast | bool | optional | true 일 경우 이전 주기, false 일 경우 현재 주기의 데이터 조회 |
-| isSort | bool | optional | true 일 경우 등수 기준 정렬, false 일 경우 입력한 userId 순으로 데이터 조회 |
-| userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 조회를 원하는 Factor와 User 리스트 묶음 |
+| isPast | bool | optional | true이면 이전 주기, false이면 현재 주기의 데이터 검색 |
+| isSort | bool | optional | true이면 등수 기준 정렬, false이면 입력한 userId순으로 데이터 검색 |
+| userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 검색을 원하는 Factor와 유저 목록 묶음 |
 | userIDsWithFactor[].factor |	int | mandatory | 조희를 원하는 Factor ID|
-| userIDsWithFactor[].userIds |	Array[String] | mandatory | 조회를 원하는 User 리스트 |
+| userIDsWithFactor[].userIds |	Array[String] | mandatory | 검색을 원하는 유저 목록 |
 
 **[Request Sample]**
 
@@ -341,21 +341,21 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| userInfosWithFactor | Array[Object] | User들의 정보 |
-| userInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfosWithFactor | Array[Object] | 유저 정보 |
+| userInfosWithFactor[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
 | userInfosWithFactor[].factor | int | Factor ID |
-| userInfosWithFactor[].userInfos | Array[Object] | User Score |
-| userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
-| userInfos[].userId | String | User ID |
-| userInfos[].score | double | User Score |
+| userInfosWithFactor[].userInfos | Array[Object] | 유저 점수 |
+| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfos[].userId | String | 유저 ID |
+| userInfos[].score | double | 유저 점수 |
 | userInfos[].rank | int | 이번 주기의 순위 |
 | userInfos[].preRank | int | 이전 주기의 순위 |
-| userInfos[].extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
-| userInfos[].date | String | User Score 가 업데이트 된 시간. (RFC 3339) |
+| userInfos[].extra | String | 유저와  함께 저장되는 Extra Data(최대 16바이트) |
+| userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
 
 ### Get multiple user info by range
 
-원하는 범위(등수)의 순위 정보를 조회할 수 있는 방법입니다.
+원하는 범위(등수)의 순위 정보를 검색할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -379,7 +379,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 |
+| ispast | bool | optional | true 또는 false (기본값은 false) <br> true이면 이전 주기의 데이터 검색 |
 | start | int | mandatory | 시작 순위|
 | size | int | mandatory | 가져올 Leaderboard 정보의 개수|
 
@@ -438,16 +438,16 @@ Content-Type: application/json
 
 | Key | Type | Description |
 | --- | --- | --- |
-| userInfosByRange | Array[Object] | User들의 정보 |
-| userInfosByRange[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
-| userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
-| userInfos[].userId | String | User ID |
-| userInfos[].score | double | User Score |
+| userInfosByRange | Array[Object] | 유저 정보 |
+| userInfosByRange[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfosByRange[].factor | int | 팩터 ID |
+| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfos[].userId | String | 유저 ID |
+| userInfos[].score | double | 유저 점수 |
 | userInfos[].rank | int | 이번 주기의 순위 |
 | userInfos[].preRank | int | 이전 주기의 순위 |
-| userInfos[].extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
-| userInfos[].date | String | User Score 가 업데이트 된 시간. (RFC 3339) |
+| userInfos[].extra | String | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
+| userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
 
 <br>
 
@@ -455,7 +455,7 @@ Content-Type: application/json
 
 ### Set single user score
 
-원하는 한 명의 User 점수를 등록할 수 있는 방법입니다.
+원하는 한 명의 유저 점수를 등록할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -465,22 +465,22 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
 | appkey | String | Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
-| factor | int | Factor ID |
-| userId | String | User ID |
+| factor | int | 팩터 ID |
+| userId | String | 유저 ID |
 
 **[Request Body]**
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionId |	long | mandatory | 트랜잭션 ID |
-|score|	double | mandatory | User 점수 |
+| transactionId |	long | 필수 | 트랜잭션 ID |
+|score|	double | 필수 | 유저 점수 |
 
 **[Request Sample]**
 
@@ -517,13 +517,13 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
-| resultInfo.userId | String | 등록된 User ID |
+| resultInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| resultInfo.userId | String | 등록된 유저 ID |
 
 
 ### Set single user score with extra data
 
-원하는 한 명의 User 점수와 Extra Data를 등록할 수 있는 방법입니다.
+원하는 한 명의 유저 점수와 Extra Data를 등록할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -540,16 +540,16 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 | Name | Type | Value |
 | --- | --- | --- |
 | appkey |	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
-| factor | int | Factor ID |
-| userId | String | User ID |
+| factor | int | 팩터 ID |
+| userId | String | 유저 ID |
 
 **[Request Body]**
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId |	long |	mandatory | 트랜잭션 ID |
-| score | double | mandatory | User 점수 |
-| extra | String | optional | User 와 함께 저장되는 Extra Data (최대 16Byte) |
+| score | double | mandatory | 유저 점수 |
+| extra | String | optional | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
 
 **[Request Sample]**
 
@@ -587,12 +587,12 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
-| resultInfo.userId | String | 등록된 User ID |
+| resultInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| resultInfo.userId | String | 등록된 유저 ID |
 
 ### Set multiple user score
 
-원하는 User들 점수를 등록할 수 있는 방법입니다.
+원하는 유저들 점수를 등록할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -615,11 +615,11 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId | long | mandatory | 트랜잭션 ID |
-| userScoresWithFactor | Array[Object] | mandatory | User 점수 리스트와 Factor의 리스트 |
+| userScoresWithFactor | Array[Object] | mandatory | 유저 점수 목록과 Factor의 목록 |
 | userScoresWithFactor[].factor | int | mandatory | 등록을 원하는 Factor ID |
-| userScoresWithFactor[].userScores | Array[Object] | mandatory | 등록을 원하는 User ID/점수의 리스트 |
-| userScores[].userId | String | mandatory | User ID |
-| userScores[].score | double | mandatory | User Score |
+| userScoresWithFactor[].userScores | Array[Object] | mandatory | 등록을 원하는 유저 ID와 점수 목록 |
+| userScores[].userId | String | mandatory | 유저 ID |
+| userScores[].score | double | mandatory | 유저 점수 |
 
 **[Request Sample]**
 
@@ -706,15 +706,15 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 결과 정보 |
-| resultInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| resultInfosWithFactor[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
 | resultInfosWithFactor[].factor | int | Factor ID |
-| resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 User 들의 결과 정보 |
-| resultInfos.resultCode | int | User 에 대한 에러코드 |
-| resultInfos.userId | String | 등록된 User ID |
+| resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 유저의 결과 정보 |
+| resultInfos.resultCode | int | 유저에 대한 오류 코드 |
+| resultInfos.userId | String | 등록된 유저 ID |
 
 ### Set multiple user score with extra data
 
-원하는 User들 점수와 Extra Data를 등록할 수 있는 방법입니다.
+원하는 유저 점수와 Extra Data를 등록할 수 있는 방법입니다.
 
 **[Method, URI]**
 
@@ -737,12 +737,12 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId | long | mandatory | 트랜잭션 ID |
-| userInfosWithFactor | Array[Object] | mandatory | User 점수 리스트와 Factor의 리스트 |
+| userInfosWithFactor | Array[Object] | mandatory | 유저 점수 목록과 Factor 목록 |
 | userInfosWithFactor[].factor | int | mandatory | 등록을 원하는 Factor ID |
-| userInfosWithFactor[].userInfos | Array[Object] | mandatory | 등록을 원하는 User ID/점수의 리스트 |
-| userInfos[].userId | String | mandatory | User ID |
-| userInfos[].score | double | mandatory | User Score |
-| userInfos[].extra | String | optional | User 와 함께 저장되는 Extra Data (최대 16Byte) |
+| userInfosWithFactor[].userInfos | Array[Object] | mandatory | 등록을 원하는 유저 ID와 점수 목록 |
+| userInfos[].userId | String | mandatory | 유저 ID |
+| userInfos[].score | double | mandatory | 유저 점수 |
+| userInfos[].extra | String | optional | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
 
 **[Request Sample]**
 
@@ -832,11 +832,11 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 결과 정보 |
-| resultInfosWithFactor[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| resultInfosWithFactor[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
 | resultInfosWithFactor[].factor | int | Factor ID |
-| resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 User 들의 결과 정보 |
-| resultInfos.resultCode | int | User 에 대한 에러코드 |
-| resultInfos.userId | String | 등록된 User ID |
+| resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 유저의 결과 정보 |
+| resultInfos.resultCode | int | 유저에 대한 오류 코드 |
+| resultInfos.userId | String | 등록된 유저 ID |
 
 <br>
 
@@ -844,7 +844,7 @@ Content-Type: application/json
 
 ### Delete single user info
 
-원하는 한 명의 User 정보를 삭제하는 방법입니다. 해당 User는 영구적으로 삭제되며, 복구되지 않습니다.
+원하는 유저 한 명의 정보를 삭제하는 방법입니다. 해당 유저는 영구적으로 삭제되며, 복구되지 않습니다.
 
 **[Method, URI]**
 
@@ -867,9 +867,9 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| userId | String |	mandatory | User ID |
+| userId | String |	mandatory | 유저 ID |
 | transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 삭제 |
+| ispast | bool | optional | true 또는 false(기본값은 false) <br> true이면 이전 주기의 데이터 삭제 |
 
 **[Request Sample]**
 
@@ -896,3 +896,4 @@ Content-Type: application/json
 	}
 }
 ```
+
