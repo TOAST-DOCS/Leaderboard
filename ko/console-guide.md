@@ -7,7 +7,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 * 유저의 랭킹 정보 검색, 수정, 삭제
 
 ## 랭킹 지표
-![leaderboard_01_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_01_201901.png)
+![leaderboard_01_201901-1](https://static.toastoven.net/prod_leaderboardv2/leaderboard_01_201901-1.png)
 
 ### 1. 특정 일자 지표
 
