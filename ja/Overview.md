@@ -7,7 +7,7 @@ Leaderboardプラットフォームを使用すれば、簡単な連動だけで
 
 ## Merits
 
-![[図0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/merits.png)
+![[図0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/merits-jp.png)
 
 <br>
 
@@ -52,7 +52,7 @@ Leaderboardでは次の用語を使用します。
 
 Leaderboardプラットフォームの物理的構造は、下図のとおりです。
 
-![[図1 Leaderboard物理的構造]](http://static.toastoven.net/prod_leaderboardv2/overview_1.png)
+![[図1 Leaderboard物理的構造]](http://static.toastoven.net/prod_leaderboardv2/overview_1-jp.png)
 
 - ゲームサーバー/TOAST Consoleは、api-leaderboard.cloud.toast.comとデータを送受信します。
 - Load Balancerは、複数台で構成したLeaderboard APサーバーに要請を分配します。
@@ -63,7 +63,7 @@ Leaderboardプラットフォームの物理的構造は、下図のとおりで
 
 Leaderboardプラットフォームの論理的構造は、下図のとおりです。
 
-![[図2 Leaderboard論理的構造]](http://static.toastoven.net/prod_leaderboardv2/overview_2.png)
+![[図2 Leaderboard論理的構造]](http://static.toastoven.net/prod_leaderboardv2/overview_2-jp.png)
 
 - 1つのプロジェクトにつき1つのLeaderboard AppKeyがあります。
 - Leaderboard AppKey内に複数個のファクターを登録できます。
@@ -83,13 +83,13 @@ Leaderboardプラットフォームの論理的構造は、下図のとおりで
 
 昇順ソートは、小さいスコアから大きいスコアにソートします。
 
-![[図3昇順ソート]](http://static.toastoven.net/prod_leaderboardv2/overview_3.png)
+![[図3昇順ソート]](http://static.toastoven.net/prod_leaderboardv2/overview_3-jp.png)
 
 **[降順ソート]**
 
 降順ソートは、大きいスコアから小さいスコアにソートします。
 
-![[図4降順ソート]](http://static.toastoven.net/prod_leaderboardv2/overview_4.png)
+![[図4降順ソート]](http://static.toastoven.net/prod_leaderboardv2/overview_4-jp.png)
 
 ### スコアアップデート
 
@@ -99,19 +99,19 @@ Leaderboardプラットフォームの論理的構造は、下図のとおりで
 
 新しいスコアが以前のスコアより高いスコアの時にアップデートします。
 
-![[図5最高スコアアップデート]](http://static.toastoven.net/prod_leaderboardv2/overview_5.png)
+![[図5最高スコアアップデート]](http://static.toastoven.net/prod_leaderboardv2/overview_5-jp.png)
 
 **[最新スコアアップデート]**
 
 既存スコアと関係なく新しいスコアをアップデートします(常にアップデート).
 
-![[図6最新スコアアップデート]](http://static.toastoven.net/prod_leaderboardv2/overview_6.png)
+![[図6最新スコアアップデート]](http://static.toastoven.net/prod_leaderboardv2/overview_6-jp.png)
 
 **[累積スコアアップデート]**
 
 新しいスコアと既存スコアを合算してアップデートします。
 
-![[図7累積スコアアップデート]](http://static.toastoven.net/prod_leaderboardv2/overview_7.png)
+![[図7累積スコアアップデート]](http://static.toastoven.net/prod_leaderboardv2/overview_7-jp.png)
 
 ### 同点者の処理
 
@@ -121,13 +121,13 @@ Leaderboardプラットフォームの論理的構造は、下図のとおりで
 
 同点者が複数人いる場合、先に登録されたユーザーが高い順位になります。
 
-![[図8：最初ランキング獲得者優先順位]](http://static.toastoven.net/prod_leaderboardv2/overview_8.png)
+![[図8：最初ランキング獲得者優先順位]](http://static.toastoven.net/prod_leaderboardv2/overview_8-jp.png)
 
 **[最新ランキング獲得者優先順位]**
 
 同点者が複数人の場合、後に登録されたユーザーが高い順位になります。
 
-![[図9：最新ランキング獲得者優先順位]](http://static.toastoven.net/prod_leaderboardv2/overview_9.png)
+![[図9：最新ランキング獲得者優先順位]](http://static.toastoven.net/prod_leaderboardv2/overview_9-jp.png)
 
 ### 初期化時間
 

@@ -18,13 +18,13 @@ Leaderboard APIはREST API形式で、次のようなAPIを提供します。
 
 > https://api-leaderboard.cloud.toast.com
 
-![図1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_201901_1-1.PNG)
+![図1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_1.PNG)
 
 ### AppKey
 アプリケーションキーはゲームサーバーから要請を送る時に必要な固有キーで、コンソールで確認できます。
 > [注意]アプリケーションキーは外部に表示してはならず、変更できません。
 
-![図2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_201901_2-1.PNG)
+![図2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_2.PNG)
 
 ### 注意事項
 すべてのAPIを使用するには **サービスを有効にした後、ファクターを登録**する必要があります。
