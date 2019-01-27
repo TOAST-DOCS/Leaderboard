@@ -8,7 +8,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 - ユーザーのランキング情報検索、修正、削除
 
 ## ランキング指標
-![leaderboard_01_201901-1](https://static.toastoven.net/prod_leaderboardv2/leaderboard_01_201901-1.png)
+![leaderboard_01_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_01_201812.png)
 
 ### 1. 特定日時指標
 
@@ -42,7 +42,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 ### ランキングデータ検索
 
-![leaderboard_02_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_02_201812.png)
+![leaderboard_02_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_02_201812.png)
 
 **[ランキングデータ検索]**
 
@@ -62,7 +62,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 ### ユーザー情報
 
-![leaderboard_03_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_03_201812.png)
+![leaderboard_03_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_03_201812.png)
 
 #### 1. ユーザー情報修正
 
@@ -71,7 +71,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 **[ユーザーランキング修正ウィンドウ]**
 **修正** ボタンをクリックすると、修正するデータを入力するウィンドウが現れます。スコア、その他の情報を修正でき、変更スコアと理由は必ず入力する必要があります。
 
-![leaderboard_04_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_04_201812.png)
+![leaderboard_04_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_04_201812.png)
 
 #### 2. ユーザー情報削除
 
@@ -80,7 +80,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 **[ユーザーランキング削除ウィンドウ]**
 **削除** ボタンをクリックすると、確認ウィンドウが現れます。理由は必須入力項目で、削除後は復旧できませんので、慎重に削除を行ってください。
 
-![leaderboard_05_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_05_201812.png)
+![leaderboard_05_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_05_201812.png)
 
 #### 3. ユーザーデータ保存
 
@@ -89,11 +89,11 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 **[データ保存ウィンドウ]**
 データは1回に最大10万件まで保存でき、許容量を超えると、検索開始順位を含め10万人までダウンロードされます。
 
-![leaderboard_06_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_06_201812.png)
+![leaderboard_06_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_06_201812.png)
 
 ## ランキング設定
 
-![leaderboard_07_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_07_201812.png)
+![leaderboard_07_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_07_201812.png)
 
 > **[注意事項]**<br>
 > ファクターの登録、初期化、削除はプロジェクトのAdminに登録されたユーザーのみ実行できます。 
@@ -108,7 +108,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 **[+追加]** ボタンをクリックすると、下記のようなウィンドウが開かれます。
 
-![leaderboard_08_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_08_201812.png)
+![leaderboard_08_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_08_201812.png)
 
 **[項目別説明]**
 
@@ -168,7 +168,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 ### ファクター検索
 
-![leaderboard_09_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_09_201812.png)
+![leaderboard_09_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_09_201812.png)
 
 検索条件がファクター名の場合、名前に検索語が含まれるファクターを検索します。
 
@@ -176,7 +176,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 ### ファクター初期化
 
-![leaderboard_10_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_10_201812.png)
+![leaderboard_10_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_10_201812.png)
 
 初期化するファクターを選択します。
 
@@ -191,6 +191,6 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 選択すると **ファクター修正** ウィンドウが現れます。ファクター名、その他情報のみ修正できます。
 
-![leaderboard_11_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_11_201812.png)
+![leaderboard_11_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_11_201812.png)
 
 ※ API情報は[API Guide](/Game/Leaderboard/ja/api-guide/)を参照してください。
