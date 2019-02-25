@@ -1,5 +1,12 @@
 ## Game > Leaderboard > Release Notes
 
+### 2019.02.26
+
+#### 기능 개선/변경
+* [Console] 한글, 일어, 영어 검수 내용 적용
+* [Console] Datepicker 다국어 적용
+* [Document] 가이드 한글, 일어, 영어 검수 내용 적용
+
 ### 2018.10.23
 
 #### 기능 개선/변경

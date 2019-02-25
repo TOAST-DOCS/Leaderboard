@@ -1,48 +1,48 @@
-## Game > Leaderboard > API Guide
+## Game > Leaderboard > APIガイド
 
-Leaderboard APIは、REST APIの形で以下のAPIを提供します。
+Leaderboard APIはREST API形式で、次のようなAPIを提供します。
 
 ### HTTP API
-- ユーザースコア登録（単一 / 複数）
-- ユーザースコア獲得（単一 / 複数 / 範囲）
-- Factorに入っているユーザー数照会
-- ユーザースコア削除（単一）
+- ユーザースコアの登録(単一/多数)
+- ユーザースコアの獲得(単一/多数/範囲)
+- ファクターにいるユーザー数の検索
+- ユーザースコアの削除(単一)
 
 <br>
 
-## Notice
-
-### Caution
-すべてのAPIを使用するためには、**商品をアクティブ化してから、Factorを登録**する必要があります。
-Leaderboard APIは、**Clientで呼び出し時乱用などの危険があり、Serverでのみ呼び出すことをお勧めします。**
+## 事前準備
+サーバーAPIを使用するためには次の情報を知っている必要があります。
 
 ### Server Address
-サーバーAPIを呼び出すためのサーバーアドレスは、以下の通りです。このアドレスは「Leaderboard」のコンソール画面からも確認できます。<br>
+サーバーAPI呼び出しサーバーアドレスは次のとおりです。アドレスはLeaderboardコンソールで確認できます。<br>
 
 > https://api-leaderboard.cloud.toast.com
 
-![図 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_1.PNG)
+![図1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_1.PNG)
 
 ### AppKey
-AppKeyは、ゲームサーバーにリクエストを送る際に必要な固有なキーで、 「Leaderboard」のコンソール画面からも確認できます。
-> **注意事項** <br>
-> AppKeyは、外部に露出されることがあってはなりません。なお、変更はできないので、ご注意ください。
+アプリケーションキーはゲームサーバーから要請を送る時に必要な固有キーで、コンソールで確認できます。
+> [注意]アプリケーションキーは外部に表示してはならず、変更できません。
 
-![図 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_2.PNG)
+![図2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_2.PNG)
+
+### 注意事項
+すべてのAPIを使用するには **サービスを有効にした後、ファクターを登録**する必要があります。
+Leaderboard APIは **クライアントで呼び出す時、アビューズなどのリスクがあるため、サーバーからのみ呼び出しすることを推奨します。**
 
 <br>
 
-## Common
+## 共通
 
 ### HTTP Header
-API呼び出し時にHTTP Headerに以下の項目を設定する必要があります。
+APIを呼び出す時、HTTP Headerに次の項目を設定する必要があります。
 
-| Name | Required | Value |
+| Name | Required |	Value |
 |---|---|---|
 | Content-Type | mandatory | application/json; charset=UTF-8 |
 
 ### API Response
-すべてのAPIリクエストに対するレスポンスとして、HTTP 200 OKを送ります。APIリクエストの成否は、Response Bodyのheader項目を参照し判断できます。
+すべてのAPI要請レスポンスにHTTP 200 OKを渡します。 API要請が成功したかはResponse Bodyのheader項目を参照して判断できます。
 
 ```
 HTTP/1.1 200 OK
@@ -60,12 +60,12 @@ Content-Type: application/json
 ```
 
 ### TransactionId
-APIを呼び出すサーバーで内部的にAPIリクエストを管理できる方法として、TransactionId機能を提供します。
-呼び出すサーバーのHTTP BodyにTransactionIdを設定しAPIを呼び出すと、「Leaderboard」サーバーは、レスポンスの結果に該当のTransactionIdを設定し、結果を送ります。TransactionIdは、定数型タイプです。
+APIを呼び出しするサーバーで内部的にAPI要請を管理できる方法としてTransactionId機能を提供します。
+呼び出しするサーバーでHTTP BodyにTransactionIdを設定してAPIを呼び出すと、Leaderboardサーバーはレスポンス結果に該当のTransactionIdを設定して結果を伝えます。TransactionIdは整数型で受け取ります。
 
 ### Time
 
-ユーザーのアップデート時間は、RFC 3339の定義に従います。
+ユーザーのアップデート時間はRFC 3339定義に従います。
 
 > https://tools.ietf.org/html/rfc3339
 
@@ -75,34 +75,34 @@ APIを呼び出すサーバーで内部的にAPIリクエストを管理でき�
 
 ### Get user count in factor
 
-希望する1つのFactorに登録されているユーザー数を照会します。
+希望する1個のファクターに登録されたユーザーの数を検索します。
 
 **[Method, URI]**
 
 ```
-GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count 
+GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count
 ```
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
-
+Common/HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
-|factor|	int|	Leaderboard Factor|
+|factor|	int|	Leaderboard Factor ID|
 
 **[Request Parameter]**
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
 | transactionid | long | optional | トランザクションID |
-| ispast | bool | optional | true or false（デフォルトはfalse） <br> trueの場合は、前回の周期のデータを照会 | 
+| ispast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
 
 **[Request Sample]**
+
 ```
 GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionid=12345&ispast=false
 ```
@@ -130,21 +130,21 @@ Content-Type: application/json
 | --- | --- | --- |
 | resultInfo | Object | 結果情報 |
 | resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/error-code) |
-| resultInfo.totalCount | int | Factorに登録されているユーザー数 |
+| resultInfo.totalCount | int | ファクターに登録されたユーザー数 |
 
 ### Get single user info
 
-希望する一人のユーザー情報を照会できます。
+希望する1名のユーザーの情報を検索できます。
 
 **[Method, URI]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users 
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
 ```
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
+Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
@@ -157,9 +157,9 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| userId | String |	mandatory | User ID |
+| userId | String |	mandatory | ユーザーID |
 | transactionid | long | optional | トランザクションID |
-| ispast | bool | optional | true or false（デフォルトはfalse) <br> trueの場合は、前回の周期のデータを照会 |
+| ispast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
 
 **[Request Sample]**
 
@@ -196,16 +196,16 @@ Content-Type: application/json
 | --- | --- | --- |
 | userInfo | Object | ユーザー情報 |
 | userInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/error-code) |
-| userInfo.userId | String | User ID |
-| userInfo.score | Double | User Score |
-| userInfo.rank | int | 今回の周期のランキング |
-| userInfo.preRank | int | 前回の周期のランキング |
-| userInfo.extra | String | ユーザーとともに保存されるExtra Data（最大16Byte） |
-| userInfo.date | String | ユーザースコアがアップデートされた時間（RFC 3339） |
+| userInfo.userId | String | ユーザーID |
+| userInfo.score | Double | ユーザースコア |
+| userInfo.rank | int | 今回の周期の順位 |
+| userInfo.preRank | int | 以前の周期の順位 |
+| userInfo.extra | String | ユーザーと一緒に保存されるExtra Data(最大16バイト) |
+| userInfo.date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
 
 ### Get multiple user info
 
-希望する複数のユーザー情報を照会できる方法です。
+希望する多数のユーザー情報を検索できる方法です。
 
 **[Method, URI]**
 
@@ -215,7 +215,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/g
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
+Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
@@ -228,11 +228,11 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId | long | optional | トランザクションID |
-| isPast | bool | optional | true or false（デフォルトはfalse) <br> trueの場合は、前回の周期のデータを照会 |
-| isSort | bool | optional | true or false（デフォルトはfalse) <br> trueの場合は、ランキング順に結果をソートします|
-| userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 照会を希望するFactorとユーザーリストのまとめ |
-| userIDsWithFactor[].factor |	int | mandatory | 照会を希望するFactor |
-| userIDsWithFactor[].userIds |	Array[String] | mandatory | 照会を希望するユーザーリスト |
+| isPast | bool | optional | trueの場合、以前の周期、 falseの場合、現在の周期のデータ検索 |
+| isSort | bool | optional | trueの場合、順位を基準にソート、 falseの場合、入力したuserId順にデータ検索 |
+| userIDsWithFactor | Array[[String, Array[String]]] | mandatory | 検索したFactorとユーザーリストの束 |
+| userIDsWithFactor[].factor |	int | mandatory | 照会したいFactor ID|
+| userIDsWithFactor[].userIds |	Array[String] | mandatory | 検索したいユーザーリスト |
 
 **[Request Sample]**
 
@@ -342,30 +342,30 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosWithFactor | Array[Object] | ユーザー情報 |
-| userInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| userInfosWithFactor[].resultCode | int | ファクターのエラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
 | userInfosWithFactor[].factor | int | Factor ID |
-| userInfosWithFactor[].userInfos | Array[Object] | User Score |
-| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/error-code) |
-| userInfos[].userId | String | User ID |
-| userInfos[].score | double | User Score |
-| userInfos[].rank | int | 今回の周期のランキング |
-| userInfos[].preRank | int | 前回の周期のランキング |
-| userInfos[].extra | String | ユーザーとともに保存されるExtra Data（最大16Byte) |
-| userInfos[].date | String | ユーザースコアがアップデートされた時間（RFC 3339) |
+| userInfosWithFactor[].userInfos | Array[Object] | ユーザースコア |
+| userInfos[].resultCode | int | 該当ユーザーのコード。エラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| userInfos[].userId | String | ユーザーID |
+| userInfos[].score | double | ユーザースコア |
+| userInfos[].rank | int | 今回の周期の順位 |
+| userInfos[].preRank | int | 以前の周期の順位 |
+| userInfos[].extra | String | ユーザーと一緒に保存されるExtra Data(最大16バイト) |
+| userInfos[].date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
 
 ### Get multiple user info by range
 
-希望する範囲（順位）のランキング情報を照会できる方法です。
+希望する範囲(順位)の順位情報を検索できる方法です。
 
 **[Method, URI]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users 
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
 ```
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
+Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
@@ -379,9 +379,9 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionid | long | optional | トランザクションID |
-| ispast | bool | optional | true or false（デフォルトはfalse) <br> trueの場合は、前回の周期のデータを照会 |
-| start | int | mandatory | 開始ランキング |
-| size | int | mandatory | 取得するLeaderboardの情報数 |
+| ispast | bool | optional | trueまたはfalse (デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
+| start | int | mandatory | 開始順位|
+| size | int | mandatory | 取得するLeaderboard情報の個数|
 
 **[Request Sample]**
 
@@ -439,15 +439,15 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosByRange | Array[Object] | ユーザー情報 |
-| userInfosByRange[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
-| userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | 該当ユーザーに対するコード。エラーコード [\[LINK\]](/Game/Leaderboard/ja/error-code) |
-| userInfos[].userId | String | User ID |
-| userInfos[].score | double | User Score |
-| userInfos[].rank | int | 今回の周期のランキング |
-| userInfos[].preRank | int | 前回の周期のランキング |
-| userInfos[].extra | String | ユーザーとともに保存されるExtra Data（最大16Byte) |
-| userInfos[].date | String | ユーザースコアがアップデートされた時間（RFC 3339) |
+| userInfosByRange[].resultCode | int | ファクターのエラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| userInfosByRange[].factor | int | ファクターID |
+| userInfos[].resultCode | int | 該当ユーザーのコード。エラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| userInfos[].userId | String | ユーザーID |
+| userInfos[].score | double | ユーザースコア |
+| userInfos[].rank | int | 今回の周期の順位 |
+| userInfos[].preRank | int | 以前の周期の順位 |
+| userInfos[].extra | String | ユーザーと一緒に保存されるExtra Data(最大16バイト) |
+| userInfos[].date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
 
 <br>
 
@@ -455,7 +455,7 @@ Content-Type: application/json
 
 ### Set single user score
 
-希望する一人のユーザーのスコアを登録できる方法です。
+希望する1名のユーザースコアを登録できる方法です。
 
 **[Method, URI]**
 
@@ -465,22 +465,22 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
+Common/HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
 | appkey | String | Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
-| factor | int | Factor ID |
-| userId | String | User ID |
+| factor | int | ファクターID |
+| userId | String | ユーザーID |
 
 **[Request Body]**
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionId |	long | mandatory | トランザクションID |
-|score|	double | mandatory | ユーザースコア |
+| transactionId |	long | 必須 | トランザクションID |
+|score|	double | 必須 | ユーザースコア |
 
 **[Request Sample]**
 
@@ -517,13 +517,13 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 結果情報 |
-| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/error-code) |
-| resultInfo.userId | String | 登録されたユーザーID  |
+| resultInfo.resultCode | int | エラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| resultInfo.userId | String | 登録されたユーザーID |
 
 
 ### Set single user score with extra data
 
-希望する一人のユーザーのスコアとExtra Dataを登録できる方法です。
+希望する1名のユーザースコアとExtra Dataを登録できる方法です。
 
 **[Method, URI]**
 
@@ -533,15 +533,15 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
+Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
 | appkey |	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
-| factor | int | Factor ID |
-| userId | String | User ID |
+| factor | int | ファクターID |
+| userId | String | ユーザーID |
 
 **[Request Body]**
 
@@ -549,7 +549,7 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 | --- | --- | --- | --- |
 | transactionId |	long |	mandatory | トランザクションID |
 | score | double | mandatory | ユーザースコア |
-| extra | String | optional | ユーザーとともに保存されるExtra Data（最大16Byte) |
+| extra | String | optional | ユーザーと一緒に保存されるExtra Data(最大16バイト) |
 
 **[Request Sample]**
 
@@ -587,12 +587,12 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 結果情報 |
-| resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/error-code) |
-| resultInfo.userId | String | 登録されたユーザーID  |
+| resultInfo.resultCode | int | エラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| resultInfo.userId | String | 登録されたユーザーID |
 
 ### Set multiple user score
 
-希望するユーザースコアを登録できる方法です。
+希望するユーザーのスコアを登録できる方法です。
 
 **[Method, URI]**
 
@@ -602,7 +602,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
+Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
@@ -615,11 +615,11 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId | long | mandatory | トランザクションID |
-| userScoresWithFactor | Array[Object] | mandatory | ユーザースコア・Factorのリスト |
-| userScoresWithFactor[].factor | int | mandatory | 登録を希望するFactor |
-| userScoresWithFactor[].userScores | Array[Object] | mandatory | 登録を希望するユーザーID/スコアのリスト |
-| userScores[].userId | String | mandatory | User ID |
-| userScores[].score | double | mandatory | User Score |
+| userScoresWithFactor | Array[Object] | mandatory | ユーザースコアリストとFactorのリスト |
+| userScoresWithFactor[].factor | int | mandatory | 登録を希望するFactor ID |
+| userScoresWithFactor[].userScores | Array[Object] | mandatory | 登録を希望するユーザーIDとスコアリスト |
+| userScores[].userId | String | mandatory | ユーザーID |
+| userScores[].score | double | mandatory | ユーザースコア |
 
 **[Request Sample]**
 
@@ -706,11 +706,11 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 結果情報 |
-| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| resultInfosWithFactor[].resultCode | int | ファクターのエラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 登録されたユーザーの結果情報 |
-| resultInfos.resultCode | int | User に対するエラーコード|
-| resultInfos.userId | String | 登録されたユーザーID  |
+| resultInfos.resultCode | int | ユーザーに対するエラーコード |
+| resultInfos.userId | String | 登録されたユーザーID |
 
 ### Set multiple user score with extra data
 
@@ -724,7 +724,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
+Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
@@ -737,12 +737,12 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
 | transactionId | long | mandatory | トランザクションID |
-| userInfosWithFactor | Array[Object] | mandatory | ユーザースコア・Factorのリスト |
-| userInfosWithFactor[].factor | int | mandatory | 登録を希望するFactor |
-| userInfosWithFactor[].userInfos | Array[Object] | mandatory | 登録を希望するユーザーID/スコアのリスト |
-| userInfos[].userId | String | mandatory | User ID |
-| userInfos[].score | double | mandatory | User Score |
-| userInfos[].extra | String | optional | ユーザーとともに保存されるExtra Data（最大16Byte) |
+| userInfosWithFactor | Array[Object] | mandatory | ユーザースコアリストとFactorリスト |
+| userInfosWithFactor[].factor | int | mandatory | 登録を希望するFactor ID |
+| userInfosWithFactor[].userInfos | Array[Object] | mandatory | 登録を希望するユーザーIDとスコアリスト |
+| userInfos[].userId | String | mandatory | ユーザーID |
+| userInfos[].score | double | mandatory | ユーザースコア |
+| userInfos[].extra | String | optional | ユーザーと一緒に保存されるExtra Data(最大16バイト) |
 
 **[Request Sample]**
 
@@ -832,10 +832,10 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 結果情報 |
-| resultInfosWithFactor[].resultCode | int | Factorに対するエラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| resultInfosWithFactor[].resultCode | int | ファクターのエラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 登録されたユーザーの結果情報 |
-| resultInfos.resultCode | int | User に対するエラーコード|
+| resultInfos.resultCode | int | ユーザーに対するエラーコード |
 | resultInfos.userId | String | 登録されたユーザーID |
 
 <br>
@@ -844,7 +844,7 @@ Content-Type: application/json
 
 ### Delete single user info
 
-希望する一人のユーザー情報を削除する方法です。該当ユーザーは永久的に削除され、復旧できません。
+希望するユーザー1名の情報を削除する方法です。該当ユーザーは完全に削除され、復旧できません。
 
 **[Method, URI]**
 
@@ -854,7 +854,7 @@ DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}
 
 **[Request Header]**
 
-Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
+Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Path Variable]**
 
@@ -865,11 +865,11 @@ Common / HTTP Headerの確認[\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 **[Request Parameter]**
 
-| Name | Type | Required | Value |
+| Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| userId | String | mandatory | User ID |
+| userId | String |	mandatory | ユーザーID |
 | transactionid | long | optional | トランザクションID |
-| ispast | bool | optional | true or false（デフォルトはfalse） <br> trueの場合は、前回の周期のデータを削除 |
+| ispast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ削除 |
 
 **[Request Sample]**
 
