@@ -108,7 +108,7 @@ After service is enabled, factor information must be added. Go to **Game > Leade
 
 Click **[+Add]** and a window pops up as below.
 
-![leaderboard_08_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_08_201902.png)
+![leaderboard_08_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_08_201902_1.png)
 
 **[Description of Each Item]**
 
