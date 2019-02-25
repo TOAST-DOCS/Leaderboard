@@ -193,4 +193,4 @@ Then a window pops up to **Modify Factors**. Only factor name and other informat
 
 ![leaderboard_11_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_11_201902.png)
 
-※ See [API Guide](/Game/Leaderboard/ko/api-guide/) for API information. 
+※ See [API Guide](/Game/Leaderboard/en/api-guide/) for API information. 
