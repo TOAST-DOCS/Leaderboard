@@ -98,13 +98,13 @@ Common/HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| transactionid | long | optional | トランザクションID |
-| ispast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
+| transactionId | long | optional | トランザクションID |
+| isPast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
 
 **[Request Sample]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionid=12345&ispast=false
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionId=12345&isPast=false
 ```
 
 **[Response]**
@@ -158,13 +158,13 @@ Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
 | userId | String |	mandatory | ユーザーID |
-| transactionid | long | optional | トランザクションID |
-| ispast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
+| transactionId | long | optional | トランザクションID |
+| isPast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
 
 **[Request Sample]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userId}&transactionid=12345&ispast=false
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userId}&transactionId=12345&isPast=false
 ```
 
 **[Response]**
@@ -378,15 +378,15 @@ Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionid | long | optional | トランザクションID |
-| ispast | bool | optional | trueまたはfalse (デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
+| transactionId | long | optional | トランザクションID |
+| isPast | bool | optional | trueまたはfalse (デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
 | start | int | mandatory | 開始順位|
 | size | int | mandatory | 取得するLeaderboard情報の個数|
 
 **[Request Sample]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionid=12345&ispast=false&start=1&size=3
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionId=12345&isPast=false&start=1&size=3
 ```
 
 **[Response]**
@@ -868,13 +868,13 @@ Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
 | userId | String |	mandatory | ユーザーID |
-| transactionid | long | optional | トランザクションID |
-| ispast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ削除 |
+| transactionId | long | optional | トランザクションID |
+| isPast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ削除 |
 
 **[Request Sample]**
 
 ```
-DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userid}&transactionid=12345&ispast=false
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userid}&transactionId=12345&isPast=false
 ```
 
 **[Response]**

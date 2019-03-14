@@ -99,12 +99,12 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/zh/api-guide/#common)
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 |
+| transactionId | long | optional | 트랜잭션 ID |
+| isPast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 |
 
 **[Request Sample]**
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionid=12345&ispast=false
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionId=12345&isPast=false
 ```
 
 **[Response]**
@@ -158,13 +158,13 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/zh/api-guide/#common)
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
 | userId | String |	mandatory | User ID |
-| transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조희 |
+| transactionId | long | optional | 트랜잭션 ID |
+| isPast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조희 |
 
 **[Request Sample]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userId}&transactionid=12345&ispast=false
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userId}&transactionId=12345&isPast=false
 ```
 
 **[Response]**
@@ -378,15 +378,15 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/zh/api-guide/#common)
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 |
+| transactionId | long | optional | 트랜잭션 ID |
+| isPast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 조회 |
 | start | int | mandatory | 시작 순위|
 | size | int | mandatory | 가져올 Leaderboard 정보의 개수|
 
 **[Request Sample]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionid=12345&ispast=false&start=1&size=3
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionId=12345&isPast=false&start=1&size=3
 ```
 
 **[Response]**
@@ -868,13 +868,13 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/zh/api-guide/#common)
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
 | userId | String |	mandatory | User ID |
-| transactionid | long | optional | 트랜잭션 ID |
-| ispast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 삭제 |
+| transactionId | long | optional | 트랜잭션 ID |
+| isPast | bool | optional | true or false (기본값은 false) <br> true 일 경우 이전 주기의 데이터 삭제 |
 
 **[Request Sample]**
 
 ```
-DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userid}?transactionid=12345&ispast=false
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userid}?transactionId=12345&isPast=false
 ```
 
 **[Response]**

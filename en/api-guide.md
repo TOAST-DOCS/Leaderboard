@@ -97,13 +97,13 @@ Check Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| transactionid | long | optional | Transaction ID |
-| ispast | bool | optional | True or false (default is false) <br>For True, search data of a previous cycle |
+| transactionId | long | optional | Transaction ID |
+| isPast | bool | optional | True or false (default is false) <br>For True, search data of a previous cycle |
 
 **[Request Sample]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionid=12345&ispast=false
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count?transactionId=12345&isPast=false
 ```
 
 **[Response]**
@@ -157,13 +157,13 @@ Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
 | userId | String |	mandatory | User ID |
-| transactionid | long | optional | Transaction ID |
-| ispast | bool | optional | True or false (default is false) <br>For True, query data of a previous cycle |
+| transactionId | long | optional | Transaction ID |
+| isPast | bool | optional | True or false (default is false) <br>For True, query data of a previous cycle |
 
 **[Request Sample]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userId}&transactionid=12345&ispast=false
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userId}&transactionId=12345&isPast=false
 ```
 
 **[Response]**
@@ -377,15 +377,15 @@ Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
 
 | Name | Type | Required | Value |
 | --- | --- | --- | --- |
-| transactionid | long | optional | Transaction ID |
-| ispast | bool | optional | True or false (default is false) <br>Search data of the previous cycle, if it is True |
+| transactionId | long | optional | Transaction ID |
+| isPast | bool | optional | True or false (default is false) <br>Search data of the previous cycle, if it is True |
 | start | int | mandatory | Ranking at start |
 | size | int | mandatory | Number of Leaderboard information to import |
 
 **[Request Sample]**
 
 ```
-GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionid=12345&ispast=false&start=1&size=3
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionId=12345&isPast=false&start=1&size=3
 ```
 
 **[Response]**
@@ -867,13 +867,13 @@ Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
 | userId | String |	mandatory | User ID |
-| transactionid | long | optional | Transaction ID |
-| ispast | bool | optional | True or false (default is false) <br>Delete data of the previous cycle, if it is true. |
+| transactionId | long | optional | Transaction ID |
+| isPast | bool | optional | True or false (default is false) <br>Delete data of the previous cycle, if it is true. |
 
 **[Request Sample]**
 
 ```
-DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userid}&transactionid=12345&ispast=false
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?userId={userid}&transactionId=12345&isPast=false
 ```
 
 **[Response]**

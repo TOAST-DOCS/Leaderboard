@@ -1,5 +1,10 @@
 ## Game > Leaderboard > Release Notes 
 
+### Mar. 26, 2019
+
+#### 機能改善/変更
+* [API] Uniform parameter case with camel case. You can use the parameters that are guided by the existing lower case 
+
 ### Feb. 26, 2019
 
 #### Feature Updates
@@ -9,7 +14,6 @@
 
 * [Document] Updated Korean, Japanese, and English Guide
 
-
 ### Oct. 23, 2018
 
 #### Feature Updates 
@@ -18,8 +22,6 @@
 * [API] Added the sorting feature for Get Multiple User Info API
 
 * [Document] Added description on improved Get Multiple User Info API
-
-  
 
 ### August 28, 2018
 
@@ -32,8 +34,6 @@
 
 * [Document] Added description regarding improved UTC configuration or modifying factors 
 
-  
-
 ### July 24, 2018 
 
 #### Feature Updates 
@@ -44,14 +44,10 @@
 
 * [Console] Fixed the unavailability of finding data when downloading users in particular ranges 
 
-  
-
 ### June 26, 2018
 
 #### Bug Fixes 
 * [Console] Fixed partial missing of indicator information 
-
-  
 
 ### May 29, 2018
 
@@ -64,16 +60,12 @@
 
 * [Document] Added a feature of describing new or improved console features. 
 
-  
-
 ### March 22, 2018
 
 #### Feature Updates 
 * [Console] Improved to configure by N cycle when a factor is registered. 
 
 * [Document] Added description regarding the configuration of improved N cycle 
-
-  
 
 ### Feb. 22, 2018
 
@@ -90,8 +82,6 @@
 
 * [Document] Added a feature of describing new console features 
 
-  
-
 ### Oct. 26, 2017
 
 #### Feature Updates 
@@ -100,8 +90,6 @@
 
 #### Bug Fixes 
 * [Console] Fixed the error of check boxes for all user information remaining selected even after deleted or re-searched. 
-
-  
 
 ### August 24, 2017
 
@@ -118,16 +106,12 @@
 
 * [API] Modified to prevent using "" for a UserID  
 
-  
-
 ### June 22, 2017
 
 #### Bug Fixes 
 * [Console] Fixed the issue of ranking name cuts when they are registered in Korean on the Internet Explorer 
 
 * [Console] Fixed the issue of user range inquiries within a ranking, which do not match UI
-
-  ​    
 
 ### April 20, 2017
 
@@ -138,8 +122,6 @@
 #### Bug Fixes 
 * [API] Returns HTTP Status Code to 200, when the server receives a request, even if it is abnormal.  
 
-  
-
 ### Feb. 23, 2017
 
 #### Feature Updates 
@@ -149,9 +131,8 @@
 #### Bug Fixes 
 * [Console] Fixed the error of web page suspension, when it is requested to remove multiple ranking data  
 
-  
-
 ### Jan. 19, 2017
+
 #### Upgrade Guide for LeaderBoard v2 
 
 * Change in Internal Structure 
