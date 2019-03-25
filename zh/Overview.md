@@ -7,7 +7,7 @@ Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 �
 
 ## Merits
 
-![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/merits.png)
+![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/newMerits_kr.png)
 
 <br>
 
