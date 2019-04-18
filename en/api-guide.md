@@ -450,6 +450,143 @@ Content-Type: application/json
 
 <br>
 
+### Get multiple user info by pivot user
+
+It is a method to retrieve ranking information of the base user and rank information of the upper and lower users.
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+```
+
+**[Request Header]**
+
+Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+
+**[Path Variable]**
+
+| Name | Type | Value |
+| --- | --- | --- |
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|factor|	int|	Factor ID|
+
+**[Request Parameter]**
+
+| Name | Type | Required | Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | Transaction ID |
+| isPast | bool | optional | True or false (default is false) <br>Search data of the previous cycle, if it is True |
+| userId | String | mandatory | Pivot User ID |
+| prevSize | int | mandatory | The size of the parent user to view in the base user ranking |
+| nextSize | int | mandatory | The size of the child user to view in the base user ranking |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionId=12345&isPast=false&userId=test4&prevSize=3&nextSize=3
+```
+
+**[Response]**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 4,
+    "userInfosByRange": {
+        "resultCode": 0,
+        "factor": 2,
+        "userInfos": [
+            {
+                "resultCode": 0,
+                "userId": "test7",
+                "score": 700,
+                "rank": 1,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test6",
+                "score": 600,
+                "rank": 2,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test5",
+                "score": 500,
+                "rank": 3,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test4",
+                "score": 400,
+                "rank": 4,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test3",
+                "score": 300,
+                "rank": 5,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test2",
+                "score": 200,
+                "rank": 6,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test1",
+                "score": 100,
+                "rank": 7,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            }
+        ]
+    }
+}
+```
+
+| Key | Type | Description |
+| --- | --- | --- |
+| userInfosByRange | Array[Object] | User information |
+| userInfosByRange[].resultCode | int | Error code of a factor [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfosByRange[].factor | int | Factor ID |
+| userInfos[].resultCode | int | User code. Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfos[].userId | String | User ID |
+| userInfos[].score | double | User scores |
+| userInfos[].rank | int | Ranking of the current cycle |
+| userInfos[].preRank | int | Ranking of the previous cycle |
+| userInfos[].extra | String | Extra data saved along with the user (up to 16 bytes) |
+| userInfos[].date | String | Updated time of user scores (RFC 3339) |
+
+<br>
+
 ## Set API
 
 ### Set Single User Scores
