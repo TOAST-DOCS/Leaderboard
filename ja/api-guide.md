@@ -479,8 +479,8 @@ Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
 | transactionId | long | optional | トランザクションID |
 | isPast | bool | optional | trueまたはfalse (デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
 | userId | String | mandatory | 基準ユーザID |
-| prevSize | int | mandatory | 基準ユーザランキングで照会することが上位ユーザサイズ |
-| nextSize | int | mandatory | 基準ユーザのランキングで照会するサブユーザサイズ |
+| prevSize | int | mandatory | 基準ユーザランキングで照会することが上位ユーザサイズ <br> 最大 500 |
+| nextSize | int | mandatory | 基準ユーザのランキングで照会するサブユーザサイズ <br> 最大 500 |
 
 **[Request Sample]**
 

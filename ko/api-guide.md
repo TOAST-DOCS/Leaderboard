@@ -479,8 +479,8 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
 | transactionId | long | optional | 트랜잭션 ID |
 | isPast | bool | optional | true 또는 false (기본값은 false) <br> true이면 이전 주기의 데이터 검색 |
 | userId | String | mandatory | 기준 유저 ID|
-| prevSize | int | mandatory | 기준 유저 순위에서 조회 할 상위 유저 크기 |
-| nextSize | int | mandatory | 기준 유저 순위에서 조회 할 하위 유저 크기 |
+| prevSize | int | mandatory | 기준 유저 순위에서 조회 할 상위 유저 크기 <br> 최대 500 |
+| nextSize | int | mandatory | 기준 유저 순위에서 조회 할 하위 유저 크기 <br> 최대 500 |
 
 **[Request Sample]**
 

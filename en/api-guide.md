@@ -478,8 +478,8 @@ Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
 | transactionId | long | optional | Transaction ID |
 | isPast | bool | optional | True or false (default is false) <br>Search data of the previous cycle, if it is True |
 | userId | String | mandatory | Pivot User ID |
-| prevSize | int | mandatory | The size of the parent user to view in the base user ranking |
-| nextSize | int | mandatory | The size of the child user to view in the base user ranking |
+| prevSize | int | mandatory | The size of the parent user to view in the base user ranking <br> up to 500 |
+| nextSize | int | mandatory | The size of the child user to view in the base user ranking <br> up to 500 |
 
 **[Request Sample]**
 
