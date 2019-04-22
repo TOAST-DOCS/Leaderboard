@@ -1,5 +1,10 @@
 ## Game > Leaderboard > Release Notes 
 
+### Apr. 23, 2019
+
+#### Feature Updates
+* [API] Add pre- and post-ranking query APIs with specific users
+
 ### Mar. 26, 2019
 
 #### 機能改善/変更

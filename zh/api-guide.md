@@ -451,6 +451,143 @@ Content-Type: application/json
 
 <br>
 
+### Get multiple user info by pivot user
+
+기준 유저의 순위 및 상위, 하위 유저들의 순위 정보를 검색할 수 있는 방법입니다.
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+```
+
+**[Request Header]**
+
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/zh/api-guide/#common)
+
+**[Path Variable]**
+
+| Name | Type | Value |
+| --- | --- | --- |
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/zh/api-guide/#appkey)|
+|factor|	int|	Factor ID|
+
+**[Request Parameter]**
+
+| Name | Type | Required | Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | 트랜잭션 ID |
+| isPast | bool | optional | true 또는 false (기본값은 false) <br> true이면 이전 주기의 데이터 검색 |
+| userId | String | mandatory | 기준 유저 ID|
+| prevSize | int | mandatory | 기준 유저 순위에서 조회 할 상위 유저 크기 <br> 최대 500 |
+| nextSize | int | mandatory | 기준 유저 순위에서 조회 할 하위 유저 크기 <br> 최대 500 |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionId=12345&isPast=false&userId=test4&prevSize=3&nextSize=3
+```
+
+**[Response]**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 4,
+    "userInfosByRange": {
+        "resultCode": 0,
+        "factor": 2,
+        "userInfos": [
+            {
+                "resultCode": 0,
+                "userId": "test7",
+                "score": 700,
+                "rank": 1,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test6",
+                "score": 600,
+                "rank": 2,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test5",
+                "score": 500,
+                "rank": 3,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test4",
+                "score": 400,
+                "rank": 4,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test3",
+                "score": 300,
+                "rank": 5,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test2",
+                "score": 200,
+                "rank": 6,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test1",
+                "score": 100,
+                "rank": 7,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            }
+        ]
+    }
+}
+```
+
+| Key | Type | Description |
+| --- | --- | --- |
+| userInfosByRange | Array[Object] | User들의 정보 |
+| userInfosByRange[].resultCode | int | Factor에 대한 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
+| userInfosByRange[].factor | int | Factor ID |
+| userInfos[].resultCode | int | 해당 User에 대한 코드. 에러코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
+| userInfos[].userId | String | User ID |
+| userInfos[].score | double | User Score |
+| userInfos[].rank | int | 이번 주기의 순위 |
+| userInfos[].preRank | int | 이전 주기의 순위 |
+| userInfos[].extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
+| userInfos[].date | String | User Score 가 업데이트 된 시간. (RFC 3339) |
+
+<br>
+
 ## Set API
 
 ### Set single user score

@@ -451,6 +451,143 @@ Content-Type: application/json
 
 <br>
 
+### Get multiple user info by pivot user
+
+基準ユーザの順位と上位、下位ユーザの順位情報を取得することができる方法です。
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+```
+
+**[Request Header]**
+
+Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#common)
+
+**[Path Variable]**
+
+| Name | Type | Value |
+| --- | --- | --- |
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
+|factor|	int|	Factor ID|
+
+**[Request Parameter]**
+
+| Name | Type | Required | Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | トランザクションID |
+| isPast | bool | optional | trueまたはfalse (デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
+| userId | String | mandatory | 基準ユーザID |
+| prevSize | int | mandatory | 基準ユーザランキングで照会することが上位ユーザサイズ <br> 最大 500 |
+| nextSize | int | mandatory | 基準ユーザのランキングで照会するサブユーザサイズ <br> 最大 500 |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users?transactionId=12345&isPast=false&userId=test4&prevSize=3&nextSize=3
+```
+
+**[Response]**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 4,
+    "userInfosByRange": {
+        "resultCode": 0,
+        "factor": 2,
+        "userInfos": [
+            {
+                "resultCode": 0,
+                "userId": "test7",
+                "score": 700,
+                "rank": 1,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test6",
+                "score": 600,
+                "rank": 2,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test5",
+                "score": 500,
+                "rank": 3,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test4",
+                "score": 400,
+                "rank": 4,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test3",
+                "score": 300,
+                "rank": 5,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test2",
+                "score": 200,
+                "rank": 6,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test1",
+                "score": 100,
+                "rank": 7,
+                "preRank": 0,
+                "extra": "",
+                "date": "2019-04-17T14:18:44+09:00"
+            }
+        ]
+    }
+}
+```
+
+| Key | Type | Description |
+| --- | --- | --- |
+| userInfosByRange | Array[Object] | ユーザー情報 |
+| userInfosByRange[].resultCode | int | ファクターのエラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| userInfosByRange[].factor | int | ファクターID |
+| userInfos[].resultCode | int | 該当ユーザーのコード。エラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| userInfos[].userId | String | ユーザーID |
+| userInfos[].score | double | ユーザースコア |
+| userInfos[].rank | int | 今回の周期の順位 |
+| userInfos[].preRank | int | 以前の周期の順位 |
+| userInfos[].extra | String | ユーザーと一緒に保存されるExtra Data(最大16バイト) |
+| userInfos[].date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
+
+<br>
+
 ## Set API
 
 ### Set single user score

@@ -1,11 +1,9 @@
 ## Game > Leaderboard > Release Notes
 
-### 2019.02.26
+### 2019.04.23
 
-#### 기능 개선/변경
-* [Console] 한글, 일어, 영어 검수 내용 적용
-* [Console] Datepicker 다국어 적용
-* [Document] 가이드 한글, 일어, 영어 검수 내용 적용
+#### 기능 추가
+* [API] 특정 유저를 포함한 전, 후 순위 조회 api 추가
 
 ### 2019.03.26
 
