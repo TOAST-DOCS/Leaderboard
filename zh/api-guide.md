@@ -4,7 +4,7 @@ Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
 
 ### HTTP API
 - User 점수 등록 (단일 / 다수)
-- User 점수 획득 (단일 / 다수 / 범위)
+- User 점수 획득 (단일 / 다수 / 범위 / 특정유저 전후)
 - Factor에 들어있는 User 수 조회
 - User 점수 삭제 (단일)
 
