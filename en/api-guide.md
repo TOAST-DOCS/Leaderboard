@@ -3,8 +3,8 @@
 Leaderboard API provides the following APIs in the REST API format.  
 
 ### HTTP API
-- Register user scores (single/multiple) 
-- Win user scores (single/multiple/range) 
+- Register user scores (single / multiple) 
+- Win user scores (single / multiple / range / before and after a specific user) 
 - Search the number of users at a factor 
 - Delete user scores (single) 
 

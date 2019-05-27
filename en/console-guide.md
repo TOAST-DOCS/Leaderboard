@@ -100,7 +100,9 @@ Data can be saved for up to 100 thousand cases at a time, and if it exceeds the 
 
 ### Register Factors 
 
-After service is enabled, factor information must be added. Go to **Game > Leaderboard > Ranking Configuration > +Add** to register factors.
+#### Direct Input
+
+After service is enabled, factor information must be added. Go to **Game > Leaderboard > Ranking Configuration > +Add > Direct Input** to register factors.
 
 > **[Note]**<br>
 > A factor refers to the combination of [Cycle, Update Standard, and Alignment Standard].<br>
@@ -112,59 +114,69 @@ Click **[+Add]** and a window pops up as below.
 
 **[Description of Each Item]**
 
-#### Factor ID
+##### Factor ID
 
 - The ID composed of original numbers of a factor; can be automatically saved when the window opens but cannot be randomly changed by user. It cannot be redundantly used. 
 
-#### Factor Name
+##### Factor Name
 
 - The name classifying ranks, available for the search of factors. Factor names can be modified after registered. 
 
-#### Limited Number of Users 
+##### Limited Number of Users 
 
 - The maximum number of users to be registered for a factor: no more than 10 million. 
 
-#### Extra Data
+##### Extra Data
 
 - Other data of a factor, which can be entered only when it is required; modifiable after registered. 
 
-#### Factor Cycle 
+##### Factor Cycle 
 
 - The initialization period of a ranking, available by day, week, month, or all. Cycle is also available for the search of factors, and users are classified by each cycle.  
 
-#### Select Time Criteria 
+##### Select Time Criteria 
 
 - UTC time which serves as criteria of a factor. For the search of users within a factor, the latest updated time is displayed based on this value.  
 
-#### Factor Initialization Time 
+##### Factor Initialization Time 
 
 - Time of initialization for each factor, to be calculated by standard UTC time. Cannot be enabled, if the cycle is 'all. ' 
 
-#### Factor Initialization Interval 
+##### Factor Initialization Interval 
 
 - Refers to the interval of initialization for a factor cycle. If it is set at 3, initialization is executed at every 3 days, 3 weeks, or 3 months, each on daily, weekly, or monthly basis.   
 
-#### Factor Initialization Date 
+##### Factor Initialization Date 
 
 - Select a day and date to initialize, for the weekly or monthly data.  
 
-#### Sorting Criteria 
+##### Sorting Criteria 
 
 - Descending Order: Sort scores in the descending order. 
 - Ascending Order: Sort scores in the ascending order. 
 
-#### Criteria of Ranking Updates
+##### Criteria of Ranking Updates
 
 - By Best Scores: Records the highest scores of the user.
 - By Latest Scores: Records the latest scores of the user. 
 - By Accumulated Scores: Registers the accumulated scores of the user. 
 
-#### Tie-Breaking 
+##### Tie-Breaking 
 
 - Priority for First Ranks: Records the earlier-registered same-score user at a higher rank.
 - Priority for Recent Ranks: Records the later-registered same-score user at a higher rank.
 
 > [Note] Factor ID is automatically specified when a factor is added. 
+
+#### Upload Files
+
+If you want to add multiple factors at once, click **Game > Leaderboard > Ranking Settings > +Add > Upload Files** to upload the file to register the factors.
+
+**[Guide]**
+
+Download the template, fill out the factor information, and upload the excel file.
+
+Press the Add Factor button to add factors.
 
 ### Search Factors 
 
