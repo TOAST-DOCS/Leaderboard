@@ -85,7 +85,7 @@ GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -144,7 +144,7 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -215,7 +215,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/g
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -365,7 +365,7 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -463,7 +463,7 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -602,7 +602,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -670,7 +670,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -739,7 +739,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -861,7 +861,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -991,7 +991,7 @@ DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#common)
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
 
 **[Path Variable]**
 

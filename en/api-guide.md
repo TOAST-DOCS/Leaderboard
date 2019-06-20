@@ -84,7 +84,7 @@ GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Check Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+Check Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -143,7 +143,7 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -214,7 +214,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/g
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -364,7 +364,7 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -462,7 +462,7 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -601,7 +601,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -669,7 +669,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -738,7 +738,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -860,7 +860,7 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 
 **[Path Variable]**
 
@@ -990,7 +990,7 @@ DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#common)
+Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 
 **[Path Variable]**
 
