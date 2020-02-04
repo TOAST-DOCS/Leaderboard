@@ -1,5 +1,10 @@
 ## Game > Leaderboard > Release Notes 
 
+### Jan. 21, 2020
+
+#### Feature Updates
+* [Common] Added automatic activation of leaderboard upon gamebase activation
+
 ### Apr. 23, 2019
 
 #### Feature Updates
