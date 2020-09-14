@@ -1,5 +1,14 @@
 ## Game > Leaderboard > Release Notes 
 
+### Sep. 22, 2020
+
+#### Feature Updates
+* [Document] Added explanation on how to use the game base due to automatic activation
+
+#### Bug Fixes
+* [Console] Fixed an error when searching users with a certain score or higher
+* [API] Fixed an error when searching a user of a factor that did not exist
+
 ### Jan. 21, 2020
 
 #### Feature Updates

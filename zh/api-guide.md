@@ -1,5 +1,9 @@
 ## Game > Leaderboard > API Guide
 
+> **[유의 사항]**<br>
+> 게임베이스를 통해 자동 활성화 된 리더보드는 아래의 이용 가이드를 참고해야 합니다.<br>
+> [\[Gamebase api guide\]](/Game/Gamebase/zh/api-guide/#leaderboard)
+
 Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
 
 ### HTTP API
