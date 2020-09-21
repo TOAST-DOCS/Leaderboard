@@ -1,5 +1,9 @@
 ## Game > Leaderboard > API Guide 
 
+> **[Caution]**<br>
+> Leaderboards that are automatically activated through the gamebase should refer to the usage guide below.<br>
+> [\[Gamebase api guide\]](/Game/Gamebase/en/api-guide/#leaderboard)
+
 Leaderboard API provides the following APIs in the REST API format.  
 
 ### HTTP API

@@ -1,5 +1,9 @@
 ## Game > Leaderboard > APIガイド
 
+> **[注意]**<br>
+> ゲームベースを介して自動的にアクティブ化されたリーダーボードは、以下の利用ガイドを参照して必要があります<br>
+> [\[Gamebase api guide\]](/Game/Gamebase/ja/api-guide/#leaderboard)
+
 Leaderboard APIはREST API形式で、次のようなAPIを提供します。
 
 ### HTTP API
