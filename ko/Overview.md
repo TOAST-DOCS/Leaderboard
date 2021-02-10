@@ -54,7 +54,7 @@ Leaderboard 플랫폼의 물리적 구조는 아래 그림과 같습니다.
 
 ![[그림 1 Leaderboard 물리적 구조]](http://static.toastoven.net/prod_leaderboardv2/overview_1.png)
 
-- 게임 서버/TOAST Console은 api-leaderboard.cloud.toast.com으로 데이터를 주고받습니다.
+- 게임 서버/NHN Cloud Console은 api-leaderboard.cloud.toast.com으로 데이터를 주고받습니다.
 - Load Balancer는 여러 대로 구성한 Leaderboard AP 서버로 요청을 분배합니다.
 - Leaderboard AP 서버는 메모리 서버와 Cassandra에 데이터를 저장합니다.
 - Leaderboard AP 서버는 메모리 서버에서 정렬된 데이터를 가져옵니다.
