@@ -141,4 +141,4 @@
 * REST API 인터페이스 개선
     * 일관성 있고 명확한 REST API 인터페이스로 개선
 
-<a href="https://toast.com/support/notice/detail/1453435858K00349" target="_blank">[공지] TOAST Cloud LeaderBoard v2 안내</a><br>
+<a href="https://toast.com/support/notice/detail/1453435858K00349" target="_blank">[공지] TOAST LeaderBoard v2 안내</a><br>
