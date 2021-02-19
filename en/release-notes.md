@@ -1,5 +1,10 @@
 ## Game > Leaderboard > Release Notes 
 
+### Feb. 23, 2021
+
+#### Feature Updates
+* [API] Add api to search users of specific rank
+
 ### Sep. 22, 2020
 
 #### Feature Updates
@@ -21,7 +26,7 @@
 
 ### Mar. 26, 2019
 
-#### 機能改善/変更
+#### Feature Updates
 * [API] Uniform parameter case with camel case. You can use the parameters that are guided by the existing lower case 
 
 ### Feb. 26, 2019

@@ -591,6 +591,131 @@ Content-Type: application/json
 
 <br>
 
+### Get selected rank user info
+
+This is a way to search for users with a specific rank.
+
+**[Method, URI]**
+
+```
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+```
+
+**[Request Header]**
+
+Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type | Value |
+| --- | --- | --- |
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|factor|	int|	Factor ID|
+
+**[Request Body]**
+
+| Name | Type | Required | Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | Transaction ID |
+| isPast | bool | optional | True or false (default is false) <br>Search data of the previous cycle, if it is True |
+| userRanks | Array[Integer] | mandatory | User ranking list. Up to 20. |
+| isSort | bool | optional | True or false (default is false) <br>Sort by ranks for True, or search data by rank list |
+
+**[Request Sample]**
+
+```
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+Content-Type: application/json
+
+{
+	"transactionId": 1234,
+	"isPast": false,
+	"userRanks": [3,1,4,5,2,0]
+	"isSort": false
+}
+```
+
+**[Response]**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 12345,
+    "userInfosByRange": {
+        "resultCode": 0,
+        "factor": 1,
+        "userInfos": [
+            {
+                "resultCode": 0,
+                "userId": "test9999998",
+                "score": 9999999.0,
+                "rank": 3,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test10000000",
+                "score": 1.0000001E7,
+                "rank": 1,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test9999997",
+                "score": 9999998.0,
+                "rank": 4,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test9999996",
+                "score": 9999997.0,
+                "rank": 5,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test9999999",
+                "score": 1.0E7,
+                "rank": 2,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            }
+        ]
+    }
+}
+```
+
+| Key | Type | Description |
+| --- | --- | --- |
+| userInfosByRange | Array[Object] | User information |
+| userInfosByRange[].resultCode | int | Error code of a factor [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfosByRange[].factor | int | Factor ID |
+| userInfos[].resultCode | int | User code. Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfos[].userId | String | User ID |
+| userInfos[].score | double | User scores |
+| userInfos[].rank | int | Ranking of the current cycle |
+| userInfos[].preRank | int | Ranking of the previous cycle |
+| userInfos[].extra | String | Extra data saved along with the user (up to 16 bytes) |
+| userInfos[].date | String | Updated time of user scores (RFC 3339) |
+
+<br>
+
 ## Set API
 
 ### Set Single User Scores
