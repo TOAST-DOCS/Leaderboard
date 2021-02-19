@@ -592,6 +592,131 @@ Content-Type: application/json
 
 <br>
 
+### Get selected rank user info
+
+특정 순위의 유저들을 검색 할 수 있는 방법입니다.
+
+**[Method, URI]**
+
+```
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+```
+
+**[Request Header]**
+
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/zh/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type | Value |
+| --- | --- | --- |
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/zh/api-guide/#appkey)|
+|factor|	int|	Factor ID|
+
+**[Request Body]**
+
+| Name | Type | Required | Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | 트랜잭션 ID |
+| isPast | bool | optional | true 또는 false (기본값은 false) <br> true이면 이전 주기의 데이터 검색 |
+| userRanks | Array[Integer] | mandatory | 유저 순위 목록. 최대 20개 까지. |
+| isSort | bool | optional | true 또는 false (기본값은 false) <br> true이면 순위대로 정렬, false이면 순위 목록대로 유지 |
+
+**[Request Sample]**
+
+```
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+Content-Type: application/json
+
+{
+	"transactionId": 1234,
+	"isPast": false,
+	"userRanks": [3,1,4,5,2,0]
+	"isSort": false
+}
+```
+
+**[Response]**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 12345,
+    "userInfosByRange": {
+        "resultCode": 0,
+        "factor": 1,
+        "userInfos": [
+            {
+                "resultCode": 0,
+                "userId": "test9999998",
+                "score": 9999999.0,
+                "rank": 3,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test10000000",
+                "score": 1.0000001E7,
+                "rank": 1,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test9999997",
+                "score": 9999998.0,
+                "rank": 4,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test9999996",
+                "score": 9999997.0,
+                "rank": 5,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test9999999",
+                "score": 1.0E7,
+                "rank": 2,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            }
+        ]
+    }
+}
+```
+
+| Key | Type | Description |
+| --- | --- | --- |
+| userInfosByRange | Array[Object] | 유저 정보 |
+| userInfosByRange[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
+| userInfosByRange[].factor | int | 팩터 ID |
+| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](/Game/Leaderboard/zh/error-code) |
+| userInfos[].userId | String | 유저 ID |
+| userInfos[].score | double | 유저 점수 |
+| userInfos[].rank | int | 이번 주기의 순위 |
+| userInfos[].preRank | int | 이전 주기의 순위 |
+| userInfos[].extra | String | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
+| userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
+
+<br>
+
 ## Set API
 
 ### Set single user score
