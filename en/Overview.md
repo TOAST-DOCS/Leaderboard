@@ -54,7 +54,7 @@ The Leadboard platform is physically structured as below:
 
 ![[그림 1 Leaderboard 물리적 구조]](http://static.toastoven.net/prod_leaderboardv2/overview_1.png)
 
-- Game server/TOAST Console exchanges data at api-leaderboard.cloud.toast.com.
+- Game server/NHN Cloud Console exchanges data at api-leaderboard.cloud.toast.com.
 - Load Balancer distributes requests to many Leaderboard AP servers.
 - Leaderboard AP server saves data in the memory server and Cassandra.
 - Leaderboard AP server imports sorted data from the memory server. 

@@ -592,6 +592,131 @@ Content-Type: application/json
 
 <br>
 
+### Get selected rank user info
+
+特定の順位のユーザを検索することができる方法です。
+
+**[Method, URI]**
+
+```
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+```
+
+**[Request Header]**
+
+Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type | Value |
+| --- | --- | --- |
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
+|factor|	int|	Factor ID|
+
+**[Request Body]**
+
+| Name | Type | Required | Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | トランザクションID |
+| isPast | bool | optional | trueまたはfalse (デフォルト値はfalse) <br> trueの場合、以前の周期のデータ検索 |
+| userRanks | Array[Integer] | mandatory | ユーザ順位のリスト。最大20個まで。 |
+| isSort | bool | optional | trueまたはfalse (デフォルト値はfalse) <br>trueの場合、順位を基準にソート、falseの場合、入力したrank list順にデータ検索 |
+
+**[Request Sample]**
+
+```
+POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+Content-Type: application/json
+
+{
+	"transactionId": 1234,
+	"isPast": false,
+	"userRanks": [3,1,4,5,2,0]
+	"isSort": false
+}
+```
+
+**[Response]**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 12345,
+    "userInfosByRange": {
+        "resultCode": 0,
+        "factor": 1,
+        "userInfos": [
+            {
+                "resultCode": 0,
+                "userId": "test9999998",
+                "score": 9999999.0,
+                "rank": 3,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test10000000",
+                "score": 1.0000001E7,
+                "rank": 1,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test9999997",
+                "score": 9999998.0,
+                "rank": 4,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test9999996",
+                "score": 9999997.0,
+                "rank": 5,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test9999999",
+                "score": 1.0E7,
+                "rank": 2,
+                "preRank": 0,
+                "extra": "",
+                "date": "2020-09-24T12:31:07+09:00"
+            }
+        ]
+    }
+}
+```
+
+| Key | Type | Description |
+| --- | --- | --- |
+| userInfosByRange | Array[Object] | ユーザー情報 |
+| userInfosByRange[].resultCode | int | ファクターのエラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| userInfosByRange[].factor | int | ファクターID |
+| userInfos[].resultCode | int | 該当ユーザーのコード。エラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
+| userInfos[].userId | String | ユーザーID |
+| userInfos[].score | double | ユーザースコア |
+| userInfos[].rank | int | 今回の周期の順位 |
+| userInfos[].preRank | int | 以前の周期の順位 |
+| userInfos[].extra | String | ユーザーと一緒に保存されるExtra Data(最大16バイト) |
+| userInfos[].date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
+
+<br>
+
 ## Set API
 
 ### Set single user score

@@ -1,5 +1,10 @@
 ## Game > Leaderboard > 릴리스 노트
 
+### 2021.02.23
+
+#### 기능 추가
+* [API] 특정 순위의 유저 조회 api 추가
+
 ### 2020.09.22
 
 #### 기능 개선/변경
@@ -141,4 +146,4 @@
 * REST API 인터페이스 개선
     * 일관성 있고 명확한 REST API 인터페이스로 개선
 
-<a href="https://toast.com/support/notice/detail/1453435858K00349" target="_blank">[공지] TOAST Cloud LeaderBoard v2 안내</a><br>
+<a href="https://toast.com/support/notice/detail/1453435858K00349" target="_blank">[공지] TOAST LeaderBoard v2 안내</a><br>
