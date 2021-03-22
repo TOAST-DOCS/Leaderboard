@@ -1,5 +1,9 @@
 ## Game > Leaderboard > Release Notes 
 
+### Mar. 23, 2021
+* [API] Add multiple user delete api
+* [API] Add factor count, single factor, multiple factor lookup api
+
 ### Feb. 23, 2021
 
 #### Feature Updates

@@ -76,6 +76,241 @@ User time is updated according to what is defined at RFC 3339.
 
 ## Get API
 
+### Get total factor count
+
+Retrieves the total number of factors.
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factor-count
+```
+
+**[Request Header]**
+
+Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type |	Value |
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+
+**[Request Parameter]**
+
+| Name | Type | Required |  Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | Transaction ID |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factor-count?transactionId=12345
+```
+
+**[Response]**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 0,
+    "totalFactorCount": 5
+}
+```
+
+### Get factor info
+
+Retrieve the desired one factor information.
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors
+```
+
+**[Request Header]**
+
+Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type |	Value |
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+
+**[Request Parameter]**
+
+| Name | Type | Required |  Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | Transaction ID |
+| factor | int | mandatory | Factor ID |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors?transactionId=12345&factor=1
+```
+
+**[Response]**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 12345,
+    "factorInfo": {
+        "resultCode": 0,
+        "factor": 1,
+        "period": "T",
+        "description": "성능 테스트",
+        "extra": "test",
+        "orderType": "D",
+        "scoreType": "U",
+        "tieScoreType": "F",
+        "resetDate": 0,
+        "resetTime": 0,
+        "maxSize": 100000000,
+        "totalSize": 89,
+        "resetInterval": 1,
+        "nextResetDate": null,
+        "utcTimeZone": "+09:00"
+    }
+}
+```
+
+### Get multiple factor info
+
+Retrieve the number of factor information you want.
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors
+```
+
+**[Request Header]**
+
+Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type |	Value |
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+
+**[Request Parameter]**
+
+| Name | Type | Required |  Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | Transaction ID |
+| start | int | mandatory | Where to start the search. Must be less than the total number of factors |
+| size | int | mandatory | Search size. Up to 1,000 |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors?transactionId=12345&start=1&size=5
+```
+
+**[Response]**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 12345,
+    "resultInfo": {
+        "resultCode": 0,
+        "factorInfoList": [
+            {
+                "resultCode": 0,
+                "factor": 1,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 89,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            },
+            {
+                "resultCode": 0,
+                "factor": 2,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 0,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            },
+            {
+                "resultCode": 0,
+                "factor": 3,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 0,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            },
+            {
+                "resultCode": 0,
+                "factor": 4,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 0,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            }
+        ]
+    }
+}
+```
+
 ### Get User Counts in Factor
 
 The number of registered users at a factor of choice can be searched. 
@@ -95,7 +330,7 @@ Check Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
-|factor|	int|	Leaderboard Factor ID|
+|factor|	int|	Factor ID|
 
 **[Request Parameter]**
 
@@ -452,8 +687,6 @@ Content-Type: application/json
 | userInfos[].extra | String | Extra data saved along with the user (up to 16 bytes) |
 | userInfos[].date | String | Updated time of user scores (RFC 3339) |
 
-<br>
-
 ### Get multiple user info by pivot user
 
 It is a method to retrieve ranking information of the base user and rank information of the upper and lower users.
@@ -588,8 +821,6 @@ Content-Type: application/json
 | userInfos[].preRank | int | Ranking of the previous cycle |
 | userInfos[].extra | String | Extra data saved along with the user (up to 16 bytes) |
 | userInfos[].date | String | Updated time of user scores (RFC 3339) |
-
-<br>
 
 ### Get selected rank user info
 
@@ -1162,3 +1393,84 @@ Content-Type: application/json
 }
 ```
 
+### Delete multiple user info
+
+Information of user list of choice can be deleted: user list information is permanently deleted and cannot be recovered.
+
+**[Method, URI]**
+
+```
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+```
+
+**[Request Header]**
+
+Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type | Value |
+| --- | --- | --- |
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|factor|	int|	Factor ID|
+
+**[Request Body]**
+
+| Name | Type | Required | Value |
+| --- | --- | --- | --- |
+| transactionId | long | mandatory | Transaction ID |
+| userIds | Array[Object] | mandatory | User ID List. Up to 20. |
+| isPast | bool | optional | True or false (default is false) <br>Delete data of the previous cycle, if it is true. |
+
+
+**[Request Sample]**
+
+```
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+
+{
+    "transactionId": 1234,
+    "isPast": false,
+    "userIds": ["test18", "test11", "test14", "test16"]
+    "isSort": false
+}
+
+```
+
+**[Response]**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+	"header": {
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
+	},
+	"transactionId": 12345,
+	"resultInfo": {
+        "resultCode": 0,
+        "factor": 1,
+        "resultInfos": [
+            {
+                "resultCode": 0,
+                "userId": "test18"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test11"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test14"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test16"
+            }
+        ]
+    }
+}
+```

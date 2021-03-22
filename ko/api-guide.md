@@ -77,14 +77,14 @@ API를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 있
 
 ## Get API
 
-### Get user count in factor
+### Get total factor count
 
-원하는 한 개의 팩터에 등록된 유저의 수를 검색합니다.
+팩터의 전체 수를 검색합니다.
 
 **[Method, URI]**
 
 ```
-GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factor-count
 ```
 
 **[Request Header]**
@@ -96,7 +96,242 @@ Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
-|factor|	int|	Leaderboard Factor ID|
+
+**[Request Parameter]**
+
+| Name | Type | Required |  Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | 트랜잭션 ID |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factor-count?transactionId=12345
+```
+
+**[Response]**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 0,
+    "totalFactorCount": 5
+}
+```
+
+### Get factor info
+
+원하는 한 개의 팩터 정보를 검색합니다.
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors
+```
+
+**[Request Header]**
+
+Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type |	Value |
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+
+**[Request Parameter]**
+
+| Name | Type | Required |  Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | 트랜잭션 ID |
+| factor | int | mandatory | 팩터 ID |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors?transactionId=12345&factor=1
+```
+
+**[Response]**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 12345,
+    "factorInfo": {
+        "resultCode": 0,
+        "factor": 1,
+        "period": "T",
+        "description": "성능 테스트",
+        "extra": "test",
+        "orderType": "D",
+        "scoreType": "U",
+        "tieScoreType": "F",
+        "resetDate": 0,
+        "resetTime": 0,
+        "maxSize": 100000000,
+        "totalSize": 89,
+        "resetInterval": 1,
+        "nextResetDate": null,
+        "utcTimeZone": "+09:00"
+    }
+}
+```
+
+### Get multiple factor info
+
+원하는 다수의 팩터 정보를 검색합니다.
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors
+```
+
+**[Request Header]**
+
+Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type |	Value |
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+
+**[Request Parameter]**
+
+| Name | Type | Required |  Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | 트랜잭션 ID |
+| start | int | mandatory | 검색 시작 위치. 전체 팩터 수 보다 작아야함 |
+| size | int | mandatory | 검색 크기. 최대 1,000까지 |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors?transactionId=12345&start=1&size=5
+```
+
+**[Response]**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 12345,
+    "resultInfo": {
+        "resultCode": 0,
+        "factorInfoList": [
+            {
+                "resultCode": 0,
+                "factor": 1,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 89,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            },
+            {
+                "resultCode": 0,
+                "factor": 2,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 0,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            },
+            {
+                "resultCode": 0,
+                "factor": 3,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 0,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            },
+            {
+                "resultCode": 0,
+                "factor": 4,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 0,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            }
+        ]
+    }
+}
+```
+
+### Get user count in factor
+
+원하는 한 개의 팩터에 등록된 유저의 수를 검색합니다.
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/user-count
+```
+
+**[Request Header]**
+
+Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type |	Value |
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|factor|	int|	Factor ID|
 
 **[Request Parameter]**
 
@@ -117,16 +352,16 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "header": {
+    "header": {
     "resultCode": 0,
-	"resultMessage": "LEADERBOARD_OK",
-	"isSuccessful": true
-  },
-  "transactionId": 0,
-  "resultInfo": {
-	"resultCode": 0,
-	"totalCount": 7
-  }
+    "resultMessage": "LEADERBOARD_OK",
+    "isSuccessful": true
+    },
+    "transactionId": 0,
+    "resultInfo": {
+    "resultCode": 0,
+    "totalCount": 7
+    }
 }
 ```
 
@@ -155,7 +390,7 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-head
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
-|factor|	int|	Leaderboard Factor ID|
+|factor|	int|	Factor ID|
 
 **[Request Parameter]**
 
@@ -453,8 +688,6 @@ Content-Type: application/json
 | userInfos[].extra | String | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
 | userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
 
-<br>
-
 ### Get multiple user info by pivot user
 
 기준 유저의 순위 및 상위, 하위 유저들의 순위 정보를 검색할 수 있는 방법입니다.
@@ -589,8 +822,6 @@ Content-Type: application/json
 | userInfos[].preRank | int | 이전 주기의 순위 |
 | userInfos[].extra | String | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
 | userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
-
-<br>
 
 ### Get selected rank user info
 
@@ -785,7 +1016,6 @@ Content-Type: application/json
 | resultInfo | Object | 결과 정보 |
 | resultInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
 | resultInfo.userId | String | 등록된 유저 ID |
-
 
 ### Set single user score with extra data
 
@@ -1133,8 +1363,6 @@ Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-head
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| userId | String |	mandatory | 유저 ID |
-| transactionId | long | optional | 트랜잭션 ID |
 | isPast | bool | optional | true 또는 false(기본값은 false) <br> true이면 이전 주기의 데이터 삭제 |
 
 **[Request Sample]**
@@ -1163,3 +1391,84 @@ Content-Type: application/json
 }
 ```
 
+### Delete multiple user info
+
+원하는 유저 여러 명의 정보를 삭제하는 방법입니다. 해당 유저는 영구적으로 삭제되며, 복구되지 않습니다.
+
+**[Method, URI]**
+
+```
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+```
+
+**[Request Header]**
+
+Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type | Value |
+| --- | --- | --- |
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|factor|	int|	Factor ID|
+
+**[Request Body]**
+
+| Name | Type | Required | Value |
+| --- | --- | --- | --- |
+| transactionId | long | mandatory | 트랜잭션 ID |
+| userIds | Array[Object] | mandatory | 유저 ID 목록. 최대 20개까지. |
+| isPast | bool | optional | true 또는 false(기본값은 false) <br> true이면 이전 주기의 데이터 삭제 |
+
+
+**[Request Sample]**
+
+```
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+
+{
+    "transactionId": 1234,
+    "isPast": false,
+    "userIds": ["test18", "test11", "test14", "test16"]
+    "isSort": false
+}
+
+```
+
+**[Response]**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+	"header": {
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
+	},
+	"transactionId": 12345,
+	"resultInfo": {
+        "resultCode": 0,
+        "factor": 1,
+        "resultInfos": [
+            {
+                "resultCode": 0,
+                "userId": "test18"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test11"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test14"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test16"
+            }
+        ]
+    }
+}
+```
