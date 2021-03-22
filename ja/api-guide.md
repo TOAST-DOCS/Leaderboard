@@ -77,6 +77,241 @@ APIを呼び出しするサーバーで内部的にAPI要請を管理できる�
 
 ## Get API
 
+### Get total factor count
+
+ファクターの合計数を検索します。
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factor-count
+```
+
+**[Request Header]**
+
+Common/HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type |	Value |
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
+
+**[Request Parameter]**
+
+| Name | Type | Required |  Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | トランザクションID |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factor-count?transactionId=12345
+```
+
+**[Response]**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 0,
+    "totalFactorCount": 5
+}
+```
+
+### Get factor info
+
+希望したのファクター情報を検索します。
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors
+```
+
+**[Request Header]**
+
+Common/HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type |	Value |
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
+
+**[Request Parameter]**
+
+| Name | Type | Required |  Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | トランザクションID |
+| factor | int | mandatory | Factor ID |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors?transactionId=12345&factor=1
+```
+
+**[Response]**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 12345,
+    "factorInfo": {
+        "resultCode": 0,
+        "factor": 1,
+        "period": "T",
+        "description": "성능 테스트",
+        "extra": "test",
+        "orderType": "D",
+        "scoreType": "U",
+        "tieScoreType": "F",
+        "resetDate": 0,
+        "resetTime": 0,
+        "maxSize": 100000000,
+        "totalSize": 89,
+        "resetInterval": 1,
+        "nextResetDate": null,
+        "utcTimeZone": "+09:00"
+    }
+}
+```
+
+### Get multiple factor info
+
+希望多数のファクター情報を検索します。
+
+**[Method, URI]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors
+```
+
+**[Request Header]**
+
+Common/HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type |	Value |
+|---|---|---|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
+
+**[Request Parameter]**
+
+| Name | Type | Required |  Value |
+| --- | --- | --- | --- |
+| transactionId | long | optional | トランザクションID |
+| start | int | mandatory | 検索の開始位置。全ファクター数よりも小さくなければする |
+| size | int | mandatory | 検索サイズ。最大1,000まで |
+
+**[Request Sample]**
+
+```
+GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors?transactionId=12345&start=1&size=5
+```
+
+**[Response]**
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "LEADERBOARD_OK",
+        "isSuccessful": true
+    },
+    "transactionId": 12345,
+    "resultInfo": {
+        "resultCode": 0,
+        "factorInfoList": [
+            {
+                "resultCode": 0,
+                "factor": 1,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 89,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            },
+            {
+                "resultCode": 0,
+                "factor": 2,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 0,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            },
+            {
+                "resultCode": 0,
+                "factor": 3,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 0,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            },
+            {
+                "resultCode": 0,
+                "factor": 4,
+                "period": "T",
+                "description": "성능 테스트",
+                "extra": "test",
+                "orderType": "D",
+                "scoreType": "U",
+                "tieScoreType": "F",
+                "resetDate": 0,
+                "resetTime": 0,
+                "maxSize": 100000000,
+                "totalSize": 0,
+                "resetInterval": 1,
+                "nextResetDate": null,
+                "utcTimeZone": "+09:00"
+            }
+        ]
+    }
+}
+```
+
 ### Get user count in factor
 
 希望する1個のファクターに登録されたユーザーの数を検索します。
@@ -96,7 +331,7 @@ Common/HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#http-header
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
-|factor|	int|	Leaderboard Factor ID|
+|factor|	int|	Factor ID|
 
 **[Request Parameter]**
 
@@ -155,7 +390,7 @@ Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#http-head
 | Name | Type |	Value |
 |---|---|---|
 |appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
-|factor|	int|	Leaderboard Factor ID|
+|factor|	int|	Factor ID|
 
 **[Request Parameter]**
 
@@ -453,8 +688,6 @@ Content-Type: application/json
 | userInfos[].extra | String | ユーザーと一緒に保存されるExtra Data(最大16バイト) |
 | userInfos[].date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
 
-<br>
-
 ### Get multiple user info by pivot user
 
 基準ユーザの順位と上位、下位ユーザの順位情報を取得することができる方法です。
@@ -589,8 +822,6 @@ Content-Type: application/json
 | userInfos[].preRank | int | 以前の周期の順位 |
 | userInfos[].extra | String | ユーザーと一緒に保存されるExtra Data(最大16バイト) |
 | userInfos[].date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
-
-<br>
 
 ### Get selected rank user info
 
@@ -1160,5 +1391,88 @@ Content-Type: application/json
 		"resultCode": 0,
 		"userId": "test4"
 	}
+}
+```
+<br>
+
+### Delete multiple user info
+
+希望ユーザ複数の情報を削除する方法です。このユーザーは、完全に削除され、復元されません。
+
+**[Method, URI]**
+
+```
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+```
+
+**[Request Header]**
+
+Common / HTTP Header 確認 [\[LINK\]](/Game/Leaderboard/ja/api-guide/#http-header)
+
+**[Path Variable]**
+
+| Name | Type | Value |
+| --- | --- | --- |
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ja/api-guide/#appkey)|
+|factor|	int|	Factor ID|
+
+**[Request Body]**
+
+| Name | Type | Required | Value |
+| --- | --- | --- | --- |
+| transactionId | long | mandatory | トランザクションID |
+| userIds | Array[Object] | mandatory | ユーザーIDリスト。最大20個まで。 |
+| isPast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ削除 |
+
+
+**[Request Sample]**
+
+```
+DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/factors/{factor}/users
+
+{
+    "transactionId": 1234,
+    "isPast": false,
+    "userIds": ["test18", "test11", "test14", "test16"]
+    "isSort": false
+}
+
+```
+
+**[Response]**
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+	"header": {
+		"resultCode": 0,
+		"resultMessage": "LEADERBOARD_OK",
+		"isSuccessful": true
+	},
+	"transactionId": 12345,
+	"resultInfo": {
+        "resultCode": 0,
+        "factor": 1,
+        "resultInfos": [
+            {
+                "resultCode": 0,
+                "userId": "test18"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test11"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test14"
+            },
+            {
+                "resultCode": 0,
+                "userId": "test16"
+            }
+        ]
+    }
 }
 ```
