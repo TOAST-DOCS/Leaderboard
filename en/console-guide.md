@@ -7,7 +7,7 @@ Following features are available:
 * Search, modify, and delete user's ranking information 
 
 ## Ranking Indicators 
-![leaderboard_01_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_01_201902.png)
+![leaderboard_01_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_01_202106.png)
 
 ### 1. Indicators of Particular Dates 
 
@@ -41,7 +41,7 @@ Up to 10 factors can be selected; if no factor is selected, top 10 factor data a
 
 ### Search of Ranking Data 
 
-![leaderboard_02_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_02_201902.png)
+![leaderboard_02_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_02_202106.png)
 
 **[Search of Ranking Data]**
 
@@ -61,7 +61,7 @@ Select a search criteria to search for user information.
 
 ### User Information 
 
-![leaderboard_03_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_03_201902.png)
+![leaderboard_03_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_03_202106.png)
 
 #### 1. Modify User Information 
 
@@ -70,7 +70,7 @@ Select a user to modify after search.
 **[Window for Modifying User Ranking]**
 Click **Modify** and a window shows up to enter data. Scores and other data can be modified, while updated scores are required, along with reasons of change.
 
-![leaderboard_04_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_04_201902.png)
+![leaderboard_04_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_04_202106.png)
 
 #### 2. Delete User Information 
 
@@ -80,7 +80,7 @@ Select a user to delete after search.
 
 Click **Delete** and a window shows up asking whether to delete. Reasons are required, and you must be cautious since data cannot be recovered once deleted. 
 
-![leaderboard_05_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_05_201902.png)
+![leaderboard_05_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_05_202106.png)
 
 #### 3. Save User Data 
 
@@ -89,11 +89,11 @@ To save currently-searched user information, click **Save Data**.
 **[Window for Saving Data]**
 Data can be saved for up to 100 thousand cases at a time, and if it exceeds the limit, only up to 100 thousand, including ranks after search started, can be downloaded. 
 
-![leaderboard_06_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_06_201902.png)
+![leaderboard_06_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_06_202106.png)
 
 ## Ranking Configuration 
 
-![leaderboard_07_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_07_201902.png)
+![leaderboard_07_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_07_202106.png)
 
 > **[Note]**<br>
 > Registering, initializing, and deleting factors are executable only by those users who are registered as ADMIN.  
@@ -110,7 +110,7 @@ After service is enabled, factor information must be added. Go to **Game > Leade
 
 Click **[+Add]** and a window pops up as below.
 
-![leaderboard_08_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_08_201902_1.png)
+![leaderboard_08_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_08_202106.png)
 
 **[Description of Each Item]**
 
@@ -188,7 +188,7 @@ When a search condition is the factor cycle, search factors by the cycle on the 
 
 ### Initialize Factors 
 
-![leaderboard_10_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_10_201902.png)
+![leaderboard_10_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_10_202106.png)
 
 Select a factor to initialize. 
 
@@ -203,6 +203,6 @@ Select a factor name to modify from the list.
 
 Then a window pops up to **Modify Factors**. Only factor name and other information can be modified. 
 
-![leaderboard_11_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_11_201902.png)
+![leaderboard_11_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_11_202106.png)
 
 ※ See [API Guide](/Game/Leaderboard/en/api-guide/) for API information. 
