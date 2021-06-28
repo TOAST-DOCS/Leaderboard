@@ -22,13 +22,13 @@ Server API can be called in the following address, which is also available from 
 
 > https://api-leaderboard.cloud.toast.com
 
-![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_201901_1-1.PNG)
+![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/en/api_guide_202106_1-1.PNG)
 
 ### AppKey
 Appkey is an original key required to send requests from a game server, and it is available in the console.  
 > [Caution] Appkey must not be exposed and cannot be modified.  
 
-![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_201901_2-1.PNG)
+![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/en/api_guide_202106_2-1.PNG)
 
 ### Caution 
 To use all APIs, **service must be enabled first, to register factors**.  

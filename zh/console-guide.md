@@ -8,7 +8,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 - 유저의 랭킹 정보 검색, 수정, 삭제
 
 ## 랭킹 지표
-![leaderboard_01_201901-1](https://static.toastoven.net/prod_leaderboardv2/leaderboard_01_201901-1.png)
+![leaderboard_01_201901-1](https://static.toastoven.net/prod_leaderboardv2/leaderboard_01_202106-1.png)
 
 ### 1. 특정 일자 지표
 
@@ -42,7 +42,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 ### 랭킹 데이터 검색
 
-![leaderboard_02_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_02_201812.png)
+![leaderboard_02_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_02_202106.png)
 
 **[랭킹 데이터 검색]**
 
@@ -62,7 +62,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 ### 유저 정보
 
-![leaderboard_03_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_03_201812.png)
+![leaderboard_03_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_03_202106.png)
 
 #### 1. 유저 정보 수정
 
@@ -71,7 +71,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 **[유저 랭킹 수정 창]**
 **수정** 버튼을 클릭하면 수정할 데이터를 입력하는 창이 나타납니다. 점수, 기타 정보를 수정할 수 있으며 변경 점수와 사유는 필수로 입력해야 합니다.
 
-![leaderboard_04_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_04_201812.png)
+![leaderboard_04_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_04_202106.png)
 
 #### 2. 유저 정보 삭제
 
@@ -80,7 +80,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 **[유저 랭킹 삭제 창]**
 **삭제** 버튼을 클릭하면 삭제 여부를 묻는 창이 나타납니다. 사유는 필수로 입력해야 하며 삭제 후 복구할 수 없으므로 신중히 삭제해야 합니다.
 
-![leaderboard_05_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_05_201812.png)
+![leaderboard_05_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_05_202106.png)
 
 #### 3. 유저 데이터 저장
 
@@ -89,11 +89,11 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 **[데이터 저장 창]**
 데이터는 1회 최대 10만 건까지 저장할 수 있으며, 허용량을 초과하면 검색 시작 순위 포함 10만 명까지만 다운로드됩니다.
 
-![leaderboard_06_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_06_201812.png)
+![leaderboard_06_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_06_202106.png)
 
 ## 랭킹 설정
 
-![leaderboard_07_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_07_201812.png)
+![leaderboard_07_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_07_202106.png)
 
 > **[유의 사항]**<br>
 > 팩터의 등록, 초기화, 삭제는 프로젝트의 ADMIN으로 등록된 사용자만 수행할 수 있습니다. 
@@ -110,7 +110,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 **[+추가]** 버튼을 클릭하면 아래와 같은 창이 열립니다.
 
-![leaderboard_08_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_08_201812.png)
+![leaderboard_08_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_08_202106.png)
 
 **[항목별 설명]**
 
@@ -188,7 +188,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 ### 팩터 초기화
 
-![leaderboard_10_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_10_201812.png)
+![leaderboard_10_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_10_202106.png)
 
 초기화할 팩터를 선택합니다.
 
@@ -203,6 +203,6 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 선택하면 **팩터 수정** 창이 나타납니다. 팩터 이름, 기타 정보만 수정할 수 있습니다.
 
-![leaderboard_11_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_11_201812.png)
+![leaderboard_11_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_11_202106.png)
 
 ※ API 정보는 [API Guide](/Game/Leaderboard/ko/api-guide/)를 참고해 주세요.
