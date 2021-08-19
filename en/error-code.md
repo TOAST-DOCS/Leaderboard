@@ -18,6 +18,7 @@ If resultCode at the header displays HTTP error codes, not like below, see the [
 |462854|	0x00071006 |LEADERBOARD_AP_ERROR_WRONG_RANGE | Invalid range. |
 |462855|	0x00071007 |LEADERBOARD_AP_ERROR_WRONG_PARAM | Invalid parameter. |
 |462856|    0x00071008 |LEADERBOARD_AP_ERROR_WRONG_PATH | Character missing in the URI; parameter missing. |
+|462857|    0x00071009 |LEADERBOARD_AP_ERROR_TOO_BIG_SIZE | Exceeded request size. |
 |463000|	0x00071098 |LEADERBOARD_AP_ERROR_SYSTEM | Error in system. |
 |463001|	0x00071099 |LEADERBOARD_AP_ERROR_UNKOWN | Unidentified error. |
 

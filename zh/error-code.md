@@ -18,6 +18,7 @@ header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에�
 |462854|	0x00071006 |LEADERBOARD_AP_ERROR_WRONG_RANGE | 잘못된 범위. |
 |462855|	0x00071007 |LEADERBOARD_AP_ERROR_WRONG_PARAM | 잘못된 파라메터. |
 |462856|    0x00071008 |LEADERBOARD_AP_ERROR_WRONG_PATH | URI 입력 시 오탈자, 파라미터 누락 |
+|462857|    0x00071009 |LEADERBOARD_AP_ERROR_TOO_BIG_SIZE | 요청 사이즈 초과. |
 |463000|	0x00071098 |LEADERBOARD_AP_ERROR_SYSTEM | 시스템 에러.|
 |463001|	0x00071099 |LEADERBOARD_AP_ERROR_UNKOWN | 미확인 에러.|
 
