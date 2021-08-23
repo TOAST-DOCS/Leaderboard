@@ -1,5 +1,9 @@
 ## Game > Leaderboard > Release Notes 
 
+### August 24, 2021
+* [Console] Fixed an issue where, when you add ranking factors with files, registration fails unless you input additional information.
+* [API] Applied the request size limit (maximum 500) for user ranking lookup and registration API.
+
 ### Mar. 23, 2021
 * [API] Add multiple user delete api
 * [API] Add factor count, single factor, multiple factor lookup api
