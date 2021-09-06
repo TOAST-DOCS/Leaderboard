@@ -1,208 +1,208 @@
-## Game > Leaderboard > 콘솔 사용 가이드
+## Game > Leaderboard > Console User Guide
 
-Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 합니다.  
-서비스를 이용하면 아래 목록의 기능을 사용할 수 있습니다.
+Leaderboard must be enabled first to use the service, before registering factors.   
+Following features are available: 
+* Check ranking indicators of a game  
+* Register, initialize, and delete factors 
+* Search, modify, and delete user's ranking information 
 
-- 게임의 랭킹 지표 확인
-- 팩터의 등록, 초기화, 삭제
-- 유저의 랭킹 정보 검색, 수정, 삭제
+## Ranking Indicators 
+![leaderboard_01_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_01_202106.png)
 
-## 랭킹 지표
-![leaderboard_01_201901-1](https://static.toastoven.net/prod_leaderboardv2/leaderboard_01_202106-1.png)
+### 1. Indicators of Particular Dates 
 
-### 1. 특정 일자 지표
+You can check the total number of users, number of factors, cycle and occupancy rate of each factor, on a particular date: data are available on a date between today and 6 months before. 
 
-특정 일자의 총 유저 수, 팩터 수, 주기 및 팩터별 점유율 현황을 확인할 수 있습니다. 오늘 날짜에서 6개월 전까지의 데이터만 확인할 수 있습니다.
+Select a date on a calendar to find its indicators. 
 
-달력에서 날짜를 선택하면 그날의 지표를 바로 확인할 수 있습니다.
+**[Description of Each Item ]**
 
-**[항목별 설명]**
+#### Entire Data 
 
-#### 전체 데이터
+- The day's total number of users
 
-- 그날의 총 유저 수.
+#### Number of Factors 
 
-#### 팩터 수
+- The day's number of factors: displayed on a graph by each cycle. 
 
-- 그날의 팩터 수. 그래프에는 주기별로 팩터가 얼마나 있는지 표시됩니다.
+#### Chart of Data Occupancy Rate 
 
-#### 데이터 점유율 차트
+- Cycle: Shows the number of users by the cycle.  
+- Factor: Shows the number of users by the factor. 
 
-- 주기: 주기를 기준으로 유저 수를 표시합니다.
-- 팩터: 팩터를 기준으로 유저 수를 표시합니다.
 
+### 2. Data Indicators during Search Period 
 
-### 2. 검색 기간 동안의 데이터 지표
+Data fluctuation can be traced during a particular search period, which cannot exceed 6 months. 
 
-일정 기간의 데이터 변동량을 확인할 수 있습니다. 검색 가능 범위는 최대 6개월입니다.
+Up to 10 factors can be selected; if no factor is selected, top 10 factor data are searched, as of a selected cycle.   
 
-최대 10개까지 특정 팩터를 선택할 수 있으며, 선택하지 않으면 선택된 주기를 기준으로 상위 10개 팩터의 데이터를 검색합니다.  
+## Ranking Data 
 
-## 랭킹 데이터
+### Search of Ranking Data 
 
-### 랭킹 데이터 검색
+![leaderboard_02_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_02_202106.png)
 
-![leaderboard_02_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_02_202106.png)
+**[Search of Ranking Data]**
 
-**[랭킹 데이터 검색]**
+Registered factors can be found on the **Ranking Data** tab. Select a factor cycle to see factors of the cycle only. 
+Select a search criteria to search for user information. 
 
-팩터를 등록하면 **랭킹 데이터** 탭에서 등록한 팩터를 확인할 수 있습니다. 팩터 주기를 선택하면 해당 주기의 팩터만 볼 수 있습니다.
-검색 기준을 선택해 유저 정보를 검색합니다.
+**[Description of Each Item]**
 
-**[항목별 설명]**
+#### Select Cycle
+- Previous Cycle: Search ranking information of the previous cycle.
+- Current Cycle: Search ranking information of the current cycle. 
 
-#### 주기 선택
-- 지난 주기: 이전 주기의 랭킹 정보를 기준으로 검색합니다.
-- 현재 주기: 현재 주기의 랭킹 정보를 기준으로 검색합니다.
+#### Search Conditions 
+- Search by Ranking: Specify the range of ranking for the users to search for. The range is limited to 500 for a search. 
+- Search by User ID: Enter user ID to search for a factor. Cannot search when user is not available. 
 
-#### 검색 조건
-- 순위별 검색: 검색할 유저의 랭킹 범위를 정합니다. 검색 시 500명까지 범위가 제한됩니다.
-- 유저 ID 검색: 해당 팩터 내에 검색하고자 하는 유저 ID를 입력합니다. 유저가 없으면 검색되지 않습니다.
 
+### User Information 
 
-### 유저 정보
+![leaderboard_03_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_03_202106.png)
 
-![leaderboard_03_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_03_202106.png)
+#### 1. Modify User Information 
 
-#### 1. 유저 정보 수정
+Select a user to modify after search. 
 
-검색 후 수정할 유저를 선택합니다.
+**[Window for Modifying User Ranking]**
+Click **Modify** and a window shows up to enter data. Scores and other data can be modified, while updated scores are required, along with reasons of change.
 
-**[유저 랭킹 수정 창]**
-**수정** 버튼을 클릭하면 수정할 데이터를 입력하는 창이 나타납니다. 점수, 기타 정보를 수정할 수 있으며 변경 점수와 사유는 필수로 입력해야 합니다.
+![leaderboard_04_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_04_202106.png)
 
-![leaderboard_04_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_04_202106.png)
+#### 2. Delete User Information 
 
-#### 2. 유저 정보 삭제
+Select a user to delete after search. 
 
-검색 후 삭제할 유저를 선택합니다.
+**[Window for Deleting User Ranking]**
 
-**[유저 랭킹 삭제 창]**
-**삭제** 버튼을 클릭하면 삭제 여부를 묻는 창이 나타납니다. 사유는 필수로 입력해야 하며 삭제 후 복구할 수 없으므로 신중히 삭제해야 합니다.
+Click **Delete** and a window shows up asking whether to delete. Reasons are required, and you must be cautious since data cannot be recovered once deleted. 
 
-![leaderboard_05_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_05_202106.png)
+![leaderboard_05_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_05_202106.png)
 
-#### 3. 유저 데이터 저장
+#### 3. Save User Data 
 
-현재 검색한 유저 정보를 저장하려면 **데이터 저장** 버튼을 클릭합니다.
+To save currently-searched user information, click **Save Data**.
 
-**[데이터 저장 창]**
-데이터는 1회 최대 10만 건까지 저장할 수 있으며, 허용량을 초과하면 검색 시작 순위 포함 10만 명까지만 다운로드됩니다.
+**[Window for Saving Data]**
+Data can be saved for up to 100 thousand cases at a time, and if it exceeds the limit, only up to 100 thousand, including ranks after search started, can be downloaded. 
 
-![leaderboard_06_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_06_202106.png)
+![leaderboard_06_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_06_202106.png)
 
-## 랭킹 설정
+## Ranking Configuration 
 
-![leaderboard_07_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_07_202106.png)
+![leaderboard_07_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_07_202106.png)
 
-> **[유의 사항]**<br>
-> 팩터의 등록, 초기화, 삭제는 프로젝트의 ADMIN으로 등록된 사용자만 수행할 수 있습니다. 
+> **[Note]**<br>
+> Registering, initializing, and deleting factors are executable only by those users who are registered as ADMIN.  
 
-### 팩터 등록
+### Register Factors 
 
-#### 직접 입력
+#### Direct Input
 
-서비스를 활성화한 후 팩터 정보를 추가해야 합니다. **Game > Leaderboard > 랭킹 설정 > +추가 > 직접 입력** 버튼을 클릭해 팩터를 등록합니다.
+After service is enabled, factor information must be added. Go to **Game > Leaderboard > Ranking Configuration > +Add > Direct Input** to register factors.
 
-> **[참고]**<br>
-> 팩터는 [주기, 업데이트 기준, 정렬기준]의 묶은 단위입니다.<br>
-> 최고 점수 랭킹을 일간, 주간, 월간으로 사용하고 싶다면 팩터를 3개 만들어야 합니다.
+> **[Note]**<br>
+> A factor refers to the combination of [Cycle, Update Standard, and Alignment Standard].<br>
+> To apply ranking of the highest scores on a daily, weekly, and monthly basis, three factors must be created.  
 
-**[+추가]** 버튼을 클릭하면 아래와 같은 창이 열립니다.
+Click **[+Add]** and a window pops up as below.
 
-![leaderboard_08_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_08_202106.png)
+![leaderboard_08_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_08_202106.png)
 
-**[항목별 설명]**
+**[Description of Each Item]**
 
-##### 팩터 ID
+##### Factor ID
 
-- 팩터의 고유한 숫자 ID로 창을 열면 자동으로 지정되나 사용자 임의로 변경할 수 있습니다. 팩터 ID는 중복해서 사용할 수 없습니다.
+- The ID composed of original numbers of a factor; can be automatically saved when the window opens but cannot be randomly changed by user. It cannot be redundantly used. 
 
-##### 팩터 이름
+##### Factor Name
 
-- 랭킹을 구분하는 이름이며 차후 팩터 검색에 사용할 수 있습니다. 팩터 이름은 등록 이후에 수정할 수 있습니다.
+- The name classifying ranks, available for the search of factors. Factor names can be modified after registered. 
 
-##### 한계 유저 수
+##### Limited Number of Users 
 
-- 해당 팩터에 등록할 수 있는 최대 유저 수입니다. 최대 1,000만 명까지 입력할 수 있습니다.
+- The maximum number of users to be registered for a factor: no more than 10 million. 
 
-##### 기타 정보
+##### Extra Data
 
-- 팩터의 기타 정보로, 필요할 때만 입력하면 됩니다. 기타 정보는 등록한 후 수정할 수 있습니다.
+- Other data of a factor, which can be entered only when it is required; modifiable after registered. 
 
-##### 팩터 주기
+##### Factor Cycle 
 
-- 랭킹의 초기화 기간을 의미하며 일간, 주간, 월간, 전체가 있습니다. 주기 또한 팩터 검색에 사용할 수 있으며 각 주기를 기준으로 유저를 분류합니다.
+- The initialization period of a ranking, available by day, week, month, or all. Cycle is also available for the search of factors, and users are classified by each cycle.  
 
-##### 기준 시간 선택
+##### Select Time Criteria 
 
-- 팩터의 기준이 되는 UTC 시간입니다. 팩터 내 유저를 검색할 때 최근 업데이트 시간은 이 값을 기준으로 표시됩니다. 
+- UTC time which serves as criteria of a factor. For the search of users within a factor, the latest updated time is displayed based on this value.  
 
-##### 팩터 초기화 시간
+##### Factor Initialization Time 
 
-- 팩터별 초기화 시간입니다. 기준 UTC 시간을 토대로 계산됩니다. 주기가 '전체'인 경우 활성화되지 않습니다.
+- Time of initialization for each factor, to be calculated by standard UTC time. Cannot be enabled, if the cycle is 'all. ' 
 
-##### 팩터 초기화 간격
+##### Factor Initialization Interval 
 
-- 팩터 주기의 초기화 간격을 의미합니다. 3으로 설정하면 일간일 때는 3일, 주간일 때는 3주, 월간일 때는 3개월에 한 번 초기화됩니다.
+- Refers to the interval of initialization for a factor cycle. If it is set at 3, initialization is executed at every 3 days, 3 weeks, or 3 months, each on daily, weekly, or monthly basis.   
 
-##### 팩터 초기화 일자
+##### Factor Initialization Date 
 
-- 주간, 월간의 경우 초기화할 요일, 일자를 선택해야 합니다.
+- Select a day and date to initialize, for the weekly or monthly data.  
 
-##### 정렬 기준
+##### Sorting Criteria 
 
-- 내림차순: 점수를 내림차순으로 정렬합니다.
-- 오름차순: 점수를 오름차순으로 정렬합니다.
+- Descending Order: Sort scores in the descending order. 
+- Ascending Order: Sort scores in the ascending order. 
 
-##### 랭킹 업데이트 기준
+##### Criteria of Ranking Updates
 
-- 베스트 점수 등록: 유저의 최고 점수를 기록합니다.
-- 최신 점수 등록: 유저의 가장 최근 점수를 기록합니다.
-- 누적 점수 등록: 유저의 점수를 누적 합산해 등록합니다.
+- By Best Scores: Records the highest scores of the user.
+- By Latest Scores: Records the latest scores of the user. 
+- By Accumulated Scores: Registers the accumulated scores of the user. 
 
-##### 동점자 처리
+##### Tie-Breaking 
 
-- 최초 랭킹 획득 우선: 동점이면 먼저 등록된 유저가 높은 등수로 기록됩니다.
-- 최근 랭킹 획득 우선: 동점이면 나중에 등록된 유저가 높은 등수로 기록됩니다.
+- Priority for First Ranks: Records the earlier-registered same-score user at a higher rank.
+- Priority for Recent Ranks: Records the later-registered same-score user at a higher rank.
 
-> [참고] 팩터 ID는 팩터 추가 시 자동으로 지정됩니다.
+> [Note] Factor ID is automatically specified when a factor is added. 
 
-#### 파일 업로드
+#### Upload Files
 
-여러 팩터를 한 번에 추가하고 싶으신 경우에 **Game > Leaderboard > 랭킹 설정 > +추가 > 파일 업로드** 버튼을 클릭해 파일을 업로드하여 팩터를 등록할 수 있습니다.
+If you want to add multiple factors at once, click **Game > Leaderboard > Ranking Settings > +Add > Upload Files** to upload the file to register the factors.
 
-**[가이드]**
+**[Guide]**
 
-템플릿을 다운받고 팩터 정보를 기입한 후 해당 엑셀 파일을 업로드 합니다. 
+Download the template, fill out the factor information, and upload the excel file.
 
-팩터 추가 버튼을 눌러 팩터를 추가합니다.
+Press the Add Factor button to add factors.
 
-### 팩터 검색
+### Search Factors 
 
-![leaderboard_09_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_09_201812.png)
+![leaderboard_09_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_09_201902.png)
 
-검색 조건이 팩터 이름이면 이름에 검색어가 포함된 팩터를 검색합니다.
+When a search condition is the factor name, search factors by the name containing search words. 
 
-검색 조건이 팩터 주기이면 선택 목록에 있는 주기로 검색합니다.
+When a search condition is the factor cycle, search factors by the cycle on the selection list. 
 
-### 팩터 초기화
+### Initialize Factors 
 
-![leaderboard_10_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_10_202106.png)
+![leaderboard_10_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_10_202106.png)
 
-초기화할 팩터를 선택합니다.
+Select a factor to initialize. 
 
-**초기화** 버튼을 클릭하면 초기화 창이 나타납니다. 초기화하면 팩터의 유저 데이터가 전부 사라지며 복구할 수 없으니 신중하게 수행해야 합니다.
+Click **Initialize** and a window pops up. Once a factor is initialized, all its user data is deleted and cannot be recovered, so make a cautious decision.  
 
-초기화 창에서 하단 항목을 선택하면 팩터까지 삭제됩니다. 데이터를 복구할 수 없으니 신중하게 수행해야 합니다. 
+If the bottom is checked on the pop-up page, even the factor shall be deleted. Take it cautiously since data cannot be recovered once it is deleted.  
 
 
-### 팩터 수정
+### Modify Factors 
 
-팩터 목록에서 수정할 팩터의 이름을 선택합니다.
+Select a factor name to modify from the list. 
 
-선택하면 **팩터 수정** 창이 나타납니다. 팩터 이름, 기타 정보만 수정할 수 있습니다.
+Then a window pops up to **Modify Factors**. Only factor name and other information can be modified. 
 
-![leaderboard_11_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_11_202106.png)
+![leaderboard_11_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_11_202106.png)
 
-※ API 정보는 [API Guide](/Game/Leaderboard/ko/api-guide/)를 참고해 주세요.
+※ See [API Guide](/Game/Leaderboard/zh/api-guide/) for API information. 
