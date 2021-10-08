@@ -1,5 +1,13 @@
 ## Game > Leaderboard > Release Notes 
 
+### 2021.10.12
+#### 기능 개선/변경
+* [Console] 랭킹 지표, 랭킹 데이터, 랭킹 설정
+    * 파일 다운로드 형식 csv로 변경 
+
+#### 버그 수정
+* [Console] 랭킹 설정에서 팩터 주기로 검색한 결과를 파일 다운로드할 때 내용이 누락되는 문제 수정
+
 ### August 24, 2021
 
 #### Feature Updates
@@ -18,14 +26,6 @@
 
 #### Feature Updates
 * [API] Add api to search users of specific rank
-
-### 2021.10.12
-#### 기능 개선/변경
-* [Console] 랭킹 지표, 랭킹 데이터, 랭킹 설정
-    * 파일 다운로드 형식 csv로 변경 
-
-#### 버그 수정
-* [Console] 랭킹 설정에서 팩터 주기로 검색한 결과를 파일 다운로드할 때 내용이 누락되는 문제 수정
 
 ### Sep. 22, 2020
 
