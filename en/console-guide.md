@@ -91,7 +91,7 @@ Data can be saved for up to 100 thousand cases at a time, and if it exceeds the 
 
 ![leaderboard_06_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_06_202106.png)
 
-## Ranking Configuration 
+## Ranking Setting 
 
 ![leaderboard_07_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_07_202106.png)
 
@@ -102,7 +102,7 @@ Data can be saved for up to 100 thousand cases at a time, and if it exceeds the 
 
 #### Direct Input
 
-After service is enabled, factor information must be added. Go to **Game > Leaderboard > Ranking Configuration > +Add > Direct Input** to register factors.
+After service is enabled, factor information must be added. Go to **Game > Leaderboard > Ranking Setting > +Add > Direct Input** to register factors.
 
 > **[Note]**<br>
 > A factor refers to the combination of [Cycle, Update Standard, and Alignment Standard].<br>
@@ -170,7 +170,7 @@ Click **[+Add]** and a window pops up as below.
 
 #### Upload Files
 
-If you want to add multiple factors at once, click **Game > Leaderboard > Ranking Settings > +Add > Upload Files** to upload the file to register the factors.
+If you want to add multiple factors at once, click **Game > Leaderboard > Ranking Setting > +Add > Upload Files** to upload the file to register the factors.
 
 **[Guide]**
 
