@@ -1,12 +1,12 @@
 ## Game > Leaderboard > Release Notes 
 
-### 2021.10.12
-#### 기능 개선/변경
-* [Console] 랭킹 지표, 랭킹 데이터, 랭킹 설정
-    * 파일 다운로드 형식 csv로 변경 
+### October 12, 2021
+#### Feature Updates
+* [Console] Ranking Indicator, Ranking Data, Ranking Setting
+    * Changed the file download format to CSV. 
 
-#### 버그 수정
-* [Console] 랭킹 설정에서 팩터 주기로 검색한 결과를 파일 다운로드할 때 내용이 누락되는 문제 수정
+#### Bug Fixes
+* [Console] Fixed an issue where the contents are omitted when downloading files from the results searched by factor cycle in Ranking Setting
 
 ### August 24, 2021
 
@@ -83,10 +83,10 @@
 ### July 24, 2018 
 
 #### Feature Updates 
-* [Console] Changed the order of user data on the ranking data tab, to show the ranking first 
+* [Console] Changed the order of user data on the Ranking Data tab, to show the ranking first 
 
 #### Bug Fixes 
-* [Console] Fixed the failure of paging, when querying users in particular ranges on the ranking data tab 
+* [Console] Fixed the failure of paging, when querying users in particular ranges on the Ranking Data tab 
 
 * [Console] Fixed the unavailability of finding data when downloading users in particular ranges 
 
@@ -162,8 +162,8 @@
 ### April 20, 2017
 
 #### Feature Updates 
-* [Console] Added a feature of searching factors on the ranking configuration tab: search is available by factor name or factor cycle. 
-* [Console] Simplified the search window on the ranking data tab: registered factors are classified by factor cycle, when searched. 
+* [Console] Added a feature of searching factors on the Ranking Setting tab: search is available by factor name or factor cycle. 
+* [Console] Simplified the search window on the Ranking Data tab: registered factors are classified by factor cycle, when searched. 
 
 #### Bug Fixes 
 * [API] Returns HTTP Status Code to 200, when the server receives a request, even if it is abnormal.  
