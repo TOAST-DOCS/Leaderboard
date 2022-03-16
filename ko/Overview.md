@@ -7,7 +7,7 @@ Leaderboard 플랫폼을 사용하면 간단한 연동만으로 랭킹 서비스
 
 ## Merits
 
-![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/newMerits_kr.png)
+![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/newMerits_kr_202203.png)
 
 <br>
 

@@ -7,7 +7,7 @@ Leaderboardプラットフォームを使用すれば、簡単な連動だけで
 
 ## Merits
 
-![[図0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/newMerits_jp.png)
+![[図0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/newMerits_jp_202203.png)
 
 <br>
 
