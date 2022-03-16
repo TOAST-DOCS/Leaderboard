@@ -7,7 +7,7 @@ With Leaderboard, it only takes a simple integration to implement a ranking serv
 
 ## Merits
 
-![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/newMerits_en.png)
+![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/newMerits_en_202203.png)
 
 <br>
 
