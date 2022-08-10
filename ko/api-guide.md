@@ -426,7 +426,8 @@ Content-Type: application/json
 		"rank": 2,
 		"preRank": 0,
 		"extra": "extra Data1",
-		"date": "2017-01-02T16:28:51+09:00"
+		"date": "2017-01-02T16:28:51+09:00",
+		"totalUserCountInFactor": 100
 	}
 }
 ```
@@ -441,6 +442,7 @@ Content-Type: application/json
 | userInfo.preRank | int | 이전 주기의 순위 |
 | userInfo.extra | String | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
 | userInfo.date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
+| userInfo.totalUserCountInFactor | int | 팩터에 등록된 유저 수 |
 
 ### Get multiple user info
 
@@ -522,7 +524,8 @@ Content-Type: application/json
 			"rank": 2,
 			"preRank": 0,
 			"extra": "extra Data1",
-			"date": "2017-01-02T16:42:31+09:00"
+			"date": "2017-01-02T16:42:31+09:00",
+			"totalUserCountInFactor": 100
 		},
 		{
 			"resultCode": 0,
@@ -531,7 +534,8 @@ Content-Type: application/json
 			"rank": 1,
 			"preRank": 0,
 			"extra": "extra Data2",
-			"date": "2017-01-02T16:42:31+09:00"
+			"date": "2017-01-02T16:42:31+09:00",
+			"totalUserCountInFactor": 100
 		},
 		{
 			"resultCode": 462850,
@@ -540,7 +544,8 @@ Content-Type: application/json
 			"rank": 0,
 			"preRank": 0,
 			"extra": "",
-			"date": "1970-01-01T09:00:00+09:00"
+			"date": "1970-01-01T09:00:00+09:00",
+			"totalUserCountInFactor": 100
 		}]
 	},
 	{
@@ -554,7 +559,8 @@ Content-Type: application/json
 			"rank": 3,
 			"preRank": 0,
 			"extra": "extra Data4",
-			"date": "2017-01-02T16:42:28+09:00"
+			"date": "2017-01-02T16:42:28+09:00",
+			"totalUserCountInFactor": 200
 		},
 		{
 			"resultCode": 0,
@@ -563,7 +569,8 @@ Content-Type: application/json
 			"rank": 2,
 			"preRank": 0,
 			"extra": "extra Data5",
-			"date": "2017-01-02T16:42:28+09:00"
+			"date": "2017-01-02T16:42:28+09:00",
+			"totalUserCountInFactor": 200
 		},
 		{
 			"resultCode": 462850,
@@ -572,7 +579,8 @@ Content-Type: application/json
 			"rank": 0,
 			"preRank": 0,
 			"extra": "",
-			"date": "1970-01-01T09:00:00+09:00"
+			"date": "1970-01-01T09:00:00+09:00",
+			"totalUserCountInFactor": 200
 		}]
 	}]
 }
@@ -591,6 +599,7 @@ Content-Type: application/json
 | userInfos[].preRank | int | 이전 주기의 순위 |
 | userInfos[].extra | String | 유저와  함께 저장되는 Extra Data(최대 16바이트) |
 | userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
+| userInfos[].totalUserCountInFactor | int | 팩터에 등록된 유저 수 |
 
 ### Get multiple user info by range
 
@@ -652,7 +661,8 @@ Content-Type: application/json
 			"rank": 1,
 			"preRank": 0,
 			"extra": "extra Data2",
-			"date": "2017-01-02T16:42:28+09:00"
+			"date": "2017-01-02T16:42:28+09:00",
+			"totalUserCountInFactor": 200
 		},
 		{
 			"resultCode": 0,
@@ -661,7 +671,8 @@ Content-Type: application/json
 			"rank": 2,
 			"preRank": 0,
 			"extra": "extra Data1",
-			"date": "2017-01-02T16:42:28+09:00"
+			"date": "2017-01-02T16:42:28+09:00",
+			"totalUserCountInFactor": 200
 		},
 		{
 			"resultCode": 0,
@@ -670,7 +681,8 @@ Content-Type: application/json
 			"rank": 3,
 			"preRank": 0,
 			"extra": "extraData",
-			"date": "2017-01-02T16:42:28+09:00"
+			"date": "2017-01-02T16:42:28+09:00",
+			"totalUserCountInFactor": 200
 		}]
 }
 ```
@@ -687,6 +699,7 @@ Content-Type: application/json
 | userInfos[].preRank | int | 이전 주기의 순위 |
 | userInfos[].extra | String | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
 | userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
+| userInfos[].totalUserCountInFactor | int | 팩터에 등록된 유저 수 |
 
 ### Get multiple user info by pivot user
 
@@ -749,7 +762,8 @@ Content-Type: application/json
                 "rank": 1,
                 "preRank": 0,
                 "extra": "",
-                "date": "2019-04-17T14:18:44+09:00"
+                "date": "2019-04-17T14:18:44+09:00",
+			    "totalUserCountInFactor": 200
             },
             {
                 "resultCode": 0,
@@ -758,7 +772,8 @@ Content-Type: application/json
                 "rank": 2,
                 "preRank": 0,
                 "extra": "",
-                "date": "2019-04-17T14:18:44+09:00"
+                "date": "2019-04-17T14:18:44+09:00",
+			    "totalUserCountInFactor": 200
             },
             {
                 "resultCode": 0,
@@ -767,7 +782,8 @@ Content-Type: application/json
                 "rank": 3,
                 "preRank": 0,
                 "extra": "",
-                "date": "2019-04-17T14:18:44+09:00"
+                "date": "2019-04-17T14:18:44+09:00",
+			    "totalUserCountInFactor": 200
             },
             {
                 "resultCode": 0,
@@ -776,7 +792,8 @@ Content-Type: application/json
                 "rank": 4,
                 "preRank": 0,
                 "extra": "",
-                "date": "2019-04-17T14:18:44+09:00"
+                "date": "2019-04-17T14:18:44+09:00",
+			    "totalUserCountInFactor": 200
             },
             {
                 "resultCode": 0,
@@ -785,7 +802,8 @@ Content-Type: application/json
                 "rank": 5,
                 "preRank": 0,
                 "extra": "",
-                "date": "2019-04-17T14:18:44+09:00"
+                "date": "2019-04-17T14:18:44+09:00",
+			    "totalUserCountInFactor": 200
             },
             {
                 "resultCode": 0,
@@ -794,7 +812,8 @@ Content-Type: application/json
                 "rank": 6,
                 "preRank": 0,
                 "extra": "",
-                "date": "2019-04-17T14:18:44+09:00"
+                "date": "2019-04-17T14:18:44+09:00",
+			    "totalUserCountInFactor": 200
             },
             {
                 "resultCode": 0,
@@ -803,7 +822,8 @@ Content-Type: application/json
                 "rank": 7,
                 "preRank": 0,
                 "extra": "",
-                "date": "2019-04-17T14:18:44+09:00"
+                "date": "2019-04-17T14:18:44+09:00",
+			    "totalUserCountInFactor": 200
             }
         ]
     }
@@ -822,6 +842,7 @@ Content-Type: application/json
 | userInfos[].preRank | int | 이전 주기의 순위 |
 | userInfos[].extra | String | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
 | userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
+| userInfos[].totalUserCountInFactor | int | 팩터에 등록된 유저 수 |
 
 ### Get selected rank user info
 
@@ -890,7 +911,8 @@ Content-Type: application/json
                 "rank": 3,
                 "preRank": 0,
                 "extra": "",
-                "date": "2020-09-24T12:31:07+09:00"
+                "date": "2020-09-24T12:31:07+09:00",
+			    "totalUserCountInFactor": 200
             },
             {
                 "resultCode": 0,
@@ -899,7 +921,8 @@ Content-Type: application/json
                 "rank": 1,
                 "preRank": 0,
                 "extra": "",
-                "date": "2020-09-24T12:31:07+09:00"
+                "date": "2020-09-24T12:31:07+09:00",
+			    "totalUserCountInFactor": 200
             },
             {
                 "resultCode": 0,
@@ -908,7 +931,8 @@ Content-Type: application/json
                 "rank": 4,
                 "preRank": 0,
                 "extra": "",
-                "date": "2020-09-24T12:31:07+09:00"
+                "date": "2020-09-24T12:31:07+09:00",
+			    "totalUserCountInFactor": 200
             },
             {
                 "resultCode": 0,
@@ -917,7 +941,8 @@ Content-Type: application/json
                 "rank": 5,
                 "preRank": 0,
                 "extra": "",
-                "date": "2020-09-24T12:31:07+09:00"
+                "date": "2020-09-24T12:31:07+09:00",
+			    "totalUserCountInFactor": 200
             },
             {
                 "resultCode": 0,
@@ -926,7 +951,8 @@ Content-Type: application/json
                 "rank": 2,
                 "preRank": 0,
                 "extra": "",
-                "date": "2020-09-24T12:31:07+09:00"
+                "date": "2020-09-24T12:31:07+09:00",
+			    "totalUserCountInFactor": 200
             }
         ]
     }
@@ -945,6 +971,7 @@ Content-Type: application/json
 | userInfos[].preRank | int | 이전 주기의 순위 |
 | userInfos[].extra | String | 유저와 함께 저장되는 Extra Data(최대 16바이트) |
 | userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
+| userInfos[].totalUserCountInFactor | int | 팩터에 등록된 유저 수 |
 
 <br>
 
