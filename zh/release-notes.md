@@ -1,5 +1,9 @@
 ## Game > Leaderboard > Release Notes
 
+### August 28, 2022
+#### Feature Updates
+* [API] Add the result value of the total number of users in the factor to the user lookup api.
+
 ### October 12, 2021
 #### Feature Updates
 * [Console] Ranking Indicator, Ranking Data, Ranking Setting
