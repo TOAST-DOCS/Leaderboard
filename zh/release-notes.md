@@ -1,6 +1,6 @@
 ## Game > Leaderboard > Release Notes
 
-### August 28, 2022
+### August 09, 2022
 #### Feature Updates
 * [API] Add the result value of the total number of users in the factor to the user lookup api.
 
