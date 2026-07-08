@@ -25,7 +25,8 @@ Server API can be called in the following address, which is also available from 
 ![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/en/api_guide_202106_1-1.PNG)
 
 ### AppKey
-Appkey is an original key required to send requests from a game server, and it is available in the console.  
+Appkey is required to use the Leaderboard API. The Appkey is included in the request URL to identify and specify a particular resource when making API calls.
+For more information on checking and using Appkeys, please refer to the [Appkey](/nhncloud/en/public-api/appkey).
 > [Caution] Appkey must not be exposed and cannot be modified.  
 
 ![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/en/api_guide_202106_2-1.PNG)
