@@ -25,7 +25,8 @@ Leaderboard API는 REST API 형태로, 다음과 같은 API를 제공합니다.
 ![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_202106_1-1.PNG)
 
 ### AppKey
-앱키는 게임 서버에서 요청을 보낼 때 꼭 필요한 고유 키로, 콘솔에서 확인할 수 있습니다.
+Leaderboard API를 사용하려면 Appkey가 필요합니다. Appkey는 API 호출 시 요청 URL에 포함하여 특정 리소스를 가리키고 식별하는 데 사용됩니다.
+Appkey 확인 및 사용에 대한 자세한 내용은 [Appkey](/nhncloud/ko/public-api/appkey)를 참고하세요.
 > [주의] 앱키는 외부에 노출하면 안 되며, 변경할 수 없습니다.
 
 ![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_202106_2-1.PNG)
