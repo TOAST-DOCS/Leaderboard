@@ -25,7 +25,8 @@ Leaderboard APIはREST API形式で、次のようなAPIを提供します。
 ![図1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_202106_1-1.PNG)
 
 ### AppKey
-アプリケーションキーはゲームサーバーから要請を送る時に必要な固有キーで、コンソールで確認できます。
+Leaderboard APIを使用するには、Appkeyが必要です。Appkeyは、API呼び出し時にリクエストURLに含めて特定のリソースを指定し、識別するために使用されます。
+Appkeyの確認及び使用に関する詳細は、[Appkey](/nhncloud/ja/public-api/appkey)を参照してください。
 > [注意]アプリケーションキーは外部に表示してはならず、変更できません。
 
 ![図2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_202106_2-1.PNG)
