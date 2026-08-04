@@ -1,8 +1,10 @@
-## Game > Leaderboard > Developer's Guide
+<a id="game-leaderboard-developers-guide"></a>
+## Game > Leaderboard > Developer's Guide { #game-leaderboard-developers-guide }
 
 Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
 
-### HTTP API
+<a id="http-api"></a>
+### HTTP API { #http-api }
 - User 점수 등록 (단일 / 다수)
 - User 점수 획득 (단일 / 다수 / 범위)
 - Factor에 들어있는 User 수 조회
@@ -10,20 +12,24 @@ Leaderboard API 는 REST API 형태로 다음과 같은 API 를 제공합니다.
 
 <br>
 
-## Notice
+<a id="section-1"></a>
+## Notice { #section-1 }
 
-### Caution
+<a id="caution"></a>
+### Caution { #caution }
 모든 API를 사용하기 위해서는 **상품 활성화 후 Factor를 등록**해야만 합니다.  
 Leaderboard API 는 **Server에서 호출 하는 것을 권장**하고, **Client 에서의 호출은 권장하고 있지 않습니다.**
 
-### Server Address
+<a id="server-address"></a>
+### Server Address { #server-address }
 서버 API 를 호출 하기 위한 서버 주소는 다음과 같습니다. 해당 주소는 Leaderboard 콘솔 화면에서도 확인 가능합니다. <br>
 
 > https://api-leaderboard.cloud.toast.com
 
 ![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/developer_1.png)
 
-### AppKey
+<a id="appkey"></a>
+### AppKey { #appkey }
 AppKey 는 게임 서버에서 요청을 보낼시 꼭 필요한 고유 키로, Leaderboard 콘솔 화면에서 확인 가능합니다.
 > **주의** <br>
 > AppKey 는 외부에 노출되어서는 안되며, 변경이 불가능합니다.
@@ -32,16 +38,19 @@ AppKey 는 게임 서버에서 요청을 보낼시 꼭 필요한 고유 키로, 
 
 <br>
 
-## Common
+<a id="common"></a>
+## Common { #common }
 
-### HTTP Header
+<a id="http-header"></a>
+### HTTP Header { #http-header }
 API 호출 시 HTTP Header 에 다음 항목을 설정해야 합니다.
 
 | Name | Required |	Value |
 |---|---|---|
 | Content-Type | mandatory | application/json; charset=UTF-8 |
 
-### API Response
+<a id="api-response"></a>
+### API Response { #api-response }
 모든 API 요청에 대한 응답으로 HTTP 200 OK 를 전달합니다. API 요청 성공 유무는 Response Body 의 header 항목을 참고하여 판단할 수 있습니다.
 
 ```
@@ -59,11 +68,13 @@ Content-Type: application/json
 }
 ```
 
-### TransactionId
+<a id="transactionid"></a>
+### TransactionId { #transactionid }
 API 를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 있는 방안으로 TransactionId 기능을 제공합니다.
 호출하는 서버에서 HTTP Body 에 TransactionId 를 설정하여 API 를 호출하면, Leaderboard 서버는 응답 결과에 해당 TransactionId 를 설정하여 결과를 전달합니다. TransactionId 는 정수형 타입으로 받습니다.
 
-### Time
+<a id="common-1"></a>
+### Time { #common-1 }
 
 User의 업데이트 시간은 RFC 3339 정의를 따릅니다.
 
@@ -71,9 +82,11 @@ User의 업데이트 시간은 RFC 3339 정의를 따릅니다.
 
 <br>
 
-## Get API
+<a id="leaderboard"></a>
+## Get API { #leaderboard }
 
-### Get user count in factor
+<a id="factor"></a>
+### Get user count in factor { #factor }
 
 원하는 한개의 Factor 에 등록된 User의 수 를 조회합니다.
 
@@ -132,7 +145,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
 | resultInfo.totalCount | int | Factor 에 등록된 User 수 |
 
-### Get single user info
+<a id="leaderboard-1"></a>
+### Get single user info { #leaderboard-1 }
 
 원하는 한 명의 User의 정보를 조회할 수 있습니다.
 
@@ -203,7 +217,8 @@ Content-Type: application/json
 | userInfo.extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
 | userInfo.date | String | User Score 가 업데이트 된 시간. (RFC 3339) |
 
-### Get multiple user info
+<a id="leaderboard-2"></a>
+### Get multiple user info { #leaderboard-2 }
 
 원하는 다수의 User 정보를 조회할 수 있는 방법입니다.
 
@@ -351,7 +366,8 @@ Content-Type: application/json
 | userInfos[].extra | String | User 와 함께 저장되는 Extra Data (최대 16Byte) |
 | userInfos[].date | String | User Score 가 업데이트 된 시간. (RFC 3339) |
 
-### Get multiple user info by range
+<a id="leaderboard-3"></a>
+### Get multiple user info by range { #leaderboard-3 }
 
 원하는 범위(등수)의 순위 정보를 조회할 수 있는 방법입니다.
 
@@ -449,9 +465,11 @@ Content-Type: application/json
 
 <br>
 
-## Set API
+<a id="leaderboard-4"></a>
+## Set API { #leaderboard-4 }
 
-### Set single user score
+<a id="leaderboard-4-1"></a>
+### Set single user score { #leaderboard-4-1 }
 
 원하는 한 명의 User 점수를 등록할 수 있는 방법입니다.
 
@@ -519,7 +537,8 @@ Content-Type: application/json
 | resultInfo.userId | String | 등록된 User ID |
 
 
-### Set single user score with extra data
+<a id="extradata"></a>
+### Set single user score with extra data { #extradata }
 
 원하는 한 명의 User 점수와 Extra Data를 등록할 수 있는 방법입니다.
 
@@ -588,7 +607,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | 에러코드 [\[LINK\]](/Game/Leaderboard/ko/Developer%60s%20Guide/#error-codes) |
 | resultInfo.userId | String | 등록된 User ID |
 
-### Set multiple user score
+<a id="leaderboard-4-2"></a>
+### Set multiple user score { #leaderboard-4-2 }
 
 원하는 User들 점수를 등록할 수 있는 방법입니다.
 
@@ -710,7 +730,8 @@ Content-Type: application/json
 | resultInfos.resultCode | int | User 에 대한 에러코드 |
 | resultInfos.userId | String | 등록된 User ID |
 
-### Set multiple user score with extra data
+<a id="leaderboard-4-extradata"></a>
+### Set multiple user score with extra data { #leaderboard-4-extradata }
 
 원하는 User들 점수와 Extra Data를 등록할 수 있는 방법입니다.
 
@@ -838,9 +859,11 @@ Content-Type: application/json
 
 <br>
 
-## Delete API
+<a id="leaderboard-5"></a>
+## Delete API { #leaderboard-5 }
 
-### Delete single user info
+<a id="leaderboard-5-leaderboard"></a>
+### Delete single user info { #leaderboard-5-leaderboard }
 
 원하는 한 명의 User 정보를 삭제하는 방법입니다. 해당 User는 영구적으로 삭제되며, 복구되지 않습니다.
 
@@ -897,7 +920,8 @@ Content-Type: application/json
 
 <br>
 
-## Error Codes
+<a id="section-2"></a>
+## Error Codes { #section-2 }
 
 아래 표의 에러 코드는 Response body의 header/body에 있는 resultCode와 resultMessage의 의미를 설명합니다.  
 header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에러 코드가 보이는 경우는 아래 [참고] 링크를 참고 부탁드립니다.

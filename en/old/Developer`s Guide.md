@@ -1,28 +1,19 @@
-## Game > Leaderboard > Developer's Guide
+<a id="game-leaderboard-developers-guide"></a>
+## Game > Leaderboard > Developer's Guide { #game-leaderboard-developers-guide }
 
 Leaderboard API 는 REST API 형태로 다음 3가지 종류를 제공합니다.
 
-#### Leaderboard 조회
+<a id="appkey"></a>
+### HTTP API { #appkey }
 
-- Factor 에 등록된 사용자 수
-- 단일/다수 사용자 점수, 순위 조회
-- 일정 범위의 전체 점수, 순위 조회
+<!-- TODO: translate body -->
 
-#### Leaderboard 등록
-
-- 단일/다수 사용자 점수 등록
-
-#### Leaderboard 삭제
-
-- 단일/모든 사용자 Leaderboard 정보 삭제
-
-> [주의]  
-> API 사용을 하기 위해서는 반드시 팩터를 등록해야 합니다.  
-
-## Leaderboard 조회
+<a id="common"></a>
+## Leaderboard 조회 { #common }
 
 
-### Factor 에 등록된 사용자 수 조회
+<a id="http-header"></a>
+### Factor 에 등록된 사용자 수 조회 { #http-header }
 
 원하는 한개의 Factor 에 등록된 사용자의 수 를 조회하는 방법입니다.
 
@@ -72,7 +63,8 @@ Content-Type: application/json
 }
 ```
 
-### 단일 사용자 점수/순위 조회
+<a id="api-response"></a>
+### 단일 사용자 점수/순위 조회 { #api-response }
 
 원하는 한 명의 사용자의 Leaderboard 정보를 조회할 수 있는 방법입니다.
 
@@ -128,7 +120,8 @@ Content-Type: application/json
 }
 ```
 
-### 다수 사용자 점수/순위 조회
+<a id="transactionid"></a>
+### 다수 사용자 점수/순위 조회 { #transactionid }
 
 여러 사용자 Leaderboard 정보를 조회할 수 있는 방법입니다.
 
@@ -250,7 +243,8 @@ Content-Type: application/json
 }
 ```
 
-### 일정 범위의 전체 점수/순위 조회
+<a id="common-1"></a>
+### 일정 범위의 전체 점수/순위 조회 { #common-1 }
 
 전체 순위 중에서 원하는 범위의 순위 정보를 조회할 수 있는 방법입니다.
 
@@ -328,9 +322,11 @@ Content-Type: application/json
 }
 ```
 
-## Leaderboard 등록
+<a id="leaderboard"></a>
+## Leaderboard 등록 { #leaderboard }
 
-### 단일 사용자 점수 등록
+<a id="factor"></a>
+### 단일 사용자 점수 등록 { #factor }
 
 원하는 한 명의 사용자 점수를 등록할 수 있는 방법입니다.
 
@@ -388,7 +384,8 @@ Content-Type: application/json
 ```
 
 
-### 단일 사용자 점수/ExtraData 등록
+<a id="leaderboard-1"></a>
+### 단일 사용자 점수/ExtraData 등록 { #leaderboard-1 }
 
 원하는 한 명의 사용자 점수와 Extra Data를 등록할 수 있는 방법입니다.
 
@@ -447,7 +444,8 @@ Content-Type: application/json
 }
 ```
 
-### 다수 사용자 점수 등록
+<a id="leaderboard-2"></a>
+### 다수 사용자 점수 등록 { #leaderboard-2 }
 
 원하는 사용자들 점수를 등록할 수 있는 방법입니다.
 
@@ -550,7 +548,8 @@ Content-Type: application/json
 }
 ```
 
-### 다수 사용자 점수/ExtraData 등록
+<a id="leaderboard-3"></a>
+### 다수 사용자 점수/ExtraData 등록 { #leaderboard-3 }
 
 원하는 사용자들 점수와 Extra Data를 등록할 수 있는 방법입니다.
 
@@ -656,9 +655,11 @@ Content-Type: application/json
 }
 ```
 
-## Leaderboard 삭제
+<a id="leaderboard-4"></a>
+## Leaderboard 삭제 { #leaderboard-4 }
 
-### 단일 사용자 Leaderboard정보 삭제
+<a id="leaderboard-4-1"></a>
+### 단일 사용자 Leaderboard정보 삭제 { #leaderboard-4-1 }
 
 원하는 한 명의 사용자 Leaderboard정보를 삭제하는 방법입니다. 입력한 사용자 Leaderboard 정보가 삭제됩니다. 
 
@@ -706,7 +707,8 @@ Content-Type: application/json
 }
 ```
 
-## 시각
+<a id="extradata"></a>
+### 시각 { #extradata }
 
 사용자의 업데이트 시간은 RFC 3339 정의를 따릅니다.
 
@@ -744,4 +746,36 @@ header 에 있는 resultCode 에서 아래의 에러코드가 아닌  HTTP 에�
 - 모든 API 사용을 하기 위해서는 상품 활성화 후 팩터를 등록해야 합니다.  
 - Leaderboard API 는 Server에서 호출 하는 것을 권장하고, Client 에서의 호출은 권장하고 있지 않습니다.
 
+
+### Caution
+
+<!-- TODO: translate body -->
+
+<a id="leaderboard-4-2"></a>
+### Server Address { #leaderboard-4-2 }
+
+<!-- TODO: translate body -->
+
+<a id="leaderboard-4-extradata"></a>
+### Appkey { #leaderboard-4-extradata }
+
+<!-- TODO: translate body -->
+
+<a id="leaderboard-5"></a>
+## Common { #leaderboard-5 }
+
+<!-- TODO: translate body -->
+
+<a id="leaderboard-5-leaderboard"></a>
+### HTTP Header { #leaderboard-5-leaderboard }
+
+<!-- TODO: translate body -->
+
+### API Response
+
+<!-- TODO: translate body -->
+
+### TransactionId
+
+<!-- TODO: translate body -->
 

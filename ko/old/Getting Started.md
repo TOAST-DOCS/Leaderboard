@@ -1,20 +1,26 @@
-## Game > Leaderboard > Getting Started
+<!-- pre-align:aligned sig=c29e4924efd2 -->
+
+<a id="game-leaderboard-getting-started"></a>
+## Game > Leaderboard > Getting Started { #game-leaderboard-getting-started }
 
 Leaderboard 사용을 위해선 상품 이용 후 랭킹을 등록해야 합니다.
 상품 이용 후에는 게임의 랭킹정보 등록, 삭제 및 플레이어의 랭킹 정보 조회, 삭제를 할 수 있습니다.
 
 <br>
 
-## Configuration
+<a id="section-1"></a>
+## Configuration { #section-1 }
 
-### Leaderboard Service Enable
+<a id="leaderboard"></a>
+### Leaderboard Service Enable { #leaderboard }
 
 Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 시 서비스가 활성화되고 관리화면으로 전환됩니다.
 
 ![[그림 1 Leaderboard 서비스 활성화]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_1.JPG)
 
 
-### API URL/AppKey
+<a id="api-urlappkey"></a>
+### API URL/AppKey { #api-urlappkey }
 
 서비스 활성화 후 접속 시 API URL 및 Appkey 값을 확인할 수 있습니다.
 
@@ -22,9 +28,11 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 
 <br>
 
-## Factor Configuration Tab
+<a id="section-2"></a>
+## Factor Configuration Tab { #section-2 }
 
-### Add Factor
+<a id="section-2-1"></a>
+### Add Factor { #section-2-1 }
 
 서비스 활성화 후 Factor 정보를 추가해야 합니다. [Game] > [Leaderboard] > [랭킹 설정] > [+추가] 버튼을 클릭해 Factor를 등록합니다.
 
@@ -40,49 +48,59 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 
 **[각 항목별 설명]**
 
+<a id="section-2-1-1"></a>
 #### Factor 이름
 
 - 랭킹을 구분할 이름이며 차후 Factor 검색에 사용될 수 있습니다.
 
+<a id="section-2-1-2"></a>
 #### Factor 주기
 
 - 랭킹의 초기화 기간을 의미하며 일간, 주간, 월간, 전체가 있습니다. 주기 또한 Factor 검색에 사용될 수 있으며 각 주기를 기준으로 유저들을 분류합니다.
 
+<a id="section-2-1-3"></a>
 #### 랭킹 업데이트 기준
 
 - Best Score : 최고 점수 등록. User의 베스트 점수를 기록합니다.
 - Latest Score : 최신 점수 등록. User의 가장 최근 점수를 기록합니다.
 - Accumulation Score : 누적 점수 등록. User의 점수를 누적 합산해 등록합니다.
 
+<a id="section-2-1-4"></a>
 #### 정렬 기준
 
 - Desc : 점수를 내림차순으로 정렬합니다.
 - Asc : 점수를 오름차순으로 정렬합니다.
 
+<a id="section-2-1-5"></a>
 #### 동점자 처리
 
 - Priority First Ranking Get : 최초 랭킹 획득 우선. 동점인 경우 먼저 등록된 유저가 높은 등수로 기록됩니다.
 - Priority Latest Ranking Get : 최근 랭킹 획득 우선. 동점인 경우 나중에 등록된 유저가 높은 등수로 기록됩니다.
 
+<a id="section-2-1-6"></a>
 #### Factor 리셋 시간
 
 - Factor 별 초기화 시간을 의미합니다. 주기가 전체인 경우 초기화 되지 않아 큰 의미는 없습니다.
 
+<a id="section-2-1-7"></a>
 #### Factor 주간 리셋 요일, Factor 월간 리셋 일자
 
 - 주간, 월간의 경우 초기화 될 요일, 일자를 선택해야합니다.
 
+<a id="section-2-1-8"></a>
 #### 한계 유저 수
 
 - 해당 Factor에 등록될 수 있는 최대 유저 수를 뜻합니다. 최대 1000만 명까지 입력할 수 있습니다.
 
+<a id="section-2-1-9"></a>
 #### 기타정보
 
 - Factor의 extra 데이터로 필요 시 입력합니다.
 
 > FactorID는 Factor 추가 시 자동으로 지정됩니다.
 
-### Search Factor
+<a id="section-2-2"></a>
+### Search Factor { #section-2-2 }
 
 검색 조건이 Factor 이름일 시 이름에 검색어가 포함된 Factor를 검색합니다.
 
@@ -92,7 +110,8 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 
 ![[그림 5-1 검색 기준 Factor 주기]](http://static.toastoven.net/prod_leaderboardv2/user_console_mod_12.JPG)
 
-### Delete Factor
+<a id="section-2-3"></a>
+### Delete Factor { #section-2-3 }
 
 삭제할 Factor들을 선택합니다.
 
@@ -104,9 +123,11 @@ Console에서 [Game] > [Leaderboard]를 선택 후 [상품이용] 버튼 클릭 
 
 <br>
 
-## Data Tab
+<a id="section-3"></a>
+## Data Tab { #section-3 }
 
-### Search User Info
+<a id="section-3-1"></a>
+### Search User Info { #section-3-1 }
 
 **[랭킹 데이터 검색]**
 
@@ -123,17 +144,21 @@ Factor 등록 후 유저 랭킹 조회 탭으로 가면 검색 기준 > Factor I
 
 **[각 항목별 설명]**
 
+<a id="section-3-1-1"></a>
 #### 주기 설정
 - 지난 주기 : 이전 주기의 랭킹 정보를 기준으로 검색합니다.
 - 현재 주기 : 현재 주기의 랭킹 정보를 기준으로 검색합니다.
 
+<a id="section-3-1-2"></a>
 #### 랭킹 설정
 - 조회할 유저의 랭킹 범위를 정합니다. 상위 50명, 상위 100명, 특정범위 지정 기능을 제공합니다.
 
+<a id="section-3-1-id"></a>
 #### User ID
 - 해당 Factor 내에 검색하고자 하는 User ID를 입력합니다. User가 없는 경우 조회되지 않습니다.
 
-### Delete User Info
+<a id="section-3-2"></a>
+### Delete User Info { #section-3-2 }
 
 **[삭제할 유저 데이터 선택]**
 조회 후 삭제할 유저를 선택합니다.

@@ -1,112 +1,153 @@
-## Game > Leaderboard > 릴리스 노트
+<!-- pre-align:aligned sig=e0c357e28891 -->
 
-### 2022.08.09
+<a id="game-leaderboard-release-notes"></a>
+## Game > Leaderboard > 릴리스 노트 { #game-leaderboard-release-notes }
+
+<a id="august-09-2022"></a>
+### 2022.08.09 { #august-09-2022 }
+<a id="august-09-2022-feature-updates"></a>
 #### 기능 개선/변경
 * [API] 유저 조회 api에 팩터 내 전체 유저수 결과 값 추가
 
-### 2021.10.12
+<a id="october-12-2021"></a>
+### 2021.10.12 { #october-12-2021 }
+<a id="october-12-2021-feature-updates"></a>
 #### 기능 개선/변경
 * [Console] 랭킹 지표, 랭킹 데이터, 랭킹 설정
     * 파일 다운로드 형식을 .csv로 변경
 
+<a id="october-12-2021-bug-fixes"></a>
 #### 버그 수정
 * [Console] 랭킹 설정에서 팩터 주기로 검색한 결과를 파일 다운로드할 때 내용이 누락되는 문제 수정
 
-### 2021.08.24
+<a id="august-24-2021"></a>
+### 2021.08.24 { #august-24-2021 }
 
+<a id="august-24-2021-feature-updates"></a>
 #### 기능 개선/변경
 * [API] 유저 랭킹 조회 및 등록 api 요청 사이즈 제한(최대 500명) 적용
 
+<a id="august-24-2021-bug-fixes"></a>
 #### 버그 수정
 * [Console] 랭킹 팩터 파일로 추가 시 기타 정보를 입력하지 않으면 등록되지 않는 현상 수정
 
-### 2021.03.23
+<a id="mar-23-2021"></a>
+### 2021.03.23 { #mar-23-2021 }
 
+<a id="mar-23-2021-feature-updates"></a>
 #### 기능 추가
 * [API] 다수 유저 삭제 api 추가
 * [API] 팩터 수, 단일 팩터, 다수 팩터 조회 api 추가
 
-### 2021.02.23
+<a id="feb-23-2021"></a>
+### 2021.02.23 { #feb-23-2021 }
 
+<a id="feb-23-2021-feature-updates"></a>
 #### 기능 추가
 * [API] 특정 순위의 유저 조회 api 추가
 
-### 2020.09.22
+<a id="sep-22-2020"></a>
+### 2020.09.22 { #sep-22-2020 }
 
+<a id="sep-22-2020-feature-updates"></a>
 #### 기능 개선/변경
 * [Document] 게임베이스 자동 활성화로 인한 이용 방법 설명 추가
 
+<a id="sep-22-2020-bug-fixes"></a>
 #### 버그 수정
 * [Console] 특정 점수 이상의 유저 조회 시 에러 발생 현상 수정
 * [API] 없는 팩터의 유저 조회 시 에러 발생 현상 수정
 
-### 2020.01.21
+<a id="jan-21-2020"></a>
+### 2020.01.21 { #jan-21-2020 }
 
+<a id="jan-21-2020-feature-updates"></a>
 #### 기능 개선/변경
 * [Common] 게임베이스 활성화 시 리더보드도 자동 활성화 기능 추가
 
-### 2019.04.23
+<a id="apr-23-2019"></a>
+### 2019.04.23 { #apr-23-2019 }
 
+<a id="apr-23-2019-feature-updates"></a>
 #### 기능 추가
 * [API] 특정 유저를 포함한 전, 후 순위 조회 api 추가
 
-### 2019.03.26
+<a id="mar-26-2019"></a>
+### 2019.03.26 { #mar-26-2019 }
 
+<a id="mar-26-2019-feature-updates"></a>
 #### 기능 개선/변경
 * [API] 파라미터의 대소문자 카멜 케이스로 통일. 기존 소문자로 가이드 된 파라미터는 그대로 사용 가능 
 
-### 2019.02.26
+<a id="feb-26-2019"></a>
+### 2019.02.26 { #feb-26-2019 }
 
+<a id="feb-26-2019-feature-updates"></a>
 #### 기능 개선/변경
 * [Console] 한글, 일어, 영어 검수 내용 적용
 * [Console] Datepicker 다국어 적용
 * [Document] 가이드 한글, 일어, 영어 검수 내용 적용
 
-### 2018.10.23
+<a id="oct-23-2018"></a>
+### 2018.10.23 { #oct-23-2018 }
 
+<a id="oct-23-2018-feature-updates"></a>
 #### 기능 개선/변경
 * [Console] 팩터 등록 시 UTC 시간대 확대
 * [API] Get multiple user info API에 정렬 기능 추가
 * [Document] 개선된 Get multiple user info API에 대한 설명 추가
 
-### 2018.08.28
+<a id="august-28-2018"></a>
+### 2018.08.28 { #august-28-2018 }
 
+<a id="august-28-2018-feature-updates"></a>
 #### 기능 개선/변경
 * [Console] 팩터 등록 시 UTC 설정 기능 추가
 * [Console] 유저 데이터 조회 시 팩터의 UTC 시간을 기준으로 최근 업데이트 시간 표시
 * [Console] 팩터 등록 후 이름, 기타 정보 수정 기능 추가
 * [Document] 개선된 UTC 설정, 팩터 수정 관련 설명 추가
 
-### 2018.07.24
+<a id="july-24-2018"></a>
+### 2018.07.24 { #july-24-2018 }
 
+<a id="july-24-2018-feature-updates"></a>
 #### 기능 개선/변경
 * [Console] 랭킹 데이터 탭 유저 데이터 항목 순서 변경. 순위를 맨 앞에 보이도록 수정.
 
+<a id="july-24-2018-bug-fixes"></a>
 #### 버그 수정
 * [Console] 랭킹 데이터 탭의 일부 특정 범위 유저 조회 시 페이징 되지 않는 버그 수정
 * [Console] 일부 특정 범위 유저 다운로드 시 데이터를 찾을 수 없는 버그 수정
 
-### 2018.06.26
+<a id="june-26-2018"></a>
+### 2018.06.26 { #june-26-2018 }
 
+<a id="june-26-2018-bug-fixes"></a>
 #### 버그 수정
 * [Console] 지표 정보가 일부 누락되어 보이는 현상 수정
 
-### 2018.05.29
+<a id="may-29-2018"></a>
+### 2018.05.29 { #may-29-2018 }
 
+<a id="may-29-2018-feature-updates"></a>
 #### 기능 개선/변경
 * [Console] 유저 데이터 조회 시 500명 제한 해제
 * [Console] 조회한 유저 데이터 다운로드 기능 추가. 1회 최대 10만 명까지 가능
 * [Console] 팩터 등록 시 팩터 ID를 지정할 수 있도록 개선
 * [Document] 신규 추가 및 개선된 콘솔 기능 설명 추가
 
-### 2018.03.22
+<a id="march-22-2018"></a>
+### 2018.03.22 { #march-22-2018 }
 
+<a id="march-22-2018-feature-updates"></a>
 #### 기능 개선/변경
 * [Console] 팩터 등록 시 N 주기만큼 설정할 수 있도록 개선
 * [Document] 개선된 N 주기 설정 관련 설명 추가
 
-### 2018.02.22
+<a id="feb-22-2018"></a>
+### 2018.02.22 { #feb-22-2018 }
 
+<a id="feb-22-2018-feature-updates"></a>
 #### 기능 개선/변경
 * [Console] 콘솔 UI 개편
 * [Console] 랭킹 지표 탭 추가. 일자별 지표 현황 확인 가능
@@ -115,52 +156,68 @@
 * [Console] 팩터 추가, 초기화 시 프로젝트의 ADMIN 사용자만 가능하도록 변경
 * [Document] 신규 추가된 콘솔 기능 설명 추가
 
-### 2017.10.26
+<a id="oct-26-2017"></a>
+### 2017.10.26 { #oct-26-2017 }
 
+<a id="oct-26-2017-feature-updates"></a>
 #### 기능 개선/변경
 * [Document] WRONG_PATH 오류 관련 오류 코드 설명 추가
 * [Document] 일본어 가이드 지원
 
+<a id="oct-26-2017-bug-fixes"></a>
 #### 버그 수정
 * [Console] 유저 정보 전체 선택 상자가 삭제, 재검색 후에도 선택돼 있던 오류 수정
 
-### 2017.08.24
+<a id="august-24-2017"></a>
+### 2017.08.24 { #august-24-2017 }
 
+<a id="august-24-2017-feature-updates"></a>
 #### 기능 개선/변경
 * [Document] API 호출 정책 관련 문구 삽입
 * [Console] 팩터 등록 시 사용하는 용어 및 설명 변경
 
+<a id="august-24-2017-bug-fixes"></a>
 #### 버그 수정
 * [Console] 지난 주기 유저가 삭제되지 않는 문제 수정
 * [Server] 초기화 시점에 데이터가 들어왔을 때 정합성 문제 수정
 * [API] 점수에 너무 큰 수 또는 작은 수가 입력되었을 경우 Infinity로 출력되는 이슈 수정
 * [API] UserID 에 "" 가 들어오지 못하도록 수정
 
-### 2017.06.22
+<a id="june-22-2017"></a>
+### 2017.06.22 { #june-22-2017 }
 
+<a id="june-22-2017-bug-fixes"></a>
 #### 버그 수정
 * [Console] Internet Explorer에서 랭킹 등록 시 이름을 한글로 등록하는 경우 내용이 잘리는 이슈 수정
 * [Console] 랭킹 내 유저 조회 시 유저 범위 조회가 UI와 맞지 않는 이슈 수정
 
-### 2017.04.20
+<a id="april-20-2017"></a>
+### 2017.04.20 { #april-20-2017 }
 
+<a id="april-20-2017-feature-updates"></a>
 #### 기능 개선/변경
 * [Console] 랭킹 설정 탭에 팩터 검색 기능 추가. 팩터 이름, 팩터 주기에 따라 검색 가능
 * [Console] 랭킹 데이터 탭에 검색 창 간결하게 변경. 검색 시 팩터 주기를 기준으로 등록된 팩터 분류
 
+<a id="april-20-2017-bug-fixes"></a>
 #### 버그 수정
 * [API] 서버로 요청이 오면, 비정상적인 요청인 경우에도, HTTP Status Code를 200으로 리턴
 
-### 2017.02.23
+<a id="feb-23-2017"></a>
+### 2017.02.23 { #feb-23-2017 }
 
+<a id="feb-23-2017-feature-updates"></a>
 #### 기능 개선/변경
 * [Console] 팩터 추가 시 주기가 '전체'인 경우 팩터 초기환 시간이 표시되지 않도록 변경
 * [Console] 유저 ID별 랭킹 조회 시 과거 주기도 검색될 수 있도록 기능 추가
 
+<a id="feb-23-2017-bug-fixes"></a>
 #### 버그 수정
 * [Console] 다수의 랭킹 데이터 삭제 요청 시 웹 페이지 동작이 멈추는 버그 수정
 
-### 2017.01.19
+<a id="jan-19-2017"></a>
+### 2017.01.19 { #jan-19-2017 }
+<a id="jan-19-2017-upgrade-guide-for-leaderboard-v2"></a>
 #### LeaderBoard v2 업그레이드 안내
 
 * 내부 구조 변경

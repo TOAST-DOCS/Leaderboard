@@ -1,4 +1,7 @@
-## Game > Leaderboard > API Guide 
+<!-- pre-align:aligned sig=c177ad881774 -->
+
+<a id="game-leaderboard-api-guide"></a>
+## Game > Leaderboard > API Guide { #game-leaderboard-api-guide }
 
 > **[Caution]**<br>
 > Leaderboards that are automatically activated through the gamebase should refer to the usage guide below.<br>
@@ -6,7 +9,8 @@
 
 Leaderboard API provides the following APIs in the REST API format.  
 
-### HTTP API
+<a id="http-api"></a>
+### HTTP API { #http-api }
 - Register user scores (single / multiple) 
 - Win user scores (single / multiple / range / before and after a specific user) 
 - Search the number of users at a factor 
@@ -14,39 +18,46 @@ Leaderboard API provides the following APIs in the REST API format.
 
 <br>
 
-## Prerequisites 
+<a id="prerequisites"></a>
+## Prerequisites { #prerequisites }
 Information that follows must be available to use Server API. 
 
-### Server Address
+<a id="server-address"></a>
+### Server Address { #server-address }
 Server API can be called in the following address, which is also available from the Leaderboard console: <br>
 
 > https://api-leaderboard.cloud.toast.com
 
 ![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/en/api_guide_202106_1-1.PNG)
 
-### AppKey
+<a id="appkey"></a>
+### AppKey { #appkey }
 Appkey is required to use the Leaderboard API. The Appkey is included in the request URL to identify and specify a particular resource when making API calls.
 For more information on checking and using Appkeys, please refer to the [Appkey](/nhncloud/en/public-api/appkey).
 > [Caution] Appkey must not be exposed and cannot be modified.  
 
 ![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/en/api_guide_202106_2-1.PNG)
 
-### Caution 
+<a id="caution"></a>
+### Caution { #caution }
 To use all APIs, **service must be enabled first, to register factors**.  
 Leaderboard API **is recommended to be called only from a server to avoid risks of abusive acts when it is called from Client.**
 
 <br>
 
-## Common 
+<a id="common"></a>
+## Common { #common }
 
-### HTTP Header
+<a id="http-header"></a>
+### HTTP Header { #http-header }
 Following item must be set at HTTP Header to call API: 
 
 | Name | Required |	Value |
 |---|---|---|
 | Content-Type | mandatory | application/json; charset=UTF-8 |
 
-### API Response
+<a id="api-response"></a>
+### API Response { #api-response }
 HTTP 200 OK is sent as response to all APIs. Success or failure of an API request can be decided upon the header of the Response Body. 
 
 ```
@@ -64,10 +75,12 @@ Content-Type: application/json
 }
 ```
 
-### TransactionId
+<a id="transactionid"></a>
+### TransactionId { #transactionid }
  TransactionId is provided as a means of management for API requests within servers sending API calls. With TransactionId set at the HTTP Body of a caller server to call API, the Leaderboard server sends results with the TransactionId set. TransactionId is received in the integer data type. 
 
-### Time
+<a id="time"></a>
+### Time { #time }
 
 User time is updated according to what is defined at RFC 3339. 
 
@@ -75,9 +88,11 @@ User time is updated according to what is defined at RFC 3339.
 
 <br>
 
-## Get API
+<a id="get-api"></a>
+## Get API { #get-api }
 
-### Get total factor count
+<a id="get-total-factor-count"></a>
+### Get total factor count { #get-total-factor-count }
 
 Retrieves the total number of factors.
 
@@ -125,7 +140,8 @@ Content-Type: application/json
 }
 ```
 
-### Get factor info
+<a id="get-factor-info"></a>
+### Get factor info { #get-factor-info }
 
 Retrieve the desired one factor information.
 
@@ -190,7 +206,8 @@ Content-Type: application/json
 }
 ```
 
-### Get multiple factor info
+<a id="get-multiple-factor-info"></a>
+### Get multiple factor info { #get-multiple-factor-info }
 
 Retrieve the number of factor information you want.
 
@@ -312,7 +329,8 @@ Content-Type: application/json
 }
 ```
 
-### Get User Counts in Factor
+<a id="get-user-counts-in-factor"></a>
+### Get User Counts in Factor { #get-user-counts-in-factor }
 
 The number of registered users at a factor of choice can be searched. 
 
@@ -371,7 +389,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
 | resultInfo.totalCount | int | Number of registered users of a factor |
 
-### Get Single User Information
+<a id="get-single-user-information"></a>
+### Get Single User Information { #get-single-user-information }
 
 Information of a single user of choice can be searched. 
 
@@ -444,7 +463,8 @@ Content-Type: application/json
 | userInfo.date | String | Updated time of user scores (RFC 3339) |
 | userInfo.totalUserCountInFactor | int | Number of registered users of a factor |
 
-### Get Multiple User Information
+<a id="get-multiple-user-information"></a>
+### Get Multiple User Information { #get-multiple-user-information }
 
 You can search information of multiple users as required.
 
@@ -601,7 +621,8 @@ Content-Type: application/json
 | userInfos[].date | String | Updated time of user scores (RFC 3339) |
 | userInfos[].totalUserCountInFactor | int | Number of registered users of a factor |
 
-### Get Multiple User Information by Range
+<a id="get-multiple-user-information-by-range"></a>
+### Get Multiple User Information by Range { #get-multiple-user-information-by-range }
 
 You can search ranking information within the range (ranks) of choice.  
 
@@ -701,7 +722,8 @@ Content-Type: application/json
 | userInfos[].date | String | Updated time of user scores (RFC 3339) |
 | userInfos[].totalUserCountInFactor | int | Number of registered users of a factor |
 
-### Get multiple user info by pivot user
+<a id="get-multiple-user-info-by-pivot-user"></a>
+### Get multiple user info by pivot user { #get-multiple-user-info-by-pivot-user }
 
 It is a method to retrieve ranking information of the base user and rank information of the upper and lower users.
 
@@ -844,7 +866,8 @@ Content-Type: application/json
 | userInfos[].date | String | Updated time of user scores (RFC 3339) |
 | userInfos[].totalUserCountInFactor | int | Number of registered users of a factor |
 
-### Get selected rank user info
+<a id="get-selected-rank-user-info"></a>
+### Get selected rank user info { #get-selected-rank-user-info }
 
 This is a way to search for users with a specific rank.
 
@@ -975,9 +998,11 @@ Content-Type: application/json
 
 <br>
 
-## Set API
+<a id="set-api"></a>
+## Set API { #set-api }
 
-### Set Single User Scores
+<a id="set-single-user-scores"></a>
+### Set Single User Scores { #set-single-user-scores }
 
 You can register scores of a user of choice. 
 
@@ -1045,7 +1070,8 @@ Content-Type: application/json
 | resultInfo.userId | String | Registered user ID |
 
 
-### Set Single User Scores with Extra Data
+<a id="set-single-user-scores-with-extra-data"></a>
+### Set Single User Scores with Extra Data { #set-single-user-scores-with-extra-data }
 
 You can register scores and extra data of a user of choice. 
 
@@ -1114,7 +1140,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
 | resultInfo.userId | String | Registered user ID |
 
-### Set Multiple User Scores
+<a id="set-multiple-user-scores"></a>
+### Set Multiple User Scores { #set-multiple-user-scores }
 
 You can register scores of multiple users of choice. 
 
@@ -1236,7 +1263,8 @@ Content-Type: application/json
 | resultInfos.resultCode | int | Error code of a user |
 | resultInfos.userId | String | Registered User ID |
 
-### Set Multiple User Scores with Extra Data
+<a id="set-multiple-user-scores-with-extra-data"></a>
+### Set Multiple User Scores with Extra Data { #set-multiple-user-scores-with-extra-data }
 
 User scores can be registered as required, along with extra data. 
 
@@ -1364,9 +1392,11 @@ Content-Type: application/json
 
 <br>
 
-## Delete API
+<a id="delete-api"></a>
+## Delete API { #delete-api }
 
-### Delete Single User Information
+<a id="delete-single-user-information"></a>
+### Delete Single User Information { #delete-single-user-information }
 
 Information of a user of choice can be deleted: the user information is permanently deleted and cannot be recovered. 
 
@@ -1421,7 +1451,8 @@ Content-Type: application/json
 }
 ```
 
-### Delete multiple user info
+<a id="delete-multiple-user-info"></a>
+### Delete multiple user info { #delete-multiple-user-info }
 
 Information of user list of choice can be deleted: user list information is permanently deleted and cannot be recovered.
 

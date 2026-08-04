@@ -1,4 +1,7 @@
-## Game > Leaderboard > APIガイド
+<!-- pre-align:aligned sig=c177ad881774 -->
+
+<a id="game-leaderboard-api-guide"></a>
+## Game > Leaderboard > APIガイド { #game-leaderboard-api-guide }
 
 > **[注意]**<br>
 > ゲームベースを介して自動的にアクティブ化されたリーダーボードは、以下の利用ガイドを参照して必要があります<br>
@@ -6,7 +9,8 @@
 
 Leaderboard APIはREST API形式で、次のようなAPIを提供します。
 
-### HTTP API
+<a id="http-api"></a>
+### HTTP API { #http-api }
 - ユーザースコアの登録(単一 / 多数)
 - ユーザースコアの獲得(単一 / 多数 / 範囲 / 特定のユーザの前後)
 - ファクターにいるユーザー数の検索
@@ -14,39 +18,46 @@ Leaderboard APIはREST API形式で、次のようなAPIを提供します。
 
 <br>
 
-## 事前準備
+<a id="prerequisites"></a>
+## 事前準備 { #prerequisites }
 サーバーAPIを使用するためには次の情報を知っている必要があります。
 
-### Server Address
+<a id="server-address"></a>
+### Server Address { #server-address }
 サーバーAPI呼び出しサーバーアドレスは次のとおりです。アドレスはLeaderboardコンソールで確認できます。<br>
 
 > https://api-leaderboard.cloud.toast.com
 
 ![図1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_202106_1-1.PNG)
 
-### AppKey
+<a id="appkey"></a>
+### AppKey { #appkey }
 Leaderboard APIを使用するには、Appkeyが必要です。Appkeyは、API呼び出し時にリクエストURLに含めて特定のリソースを指定し、識別するために使用されます。
 Appkeyの確認及び使用に関する詳細は、[Appkey](/nhncloud/ja/public-api/appkey)を参照してください。
 > [注意]アプリケーションキーは外部に表示してはならず、変更できません。
 
 ![図2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/jp/api_guide_202106_2-1.PNG)
 
-### 注意事項
+<a id="caution"></a>
+### 注意事項 { #caution }
 すべてのAPIを使用するには **サービスを有効にした後、ファクターを登録**する必要があります。
 Leaderboard APIは **クライアントで呼び出す時、アビューズなどのリスクがあるため、サーバーからのみ呼び出しすることを推奨します。**
 
 <br>
 
-## 共通
+<a id="common"></a>
+## 共通 { #common }
 
-### HTTP Header
+<a id="http-header"></a>
+### HTTP Header { #http-header }
 APIを呼び出す時、HTTP Headerに次の項目を設定する必要があります。
 
 | Name | Required |	Value |
 |---|---|---|
 | Content-Type | mandatory | application/json; charset=UTF-8 |
 
-### API Response
+<a id="api-response"></a>
+### API Response { #api-response }
 すべてのAPI要請レスポンスにHTTP 200 OKを渡します。 API要請が成功したかはResponse Bodyのheader項目を参照して判断できます。
 
 ```
@@ -64,11 +75,13 @@ Content-Type: application/json
 }
 ```
 
-### TransactionId
+<a id="transactionid"></a>
+### TransactionId { #transactionid }
 APIを呼び出しするサーバーで内部的にAPI要請を管理できる方法としてTransactionId機能を提供します。
 呼び出しするサーバーでHTTP BodyにTransactionIdを設定してAPIを呼び出すと、Leaderboardサーバーはレスポンス結果に該当のTransactionIdを設定して結果を伝えます。TransactionIdは整数型で受け取ります。
 
-### Time
+<a id="time"></a>
+### Time { #time }
 
 ユーザーのアップデート時間はRFC 3339定義に従います。
 
@@ -76,9 +89,11 @@ APIを呼び出しするサーバーで内部的にAPI要請を管理できる�
 
 <br>
 
-## Get API
+<a id="get-api"></a>
+## Get API { #get-api }
 
-### Get total factor count
+<a id="get-total-factor-count"></a>
+### Get total factor count { #get-total-factor-count }
 
 ファクターの合計数を検索します。
 
@@ -126,7 +141,8 @@ Content-Type: application/json
 }
 ```
 
-### Get factor info
+<a id="get-factor-info"></a>
+### Get factor info { #get-factor-info }
 
 希望したのファクター情報を検索します。
 
@@ -191,7 +207,8 @@ Content-Type: application/json
 }
 ```
 
-### Get multiple factor info
+<a id="get-multiple-factor-info"></a>
+### Get multiple factor info { #get-multiple-factor-info }
 
 希望多数のファクター情報を検索します。
 
@@ -313,7 +330,8 @@ Content-Type: application/json
 }
 ```
 
-### Get user count in factor
+<a id="get-user-counts-in-factor"></a>
+### Get user count in factor { #get-user-counts-in-factor }
 
 希望する1個のファクターに登録されたユーザーの数を検索します。
 
@@ -372,7 +390,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/error-code) |
 | resultInfo.totalCount | int | ファクターに登録されたユーザー数 |
 
-### Get single user info
+<a id="get-single-user-information"></a>
+### Get single user info { #get-single-user-information }
 
 希望する1名のユーザーの情報を検索できます。
 
@@ -445,7 +464,8 @@ Content-Type: application/json
 | userInfo.date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
 | userInfo.totalUserCountInFactor | int | ファクターに登録されたユーザー数 |
 
-### Get multiple user info
+<a id="get-multiple-user-information"></a>
+### Get multiple user info { #get-multiple-user-information }
 
 希望する多数のユーザー情報を検索できる方法です。
 
@@ -602,7 +622,8 @@ Content-Type: application/json
 | userInfos[].date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
 | userInfos[].totalUserCountInFactor | int | ファクターに登録されたユーザー数 |
 
-### Get multiple user info by range
+<a id="get-multiple-user-information-by-range"></a>
+### Get multiple user info by range { #get-multiple-user-information-by-range }
 
 希望する範囲(順位)の順位情報を検索できる方法です。
 
@@ -702,7 +723,8 @@ Content-Type: application/json
 | userInfos[].date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
 | userInfos[].totalUserCountInFactor | int | ファクターに登録されたユーザー数 |
 
-### Get multiple user info by pivot user
+<a id="get-multiple-user-info-by-pivot-user"></a>
+### Get multiple user info by pivot user { #get-multiple-user-info-by-pivot-user }
 
 基準ユーザの順位と上位、下位ユーザの順位情報を取得することができる方法です。
 
@@ -845,7 +867,8 @@ Content-Type: application/json
 | userInfos[].date | String | ユーザースコアがアップデートされた時間(RFC 3339) |
 | userInfos[].totalUserCountInFactor | int | ファクターに登録されたユーザー数 |
 
-### Get selected rank user info
+<a id="get-selected-rank-user-info"></a>
+### Get selected rank user info { #get-selected-rank-user-info }
 
 特定の順位のユーザを検索することができる方法です。
 
@@ -976,9 +999,11 @@ Content-Type: application/json
 
 <br>
 
-## Set API
+<a id="set-api"></a>
+## Set API { #set-api }
 
-### Set single user score
+<a id="set-single-user-scores"></a>
+### Set single user score { #set-single-user-scores }
 
 希望する1名のユーザースコアを登録できる方法です。
 
@@ -1046,7 +1071,8 @@ Content-Type: application/json
 | resultInfo.userId | String | 登録されたユーザーID |
 
 
-### Set single user score with extra data
+<a id="set-single-user-scores-with-extra-data"></a>
+### Set single user score with extra data { #set-single-user-scores-with-extra-data }
 
 希望する1名のユーザースコアとExtra Dataを登録できる方法です。
 
@@ -1115,7 +1141,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | エラーコード[\[LINK\]](/Game/Leaderboard/ja/error-code) |
 | resultInfo.userId | String | 登録されたユーザーID |
 
-### Set multiple user score
+<a id="set-multiple-user-scores"></a>
+### Set multiple user score { #set-multiple-user-scores }
 
 希望するユーザーのスコアを登録できる方法です。
 
@@ -1237,7 +1264,8 @@ Content-Type: application/json
 | resultInfos.resultCode | int | ユーザーに対するエラーコード |
 | resultInfos.userId | String | 登録されたユーザーID |
 
-### Set multiple user score with extra data
+<a id="set-multiple-user-scores-with-extra-data"></a>
+### Set multiple user score with extra data { #set-multiple-user-scores-with-extra-data }
 
 希望するユーザースコアとExtra Dataを登録できる方法です。
 
@@ -1365,9 +1393,11 @@ Content-Type: application/json
 
 <br>
 
-## Delete API
+<a id="delete-api"></a>
+## Delete API { #delete-api }
 
-### Delete single user info
+<a id="delete-single-user-information"></a>
+### Delete single user info { #delete-single-user-information }
 
 希望するユーザー1名の情報を削除する方法です。該当ユーザーは完全に削除され、復旧できません。
 
@@ -1423,7 +1453,8 @@ Content-Type: application/json
 ```
 <br>
 
-### Delete multiple user info
+<a id="delete-multiple-user-info"></a>
+### Delete multiple user info { #delete-multiple-user-info }
 
 希望ユーザ複数の情報を削除する方法です。このユーザーは、完全に削除され、復元されません。
 

@@ -1,6 +1,10 @@
-## Game > Leaderboard > Error Codes
+<!-- pre-align:aligned sig=a831e21b56d5 -->
 
-## Error Codes 
+<a id="game-leaderboard-error-codes"></a>
+## Game > Leaderboard > Error Codes { #game-leaderboard-error-codes }
+
+<a id="error-codes"></a>
+## Error Codes { #error-codes }
 
 Below table describes resultCode and resultMessage at the header/body in the Response body. 
 If resultCode at the header displays HTTP error codes, not like below, see the [Note] link at the bottom. 

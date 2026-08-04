@@ -1,4 +1,7 @@
-## Game > Leaderboard > Console User Guide
+<!-- pre-align:aligned sig=5dbe7787c4ab -->
+
+<a id="game-leaderboard-console-user-guide"></a>
+## Game > Leaderboard > Console User Guide { #game-leaderboard-console-user-guide }
 
 Leaderboard must be enabled first to use the service, before registering factors.   
 Following features are available: 
@@ -6,10 +9,12 @@ Following features are available:
 * Register, initialize, and delete factors 
 * Search, modify, and delete user's ranking information 
 
-## Ranking Indicators 
+<a id="ranking-indicators"></a>
+## Ranking Indicators { #ranking-indicators }
 ![leaderboard_01_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_01_202106.png)
 
-### 1. Indicators of Particular Dates 
+<a id="indicators-of-particular-dates"></a>
+### 1. Indicators of Particular Dates { #indicators-of-particular-dates }
 
 You can check the total number of users, number of factors, cycle and occupancy rate of each factor, on a particular date: data are available on a date between today and 6 months before. 
 
@@ -17,29 +22,35 @@ Select a date on a calendar to find its indicators.
 
 **[Description of Each Item ]**
 
+<a id="indicators-of-particular-dates-entire-data"></a>
 #### Entire Data 
 
 - The day's total number of users
 
+<a id="indicators-of-particular-dates-number-of-factors"></a>
 #### Number of Factors 
 
 - The day's number of factors: displayed on a graph by each cycle. 
 
+<a id="indicators-of-particular-dates-chart-of-data-occupancy-rate"></a>
 #### Chart of Data Occupancy Rate 
 
 - Cycle: Shows the number of users by the cycle.  
 - Factor: Shows the number of users by the factor. 
 
 
-### 2. Data Indicators during Search Period 
+<a id="data-indicators-during-search-period"></a>
+### 2. Data Indicators during Search Period { #data-indicators-during-search-period }
 
 Data fluctuation can be traced during a particular search period, which cannot exceed 6 months. 
 
 Up to 10 factors can be selected; if no factor is selected, top 10 factor data are searched, as of a selected cycle.   
 
-## Ranking Data 
+<a id="ranking-data"></a>
+## Ranking Data { #ranking-data }
 
-### Search of Ranking Data 
+<a id="search-of-ranking-data"></a>
+### Search of Ranking Data { #search-of-ranking-data }
 
 ![leaderboard_02_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_02_202106.png)
 
@@ -50,19 +61,23 @@ Select a search criteria to search for user information.
 
 **[Description of Each Item]**
 
+<a id="search-of-ranking-data-select-cycle"></a>
 #### Select Cycle
 - Previous Cycle: Search ranking information of the previous cycle.
 - Current Cycle: Search ranking information of the current cycle. 
 
+<a id="search-of-ranking-data-search-conditions"></a>
 #### Search Conditions 
 - Search by Ranking: Specify the range of ranking for the users to search for. The range is limited to 500 for a search. 
 - Search by User ID: Enter user ID to search for a factor. Cannot search when user is not available. 
 
 
-### User Information 
+<a id="user-information"></a>
+### User Information { #user-information }
 
 ![leaderboard_03_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_03_202106.png)
 
+<a id="user-information-modify-user-information"></a>
 #### 1. Modify User Information 
 
 Select a user to modify after search. 
@@ -72,6 +87,7 @@ Click **Modify** and a window shows up to enter data. Scores and other data can 
 
 ![leaderboard_04_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_04_202106.png)
 
+<a id="user-information-delete-user-information"></a>
 #### 2. Delete User Information 
 
 Select a user to delete after search. 
@@ -82,6 +98,7 @@ Click **Delete** and a window shows up asking whether to delete. Reasons are req
 
 ![leaderboard_05_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_05_202106.png)
 
+<a id="user-information-save-user-data"></a>
 #### 3. Save User Data 
 
 To save currently-searched user information, click **Save Data**.
@@ -91,15 +108,18 @@ Data can be saved for up to 100 thousand cases at a time, and if it exceeds the 
 
 ![leaderboard_06_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_06_202106.png)
 
-## Ranking Setting 
+<a id="ranking-setting"></a>
+## Ranking Setting { #ranking-setting }
 
 ![leaderboard_07_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_07_202106.png)
 
 > **[Note]**<br>
 > Registering, initializing, and deleting factors are executable only by those users who are registered as ADMIN.  
 
-### Register Factors 
+<a id="register-factors"></a>
+### Register Factors { #register-factors }
 
+<a id="register-factors-direct-input"></a>
 #### Direct Input
 
 After service is enabled, factor information must be added. Go to **Game > Leaderboard > Ranking Setting > +Add > Direct Input** to register factors.
@@ -168,6 +188,7 @@ Click **[+Add]** and a window pops up as below.
 
 > [Note] Factor ID is automatically specified when a factor is added. 
 
+<a id="register-factors-upload-files"></a>
 #### Upload Files
 
 If you want to add multiple factors at once, click **Game > Leaderboard > Ranking Setting > +Add > Upload Files** to upload the file to register the factors.
@@ -178,7 +199,8 @@ Download the template, fill out the factor information, and upload the excel fil
 
 Press the Add Factor button to add factors.
 
-### Search Factors 
+<a id="search-factors"></a>
+### Search Factors { #search-factors }
 
 ![leaderboard_09_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_09_201902.png)
 
@@ -186,7 +208,8 @@ When a search condition is the factor name, search factors by the name containin
 
 When a search condition is the factor cycle, search factors by the cycle on the selection list. 
 
-### Initialize Factors 
+<a id="initialize-factors"></a>
+### Initialize Factors { #initialize-factors }
 
 ![leaderboard_10_201902](https://static.toastoven.net/prod_leaderboardv2/en/leaderboard_10_202106.png)
 
@@ -197,7 +220,8 @@ Click **Initialize** and a window pops up. Once a factor is initialized, all its
 If the bottom is checked on the pop-up page, even the factor shall be deleted. Take it cautiously since data cannot be recovered once it is deleted.  
 
 
-### Modify Factors 
+<a id="modify-factors"></a>
+### Modify Factors { #modify-factors }
 
 Select a factor name to modify from the list. 
 
