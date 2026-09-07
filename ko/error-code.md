@@ -1,6 +1,10 @@
-## Game > Leaderboard > 오류 코드
+<!-- pre-align:aligned sig=a831e21b56d5 -->
 
-## 오류 코드
+<a id="game-leaderboard-error-codes"></a>
+## Game > Leaderboard > 오류 코드 { #game-leaderboard-error-codes }
+
+<a id="error-codes"></a>
+## 오류 코드 { #error-codes }
 
 아래 표의 오류 코드는 Response body의 header/body에 있는 resultCode와 resultMessage의 의미를 설명합니다.
 header에 있는 resultCode에서 아래의 오류 코드가 아닌  HTTP 오류 코드가 보이면 아래 [참고] 링크를 참고해 주시기 바랍니다.

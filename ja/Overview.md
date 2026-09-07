@@ -1,28 +1,35 @@
-## Game > Leaderboard > 概要
+<!-- pre-align:aligned sig=a6d523e8ee7f -->
+
+<a id="game-leaderboard-overview"></a>
+## Game > Leaderboard > 概要 { #game-leaderboard-overview }
 
 ゲームでフレンドとの順位競争は、今では欠かすことのできない要素です。<br>
 Leaderboardプラットフォームを使用すれば、簡単な連動だけでランキングサービスを実装できます。
 
 <br>
 
-## Merits
+<a id="merits"></a>
+## Merits { #merits }
 
 ![[図0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/newMerits_jp_202203.png)
 
 <br>
 
-## 主な機能
+<a id="main-features"></a>
+## 主な機能 { #main-features }
 
 次のような機能を提供します。
 
-### ウェブコンソール
+<a id="web-console"></a>
+### ウェブコンソール { #web-console }
 
 - 使用量情報確認
 - TPS(1秒当たりの処理量)確認
 - ファクター登録、検索、初期化
 - ユーザースコア検索、変更、削除
 
-### HTTP API
+<a id="http-api"></a>
+### HTTP API { #http-api }
 
 - ユーザースコア登録(単一、多数)
 - ユーザースコア獲得(単一、多数、範囲)
@@ -31,7 +38,8 @@ Leaderboardプラットフォームを使用すれば、簡単な連動だけで
 
 <br>
 
-## 用語
+<a id="glossary"></a>
+## 用語 { #glossary }
 
 Leaderboardでは次の用語を使用します。
 
@@ -46,9 +54,11 @@ Leaderboardでは次の用語を使用します。
 
 <br>
 
-## サービス構造
+<a id="service-structure"></a>
+## サービス構造 { #service-structure }
 
-### 物理的構造
+<a id="physical-structure"></a>
+### 物理的構造 { #physical-structure }
 
 Leaderboardプラットフォームの物理的構造は、下図のとおりです。
 
@@ -59,7 +69,8 @@ Leaderboardプラットフォームの物理的構造は、下図のとおりで
 - Leaderboard APサーバーは、メモリサーバーとCassandraにデータを保存します。
 - Leaderboard APサーバーは、メモリサーバーでソートされたデータを取得します。
 
-### 論理的構造
+<a id="logical-structure"></a>
+### 論理的構造 { #logical-structure }
 
 Leaderboardプラットフォームの論理的構造は、下図のとおりです。
 
@@ -71,11 +82,13 @@ Leaderboardプラットフォームの論理的構造は、下図のとおりで
 
 <br>
 
-## 特徴
+<a id="features"></a>
+## 特徴 { #features }
 
 設定はファクター単位で可能です。設定によって複数の特性のLeaderboardを使用できます。
 
-### ソート
+<a id="sorting"></a>
+### ソート { #sorting }
 
 スコアソート方式は、昇順、降順を設定できます。
 
@@ -91,7 +104,8 @@ Leaderboardプラットフォームの論理的構造は、下図のとおりで
 
 ![[図4降順ソート]](http://static.toastoven.net/prod_leaderboardv2/overview_4-jp.png)
 
-### スコアアップデート
+<a id="updating-scores"></a>
+### スコアアップデート { #updating-scores }
 
 スコアアップデート方式は、最高、最新、累積スコアに設定できます。
 
@@ -113,7 +127,8 @@ Leaderboardプラットフォームの論理的構造は、下図のとおりで
 
 ![[図7累積スコアアップデート]](http://static.toastoven.net/prod_leaderboardv2/overview_7-jp.png)
 
-### 同点者の処理
+<a id="tie-breaking"></a>
+### 同点者の処理 { #tie-breaking }
 
 同点者の順位決定方式は、ファクター単位で最初、最新ランキング獲得者優先順位に設定できます。
 
@@ -129,16 +144,19 @@ Leaderboardプラットフォームの論理的構造は、下図のとおりで
 
 ![[図9：最新ランキング獲得者優先順位]](http://static.toastoven.net/prod_leaderboardv2/overview_9-jp.png)
 
-### 初期化時間
+<a id="initialization-time"></a>
+### 初期化時間 { #initialization-time }
 
 ファクターの初期化時間を設定できます。<br>
 全体ランキングは初期化されません。
 
-### 初期化日時
+<a id="initialization-date-and-time"></a>
+### 初期化日時 { #initialization-date-and-time }
 
 週間ランキングは初期化曜日を、月間ランキングは初期化日を指定できます。<br>
 全体ランキングは初期化されません。
 
-### 限界ユーザー数
+<a id="limited-number-of-users"></a>
+### 限界ユーザー数 { #limited-number-of-users }
 
 ファクターに登録できる最大ユーザー数を意味します。最大1,000万人まで入力できます。

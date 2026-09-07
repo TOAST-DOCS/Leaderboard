@@ -1,28 +1,35 @@
-## Game > Leaderboard > Overview
+<!-- pre-align:aligned sig=78dc2e6abef4 -->
+
+<a id="game-leaderboard-overview"></a>
+## Game > Leaderboard > Overview { #game-leaderboard-overview }
 
 ゲームにおいて友だちとのランキング競争は今や欠かせない要素となっています。<br>
 「Leaderboard」プラットフォームは、簡単な連動だけでランキングサービスを実装できるようサポートします。
 
 <br>
 
-## Merits
+<a id="merits"></a>
+## Merits { #merits }
 
 ![[図0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/merits-jp.png)
 
 <br>
 
-## Main Function
+<a id="section-1"></a>
+## Main Function { #section-1 }
 
 以下のような機能を提供します。
 
-### Web Console 
+<a id="web-console"></a>
+### Web Console { #web-console }
 
 - 使用量の情報確認
 - TPS(秒あたりのスループット)確認
 - Factor登録 / 照会 / リセット
 - ユーザースコア照会 / 変更 / 削除
 
-### HTTP API
+<a id="http-api"></a>
+### HTTP API { #http-api }
 
 - ユーザースコア登録（単一 / 複数）
 - ユーザースコア獲得（単一 / 複数 / 範囲）
@@ -31,7 +38,8 @@
 
 <br>
 
-## Term
+<a id="section-2"></a>
+## Term { #section-2 }
 
 「Leaderboard」では、次の用語を使います。
 
@@ -46,9 +54,11 @@
 
 <br>
 
-## Service Structure
+<a id="section-3"></a>
+## Service Structure { #section-3 }
 
-### Physical Structure
+<a id="section-3-1"></a>
+### Physical Structure { #section-3-1 }
 
 「Leaderboard」プラットフォームの物理的構造は、以下の図の通りです。
 
@@ -59,7 +69,8 @@
 - Leaderboard APサーバーは、Memory ServerとCassandraにデータを保存します。
 - Leaderboard APサーバーは、Memory Serverからソート済みのデータを取得します。
 
-### Logical Structure
+<a id="section-3-2"></a>
+### Logical Structure { #section-3-2 }
 
 「Leaderboard」プラットフォームの論理的構造は、以下の図の通りです。
 
@@ -71,11 +82,13 @@
 
 <br>
 
-## Feature
+<a id="feature"></a>
+## Feature { #feature }
 
 設定はFactor単位で行うことができます。設定により、様々な特性のリーダーボードをご利用いただけます。
 
-###  Sorting
+<a id="feature-1"></a>
+###  Sorting { #feature-1 }
 
 スコアソート方式は、昇順/降順ソートで設定できます。
 
@@ -91,7 +104,8 @@
 
 ![[図4 降順ソート]](http://static.toastoven.net/prod_leaderboardv2/overview_4-jp.png)
 
-### Score update
+<a id="feature-2"></a>
+### Score update { #feature-2 }
 
 スコアのアップデート方式は、最高/最新/累計スコアで設定できます。
 
@@ -113,7 +127,8 @@
 
 ![[図7 累計スコアのアップデート]](http://static.toastoven.net/prod_leaderboardv2/overview_7-jp.png)
 
-### Tie score
+<a id="feature-3"></a>
+### Tie score { #feature-3 }
 
 同点者のランキング決定方式は、Factor単位で最初/最新ランキング獲得者の優先順位で設定できます。
 
@@ -129,17 +144,20 @@
 
 ![[図9 最新ランキング獲得者の優先順位]](http://static.toastoven.net/prod_leaderboardv2/overview_9-jp.png)
 
-### Reset time
+<a id="reset-time"></a>
+### Reset time { #reset-time }
 
 該当Factorのリセット時間を設定できます。<br>
 全体ランキングはリセットされません。
 
-### Reset Date
+<a id="reset-date"></a>
+### Reset Date { #reset-date }
 
 週間ランキングはリセットの曜日を、月間ランキングはリセットの日付を指定できます。<br>
 全体ランキングはリセットされません。
 
-### Limit User
+<a id="limit-user"></a>
+### Limit User { #limit-user }
 
 該当Factorに登録できる最大ユーザー数を意味します。最大1000万人まで入力できます。
 

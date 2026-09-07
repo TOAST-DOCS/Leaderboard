@@ -1,8 +1,10 @@
-## Game > Leaderboard > Developer's Guide
+<a id="game-leaderboard-developers-guide"></a>
+## Game > Leaderboard > Developer's Guide { #game-leaderboard-developers-guide }
 
 Leaderboard APIは、REST APIの形で以下のAPIを提供します。
 
-### HTTP API
+<a id="http-api"></a>
+### HTTP API { #http-api }
 - ユーザースコア登録（単一 / 複数）
 - ユーザースコア獲得（単一 / 複数 / 範囲）
 - Factorに入っているユーザー数照会
@@ -10,20 +12,24 @@ Leaderboard APIは、REST APIの形で以下のAPIを提供します。
 
 <br>
 
-## Notice
+<a id="section-1"></a>
+## Notice { #section-1 }
 
-### Caution
+<a id="caution"></a>
+### Caution { #caution }
 すべてのAPIを使用するためには、**商品をアクティブ化してから、Factorを登録**する必要があります。
 Leaderboard APIは、**Serverから呼び出すことをお勧め**しており、**Clientからの呼び出しはお勧めしていません。**
 
-### Server Address
+<a id="server-address"></a>
+### Server Address { #server-address }
 サーバーAPIを呼び出すためのサーバーアドレスは、以下の通りです。このアドレスは「Leaderboard」のコンソール画面からも確認できます。<br>
 
 > https://api-leaderboard.cloud.toast.com
 
 ![図 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/developer_1-jp.png)
 
-### AppKey
+<a id="appkey"></a>
+### AppKey { #appkey }
 AppKeyは、ゲームサーバーにリクエストを送る際に必要な固有なキーで、 「Leaderboard」のコンソール画面からも確認できます。
 > **注意事項** <br>
 > AppKeyは、外部に露出されることがあってはなりません。なお、変更はできないので、ご注意ください。
@@ -32,16 +38,19 @@ AppKeyは、ゲームサーバーにリクエストを送る際に必要な固�
 
 <br>
 
-## Common
+<a id="common"></a>
+## Common { #common }
 
-### HTTP Header
+<a id="http-header"></a>
+### HTTP Header { #http-header }
 API呼び出し時にHTTP Headerに以下の項目を設定する必要があります。
 
 | Name | Required | Value |
 |---|---|---|
 | Content-Type | mandatory | application/json; charset=UTF-8 |
 
-### API Response
+<a id="api-response"></a>
+### API Response { #api-response }
 すべてのAPIリクエストに対するレスポンスとして、HTTP 200 OKを送ります。APIリクエストの成否は、Response Bodyのheader項目を参照し判断できます。
 
 ```
@@ -59,11 +68,13 @@ Content-Type: application/json
 }
 ```
 
-### TransactionId
+<a id="transactionid"></a>
+### TransactionId { #transactionid }
 APIを呼び出すサーバーで内部的にAPIリクエストを管理できる方法として、TransactionId機能を提供します。
 呼び出すサーバーのHTTP BodyにTransactionIdを設定しAPIを呼び出すと、「Leaderboard」サーバーは、レスポンスの結果に該当のTransactionIdを設定し、結果を送ります。TransactionIdは、定数型タイプです。
 
-### Time
+<a id="common-1"></a>
+### Time { #common-1 }
 
 ユーザーのアップデート時間は、RFC 3339の定義に従います。
 
@@ -71,9 +82,11 @@ APIを呼び出すサーバーで内部的にAPIリクエストを管理でき�
 
 <br>
 
-## Get API
+<a id="leaderboard"></a>
+## Get API { #leaderboard }
 
-### Get user count in factor
+<a id="factor"></a>
+### Get user count in factor { #factor }
 
 希望する1つのFactorに登録されているユーザー数を照会します。
 
@@ -132,7 +145,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | resultInfo.totalCount | int | Factorに登録されているユーザー数 |
 
-### Get single user info
+<a id="leaderboard-1"></a>
+### Get single user info { #leaderboard-1 }
 
 希望する一人のユーザー情報を照会できます。
 
@@ -203,7 +217,8 @@ Content-Type: application/json
 | userInfo.extra | String | ユーザーとともに保存されるExtra Data（最大16Byte） |
 | userInfo.date | String | ユーザースコアがアップデートされた時間（RFC 3339） |
 
-### Get multiple user info
+<a id="leaderboard-2"></a>
+### Get multiple user info { #leaderboard-2 }
 
 希望する複数のユーザー情報を照会できる方法です。
 
@@ -351,7 +366,8 @@ Content-Type: application/json
 | userInfos[].extra | String | ユーザーとともに保存されるExtra Data（最大16Byte) |
 | userInfos[].date | String | ユーザースコアがアップデートされた時間（RFC 3339) |
 
-### Get multiple user info by range
+<a id="leaderboard-3"></a>
+### Get multiple user info by range { #leaderboard-3 }
 
 希望する範囲（順位）のランキング情報を照会できる方法です。
 
@@ -449,9 +465,11 @@ Content-Type: application/json
 
 <br>
 
-## Set API
+<a id="leaderboard-4"></a>
+## Set API { #leaderboard-4 }
 
-### Set single user score
+<a id="leaderboard-4-1"></a>
+### Set single user score { #leaderboard-4-1 }
 
 希望する一人のユーザーのスコアを登録できる方法です。
 
@@ -519,7 +537,8 @@ Content-Type: application/json
 | resultInfo.userId | String | 登録されたユーザーID  |
 
 
-### Set single user score with extra data
+<a id="extradata"></a>
+### Set single user score with extra data { #extradata }
 
 希望する一人のユーザーのスコアとExtra Dataを登録できる方法です。
 
@@ -588,7 +607,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | エラーコード [\[LINK\]](/Game/Leaderboard/ja/Developer%60s%20Guide/#error-codes) |
 | resultInfo.userId | String | 登録されたユーザーID  |
 
-### Set multiple user score
+<a id="leaderboard-4-2"></a>
+### Set multiple user score { #leaderboard-4-2 }
 
 希望するユーザースコアを登録できる方法です。
 
@@ -710,7 +730,8 @@ Content-Type: application/json
 | resultInfos.resultCode | int | User に対するエラーコード|
 | resultInfos.userId | String | 登録されたユーザーID  |
 
-### Set multiple user score with extra data
+<a id="leaderboard-4-extradata"></a>
+### Set multiple user score with extra data { #leaderboard-4-extradata }
 
 希望するユーザースコアとExtra Dataを登録できる方法です。
 
@@ -838,9 +859,11 @@ Content-Type: application/json
 
 <br>
 
-## Delete API
+<a id="leaderboard-5"></a>
+## Delete API { #leaderboard-5 }
 
-### Delete single user info
+<a id="leaderboard-5-leaderboard"></a>
+### Delete single user info { #leaderboard-5-leaderboard }
 
 希望する一人のユーザー情報を削除する方法です。該当ユーザーは永久的に削除され、復旧できません。
 
@@ -897,7 +920,8 @@ Content-Type: application/json
 
 <br>
 
-## Error Codes
+<a id="section-2"></a>
+## Error Codes { #section-2 }
 
 以下の表のエラーコードは、Response bodyのheader/bodyにあるresultCodeとresultMessageの意味を説明したものです。
 HeaderのresultCodeで以下のエラーコードではなく、HTTPのエラーコードが表示される場合は、以下の[参照]リンクをご参照ください。

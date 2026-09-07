@@ -1,28 +1,35 @@
-## Game > Leaderboard > Overview
+<!-- pre-align:aligned sig=78dc2e6abef4 -->
+
+<a id="game-leaderboard-overview"></a>
+## Game > Leaderboard > Overview { #game-leaderboard-overview }
 
 게임에서 친구들과의 순위 경쟁은 이제 빠질 수 없는 요소 입니다.<br>
 Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 할 수 있도록 지원 합니다.
 
 <br>
 
-## Merits
+<a id="merits"></a>
+## Merits { #merits }
 
 ![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/merits.png)
 
 <br>
 
-## Main Function
+<a id="section-1"></a>
+## Main Function { #section-1 }
 
 다음과 같은 기능을 제공합니다.
 
-### Web Console 
+<a id="web-console"></a>
+### Web Console { #web-console }
 
 - 사용량 정보 확인 
 - TPS(초당 처리량) 확인
 - Factor 등록 / 조회 / 초기화
 - User 점수 조회 / 변경 / 삭제
 
-### HTTP API
+<a id="http-api"></a>
+### HTTP API { #http-api }
 
 - User 점수 등록 (단일 / 다수)
 - User 점수 획득 (단일 / 다수 / 범위)
@@ -31,7 +38,8 @@ Leaderboard 플랫폼은 간단한 연동만으로 랭킹 서비스를 구현 �
 
 <br>
 
-## Term
+<a id="section-2"></a>
+## Term { #section-2 }
 
 Leaderboard 에서는 다음 용어를 사용합니다.
 
@@ -46,9 +54,11 @@ Leaderboard 에서는 다음 용어를 사용합니다.
 
 <br>
 
-## Service Structure
+<a id="section-3"></a>
+## Service Structure { #section-3 }
 
-### Physical Structure
+<a id="section-3-1"></a>
+### Physical Structure { #section-3-1 }
 
 Leaderboard 플랫폼의 물리적 구성은 아래 그림과 같습니다.
 
@@ -59,7 +69,8 @@ Leaderboard 플랫폼의 물리적 구성은 아래 그림과 같습니다.
 - Leaderboard AP 서버는 Memory Server 와 Cassandra 에 데이터를 저장합니다.
 - Leaderboard AP 서버는 Memory Server 에서 정렬된 데이터를 가져옵니다.
 
-### Logical Structure
+<a id="section-3-2"></a>
+### Logical Structure { #section-3-2 }
 
 Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 
@@ -71,11 +82,13 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 
 <br>
 
-## Feature
+<a id="feature"></a>
+## Feature { #feature }
 
 설정은 Factor 단위로 할 수 있습니다. 설정에 따라서 여러 특성의 리더보드를 사용하실 수 있습니다.
 
-###  Sorting
+<a id="feature-1"></a>
+###  Sorting { #feature-1 }
 
 점수 정렬 방식은 오름차순/내림차순 정렬로 설정할 수 있습니다. 
 
@@ -91,7 +104,8 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 
 ![[그림 4 내림차순 정렬]](http://static.toastoven.net/prod_leaderboardv2/overview_4.png)
 
-### Score update
+<a id="feature-2"></a>
+### Score update { #feature-2 }
 
 점수 업데이트 방식은 최고/최근/누적 점수로 설정할 수 있습니다. 
 
@@ -113,7 +127,8 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 
 ![[그림 7 누적 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_7.png)
 
-### Tie score
+<a id="feature-3"></a>
+### Tie score { #feature-3 }
 
 동점자 순위 결정 방식은 Factor 단위로 최초/최근 랭킹 획득자 우선순위로 설정할 수 있습니다.
 
@@ -129,16 +144,19 @@ Leaderboard 플랫폼의 논리적 구조는 아래 그림과 같습니다.
 
 ![[그림 9 최근 랭킹 획득자 우선 순위]](http://static.toastoven.net/prod_leaderboardv2/overview_9.png)
 
-### Reset time
+<a id="reset-time"></a>
+### Reset time { #reset-time }
 
 해당 Factor의 초기화 시간을 설정 할 수 있습니다.<br>
 전체 랭킹의 경우는 초기화되지 않습니다.
 
-### Reset Date
+<a id="reset-date"></a>
+### Reset Date { #reset-date }
 
 주간랭킹의 경우 초기화 요일을, 월간랭킹의 경우 초기화 날을 지정할 수 있습니다.<br>
 전체 랭킹의 경우는 초기화되지 않습니다.
 
-### Limit User
+<a id="limit-user"></a>
+### Limit User { #limit-user }
 
 해당 Factor에 등록될 수 있는 최대 유저 수를 뜻합니다. 최대 1000만 명까지 입력할 수 있습니다.

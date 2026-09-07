@@ -1,4 +1,7 @@
-## Game > Leaderboard > API 가이드
+<!-- pre-align:aligned sig=c177ad881774 -->
+
+<a id="game-leaderboard-api-guide"></a>
+## Game > Leaderboard > API 가이드 { #game-leaderboard-api-guide }
 
 > **[유의 사항]**<br>
 > 게임베이스를 통해 자동 활성화 된 리더보드는 아래의 이용 가이드를 참고해야 합니다.<br>
@@ -6,7 +9,8 @@
 
 Leaderboard API는 REST API 형태로, 다음과 같은 API를 제공합니다.
 
-### HTTP API
+<a id="http-api"></a>
+### HTTP API { #http-api }
 - 유저 점수 등록(단일 / 다수)
 - 유저 점수 획득(단일 / 다수 / 범위 / 특정유저 전후)
 - 팩터에 있는 유저 수 검색
@@ -14,39 +18,46 @@ Leaderboard API는 REST API 형태로, 다음과 같은 API를 제공합니다.
 
 <br>
 
-## 사전 준비
+<a id="prerequisites"></a>
+## 사전 준비 { #prerequisites }
 서버 API를 사용하기 위해서는 다음의 정보들을 알고 있어야 합니다.  
 
-### Server Address
+<a id="server-address"></a>
+### Server Address { #server-address }
 서버 API 호출 서버 주소는 다음과 같습니다. 해당 주소는 Leaderboard 콘솔에서도 확인할 수 있습니다.<br>
 
 > https://api-leaderboard.cloud.toast.com
 
 ![그림 1 Server Address](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_202106_1-1.PNG)
 
-### AppKey
+<a id="appkey"></a>
+### AppKey { #appkey }
 Leaderboard API를 사용하려면 Appkey가 필요합니다. Appkey는 API 호출 시 요청 URL에 포함하여 특정 리소스를 가리키고 식별하는 데 사용됩니다.
 Appkey 확인 및 사용에 대한 자세한 내용은 [Appkey](/nhncloud/ko/public-api/appkey)를 참고하세요.
 > [주의] 앱키는 외부에 노출하면 안 되며, 변경할 수 없습니다.
 
 ![그림 2 AppKey](http://static.toastoven.net/prod_leaderboardv2/renewal/api_guide_202106_2-1.PNG)
 
-### 주의 사항
+<a id="caution"></a>
+### 주의 사항 { #caution }
 모든 API를 사용하려면 **서비스 활성화 후 팩터를 등록**해야 합니다.  
 Leaderboard API는 **클라이언트에서 호출 시 어뷰징 등의 위험이 있어 서버에서만 호출하는 것을 권장합니다.**
 
 <br>
 
-## 공통
+<a id="common"></a>
+## 공통 { #common }
 
-### HTTP Header
+<a id="http-header"></a>
+### HTTP Header { #http-header }
 API를 호출할 때 HTTP Header에 다음 항목을 설정해야 합니다.
 
 | Name | Required |	Value |
 |---|---|---|
 | Content-Type | mandatory | application/json; charset=UTF-8 |
 
-### API Response
+<a id="api-response"></a>
+### API Response { #api-response }
 모든 API 요청 응답으로 HTTP 200 OK를 전달합니다. API 요청 성공 유무는 Response Body의 header 항목을 참고하여 판단할 수 있습니다.
 
 ```
@@ -64,11 +75,13 @@ Content-Type: application/json
 }
 ```
 
-### TransactionId
+<a id="transactionid"></a>
+### TransactionId { #transactionid }
 API를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 있는 방안으로 TransactionId 기능을 제공합니다.
 호출하는 서버에서 HTTP Body에 TransactionId를 설정하여 API를 호출하면, Leaderboard 서버는 응답 결과에 해당 TransactionId를 설정하여 결과를 전달합니다. TransactionId는 정수형 타입으로 받습니다.
 
-### Time
+<a id="time"></a>
+### Time { #time }
 
 유저의 업데이트 시간은 RFC 3339 정의를 따릅니다.
 
@@ -76,9 +89,11 @@ API를 호출하는 서버에서 내부적으로 API 요청을 관리할 수 있
 
 <br>
 
-## Get API
+<a id="get-api"></a>
+## Get API { #get-api }
 
-### Get total factor count
+<a id="get-total-factor-count"></a>
+### Get total factor count { #get-total-factor-count }
 
 팩터의 전체 수를 검색합니다.
 
@@ -126,7 +141,8 @@ Content-Type: application/json
 }
 ```
 
-### Get factor info
+<a id="get-factor-info"></a>
+### Get factor info { #get-factor-info }
 
 원하는 한 개의 팩터 정보를 검색합니다.
 
@@ -191,7 +207,8 @@ Content-Type: application/json
 }
 ```
 
-### Get multiple factor info
+<a id="get-multiple-factor-info"></a>
+### Get multiple factor info { #get-multiple-factor-info }
 
 원하는 다수의 팩터 정보를 검색합니다.
 
@@ -313,7 +330,8 @@ Content-Type: application/json
 }
 ```
 
-### Get user count in factor
+<a id="get-user-counts-in-factor"></a>
+### Get user count in factor { #get-user-counts-in-factor }
 
 원하는 한 개의 팩터에 등록된 유저의 수를 검색합니다.
 
@@ -372,7 +390,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
 | resultInfo.totalCount | int | 팩터에 등록된 유저 수 |
 
-### Get single user info
+<a id="get-single-user-information"></a>
+### Get single user info { #get-single-user-information }
 
 원하는 한 명의 유저의 정보를 검색할 수 있습니다.
 
@@ -445,7 +464,8 @@ Content-Type: application/json
 | userInfo.date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
 | userInfo.totalUserCountInFactor | int | 팩터에 등록된 유저 수 |
 
-### Get multiple user info
+<a id="get-multiple-user-information"></a>
+### Get multiple user info { #get-multiple-user-information }
 
 원하는 다수의 유저 정보를 검색할 수 있는 방법입니다.
 
@@ -602,7 +622,8 @@ Content-Type: application/json
 | userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
 | userInfos[].totalUserCountInFactor | int | 팩터에 등록된 유저 수 |
 
-### Get multiple user info by range
+<a id="get-multiple-user-information-by-range"></a>
+### Get multiple user info by range { #get-multiple-user-information-by-range }
 
 원하는 범위(등수)의 순위 정보를 검색할 수 있는 방법입니다.
 
@@ -702,7 +723,8 @@ Content-Type: application/json
 | userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
 | userInfos[].totalUserCountInFactor | int | 팩터에 등록된 유저 수 |
 
-### Get multiple user info by pivot user
+<a id="get-multiple-user-info-by-pivot-user"></a>
+### Get multiple user info by pivot user { #get-multiple-user-info-by-pivot-user }
 
 기준 유저의 순위 및 상위, 하위 유저들의 순위 정보를 검색할 수 있는 방법입니다.
 
@@ -845,7 +867,8 @@ Content-Type: application/json
 | userInfos[].date | String | 유저 점수가 업데이트된 시간(RFC 3339) |
 | userInfos[].totalUserCountInFactor | int | 팩터에 등록된 유저 수 |
 
-### Get selected rank user info
+<a id="get-selected-rank-user-info"></a>
+### Get selected rank user info { #get-selected-rank-user-info }
 
 특정 순위의 유저들을 검색 할 수 있는 방법입니다.
 
@@ -976,9 +999,11 @@ Content-Type: application/json
 
 <br>
 
-## Set API
+<a id="set-api"></a>
+## Set API { #set-api }
 
-### Set single user score
+<a id="set-single-user-scores"></a>
+### Set single user score { #set-single-user-scores }
 
 원하는 한 명의 유저 점수를 등록할 수 있는 방법입니다.
 
@@ -1045,7 +1070,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
 | resultInfo.userId | String | 등록된 유저 ID |
 
-### Set single user score with extra data
+<a id="set-single-user-scores-with-extra-data"></a>
+### Set single user score with extra data { #set-single-user-scores-with-extra-data }
 
 원하는 한 명의 유저 점수와 Extra Data를 등록할 수 있는 방법입니다.
 
@@ -1114,7 +1140,8 @@ Content-Type: application/json
 | resultInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
 | resultInfo.userId | String | 등록된 유저 ID |
 
-### Set multiple user score
+<a id="set-multiple-user-scores"></a>
+### Set multiple user score { #set-multiple-user-scores }
 
 원하는 유저들 점수를 등록할 수 있는 방법입니다.
 
@@ -1236,7 +1263,8 @@ Content-Type: application/json
 | resultInfos.resultCode | int | 유저에 대한 오류 코드 |
 | resultInfos.userId | String | 등록된 유저 ID |
 
-### Set multiple user score with extra data
+<a id="set-multiple-user-scores-with-extra-data"></a>
+### Set multiple user score with extra data { #set-multiple-user-scores-with-extra-data }
 
 원하는 유저 점수와 Extra Data를 등록할 수 있는 방법입니다.
 
@@ -1364,9 +1392,11 @@ Content-Type: application/json
 
 <br>
 
-## Delete API
+<a id="delete-api"></a>
+## Delete API { #delete-api }
 
-### Delete single user info
+<a id="delete-single-user-information"></a>
+### Delete single user info { #delete-single-user-information }
 
 원하는 유저 한 명의 정보를 삭제하는 방법입니다. 해당 유저는 영구적으로 삭제되며, 복구되지 않습니다.
 
@@ -1419,7 +1449,8 @@ Content-Type: application/json
 }
 ```
 
-### Delete multiple user info
+<a id="delete-multiple-user-info"></a>
+### Delete multiple user info { #delete-multiple-user-info }
 
 원하는 유저 여러 명의 정보를 삭제하는 방법입니다. 해당 유저는 영구적으로 삭제되며, 복구되지 않습니다.
 

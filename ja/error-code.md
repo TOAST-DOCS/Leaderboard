@@ -1,6 +1,10 @@
-## Game > Leaderboard > エラーコード
+<!-- pre-align:aligned sig=a831e21b56d5 -->
 
-## エラーコード
+<a id="game-leaderboard-error-codes"></a>
+## Game > Leaderboard > エラーコード { #game-leaderboard-error-codes }
+
+<a id="error-codes"></a>
+## エラーコード { #error-codes }
 
 下記表のエラーコードはResponse bodyのheader/bodyにあるresultCodeとresultMessageの意味を説明します。
 headerにあるresultCodeで下記のエラーコードではなくHTTPエラーコードが表示された場合、下記[参考]リンクを参照してください。

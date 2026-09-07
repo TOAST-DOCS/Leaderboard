@@ -1,28 +1,35 @@
-## Game > Leaderboard > Overview
+<!-- pre-align:aligned sig=a6d523e8ee7f -->
+
+<a id="game-leaderboard-overview"></a>
+## Game > Leaderboard > Overview { #game-leaderboard-overview }
 
 Competing for a higher rank is essential for a game play. <br>
 With Leaderboard, it only takes a simple integration to implement a ranking service.  
 
 <br>
 
-## Merits
+<a id="merits"></a>
+## Merits { #merits }
 
 ![[그림 0 Leaderboard Merits]](http://static.toastoven.net/prod_leaderboardv2/newMerits_en_202203.png)
 
 <br>
 
-## Main Features
+<a id="main-features"></a>
+## Main Features { #main-features }
 
 Following features are provided: 
 
-### Web Console
+<a id="web-console"></a>
+### Web Console { #web-console }
 
 - Check usage volume information 
 - Check Transactions Per Second (TPS) 
 - Register, search, or initialize factors 
 - Search, change, or delete user scores 
 
-### HTTP API
+<a id="http-api"></a>
+### HTTP API { #http-api }
 
 - Register user scores (by single or multiple) 
 - Win user scores (by single, multiple, or range)
@@ -31,7 +38,8 @@ Following features are provided:
 
 <br>
 
-## Glossary
+<a id="glossary"></a>
+## Glossary { #glossary }
 
 Following terms are used for Leaderboard.
 
@@ -46,9 +54,11 @@ Following terms are used for Leaderboard.
 
 <br>
 
-## Service Structure 
+<a id="service-structure"></a>
+## Service Structure { #service-structure }
 
-### Physical Structure
+<a id="physical-structure"></a>
+### Physical Structure { #physical-structure }
 
 The Leadboard platform is physically structured as below: 
 
@@ -59,7 +69,8 @@ The Leadboard platform is physically structured as below:
 - Leaderboard AP server saves data in the memory server and Cassandra.
 - Leaderboard AP server imports sorted data from the memory server. 
 
-### Logical Structure
+<a id="logical-structure"></a>
+### Logical Structure { #logical-structure }
 
 The Leaderboard platform is logically structured as below: 
 
@@ -71,11 +82,13 @@ The Leaderboard platform is logically structured as below:
 
 <br>
 
-## Features 
+<a id="features"></a>
+## Features { #features }
 
 Leaderboard is configured by factor. Depending on the setting, it can be differently applied. 
 
-###  Sorting
+<a id="sorting"></a>
+###  Sorting { #sorting }
 
 Scores can be sorted in the ascending or descending order. 
 
@@ -91,7 +104,8 @@ The descending order sorts scores from the highest to the lowest.
 
 ![[그림 4 내림차순 정렬]](http://static.toastoven.net/prod_leaderboardv2/overview_4.png)
 
-### Updating Scores 
+<a id="updating-scores"></a>
+### Updating Scores { #updating-scores }
 
 Scores can be updated by the highest, the latest, or the accumulated. 
 
@@ -113,7 +127,8 @@ Updated with the combination of a new score and an existing one.
 
 ![[그림 7 누적 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_7.png)
 
-### Tie-Breaking  
+<a id="tie-breaking"></a>
+### Tie-Breaking { #tie-breaking }
 
 The tie-breaking method may be set to prioritize the first or the latest-ranks by factor.
 
@@ -129,16 +144,19 @@ When there are a multiple number of ties, the latest-registered user ranks the h
 
 ![[그림 9 최근 랭킹 획득자 우선순위]](http://static.toastoven.net/prod_leaderboardv2/overview_9.png)
 
-### Initialization Time 
+<a id="initialization-time"></a>
+### Initialization Time { #initialization-time }
 
 Initialization time of a factor can be configured. <br>
 The entire ranking is not initialized. 
 
-### Initialization Date and Time
+<a id="initialization-date-and-time"></a>
+### Initialization Date and Time { #initialization-date-and-time }
 
 For the weekly ranking, specify a date of initialization; for the monthly ranking, specify a day of initialization.  <br>
 The entire ranking is not initialized. 
 
-### Limited Number of Users
+<a id="limited-number-of-users"></a>
+### Limited Number of Users { #limited-number-of-users }
 
 The maximum number of users to be registered for a factor: no more than 10 million.  

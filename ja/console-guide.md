@@ -1,4 +1,7 @@
-## Game > Leaderboard > コンソール使用ガイド
+<!-- pre-align:aligned sig=5dbe7787c4ab -->
+
+<a id="game-leaderboard-console-user-guide"></a>
+## Game > Leaderboard > コンソール使用ガイド { #game-leaderboard-console-user-guide }
 
 Leaderboardを使用するためにサービスを有効にした後、ファクターを登録する必要があります。
 サービスを利用すると、下記リストの機能を使用できます。
@@ -7,10 +10,12 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 - ファクターの登録、初期化、削除
 - ユーザーのランキング情報検索、修正、削除
 
-## ランキング指標
+<a id="ranking-indicators"></a>
+## ランキング指標 { #ranking-indicators }
 ![leaderboard_01_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_01_202106.png)
 
-### 1. 特定日時指標
+<a id="indicators-of-particular-dates"></a>
+### 1. 特定日時指標 { #indicators-of-particular-dates }
 
 特定日時の総ユーザー数、ファクター数、周期およびファクター別の占有率状況を確認できます。6ヶ月前までのデータのみ確認できます。
 
@@ -18,29 +23,35 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 **[項目別説明]**
 
+<a id="indicators-of-particular-dates-entire-data"></a>
 #### 全体データ
 
 - その日の総ユーザー数。
 
+<a id="indicators-of-particular-dates-number-of-factors"></a>
 #### ファクター数
 
 - その日のファクター数。グラフには周期別にファクターがどれだけあるか表示されます。
 
+<a id="indicators-of-particular-dates-chart-of-data-occupancy-rate"></a>
 #### データ占有率チャート
 
 - 周期：周期を基準にユーザー数を表示します。
 - ファクター：ファクターを基準にユーザー数を表示します。
 
 
-### 2. 検索期間のデータ指標
+<a id="data-indicators-during-search-period"></a>
+### 2. 検索期間のデータ指標 { #data-indicators-during-search-period }
 
 一定期間のデータ変動量を確認できます。検索可能範囲は最大6ヶ月です。
 
 最大10個まで特定ファクターを選択でき、選択しない場合、選択された周期を基準に上位10個のファクターのデータを検索します。  
 
-## ランキングデータ
+<a id="ranking-data"></a>
+## ランキングデータ { #ranking-data }
 
-### ランキングデータ検索
+<a id="search-of-ranking-data"></a>
+### ランキングデータ検索 { #search-of-ranking-data }
 
 ![leaderboard_02_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_02_202106.png)
 
@@ -51,19 +62,23 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 **[項目別説明]**
 
+<a id="search-of-ranking-data-select-cycle"></a>
 #### 周期選択
 - 以前の周期：以前の周期のランキング情報を基準に検索します。
 - 現在の周期：現在の周期のランキング情報を基準に検索します。
 
+<a id="search-of-ranking-data-search-conditions"></a>
 #### 検索条件
 - 順位別検索：検索するユーザーのランキング範囲を決めます。検索時、500人まで範囲が制限されます。
 - ユーザーID検索：該当ファクター内に検索するユーザーIDを入力します。ユーザーがいない場合は検索されません。
 
 
-### ユーザー情報
+<a id="user-information"></a>
+### ユーザー情報 { #user-information }
 
 ![leaderboard_03_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_03_202106.png)
 
+<a id="user-information-modify-user-information"></a>
 #### 1. ユーザー情報修正
 
 検索後に修正するユーザーを選択します。
@@ -73,6 +88,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 ![leaderboard_04_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_04_202106.png)
 
+<a id="user-information-delete-user-information"></a>
 #### 2. ユーザー情報削除
 
 検索後、削除するユーザーを選択します。
@@ -82,6 +98,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 ![leaderboard_05_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_05_202106.png)
 
+<a id="user-information-save-user-data"></a>
 #### 3. ユーザーデータ保存
 
 現在検索したユーザー情報を保存するには、 **データ保存** ボタンをクリックします。
@@ -91,15 +108,18 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 ![leaderboard_06_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_06_202106.png)
 
-## ランキング設定
+<a id="ranking-setting"></a>
+## ランキング設定 { #ranking-setting }
 
 ![leaderboard_07_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_07_202106.png)
 
 > **[注意事項]**<br>
 > ファクターの登録、初期化、削除はプロジェクトのAdminに登録されたユーザーのみ実行できます。 
 
-### ファクター登録
+<a id="register-factors"></a>
+### ファクター登録 { #register-factors }
 
+<a id="register-factors-direct-input"></a>
 #### 直接入力
 
 サービスを有効にした後、ファクター情報を追加する必要があります。 **Game > Leaderboard > ランキング設定 > +追加 > 直接入力** ボタンをクリックしてファクターを登録します。
@@ -168,6 +188,7 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 > [参考]ファクターIDはファクター追加時に自動で指定されます。
 
+<a id="register-factors-upload-files"></a>
 #### ファイルのアップロード
 
 複数ファクターを一度に追加したい場合に **Game> Leaderboard>ランキング設定> +追加>ファイルのアップロード** ボタンをクリックして、ファイルをアップロードしてファクタを登録することができます。
@@ -178,7 +199,8 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 ファクターの追加]ボタンをクリックして、ファクターを追加します。
 
-### ファクター検索
+<a id="search-factors"></a>
+### ファクター検索 { #search-factors }
 
 ![leaderboard_09_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_09_201812.png)
 
@@ -186,7 +208,8 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 検索条件がファクター周期の場合、選択リストにある周期で検索します。
 
-### ファクター初期化
+<a id="initialize-factors"></a>
+### ファクター初期化 { #initialize-factors }
 
 ![leaderboard_10_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_10_202106.png)
 
@@ -197,7 +220,8 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 初期化ウィンドウで下段項目を選択すると、ファクターまで削除されます。データは復旧できませんので、慎重に行ってください。
 
 
-### ファクター修正
+<a id="modify-factors"></a>
+### ファクター修正 { #modify-factors }
 
 ファクターリストから修正するファクターの名前を選択します。
 

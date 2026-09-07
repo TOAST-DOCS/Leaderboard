@@ -1,4 +1,7 @@
-## Game > Leaderboard > 콘솔 사용 가이드
+<!-- pre-align:aligned sig=5dbe7787c4ab -->
+
+<a id="game-leaderboard-console-user-guide"></a>
+## Game > Leaderboard > 콘솔 사용 가이드 { #game-leaderboard-console-user-guide }
 
 Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 합니다.  
 서비스를 이용하면 아래 목록의 기능을 사용할 수 있습니다.
@@ -7,10 +10,12 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 - 팩터의 등록, 초기화, 삭제
 - 유저의 랭킹 정보 검색, 수정, 삭제
 
-## 랭킹 지표
+<a id="ranking-indicators"></a>
+## 랭킹 지표 { #ranking-indicators }
 ![leaderboard_01_201901-1](https://static.toastoven.net/prod_leaderboardv2/leaderboard_01_202106-1.png)
 
-### 1. 특정 일자 지표
+<a id="indicators-of-particular-dates"></a>
+### 1. 특정 일자 지표 { #indicators-of-particular-dates }
 
 특정 일자의 총 유저 수, 팩터 수, 주기 및 팩터별 점유율 현황을 확인할 수 있습니다. 오늘 날짜에서 6개월 전까지의 데이터만 확인할 수 있습니다.
 
@@ -18,29 +23,35 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 **[항목별 설명]**
 
+<a id="indicators-of-particular-dates-entire-data"></a>
 #### 전체 데이터
 
 - 그날의 총 유저 수.
 
+<a id="indicators-of-particular-dates-number-of-factors"></a>
 #### 팩터 수
 
 - 그날의 팩터 수. 그래프에는 주기별로 팩터가 얼마나 있는지 표시됩니다.
 
+<a id="indicators-of-particular-dates-chart-of-data-occupancy-rate"></a>
 #### 데이터 점유율 차트
 
 - 주기: 주기를 기준으로 유저 수를 표시합니다.
 - 팩터: 팩터를 기준으로 유저 수를 표시합니다.
 
 
-### 2. 검색 기간 동안의 데이터 지표
+<a id="data-indicators-during-search-period"></a>
+### 2. 검색 기간 동안의 데이터 지표 { #data-indicators-during-search-period }
 
 일정 기간의 데이터 변동량을 확인할 수 있습니다. 검색 가능 범위는 최대 6개월입니다.
 
 최대 10개까지 특정 팩터를 선택할 수 있으며, 선택하지 않으면 선택된 주기를 기준으로 상위 10개 팩터의 데이터를 검색합니다.  
 
-## 랭킹 데이터
+<a id="ranking-data"></a>
+## 랭킹 데이터 { #ranking-data }
 
-### 랭킹 데이터 검색
+<a id="search-of-ranking-data"></a>
+### 랭킹 데이터 검색 { #search-of-ranking-data }
 
 ![leaderboard_02_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_02_202106.png)
 
@@ -51,19 +62,23 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 **[항목별 설명]**
 
+<a id="search-of-ranking-data-select-cycle"></a>
 #### 주기 선택
 - 지난 주기: 이전 주기의 랭킹 정보를 기준으로 검색합니다.
 - 현재 주기: 현재 주기의 랭킹 정보를 기준으로 검색합니다.
 
+<a id="search-of-ranking-data-search-conditions"></a>
 #### 검색 조건
 - 순위별 검색: 검색할 유저의 랭킹 범위를 정합니다. 검색 시 500명까지 범위가 제한됩니다.
 - 유저 ID 검색: 해당 팩터 내에 검색하고자 하는 유저 ID를 입력합니다. 유저가 없으면 검색되지 않습니다.
 
 
-### 유저 정보
+<a id="user-information"></a>
+### 유저 정보 { #user-information }
 
 ![leaderboard_03_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_03_202106.png)
 
+<a id="user-information-modify-user-information"></a>
 #### 1. 유저 정보 수정
 
 검색 후 수정할 유저를 선택합니다.
@@ -73,6 +88,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 ![leaderboard_04_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_04_202106.png)
 
+<a id="user-information-delete-user-information"></a>
 #### 2. 유저 정보 삭제
 
 검색 후 삭제할 유저를 선택합니다.
@@ -82,6 +98,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 ![leaderboard_05_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_05_202106.png)
 
+<a id="user-information-save-user-data"></a>
 #### 3. 유저 데이터 저장
 
 현재 검색한 유저 정보를 저장하려면 **데이터 저장** 버튼을 클릭합니다.
@@ -91,15 +108,18 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 ![leaderboard_06_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_06_202106.png)
 
-## 랭킹 설정
+<a id="ranking-setting"></a>
+## 랭킹 설정 { #ranking-setting }
 
 ![leaderboard_07_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_07_202106.png)
 
 > **[유의 사항]**<br>
 > 팩터의 등록, 초기화, 삭제는 프로젝트의 ADMIN으로 등록된 사용자만 수행할 수 있습니다. 
 
-### 팩터 등록
+<a id="register-factors"></a>
+### 팩터 등록 { #register-factors }
 
+<a id="register-factors-direct-input"></a>
 #### 직접 입력
 
 서비스를 활성화한 후 팩터 정보를 추가해야 합니다. **Game > Leaderboard > 랭킹 설정 > +추가 > 직접 입력** 버튼을 클릭해 팩터를 등록합니다.
@@ -168,6 +188,7 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 > [참고] 팩터 ID는 팩터 추가 시 자동으로 지정됩니다.
 
+<a id="register-factors-upload-files"></a>
 #### 파일 업로드
 
 여러 팩터를 한 번에 추가하고 싶으신 경우에 **Game > Leaderboard > 랭킹 설정 > +추가 > 파일 업로드** 버튼을 클릭해 파일을 업로드하여 팩터를 등록할 수 있습니다.
@@ -178,7 +199,8 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 팩터 추가 버튼을 눌러 팩터를 추가합니다.
 
-### 팩터 검색
+<a id="search-factors"></a>
+### 팩터 검색 { #search-factors }
 
 ![leaderboard_09_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_09_201812.png)
 
@@ -186,7 +208,8 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 검색 조건이 팩터 주기이면 선택 목록에 있는 주기로 검색합니다.
 
-### 팩터 초기화
+<a id="initialize-factors"></a>
+### 팩터 초기화 { #initialize-factors }
 
 ![leaderboard_10_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_10_202106.png)
 
@@ -197,7 +220,8 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 초기화 창에서 하단 항목을 선택하면 팩터까지 삭제됩니다. 데이터를 복구할 수 없으니 신중하게 수행해야 합니다. 
 
 
-### 팩터 수정
+<a id="modify-factors"></a>
+### 팩터 수정 { #modify-factors }
 
 팩터 목록에서 수정할 팩터의 이름을 선택합니다.
 
