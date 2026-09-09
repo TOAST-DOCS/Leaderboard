@@ -105,13 +105,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common/HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Parameter]**
 
@@ -154,13 +154,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common/HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Parameter]**
 
@@ -220,13 +220,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common/HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Parameter]**
 
@@ -343,13 +343,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common/HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
@@ -387,7 +387,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| resultInfo.resultCode | int | 오류 코드 [\[LINK\]](./error-code/) |
 | resultInfo.totalCount | int | 팩터에 등록된 유저 수 |
 
 <a id="get-single-user-information"></a>
@@ -403,13 +403,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common / HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
@@ -455,7 +455,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfo | Object | 유저 정보 |
-| userInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfo.resultCode | int | 오류 코드 [\[LINK\]](./error-code/) |
 | userInfo.userId | String | 유저 ID |
 | userInfo.score | Double | 유저 점수 |
 | userInfo.rank | int | 이번 주기의 순위 |
@@ -477,13 +477,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/g
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common / HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Body]**
 
@@ -610,10 +610,10 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosWithFactor | Array[Object] | 유저 정보 |
-| userInfosWithFactor[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfosWithFactor[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](./error-code/) |
 | userInfosWithFactor[].factor | int | Factor ID |
 | userInfosWithFactor[].userInfos | Array[Object] | 유저 점수 |
-| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](./error-code/) |
 | userInfos[].userId | String | 유저 ID |
 | userInfos[].score | double | 유저 점수 |
 | userInfos[].rank | int | 이번 주기의 순위 |
@@ -635,13 +635,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common / HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
@@ -712,9 +712,9 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosByRange | Array[Object] | 유저 정보 |
-| userInfosByRange[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfosByRange[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](./error-code/) |
 | userInfosByRange[].factor | int | 팩터 ID |
-| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](./error-code/) |
 | userInfos[].userId | String | 유저 ID |
 | userInfos[].score | double | 유저 점수 |
 | userInfos[].rank | int | 이번 주기의 순위 |
@@ -736,13 +736,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common / HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
@@ -856,9 +856,9 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosByRange | Array[Object] | 유저 정보 |
-| userInfosByRange[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfosByRange[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](./error-code/) |
 | userInfosByRange[].factor | int | 팩터 ID |
-| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](./error-code/) |
 | userInfos[].userId | String | 유저 ID |
 | userInfos[].score | double | 유저 점수 |
 | userInfos[].rank | int | 이번 주기의 순위 |
@@ -880,13 +880,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common / HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Body]**
@@ -986,9 +986,9 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosByRange | Array[Object] | 유저 정보 |
-| userInfosByRange[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfosByRange[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](./error-code/) |
 | userInfosByRange[].factor | int | 팩터 ID |
-| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| userInfos[].resultCode | int | 해당 유저의 코드. 오류 코드 [\[LINK\]](./error-code/) |
 | userInfos[].userId | String | 유저 ID |
 | userInfos[].score | double | 유저 점수 |
 | userInfos[].rank | int | 이번 주기의 순위 |
@@ -1015,13 +1015,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common/HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common/HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-| appkey | String | Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+| appkey | String | Leaderboard AppKey [\[LINK\]](#appkey)|
 | factor | int | 팩터 ID |
 | userId | String | 유저 ID |
 
@@ -1067,7 +1067,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| resultInfo.resultCode | int | 오류 코드 [\[LINK\]](./error-code/) |
 | resultInfo.userId | String | 등록된 유저 ID |
 
 <a id="set-single-user-scores-with-extra-data"></a>
@@ -1083,13 +1083,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common / HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-| appkey |	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+| appkey |	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 | factor | int | 팩터 ID |
 | userId | String | 유저 ID |
 
@@ -1137,7 +1137,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | 결과 정보 |
-| resultInfo.resultCode | int | 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| resultInfo.resultCode | int | 오류 코드 [\[LINK\]](./error-code/) |
 | resultInfo.userId | String | 등록된 유저 ID |
 
 <a id="set-multiple-user-scores"></a>
@@ -1153,13 +1153,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common / HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Body]**
 
@@ -1257,7 +1257,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 결과 정보 |
-| resultInfosWithFactor[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| resultInfosWithFactor[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](./error-code/) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 유저의 결과 정보 |
 | resultInfos.resultCode | int | 유저에 대한 오류 코드 |
@@ -1276,13 +1276,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common / HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Body]**
 
@@ -1384,7 +1384,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | 결과 정보 |
-| resultInfosWithFactor[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](/Game/Leaderboard/ko/error-code) |
+| resultInfosWithFactor[].resultCode | int | 팩터의 오류 코드 [\[LINK\]](./error-code/) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | 등록된 유저의 결과 정보 |
 | resultInfos.resultCode | int | 유저에 대한 오류 코드 |
@@ -1408,13 +1408,13 @@ DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common / HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
@@ -1462,13 +1462,13 @@ DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}
 
 **[Request Header]**
 
-Common / HTTP Header 확인 [\[LINK\]](/Game/Leaderboard/ko/api-guide/#http-header)
+Common / HTTP Header 확인 [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/ko/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Body]**
