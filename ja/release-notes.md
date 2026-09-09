@@ -37,7 +37,8 @@
 <a id="mar-23-2021-feature-updates"></a>
 #### 機能追加
 
-<!-- TODO: translate body -->
+* [API] 複数ユーザー削除 API を追加
+* [API] ファクター数、単一ファクター、複数ファクター照会 API を追加
 
 <a id="feb-23-2021"></a>
 ### 2021.02.23 { #feb-23-2021 }
@@ -45,7 +46,7 @@
 <a id="feb-23-2021-feature-updates"></a>
 #### 機能追加
 
-<!-- TODO: translate body -->
+* [API] 特定の順位のユーザー照会 API 追加
 
 <a id="sep-22-2020"></a>
 ### 2020.09.22 { #sep-22-2020 }
@@ -72,7 +73,7 @@
 <a id="apr-23-2019-feature-updates"></a>
 #### 機能追加
 
-<!-- TODO: translate body -->
+* [API] 特定ユーザーを含む前後の順位照会 API を追加
 
 <a id="mar-26-2019"></a>
 ### 2019.03.26 { #mar-26-2019 }
