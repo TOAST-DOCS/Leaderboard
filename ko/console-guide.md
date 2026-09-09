@@ -229,4 +229,4 @@ Leaderboard 사용을 위해서 서비스 활성화 후 팩터를 등록해야 �
 
 ![leaderboard_11_201812](https://static.toastoven.net/prod_leaderboardv2/leaderboard_11_202106.png)
 
-※ API 정보는 [API Guide](/Game/Leaderboard/ko/api-guide/)를 참고해 주세요.
+※ API 정보는 [API Guide](./api-guide/)를 참고해 주세요.

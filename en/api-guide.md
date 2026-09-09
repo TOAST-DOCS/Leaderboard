@@ -104,13 +104,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Common/HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Parameter]**
 
@@ -153,13 +153,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Common/HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Parameter]**
 
@@ -219,13 +219,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Common/HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Parameter]**
 
@@ -342,13 +342,13 @@ GET  https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Check Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Check Common/HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
@@ -386,7 +386,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | Result information |
-| resultInfo.resultCode | int | Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| resultInfo.resultCode | int | Error code [\[LINK\]](./error-code/) |
 | resultInfo.totalCount | int | Number of registered users of a factor |
 
 <a id="get-single-user-information"></a>
@@ -402,13 +402,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Check Common / HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type |	Value |
 |---|---|---|
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Leaderboard Factor ID|
 
 **[Request Parameter]**
@@ -454,7 +454,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfo | Object | User information |
-| userInfo.resultCode | int | Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfo.resultCode | int | Error code [\[LINK\]](./error-code/) |
 | userInfo.userId | String | User ID |
 | userInfo.score | Double | User scores |
 | userInfo.rank | int | Ranking of the current cycle |
@@ -476,13 +476,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/g
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Check Common / HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Body]**
 
@@ -609,10 +609,10 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosWithFactor | Array[Object] | User information |
-| userInfosWithFactor[].resultCode | int | Error code of a factor [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfosWithFactor[].resultCode | int | Error code of a factor [\[LINK\]](./error-code/) |
 | userInfosWithFactor[].factor | int | Factor ID |
 | userInfosWithFactor[].userInfos | Array[Object] | User scores |
-| userInfos[].resultCode | int | User code. Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfos[].resultCode | int | User code. Error code [\[LINK\]](./error-code/) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User scores |
 | userInfos[].rank | int | Ranking of the current cycle |
@@ -634,13 +634,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Check Common / HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
@@ -711,9 +711,9 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosByRange | Array[Object] | User information |
-| userInfosByRange[].resultCode | int | Error code of a factor [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfosByRange[].resultCode | int | Error code of a factor [\[LINK\]](./error-code/) |
 | userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | User code. Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfos[].resultCode | int | User code. Error code [\[LINK\]](./error-code/) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User scores |
 | userInfos[].rank | int | Ranking of the current cycle |
@@ -735,13 +735,13 @@ GET https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/fa
 
 **[Request Header]**
 
-Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Common / HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
@@ -855,9 +855,9 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosByRange | Array[Object] | User information |
-| userInfosByRange[].resultCode | int | Error code of a factor [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfosByRange[].resultCode | int | Error code of a factor [\[LINK\]](./error-code/) |
 | userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | User code. Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfos[].resultCode | int | User code. Error code [\[LINK\]](./error-code/) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User scores |
 | userInfos[].rank | int | Ranking of the current cycle |
@@ -879,13 +879,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Common / HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Body]**
@@ -985,9 +985,9 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | userInfosByRange | Array[Object] | User information |
-| userInfosByRange[].resultCode | int | Error code of a factor [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfosByRange[].resultCode | int | Error code of a factor [\[LINK\]](./error-code/) |
 | userInfosByRange[].factor | int | Factor ID |
-| userInfos[].resultCode | int | User code. Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| userInfos[].resultCode | int | User code. Error code [\[LINK\]](./error-code/) |
 | userInfos[].userId | String | User ID |
 | userInfos[].score | double | User scores |
 | userInfos[].rank | int | Ranking of the current cycle |
@@ -1014,13 +1014,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Common/HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Common/HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-| appkey | String | Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+| appkey | String | Leaderboard AppKey [\[LINK\]](#appkey)|
 | factor | int | Factor ID |
 | userId | String | User ID |
 
@@ -1066,7 +1066,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | Result information |
-| resultInfo.resultCode | int | Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| resultInfo.resultCode | int | Error code [\[LINK\]](./error-code/) |
 | resultInfo.userId | String | Registered user ID |
 
 
@@ -1083,13 +1083,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/f
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Check Common / HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-| appkey |	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+| appkey |	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 | factor | int | Factor ID |
 | userId | String | User ID |
 
@@ -1137,7 +1137,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfo | Object | Result information |
-| resultInfo.resultCode | int | Error code [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| resultInfo.resultCode | int | Error code [\[LINK\]](./error-code/) |
 | resultInfo.userId | String | Registered user ID |
 
 <a id="set-multiple-user-scores"></a>
@@ -1153,13 +1153,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Check Common / HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Body]**
 
@@ -1257,7 +1257,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | Result information |
-| resultInfosWithFactor[].resultCode | int | Error code of a factor [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| resultInfosWithFactor[].resultCode | int | Error code of a factor [\[LINK\]](./error-code/) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | Result information of a registered user |
 | resultInfos.resultCode | int | Error code of a user |
@@ -1276,13 +1276,13 @@ POST https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}/s
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Check Common / HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 
 **[Request Body]**
 
@@ -1384,7 +1384,7 @@ Content-Type: application/json
 | Key | Type | Description |
 | --- | --- | --- |
 | resultInfosWithFactor | Array[Object] | Result information |
-| resultInfosWithFactor[].resultCode | int | Error code of a factor [\[LINK\]](/Game/Leaderboard/en/error-code) |
+| resultInfosWithFactor[].resultCode | int | Error code of a factor [\[LINK\]](./error-code/) |
 | resultInfosWithFactor[].factor | int | Factor ID |
 | resultInfosWithFactor[].resultInfos | Array[Object] | Result information of a registered user |
 | resultInfos.resultCode | int | Error code of a user |
@@ -1408,13 +1408,13 @@ DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}
 
 **[Request Header]**
 
-Check Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Check Common / HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Parameter]**
@@ -1464,13 +1464,13 @@ DELETE https://api-leaderboard.cloud.toast.com/leaderboard/v2.0/appkeys/{appkey}
 
 **[Request Header]**
 
-Common / HTTP Header [\[LINK\]](/Game/Leaderboard/en/api-guide/#http-header)
+Common / HTTP Header [\[LINK\]](#http-header)
 
 **[Path Variable]**
 
 | Name | Type | Value |
 | --- | --- | --- |
-|appkey|	String|	Leaderboard AppKey [\[LINK\]](/Game/Leaderboard/en/api-guide/#appkey)|
+|appkey|	String|	Leaderboard AppKey [\[LINK\]](#appkey)|
 |factor|	int|	Factor ID|
 
 **[Request Body]**

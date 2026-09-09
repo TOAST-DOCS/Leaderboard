@@ -229,4 +229,4 @@ Leaderboardを使用するためにサービスを有効にした後、ファク
 
 ![leaderboard_11_201812](https://static.toastoven.net/prod_leaderboardv2/jp/leaderboard_11_202106.png)
 
-※ API情報は[API Guide](/Game/Leaderboard/ja/api-guide/)を参照してください。
+※ API情報は[API Guide](./api-guide/)を参照してください。
