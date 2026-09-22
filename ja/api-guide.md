@@ -1422,8 +1422,6 @@ Common / HTTP Header 確認 [\[LINK\]](#http-header)
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| userId | String |	mandatory | ユーザーID |
-| transactionId | long | optional | トランザクションID |
 | isPast | bool | optional | trueまたはfalse(デフォルト値はfalse) <br> trueの場合、以前の周期のデータ削除 |
 
 **[Request Sample]**
