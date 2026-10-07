@@ -62,7 +62,7 @@ Following terms are used for Leaderboard.
 
 The Leadboard platform is physically structured as below: 
 
-![[그림 1 Leaderboard 물리적 구조]](http://static.toastoven.net/prod_leaderboardv2/overview_1.png)
+![[Figure 1 Leaderboard Physical Structure]](http://static.toastoven.net/prod_leaderboardv2/overview_1.png)
 
 - Game server/NHN Cloud Console exchanges data at api-leaderboard.cloud.toast.com.
 - Load Balancer distributes requests to many Leaderboard AP servers.
@@ -74,7 +74,7 @@ The Leadboard platform is physically structured as below:
 
 The Leaderboard platform is logically structured as below: 
 
-![[그림 2 Leaderboard 논리적 구조]](http://static.toastoven.net/prod_leaderboardv2/overview_2.png)
+![[Figure 2 Leaderboard Logical Structure]](http://static.toastoven.net/prod_leaderboardv2/overview_2.png)
 
 - Each project owns one Leaderboard AppKey.
 - Many factors can be registered within a Leaderboard AppKey.
@@ -96,13 +96,13 @@ Scores can be sorted in the ascending or descending order.
 
 The ascending order sorts scores from the lowest to the highest.
 
-![[그림 3 오름차순 정렬]](http://static.toastoven.net/prod_leaderboardv2/overview_3.png)
+![[Figure 3 Sort by Ascending Order]](http://static.toastoven.net/prod_leaderboardv2/overview_3.png)
 
 **[Sort by Descending Order]**
 
 The descending order sorts scores from the highest to the lowest. 
 
-![[그림 4 내림차순 정렬]](http://static.toastoven.net/prod_leaderboardv2/overview_4.png)
+![[Figure 4 Sort by Descending Order]](http://static.toastoven.net/prod_leaderboardv2/overview_4.png)
 
 <a id="updating-scores"></a>
 ### Updating Scores { #updating-scores }
@@ -113,19 +113,19 @@ Scores can be updated by the highest, the latest, or the accumulated.
 
 Updated when a newer score is higher than a previous one. 
 
-![[그림 5 최고 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_5.png)
+![[Figure 5 Updating with the Highest Scores]](http://static.toastoven.net/prod_leaderboardv2/overview_5.png)
 
 **[Updating with the Latest Scores]**
 
 Updated with new scores, regardless of existing scores (updated at all times).
 
-![[그림 6 최근 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_6.png)
+![[Figure 6 Updating with the Latest Scores]](http://static.toastoven.net/prod_leaderboardv2/overview_6.png)
 
 **[Updating with the Accumulated Scores]**
 
 Updated with the combination of a new score and an existing one.
 
-![[그림 7 누적 점수 업데이트]](http://static.toastoven.net/prod_leaderboardv2/overview_7.png)
+![[Figure 7 Updating with the Accumulated Scores]](http://static.toastoven.net/prod_leaderboardv2/overview_7.png)
 
 <a id="tie-breaking"></a>
 ### Tie-Breaking { #tie-breaking }
@@ -136,13 +136,13 @@ The tie-breaking method may be set to prioritize the first or the latest-ranks b
 
 When there are a multiple number of ties, the first-registered user ranks the highest. 
 
-![[그림 8 최초 랭킹 획득자 우선순위]](http://static.toastoven.net/prod_leaderboardv2/overview_8.png)
+![[Figure 8 Set Priorities for First Ranks]](http://static.toastoven.net/prod_leaderboardv2/overview_8.png)
 
 **[Set Priorities for Latest Ranks]**
 
 When there are a multiple number of ties, the latest-registered user ranks the highest. 
 
-![[그림 9 최근 랭킹 획득자 우선순위]](http://static.toastoven.net/prod_leaderboardv2/overview_9.png)
+![[Figure 9 Set Priorities for Latest Ranks]](http://static.toastoven.net/prod_leaderboardv2/overview_9.png)
 
 <a id="initialization-time"></a>
 ### Initialization Time { #initialization-time }
