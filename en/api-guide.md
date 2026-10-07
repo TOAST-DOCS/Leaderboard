@@ -1421,9 +1421,7 @@ Check Common / HTTP Header [\[LINK\]](#http-header)
 
 | Name | Type | Required |  Value |
 | --- | --- | --- | --- |
-| userId | String |	mandatory | User ID |
-| transactionId | long | optional | Transaction ID |
-| isPast | bool | optional | True or false (default is false) <br>Delete data of the previous cycle, if it is true. |
+| isPast | bool | optional | "true" or "false" (default is false) <br> If true, deletes data of the previous cycle. |
 
 **[Request Sample]**
 
